@@ -346,7 +346,7 @@ def main():
 
 
     #TODO: Path to file
-    filename = "response.json"
+    filename = "/home/chenlawrance/repo/LLM-Creativity/dataset/AUT/test_response.json"
     
     evaluation_details = {
         "fluency": evaluate_fluency(model, filename, 3),
@@ -380,7 +380,7 @@ def main():
     for key, result in evaluation_results.items():
         print(f"{key} Average Score: {result['average_score']}")
 
-    with open(f"evaluation_results_version_{args.version}_4.json", "w") as outfile:
+    with open(f"evaluation_results_version_{args.version}.json", "w") as outfile:
         json.dump(evaluation_results, outfile, indent=4)
 
     model.save_cache()

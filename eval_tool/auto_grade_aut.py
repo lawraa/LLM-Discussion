@@ -69,17 +69,9 @@ class OpenAIModel():
                     time.sleep(1)
     
 
-def evaluate_fluency(model: OpenAIModel, responses_file_path: str, sample_time = 3) -> float:
+def evaluate_fluency(model: OpenAIModel, responses_file_path: str, sample_time = 3):
     with open(responses_file_path, "r") as file:
         responses = json.load(file)
-    #format or process "responses" further
-    item = responses['item']
-    use = responses['uses']
-
-    prompt = f"""
-    The item is {item}. The responses are: {use}
-    """
-    messages = [{"role": "user", "content": prompt}]
     tools = [
         {
             "type": "function",
@@ -112,39 +104,51 @@ def evaluate_fluency(model: OpenAIModel, responses_file_path: str, sample_time =
             }
         }
     ]
+
     tool_choice = {"type": "function", "function": {"name": "fluency_evaluator"}}
-    responses = []
+    #format or process "responses" further
+
     total_score = 0
-    success_count = 0
-    seed = 0
-    while success_count < sample_time:
-        try:
-            response = model.generate_response(messages=messages, tools=tools, tool_choice=tool_choice, seed=seed)
-            print(response)
-            responses.append(response)
-            total_score += response['results']['total_fluency_score']
-            success_count += 1
-        except:
-            import traceback
-            traceback.print_exc()
-            time.sleep(1)
-        seed += 1
-    average_score = total_score / sample_time
-    return average_score, responses
+    total_responses = []
+
+    for response_obj in responses:
+        item = response_obj['item']
+        uses = response_obj['uses']
+        prompt = f"The item is {item}. The responses are: {uses}"
+
+        messages = [{"role": "user", "content": prompt}]
+        sample_responses = []
+        sample_score = 0
+        seed = 0
+        success_count = 0
+        while success_count < sample_time:
+            try:
+                response = model.generate_response(messages=messages, tools=tools, tool_choice=tool_choice, seed=seed)
+                sample_responses.append(response)
+                sample_score += response['results']['total_fluency_score']
+                success_count += 1
+            except:
+                import traceback
+                traceback.print_exc()
+                time.sleep(1)
+            seed += 1
+        average_item_score = sample_score / sample_time
+        total_score += average_item_score
+
+        # Add the responses for this item to the total responses
+        total_responses.append({
+            "item": item,
+            "result": uses,
+            "responses": sample_responses,
+            "average_score": average_item_score
+        })
+
+    return total_responses
 
 
-def evaluate_flexibility(model: OpenAIModel, responses_file_path: str, sample_time = 3) -> float:
+def evaluate_flexibility(model: OpenAIModel, responses_file_path: str, sample_time = 3):
     with open(responses_file_path, "r") as file:
         responses = json.load(file)
-    #format or process "responses" further
-    item = responses['item']
-    use = responses['uses']
-    prompt = f"""
-    The item is {item}. The responses are: {use}
-    """
-
-    messages = [{"role": "user", "content": prompt}]
-
     tools = [
         {
             "type": "function",
@@ -178,39 +182,45 @@ def evaluate_flexibility(model: OpenAIModel, responses_file_path: str, sample_ti
         }
     ]
     tool_choice = {"type": "function", "function": {"name": "flexibility_evaluator"}}
-    responses = []
     total_score = 0
-    success_count = 0
-    seed = 0
-    while success_count < sample_time:
-        try:
-            response = model.generate_response(messages=messages, tools=tools, tool_choice=tool_choice, seed=seed)
-            print(response)
-            responses.append(response)
-            total_score += response['results']['total_flexibility_score']
-            success_count += 1
-        except:
-            import traceback
-            traceback.print_exc()
-            time.sleep(1)
-        seed += 1
-    average_score = total_score / sample_time
-    return average_score, responses
+    total_responses = []
+
+    for response_obj in responses:
+        item = response_obj['item']
+        uses = response_obj['uses']
+        prompt = f"The item is {item}. The responses are: {uses}"
+
+        messages = [{"role": "user", "content": prompt}]
+        sample_responses = []
+        sample_score = 0
+        seed = 0
+        success_count = 0
+        while success_count < sample_time:
+            try:
+                response = model.generate_response(messages=messages, tools=tools, tool_choice=tool_choice, seed=seed)
+                print(response)
+                sample_responses.append(response)
+                sample_score += response['results']['total_flexibility_score']
+                success_count += 1
+            except:
+                import traceback
+                traceback.print_exc()
+                time.sleep(1)
+            seed += 1
+        average_item_score = sample_score / sample_time
+        total_score += average_item_score
+        total_responses.append({
+            "item": item,
+            "result": uses,
+            "responses": sample_responses,
+            "average_score": average_item_score
+        })
+    return total_responses
 
 
-def evaluate_originality(model: OpenAIModel, responses_file_path: str, sample_time = 3) -> float:
-
-    # Load responses from the provided file path
+def evaluate_originality(model: OpenAIModel, responses_file_path: str, sample_time = 3):
     with open(responses_file_path, "r") as file:
         responses = json.load(file)
-    item = responses['item']
-    use = responses['uses']
-    prompt = f"""
-    The item is {item}. The responses are: {use}
-    """
-
-    messages = [{"role": "user", "content": prompt}]
-    #print("ORIGINALITY PROMPT: ", messages)
     tools = [
         {
             "type": "function",
@@ -242,39 +252,46 @@ def evaluate_originality(model: OpenAIModel, responses_file_path: str, sample_ti
         }
     ]
     tool_choice = {"type": "function", "function": {"name": "originality_evaluator"}}
-    responses = []
     total_score = 0
-    success_count = 0
-    seed = 0
-    while success_count < sample_time:
-        try:
-            response = model.generate_response(messages=messages, tools=tools, tool_choice=tool_choice, seed=seed)
-            print("RESPONSE IS: ", response)
-            responses.append(response)
-            total_score += response['results']['originality_rating']
-            success_count += 1
-        except:
-            import traceback
-            traceback.print_exc()
-            time.sleep(1)
-        seed += 1
-    average_score = total_score / sample_time
-    return average_score, responses
+    total_responses = []
+
+    for response_obj in responses:
+        item = response_obj['item']
+        uses = response_obj['uses']
+        prompt = f"The item is {item}. The responses are: {uses}"
+
+        messages = [{"role": "user", "content": prompt}]
+        sample_responses = []
+        sample_score = 0
+        seed = 0
+        success_count = 0
+        while success_count < sample_time:
+            try:
+                response = model.generate_response(messages=messages, tools=tools, tool_choice=tool_choice, seed=seed)
+                sample_responses.append(response)
+                sample_score += response['results']['originality_rating']
+                success_count += 1
+            except:
+                import traceback
+                traceback.print_exc()
+                time.sleep(1)
+            seed += 1
+        average_item_score = sample_score / sample_time
+        total_score += average_item_score
+
+        # Add the responses for this item to the total responses
+        total_responses.append({
+            "item": item,
+            "result": uses,
+            "responses": sample_responses,
+            "average_score": average_item_score
+        })
+    return total_responses
 
 
-def evaluate_elaboration(model: OpenAIModel, responses_file_path: str, sample_time: int = 3) -> float:
-
-    # Load responses from the provided file path
+def evaluate_elaboration(model: OpenAIModel, responses_file_path: str, sample_time: int = 3):
     with open(responses_file_path, "r") as file:
         responses = json.load(file)
-    item = responses['item']
-    use = responses['uses']
-    prompt = f"""
-    The item is {item}. The responses are: {use}
-    """
-
-    messages = [{"role": "user", "content": prompt}]
-
     tools = [
         {
             "type": "function",
@@ -312,24 +329,43 @@ def evaluate_elaboration(model: OpenAIModel, responses_file_path: str, sample_ti
         }
     ]
     tool_choice = {"type": "function", "function": {"name": "elaboration_evaluator"}}
-    responses = []
     total_score = 0
-    success_count = 0
-    seed = 0
-    while success_count < sample_time:
-        try:
-            response = model.generate_response(messages=messages, tools=tools, tool_choice=tool_choice, seed=seed)
-            print(response)
-            responses.append(response)
-            total_score += response['results']['elaboration_rating']
-            success_count += 1
-        except:
-            import traceback
-            traceback.print_exc()
-            time.sleep(1)
-        seed += 1
-    average_score = total_score / sample_time
-    return average_score, responses
+    total_responses = []
+
+    for response_obj in responses:
+        item = response_obj['item']
+        uses = response_obj['uses']
+        prompt = f"The item is {item}. The responses are: {uses}"
+
+        messages = [{"role": "user", "content": prompt}]
+        sample_responses = []
+        sample_score = 0
+        seed = 0
+        success_count = 0
+        while success_count < sample_time:
+            try:
+                response = model.generate_response(messages=messages, tools=tools, tool_choice=tool_choice, seed=seed)
+                print(response)
+                sample_responses.append(response)
+                sample_score += response['results']['elaboration_rating']
+                success_count += 1
+            except:
+                import traceback
+                traceback.print_exc()
+                time.sleep(1)
+            seed += 1
+        average_item_score = sample_score / sample_time
+        total_score += average_item_score
+
+        # Add the responses for this item to the total responses
+        total_responses.append({
+            "item": item,
+            "result": uses,
+            "responses": sample_responses,
+            "average_score": average_item_score
+        })
+
+    return total_responses
 
 
 def main():
@@ -346,42 +382,41 @@ def main():
 
 
     #TODO: Path to file
-    filename = "/home/chenlawrance/repo/LLM-Creativity/dataset/AUT/test_response.json"
+    filename = "/home/chenlawrance/repo/LLM-Creativity/dataset/AUT/test_response_1.json"
     
+    fluency_results = evaluate_fluency(model, filename)
+    flexibility_results = evaluate_flexibility(model, filename)
+    originality_results = evaluate_originality(model, filename)
+    elaboration_results = evaluate_elaboration(model, filename)
+
     evaluation_details = {
-        "fluency": evaluate_fluency(model, filename, 3),
-        "flexibility": evaluate_flexibility(model, filename, 3),
-        "originality": evaluate_originality(model, filename, 3),
-        "elaboration": evaluate_elaboration(model, filename, 3)
+        "fluency": fluency_results,
+        "flexibility": flexibility_results,
+        "originality": originality_results,
+        "elaboration": elaboration_results
     }
 
     # Store results and responses
-    evaluation_results = {}
-    for key, (score, responses) in evaluation_details.items():
-        filtered_responses = []
-        for response in responses:
-            # Check if key components are not null
-            if response.get('results') and response['results'].get('total_fluency_score') is not None and response['results'].get('evaluation_explanation') is not None and response['results'].get('listed_responses') is not None :
-                filtered_responses.append(response) # for fluency
-            elif response.get('results') and response['results'].get('listed_categories') is not None and response['results'].get('evaluation_explanation') is not None and response['results'].get('total_flexibility_score') is not None :
-                filtered_responses.append(response) # for flexibility
-            elif response.get('results') and response['results'].get('originality_rating') is not None and response['results'].get('evaluation_explanation') is not None :
-                filtered_responses.append(response) # for originality
-            elif response.get('results') and response['results'].get('elaboration_rating') is not None and response['results'].get('evaluation_explanation') is not None :
-                filtered_responses.append(response) # for originality
+    # evaluation_results = {}
+    # for key, responses in evaluation_details.items():
+    #     filtered_responses = []
+    #     for response in responses:
+    #         # Check if key components are not null
+    #         if response.get('results') and response['results'].get('total_fluency_score') is not None and response['results'].get('evaluation_explanation') is not None and response['results'].get('listed_responses') is not None :
+    #             filtered_responses.append(response) # for fluency
+    #         elif response.get('results') and response['results'].get('listed_categories') is not None and response['results'].get('evaluation_explanation') is not None and response['results'].get('total_flexibility_score') is not None :
+    #             filtered_responses.append(response) # for flexibility
+    #         elif response.get('results') and response['results'].get('originality_rating') is not None and response['results'].get('evaluation_explanation') is not None :
+    #             filtered_responses.append(response) # for originality
+    #         elif response.get('results') and response['results'].get('elaboration_rating') is not None and response['results'].get('evaluation_explanation') is not None :
+    #             filtered_responses.append(response) # for originality
 
-        evaluation_results[key] = {
-            "average_score": score,
-            "responses": filtered_responses
-        }
-
-
-    # Print and save the results
-    for key, result in evaluation_results.items():
-        print(f"{key} Average Score: {result['average_score']}")
+    #     evaluation_results[key] = {
+    #         "responses": filtered_responses
+    #     }
 
     with open(f"evaluation_results_version_{args.version}.json", "w") as outfile:
-        json.dump(evaluation_results, outfile, indent=4)
+        json.dump(evaluation_details, outfile, indent=4)
 
     model.save_cache()
 

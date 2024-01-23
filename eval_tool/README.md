@@ -27,7 +27,9 @@ with open(f"evaluation_results_version_{args.version}_4.json", "w") as outfile:
 
 ## To execute the code, run:
 ```
-pytohn3 auto_grade.py --version 3 # 3 for ChatGPT 3.5, 4 for GPT4
+python3 auto_grade_aut.py --version 3 --input_file <filename>
+# 3 for ChatGPT 3.5, 4 for GPT4
+# example of <filename>, if file is test.json, the just type test for <filename>
 ```
 
 Almost in all scenarios, GPT4 is better than 3.5.

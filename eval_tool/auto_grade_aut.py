@@ -42,9 +42,11 @@ class OpenAIModel():
         return cache # return cache
 
     
-    def generate_response(self, messages, tools, tool_choice, temperature = 1.0, top_p = 1.0, seed = 0):
+    def generate_response(self, messages, tools, tool_choice, temperature = 1, top_p = 1, seed = 0):
         prompt = (messages, tools, tool_choice, seed)
+
         prompt = str(prompt)
+        #print("MESSAGE IS : ", messages)
         if prompt in self.cache_dict:
             return self.cache_dict[prompt]
         else:
@@ -77,21 +79,21 @@ def evaluate_fluency(model: OpenAIModel, responses_file_path: str, sample_time =
             "type": "function",
             "function": {
                 "name": "fluency_evaluator",
-                "description": "This tool evaluate the fluency of responses to a divergent thinking task where participants were asked to list as many use of an item as possible. Fluency is defined as the quantity of relevant ideas or responses. This tool identifies and counts the number of unique, relevant responses, lists them out, and provides a total fluency score. It also includes an explanation of the criteria used to determine the relevance of each response and the counting process.",
+                "description": "This tool evaluates counts the number of unique, relevant(practical) responses, lists them out, and provides the total fluency score. It also includes an explanation of the criteria used to determine the relevance of each response and the counting process.",
                 "parameters": {
                     "type": "object",
                     "properties": {
                         "results": {
                             "type": "object",
-                            "description": "The output of the evaluation, including the listed responses and total fluency score.",
+                            "description": "The output of the evaluation, including the listed responses and total number of relevant(practical) response.",
                             "properties": {
+                                "number_of_responses": {
+                                    "type": "number",
+                                    "description": "This will output the total number of unique, relevant ideas."
+                                },
                                 "listed_responses": {
                                     "type": "string",
                                     "description": "Numbered list of unique, relevant responses."
-                                },
-                                "total_fluency_score": {
-                                    "type": "number",
-                                    "description": "The total fluency score based on the total number of unique, relevant responses."
                                 },
                                 "evaluation_explanation": {
                                     "type": "string",
@@ -113,7 +115,7 @@ def evaluate_fluency(model: OpenAIModel, responses_file_path: str, sample_time =
 
     for response_obj in responses:
         item = response_obj['item']
-        uses = response_obj['uses']
+        uses = '\n'.join(response_obj['uses'])
         prompt = f"The item is {item}. The responses are: {uses}"
 
         messages = [{"role": "user", "content": prompt}]
@@ -124,8 +126,9 @@ def evaluate_fluency(model: OpenAIModel, responses_file_path: str, sample_time =
         while success_count < sample_time:
             try:
                 response = model.generate_response(messages=messages, tools=tools, tool_choice=tool_choice, seed=seed)
+                print(response)
                 sample_responses.append(response)
-                sample_score += response['results']['total_fluency_score']
+                sample_score += response['results']['number_of_responses']
                 success_count += 1
             except:
                 import traceback
@@ -268,6 +271,7 @@ def evaluate_originality(model: OpenAIModel, responses_file_path: str, sample_ti
         while success_count < sample_time:
             try:
                 response = model.generate_response(messages=messages, tools=tools, tool_choice=tool_choice, seed=seed)
+                print(response)
                 sample_responses.append(response)
                 sample_score += response['results']['originality_rating']
                 success_count += 1
@@ -367,22 +371,24 @@ def evaluate_elaboration(model: OpenAIModel, responses_file_path: str, sample_ti
 
     return total_responses
 
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--version", default="3", choices=["3", "4"])
+    # Add a new argument for the input file name
+    parser.add_argument("--input_file", required=True, help="File name in /home/chenlawrance/repo/LLM-Creativity/dataset/AUT/")
     args = parser.parse_args()
+
     if args.version == "3":
         version = "gpt-3.5-turbo-1106"
         cache_file_name = "cache_35.pickle"
     elif args.version == "4":
         version = "gpt-4-1106-preview"
         cache_file_name = "cache_4.pickle"
+    
     model = OpenAIModel(cache_file_name, version)
 
-
-    #TODO: Path to file
-    filename = "/home/chenlawrance/repo/LLM-Creativity/dataset/AUT/test_response_1.json"
+    # Use the input file argument
+    filename = f"/home/chenlawrance/repo/LLM-Creativity/dataset/AUT/{args.input_file}.json"
     
     fluency_results = evaluate_fluency(model, filename)
     flexibility_results = evaluate_flexibility(model, filename)
@@ -396,26 +402,7 @@ def main():
         "elaboration": elaboration_results
     }
 
-    # Store results and responses
-    # evaluation_results = {}
-    # for key, responses in evaluation_details.items():
-    #     filtered_responses = []
-    #     for response in responses:
-    #         # Check if key components are not null
-    #         if response.get('results') and response['results'].get('total_fluency_score') is not None and response['results'].get('evaluation_explanation') is not None and response['results'].get('listed_responses') is not None :
-    #             filtered_responses.append(response) # for fluency
-    #         elif response.get('results') and response['results'].get('listed_categories') is not None and response['results'].get('evaluation_explanation') is not None and response['results'].get('total_flexibility_score') is not None :
-    #             filtered_responses.append(response) # for flexibility
-    #         elif response.get('results') and response['results'].get('originality_rating') is not None and response['results'].get('evaluation_explanation') is not None :
-    #             filtered_responses.append(response) # for originality
-    #         elif response.get('results') and response['results'].get('elaboration_rating') is not None and response['results'].get('evaluation_explanation') is not None :
-    #             filtered_responses.append(response) # for originality
-
-    #     evaluation_results[key] = {
-    #         "responses": filtered_responses
-    #     }
-
-    with open(f"evaluation_results_version_{args.version}.json", "w") as outfile:
+    with open(f"./result/evaluation_{args.input_file}_{args.version}.json", "w") as outfile:
         json.dump(evaluation_details, outfile, indent=4)
 
     model.save_cache()
@@ -424,4 +411,4 @@ if __name__ == "__main__":
     main()
 
 
-
+#python your_script.py --version 3 --input_file phober_response

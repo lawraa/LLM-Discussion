@@ -1,5 +1,5 @@
 # Evaluation API Tool
-Evaluate Results using 'Fluency', 'Flexibility', 'Originality', and 'Elaboration'
+Evaluate Results using **Fluency**, **Flexibility**, **Originality**, and **Elaboration**
 ## Setup and Installation
 
 1. **Clone the Repository:**

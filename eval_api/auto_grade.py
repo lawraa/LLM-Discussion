@@ -8,6 +8,8 @@ from typing import List, Dict, Tuple
 import argparse
 import re
 from pathlib import Path
+import logging
+
 
 load_dotenv()
 client = OpenAI(
@@ -37,7 +39,7 @@ class OpenAIModel():
                 except Exception:
                     if not allow_retry:
                         assert False
-                    print ("Pickle Error: Retry in 5sec...")
+                    logging.error("Pickle Unpickling Error: Retry in 5sec...")
                     time.sleep(5)
         else:
             cache = {}
@@ -64,6 +66,7 @@ class OpenAIModel():
                 except:
                     import traceback
                     traceback.print_exc()
+                    logging.exception("Exception occurred")
                     time.sleep(1)
 
 def parse_number_score(input_str):
@@ -230,10 +233,9 @@ def evaluate_elaboration(model: OpenAIModel, response_obj, sample_time = 3):
     return output_format
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--version", default="3", choices=["3", "4"])
-    # Add a new argument for the input file name
-    parser.add_argument("--input_file", required=True, help="File name in /home/chenlawrance/repo/LLM-Creativity/dataset/AUT/")
+    parser = argparse.ArgumentParser(description="This script evaluates responses based on criteria like fluency, flexibility, etc., using OpenAI's API.")
+    parser.add_argument("--version", default="3", choices=["3", "4"], help="Version of the OpenAI model to use (3 or 4).")
+    parser.add_argument("--input_file", required=True, help="Name of the input file without extension, located in the dataset/AUT/ directory.")
     args = parser.parse_args()
 
     if args.version == "3":
@@ -242,13 +244,8 @@ def main():
     elif args.version == "4":
         version = "gpt-4-1106-preview"
         cache_file_name = "cache_4.pickle"
-
+    #filename = Path(__file__).parent.parent / 'dataset' / 'AUT' / f"{args.input_file}.json"
     filename = os.path.join(Path(__file__).parent, '..', 'dataset', 'AUT', f"{args.input_file}.json")
-    #Path(__file__).parent get the directory where your script is located
-    #filename = f"/home/chenlawrance/repo/LLM-Creativity/dataset/AUT/{args.input_file}.json"
-
-    # version = "gpt-4-1106-preview"  # or "gpt-3.5-turbo-1106" based on your preference
-    # cache_file_name = "cache_4.pickle"  # Change according to the model version
 
     model = OpenAIModel(cache_file_name, version)
     total_responses = []
@@ -271,13 +268,14 @@ def main():
         total_responses.append(item_results)
 
     output_file_path = os.path.join(Path(__file__).parent, 'result', f"evaluation_{args.input_file}_{args.version}.json")
-
+    
     with open(output_file_path, "w") as outfile:
         json.dump(total_responses, outfile, indent=4)
 
     model.save_cache()
     
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     main()
 
 # python3 auto_grade.py --version 3 --input_file test_response_2

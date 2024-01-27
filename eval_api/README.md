@@ -26,8 +26,7 @@ For `box_plot.py`, set the file paths for the data you want to analyze:
   ```bash
   filename1  = "your_first_filename"
   filename2 = "your_second_filename"
-  file_path_current = f'/path/to/result/{filename1}'
-  file_path_previous = f'/path/to/result/{filename2}'
+  # e.g. filename = "file1.json"
   ```
 For `mean_std.py`, set the file path to the dataset you want to analyze:
   ```bash

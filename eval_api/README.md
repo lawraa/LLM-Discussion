@@ -11,9 +11,9 @@ Evaluate Results using 'Fluency', 'Flexibility', 'Originality', and 'Elaboration
    pip install -r requirements.txt
    ```
 3. Before you execute, create a file name `.env` in the same folder. It must contain:
-```
-api_key="YOUR_API_KEY"
-```
+   ```bash
+   api_key="YOUR_API_KEY"
+   ```
 
 ### 1. Setting File Paths:
 For `auto_grade.py`, set your dataset path in the file:

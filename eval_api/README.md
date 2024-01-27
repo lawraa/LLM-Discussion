@@ -27,7 +27,7 @@ For `box_plot.py`, set the file paths for the data you want to analyze:
   Choose 2 Files from "/result" Folder
   filename1  = "your_first_filename"
   filename2 = "your_second_filename"
-  # e.g. filename = "file1.json"
+  # e.g. filename = "file1"
   ```
 Output for `box_plot.py` will be stored in `analysis_img/boxplot` folder <br /><br />
 
@@ -35,6 +35,7 @@ For `mean_std.py`, set the file path to the dataset you want to analyze:
   ```bash
   Choose 1 File from "/result" Folder
   filename = "your_filename"
+  # e.g. filename = "file2"
   ```
 ### 2. Running the Script
   To run `auto_grade.py`:

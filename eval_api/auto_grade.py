@@ -241,15 +241,8 @@ def main():
     elif args.version == "4":
         version = "gpt-4-1106-preview"
         cache_file_name = "cache_4.pickle"
-    
-    model = OpenAIModel(cache_file_name, version)
-
-    filename = f"/home/chenlawrance/repo/LLM-Creativity/dataset/AUT/{args.input_file}.json"
-
-
     # version = "gpt-4-1106-preview"  # or "gpt-3.5-turbo-1106" based on your preference
     # cache_file_name = "cache_4.pickle"  # Change according to the model version
-
     model = OpenAIModel(cache_file_name, version)
     total_responses = []
 

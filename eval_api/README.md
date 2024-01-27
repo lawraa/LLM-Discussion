@@ -16,12 +16,11 @@ Evaluate Results using 'Fluency', 'Flexibility', 'Originality', and 'Elaboration
    ```
 
 ### 1. Setting File Paths:
-For `auto_grade.py`, set your dataset path in the file:
+For `auto_grade.py`, you don't have to edit path
   ```bash
-  filename = f"/path/to/your/dataset/{args.input_file}.json"
-  #Don't Edit the args.input_file
+  Put your input json file into "dataset" folder
   ```
-Output for `auto_grade.py` will be stored in /result <br /><br />
+Output for `auto_grade.py` will be stored in /result folder <br /><br />
 
 For `box_plot.py`, set the file paths for the data you want to analyze:
   ```bash

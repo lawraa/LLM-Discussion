@@ -1,4 +1,4 @@
-# Evaluation
+# Evaluation API Tool
 Evaluate Results using 'Fluency', 'Flexibility', 'Originality', and 'Elaboration'
 ## Setup and Installation
 
@@ -20,18 +20,21 @@ For `auto_grade.py`, you don't have to edit path
   ```bash
   Put your input json file into "dataset" folder
   ```
-Output for `auto_grade.py` will be stored in /result folder <br /><br />
+Output for `auto_grade.py` will be stored in `/result` folder <br /><br />
 
 For `box_plot.py`, set the file paths for the data you want to analyze:
   ```bash
+  Choose 2 Files from "/result" Folder
   filename1  = "your_first_filename"
   filename2 = "your_second_filename"
   # e.g. filename = "file1.json"
   ```
+Output for `box_plot.py` will be stored in `analysis_img/boxplot` folder <br /><br />
+
 For `mean_std.py`, set the file path to the dataset you want to analyze:
   ```bash
+  Choose 1 File from "/result" Folder
   filename = "your_filename"
-  filepath = f'/path/to/result/{filename}.json'
   ```
 ### 2. Running the Script
   To run `auto_grade.py`:

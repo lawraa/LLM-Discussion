@@ -17,11 +17,11 @@ def calculate_mean_std(file_path):
     mean_std = {category: {"mean": np.mean(scores[category]), "std": np.std(scores[category])} for category in scores}
     return scores, mean_std
 
-filename1  = "evaluation_reproduce_all_25_3.json"
-filename2 = "evaluation_reproduce_yes_extracted_25_3.json"
+filename1  = "evaluation_Curr_classify_answers_50_3"
+filename2 = "evaluation_Prev_classify_answers_50_3"
 # File paths
-file_path_current = os.path.join(Path(__file__).parent, 'result', filename1)
-file_path_previous = os.path.join(Path(__file__).parent, 'result', filename2)
+file_path_current = os.path.join(Path(__file__).parent, 'result', f"{filename1}.json")
+file_path_previous = os.path.join(Path(__file__).parent, 'result', f"{filename2}.json")
 
 # Calculate for current and previous files
 scores_current, mean_std_current = calculate_mean_std(file_path_current)

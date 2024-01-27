@@ -1,9 +1,11 @@
 import json
 import numpy as np
 import matplotlib.pyplot as plt
-filename = "evaluation_Curr_classify_answers_50_3"
-filepath = f'/home/chenlawrance/repo/LLM-Creativity/eval_api/result/{filename}.json'
+import os 
+from pathlib import Path
 
+filename = "evaluation_Curr_classify_answers_50_3.json"
+filepath = os.path.join(Path(__file__).parent, 'result', filename)
 
 def calculate_mean_std(file_path):
     with open(file_path, 'r') as file:

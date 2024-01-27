@@ -25,7 +25,6 @@ def calculate_mean_std(file_path):
 
 scores_current, mean_std_current = calculate_mean_std(filepath)
 
-# Print the mean and standard deviation
 print(f"File: {filename}.json")
 for category in mean_std_current:
     print(f"{category} - Mean: {mean_std_current[category]['mean']}, Standard Deviation: {mean_std_current[category]['std']}")

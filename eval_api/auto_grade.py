@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from typing import List, Dict, Tuple
 import argparse
 import re
+from pathlib import Path
 
 load_dotenv()
 client = OpenAI(
@@ -241,11 +242,10 @@ def main():
     elif args.version == "4":
         version = "gpt-4-1106-preview"
         cache_file_name = "cache_4.pickle"
-    
-    model = OpenAIModel(cache_file_name, version)
 
-    filename = f"/home/chenlawrance/repo/LLM-Creativity/dataset/AUT/{args.input_file}.json"
-
+    filename = os.path.join(Path(__file__).parent, '..', 'dataset', 'AUT', f"{args.input_file}.json")
+    #Path(__file__).parent get the directory where your script is located
+    #filename = f"/home/chenlawrance/repo/LLM-Creativity/dataset/AUT/{args.input_file}.json"
 
     # version = "gpt-4-1106-preview"  # or "gpt-3.5-turbo-1106" based on your preference
     # cache_file_name = "cache_4.pickle"  # Change according to the model version
@@ -270,7 +270,9 @@ def main():
         }
         total_responses.append(item_results)
 
-    with open(f"./result/evaluation_{args.input_file}_{args.version}.json", "w") as outfile:
+    output_file_path = os.path.join(Path(__file__).parent, 'result', f"evaluation_{args.input_file}_{args.version}.json")
+
+    with open(output_file_path, "w") as outfile:
         json.dump(total_responses, outfile, indent=4)
 
     model.save_cache()
@@ -278,7 +280,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-
-
-
-# python3 auto_grade --version 3 --input_file test_response
+# python3 auto_grade.py --version 3 --input_file test_response_2

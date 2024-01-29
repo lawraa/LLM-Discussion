@@ -79,17 +79,10 @@ def parse_number_score(input_str):
 
     return None  # Return None or a default value if no match is found
 
-def evaluate_fluency(model: OpenAIModel, response_obj, sample_time = 3):
-    item = response_obj['item']
-    if isinstance(response_obj['uses'], str):
-        uses = response_obj['uses']
-    elif isinstance(response_obj['uses'], list):
-        uses = '\n'.join(response_obj['uses'])
-    else:
-        raise ValueError("Invalid format for 'uses'")
+def evaluate_fluency(model: OpenAIModel, item, uses, sample_time):
     prompt = f"""
-    You are a helpful assistant and a critical thinker. Participants were asked to list as many uses of an item as possible. Identify and count the number of unique, relevant responses and explain why. It is important to the total amount of unique, relevant, and practical responses in the specific format of (X) at the end of your response. \n
-    "The item is {item}. The responses are: {uses}"
+    You are a helpful assistant and a critical thinker. Participants were asked to list the use of an item as possible. Identify and count the number of unique, relevant responses and explain why. It is important to the total amount of unique, relevant, and practical responses in the specific format of (X) at the end of your response. \n
+    "The item is {item}. The response is: {uses}"
     """
     print(prompt)
     messages = [{"role": "user", "content": prompt}]
@@ -113,22 +106,16 @@ def evaluate_fluency(model: OpenAIModel, response_obj, sample_time = 3):
         seed += 1
     average_item_score = sample_score / sample_time
     output_format = {
+            "use": uses,
             "responses": sample_responses,
             "average_score": average_item_score
         }
     return output_format
 
-def evaluate_flexibility(model: OpenAIModel, response_obj, sample_time = 3):
-    item = response_obj['item']
-    if isinstance(response_obj['uses'], str):
-        uses = response_obj['uses']
-    elif isinstance(response_obj['uses'], list):
-        uses = '\n'.join(response_obj['uses'])
-    else:
-        raise ValueError("Invalid format for 'uses'")
+def evaluate_flexibility(model: OpenAIModel, item, uses, sample_time):
     prompt = f"""
-    You are a helpful assistant and a critical thinker. Participants were asked to list as many uses for an item as possible. Please evaluate the flexibility of the relevant responses, where flexibility refers to the variety of distinct categories or perspectives represented in the responses. Define and count the number of unique categories or perspectives present, and provide a brief explanation for how you determined these categories. It is important to present the total number of categories or perspectives in the specific format of (X) at the end of your response. \n
-    "The item is {item}. The responses are: {uses}"
+    You are a helpful assistant and a critical thinker. Participants were asked to list the use for an item as possible. Please evaluate the flexibility of the relevant responses, where flexibility refers to the variety of distinct categories or perspectives represented in the responses. Define and count the number of unique categories or perspectives present, and provide a brief explanation for how you determined these categories. It is important to present the total number of categories or perspectives in the specific format of (X) at the end of your response. \n
+    "The item is {item}. The response is: {uses}"
     """
     messages = [{"role": "user", "content": prompt}]
     sample_responses = []
@@ -151,22 +138,16 @@ def evaluate_flexibility(model: OpenAIModel, response_obj, sample_time = 3):
         seed += 1
     average_item_score = sample_score / sample_time
     output_format = {
+            "use": uses,
             "responses": sample_responses,
             "average_score": average_item_score
         }
     return output_format
 
-def evaluate_originality(model: OpenAIModel, response_obj, sample_time = 3):
-    item = response_obj['item']
-    if isinstance(response_obj['uses'], str):
-        uses = response_obj['uses']
-    elif isinstance(response_obj['uses'], list):
-        uses = '\n'.join(response_obj['uses'])
-    else:
-        raise ValueError("Invalid format for 'uses'")
+def evaluate_originality(model: OpenAIModel, item, uses, sample_time):
     prompt = f"""
-    You are a helpful assistant and a critical thinker. Please evaluate the overall originality of the collective responses to a divergent thinking task where participants were asked to list as many uses for an item as possible. Originality should be gauged by assessing the uniqueness or novelty of the ideas as a whole, considering factors like unexpectedness and rarity across all responses. Rate the overall originality of the set of responses on a scale from 1 to 5, with 5 indicating the highest level of originality. Provide a brief justification for your overall score. It is important to indicate the collective originality score in the specific format of (X) at the end of your response. \n
-    "The item is {item}. The responses are: {uses}"
+    You are a helpful assistant and a critical thinker. Please evaluate the originality of a specific use for an item as part of a divergent thinking task. Originality should be assessed based on the uniqueness and novelty of the idea. Consider factors like unexpectedness and rarity in your evaluation. Rate the originality of this specific use on a scale from 1 to 5, with 5 indicating the highest level of originality. Provide a brief justification for your score. It is important to present the originality score in the specific format of (X) at the end of your response. \n
+    "The item is {item}. The specific use is: {uses}"
     """
     messages = [{"role": "user", "content": prompt}]
     sample_responses = []
@@ -189,22 +170,16 @@ def evaluate_originality(model: OpenAIModel, response_obj, sample_time = 3):
         seed += 1
     average_item_score = sample_score / sample_time
     output_format = {
+            "use": uses,
             "responses": sample_responses,
             "average_score": average_item_score
         }
     return output_format
 
-def evaluate_elaboration(model: OpenAIModel, response_obj, sample_time = 3):
-    item = response_obj['item']
-    if isinstance(response_obj['uses'], str):
-        uses = response_obj['uses']
-    elif isinstance(response_obj['uses'], list):
-        uses = '\n'.join(response_obj['uses'])
-    else:
-        raise ValueError("Invalid format for 'uses'")
+def evaluate_elaboration(model: OpenAIModel, item, uses, sample_time):
     prompt = f"""
-    You are a helpful assistant and a critical thinker. Participants were asked to list as many uses for an item as possible. Please evaluate the overall level of elaboration in the set of responses on a scale of 1 to 5, with 5 being the highest. Elaboration should be judged based on the collective detail and development of the ideas across all responses. Provide a brief justification for your overall evaluation. It is important to indicate the overall elaboration score in the specific format of (X) at the end of your response. \n
-    "The item is {item}. The responses are: {uses}"
+    You are a helpful assistant and a critical thinker. Please evaluate the level of elaboration for a specific use of an item. Elaboration should be judged based on the detail, development, and thoroughness of the idea presented. Rate the elaboration of this specific use on a scale from 1 to 5, with 5 being the highest level of elaboration. Provide a brief justification for your score. It is important to present the elaboration score in the specific format of (X) at the end of your response.\n
+    "The item is {item}. The specific use is: {uses}"
     """
     messages = [{"role": "user", "content": prompt}]
     sample_responses = []
@@ -227,6 +202,7 @@ def evaluate_elaboration(model: OpenAIModel, response_obj, sample_time = 3):
         seed += 1
     average_item_score = sample_score / sample_time
     output_format = {
+            "use": uses,
             "responses": sample_responses,
             "average_score": average_item_score
         }
@@ -254,21 +230,39 @@ def main():
     with open(filename, "r") as file:
         responses = json.load(file)
     for response_obj in responses:
-        fluency_results = evaluate_fluency(model, response_obj, args.sample)
-        flexibility_results = evaluate_flexibility(model, response_obj, args.sample)
-        originality_results = evaluate_originality(model, response_obj, args.sample)
-        elaboration_results = evaluate_elaboration(model, response_obj, args.sample)
-        item_results = {
-            "item": response_obj['item'],
-            "response": response_obj['uses'],
-            "fluency": fluency_results,
-            "flexibility": flexibility_results,
-            "originality": originality_results,
-            "elaboration": elaboration_results
-        }
+        item = response_obj['item']
+        uses = response_obj['uses']
+        item_results = {"item": item, "responses": []}
+        for use in uses:
+            use_results = {}
+            #fluency_result = evaluate_fluency(model, item, use, args.sample)
+            #flexibility_result = evaluate_flexibility(model, item, use, args.sample)
+            originality_result = evaluate_originality(model, item, use, args.sample)
+            elaboration_result = evaluate_elaboration(model, item, use, args.sample)
+            #print(f"Item: {item}, Use: {use}, Fluency Score: {fluency_result['average_score']}")
+            #print(f"Item: {item}, Use: {use}, Flexibility Score: {flexibility_result['average_score']}")
+            print(f"Item: {item}, Use: {use}, Originality Score: {originality_result['average_score']}")
+            print(f"Item: {item}, Use: {use}, Elaboration Score: {elaboration_result['average_score']}")
+            # use_results['fluency'] = fluency_result
+            # use_results['flexibility'] = flexibility_result
+            use_results['originality'] = originality_result
+            use_results['elaboration'] = elaboration_result
+
+            item_results["responses"].append(use_results)
+        
+        # average_fluency = sum(r['fluency']['average_score'] for r in item_results['responses'] if 'fluency' in r) / len(item_results['responses'])
+        # average_flexibility = sum(r['flexibility']['average_score'] for r in item_results['responses'] if 'flexibility' in r) / len(item_results['responses'])
+        average_originality = sum(r['originality']['average_score'] for r in item_results['responses'] if 'originality' in r) / len(item_results['responses'])
+        average_elaboration = sum(r['elaboration']['average_score'] for r in item_results['responses'] if 'elaboration' in r) / len(item_results['responses'])
+
+        # item_results['average_fluency'] = average_fluency
+        # item_results['average_flexibility'] = average_flexibility
+        item_results['average_originality'] = average_originality
+        item_results['average_elaboration'] = average_elaboration
+        
         total_responses.append(item_results)
 
-    output_file_path = os.path.join(Path(__file__).parent, 'result', f"evaluation_{args.input_file}_{args.version}.json")
+    output_file_path = os.path.join(Path(__file__).parent, 'result_sample', f"evaluation_{args.input_file}_{args.version}_sample.json")
     
     with open(output_file_path, "w") as outfile:
         json.dump(total_responses, outfile, indent=4)

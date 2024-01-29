@@ -164,8 +164,18 @@ def evaluate_originality(model: OpenAIModel, response_obj, sample_time = 3):
         uses = '\n'.join(response_obj['uses'])
     else:
         raise ValueError("Invalid format for 'uses'")
+        
     prompt = f"""
-    You are a helpful assistant and a critical thinker. Please evaluate the overall originality of the collective responses to a divergent thinking task where participants were asked to list as many uses for an item as possible. Originality should be gauged by assessing the uniqueness or novelty of the ideas as a whole, considering factors like unexpectedness and rarity across all responses. Rate the overall originality of the set of responses on a scale from 1 to 5, with 5 indicating the highest level of originality. Provide a brief justification for your overall score. It is important to indicate the collective originality score in the specific format of (X) at the end of your response. \n
+    You are a helpful assistant and a critical thinker. In this task, participants were asked to list as many uses for an item as possible, a common divergent thinking task that measures creativity. Please evaluate the overall originality of the collective responses based on their uniqueness and novelty. Originality is key in determining how creatively participants think outside the norm. Rate the overall originality on a scale from 1 to 5, considering:
+
+    - 1 point: Very Common - The ideas are mundane and frequently mentioned in everyday contexts. There's a notable lack of novelty, with responses being the most typical or expected uses.
+    - 2 points: Somewhat Common - The ideas are somewhat ordinary but show slight variations from typical uses, indicating a basic level of creativity.
+    - 3 points: Moderately Original - The ideas display a fair amount of creativity and novelty. They are not the usual thoughts but aren't highly rare or unexpected.
+    - 4 points: Very Original - The ideas are significantly unique, demonstrating a high level of creativity and innovation. They are unexpected and not commonly considered.
+    - 5 points: Extremely Original - The ideas are extraordinarily unique and rare, displaying a high degree of novelty, creativity, and unexpectedness. These ideas are seldom thought of in typical contexts.
+
+    After reviewing the responses, assign an overall originality score based on these criteria. Provide a brief but detailed justification for your rating, including examples of responses that exemplify the assigned score level. It is important to conclude your response by stating the collective originality score in the format: (X) \n
+
     "The item is {item}. The responses are: {uses}"
     """
     messages = [{"role": "user", "content": prompt}]
@@ -203,9 +213,18 @@ def evaluate_elaboration(model: OpenAIModel, response_obj, sample_time = 3):
     else:
         raise ValueError("Invalid format for 'uses'")
     prompt = f"""
-    You are a helpful assistant and a critical thinker. Participants were asked to list as many uses for an item as possible. Please evaluate the overall level of elaboration in the set of responses on a scale of 1 to 5, with 5 being the highest. Elaboration should be judged based on the collective detail and development of the ideas across all responses. Provide a brief justification for your overall evaluation. It is important to indicate the overall elaboration score in the specific format of (X) at the end of your response. \n
+    You are a helpful assistant and a critical thinker. Participants were asked to list as many uses for an item as possible. Please evaluate the overall level of elaboration in the set of responses on a scale of 1 to 5, where 1 is the least elaborated and 5 is the most elaborated. Elaboration should be judged based on the collective detail and development of the ideas across all responses. Consider the following criteria for each rating point:
+
+    1 point: Very Basic - The responses are extremely basic with minimal detail or explanation. Ideas are presented in a very simple or cursory manner.
+    2 points: Somewhat Basic - The responses show a slight degree of detail, but remain on a basic level. Ideas are somewhat developed but lack depth.
+    3 points: Moderately Elaborated - The responses offer a moderate level of detail and development. Ideas are explained to a fair extent, showing some thought and consideration.
+    4 points: Highly Elaborated - The responses are well-developed and detailed. Ideas are thoroughly explained and exhibit a high level of thought and complexity.
+    5 points: Exceptionally Elaborated - The responses demonstrate exceptional elaboration. Ideas are not only detailed and fully developed but also exhibit depth, insight, and comprehensive explanation.
+
+    After reviewing the responses, assign an overall elaboration score based on these criteria. Provide a brief justification for your rating. It is important to conclude your response by stating the overall elaboration score in the format (X). \n
+
     "The item is {item}. The responses are: {uses}"
-    """
+"""
     messages = [{"role": "user", "content": prompt}]
     sample_responses = []
     sample_score = 0
@@ -254,21 +273,21 @@ def main():
     with open(filename, "r") as file:
         responses = json.load(file)
     for response_obj in responses:
-        fluency_results = evaluate_fluency(model, response_obj, args.sample)
-        flexibility_results = evaluate_flexibility(model, response_obj, args.sample)
+        # fluency_results = evaluate_fluency(model, response_obj, args.sample)
+        # flexibility_results = evaluate_flexibility(model, response_obj, args.sample)
         originality_results = evaluate_originality(model, response_obj, args.sample)
         elaboration_results = evaluate_elaboration(model, response_obj, args.sample)
         item_results = {
             "item": response_obj['item'],
             "response": response_obj['uses'],
-            "fluency": fluency_results,
-            "flexibility": flexibility_results,
+            # "fluency": fluency_results,
+            # "flexibility": flexibility_results,
             "originality": originality_results,
             "elaboration": elaboration_results
         }
         total_responses.append(item_results)
 
-    output_file_path = os.path.join(Path(__file__).parent, 'result', f"evaluation_{args.input_file}_{args.version}.json")
+    output_file_path = os.path.join(Path(__file__).parent, 'result_sample', f"evaluation_{args.input_file}_{args.version}_criteria.json")
     
     with open(output_file_path, "w") as outfile:
         json.dump(total_responses, outfile, indent=4)

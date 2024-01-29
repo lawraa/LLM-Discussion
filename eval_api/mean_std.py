@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import os 
 from pathlib import Path
 
-filename = "evaluation_Curr_classify_answers_50_3"
+filename = "evaluation_test_response_3"
 filepath = os.path.join(Path(__file__).parent, 'result', f"{filename}.json")
 
 def calculate_mean_std(file_path):

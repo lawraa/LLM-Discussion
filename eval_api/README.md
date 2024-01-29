@@ -8,7 +8,7 @@ Evaluate Results using **Fluency**, **Flexibility**, **Originality**, and **Elab
 2. **Install Dependencies:**
    Navigate to the project directory and run:
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirement.txt
    ```
 3. Before you execute, create a file name `.env` in the same folder. It must contain:
    ```bash

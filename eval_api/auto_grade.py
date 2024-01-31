@@ -1,282 +1,107 @@
-from openai import OpenAI
-import os
-import pickle
-import json
-import time
-from dotenv import load_dotenv
-from typing import List, Dict, Tuple
 import argparse
-import re
+import json
+import os
 from pathlib import Path
+from utils.openai_model import OpenAIModel
+from eval_functions.evaluate_criterion import evaluate_criterion
+from eval_functions.pairwise_comparison import pairwise_judgement
 import logging
 
-
-load_dotenv()
-client = OpenAI(
-    api_key=os.getenv("api_key"),
-)
-
-class OpenAIModel():
-    def __init__(self, cache_file, version):
-        self.cache_file = cache_file
-        self.cache_dict = self.load_cache()
-        self.version = version
-
-    def save_cache(self):
-        for k, v in self.load_cache().items():
-            self.cache_dict[k] = v
-
-        with open(self.cache_file, "wb") as f:
-            pickle.dump(self.cache_dict, f)
-
-    def load_cache(self, allow_retry=True):
-        if os.path.exists(self.cache_file):
-            while True:
-                try:
-                    with open(self.cache_file, "rb") as f:  # rb - read binary
-                        cache = pickle.load(f) #load pickle object
-                    break
-                except Exception:
-                    if not allow_retry:
-                        assert False
-                    logging.error("Pickle Unpickling Error: Retry in 5sec...")
-                    time.sleep(5)
-        else:
-            cache = {}
-        return cache # return cache
-
-    def generate_response(self, messages, temperature=1, top_p=1, seed=0):
-        prompt = (messages, seed)
-        prompt = str(prompt)
-        if prompt in self.cache_dict:
-            return self.cache_dict[prompt]
-        else:
-            for _ in range(3):
-                try:
-                    response = client.chat.completions.create(
-                        model=self.version,
-                        messages=messages,
-                        temperature=temperature,
-                        top_p=top_p,
-                        seed=seed
-                    )
-                    result = response.choices[0].message.content
-                    self.cache_dict[prompt] = result
-                    return result
-                except:
-                    import traceback
-                    traceback.print_exc()
-                    logging.exception("Exception occurred")
-                    time.sleep(1)
-
-def parse_number_score(input_str):
-    pattern = r'\((\d+)\)'  # This pattern matches one or more digits inside parentheses
-    matches = re.findall(pattern, input_str)
-
-    # Assuming you want the last matching number
-    if matches:
-        return int(matches[-1])  # Convert the matched string to an integer
-
-    return None  # Return None or a default value if no match is found
-
-def evaluate_fluency(model: OpenAIModel, response_obj, sample_time = 3):
-    item = response_obj['item']
-    if isinstance(response_obj['uses'], str):
-        uses = response_obj['uses']
-    elif isinstance(response_obj['uses'], list):
-        uses = '\n'.join(response_obj['uses'])
-    else:
-        raise ValueError("Invalid format for 'uses'")
-    prompt = f"""
-    You are a helpful assistant and a critical thinker. Participants were asked to list as many uses of an item as possible. Identify and count the number of unique, relevant responses and explain why. It is important to the total amount of unique, relevant, and practical responses in the specific format of (X) at the end of your response. \n
-    "The item is {item}. The responses are: {uses}"
-    """
-    print(prompt)
-    messages = [{"role": "user", "content": prompt}]
-    sample_responses = []
-    sample_score = 0
-    seed = 0
-    success_count = 0
-    while success_count < sample_time:
-        try:
-            response = model.generate_response(messages=messages, seed=seed)
-            print("RESPONSE IS = ", response)
-            individual_score = parse_number_score(response)
-            sample_responses.append({"response": response, "score": individual_score})
-            sample_score +=  individual_score
-            print("SCORE IS ===== ", sample_score)
-            success_count +=1
-        except:
-            import traceback
-            traceback.print_exc()
-            time.sleep(1)
-        seed += 1
-    average_item_score = sample_score / sample_time
-    output_format = {
-            "responses": sample_responses,
-            "average_score": average_item_score
-        }
-    return output_format
-
-def evaluate_flexibility(model: OpenAIModel, response_obj, sample_time = 3):
-    item = response_obj['item']
-    if isinstance(response_obj['uses'], str):
-        uses = response_obj['uses']
-    elif isinstance(response_obj['uses'], list):
-        uses = '\n'.join(response_obj['uses'])
-    else:
-        raise ValueError("Invalid format for 'uses'")
-    prompt = f"""
-    You are a helpful assistant and a critical thinker. Participants were asked to list as many uses for an item as possible. Please evaluate the flexibility of the relevant responses, where flexibility refers to the variety of distinct categories or perspectives represented in the responses. Define and count the number of unique categories or perspectives present, and provide a brief explanation for how you determined these categories. It is important to present the total number of categories or perspectives in the specific format of (X) at the end of your response. \n
-    "The item is {item}. The responses are: {uses}"
-    """
-    messages = [{"role": "user", "content": prompt}]
-    sample_responses = []
-    sample_score = 0
-    seed = 0
-    success_count = 0
-    while success_count < sample_time:
-        try:
-            response = model.generate_response(messages=messages, seed=seed)
-            print("RESPONSE IS = ", response)
-            individual_score = parse_number_score(response)
-            sample_responses.append({"response": response, "score": individual_score})
-            sample_score +=  individual_score
-            print("SCORE IS ===== ", sample_score)
-            success_count +=1
-        except:
-            import traceback
-            traceback.print_exc()
-            time.sleep(1)
-        seed += 1
-    average_item_score = sample_score / sample_time
-    output_format = {
-            "responses": sample_responses,
-            "average_score": average_item_score
-        }
-    return output_format
-
-def evaluate_originality(model: OpenAIModel, response_obj, sample_time = 3):
-    item = response_obj['item']
-    if isinstance(response_obj['uses'], str):
-        uses = response_obj['uses']
-    elif isinstance(response_obj['uses'], list):
-        uses = '\n'.join(response_obj['uses'])
-    else:
-        raise ValueError("Invalid format for 'uses'")
-    prompt = f"""
-    You are a helpful assistant and a critical thinker. Please evaluate the overall originality of the collective responses to a divergent thinking task where participants were asked to list as many uses for an item as possible. Originality should be gauged by assessing the uniqueness or novelty of the ideas as a whole, considering factors like unexpectedness and rarity across all responses. Rate the overall originality of the set of responses on a scale from 1 to 5, with 5 indicating the highest level of originality. Provide a brief justification for your overall score. It is important to indicate the collective originality score in the specific format of (X) at the end of your response. \n
-    "The item is {item}. The responses are: {uses}"
-    """
-    messages = [{"role": "user", "content": prompt}]
-    sample_responses = []
-    sample_score = 0
-    seed = 0
-    success_count = 0
-    while success_count < sample_time:
-        try:
-            response = model.generate_response(messages=messages, seed=seed)
-            print("RESPONSE IS = ", response)
-            individual_score = parse_number_score(response)
-            sample_responses.append({"response": response, "score": individual_score})
-            sample_score +=  individual_score
-            print("SCORE IS ===== ", sample_score)
-            success_count +=1
-        except:
-            import traceback
-            traceback.print_exc()
-            time.sleep(1)
-        seed += 1
-    average_item_score = sample_score / sample_time
-    output_format = {
-            "responses": sample_responses,
-            "average_score": average_item_score
-        }
-    return output_format
-
-def evaluate_elaboration(model: OpenAIModel, response_obj, sample_time = 3):
-    item = response_obj['item']
-    if isinstance(response_obj['uses'], str):
-        uses = response_obj['uses']
-    elif isinstance(response_obj['uses'], list):
-        uses = '\n'.join(response_obj['uses'])
-    else:
-        raise ValueError("Invalid format for 'uses'")
-    prompt = f"""
-    You are a helpful assistant and a critical thinker. Participants were asked to list as many uses for an item as possible. Please evaluate the overall level of elaboration in the set of responses on a scale of 1 to 5, with 5 being the highest. Elaboration should be judged based on the collective detail and development of the ideas across all responses. Provide a brief justification for your overall evaluation. It is important to indicate the overall elaboration score in the specific format of (X) at the end of your response. \n
-    "The item is {item}. The responses are: {uses}"
-    """
-    messages = [{"role": "user", "content": prompt}]
-    sample_responses = []
-    sample_score = 0
-    seed = 0
-    success_count = 0
-    while success_count < sample_time:
-        try:
-            response = model.generate_response(messages=messages, seed=seed)
-            print("RESPONSE IS = ", response)
-            individual_score = parse_number_score(response)
-            sample_responses.append({"response": response, "score": individual_score})
-            sample_score +=  individual_score
-            print("SCORE IS ===== ", sample_score)
-            success_count +=1
-        except:
-            import traceback
-            traceback.print_exc()
-            time.sleep(1)
-        seed += 1
-    average_item_score = sample_score / sample_time
-    output_format = {
-            "responses": sample_responses,
-            "average_score": average_item_score
-        }
-    return output_format
-
 def main():
-    parser = argparse.ArgumentParser(description="This script evaluates responses based on criteria like fluency, flexibility, etc., using OpenAI's API.")
-    parser.add_argument("--version", default="3", choices=["3", "4"], help="Version of the OpenAI model to use (3 or 4).")
-    parser.add_argument("--input_file", required=True, help="Name of the input file without extension, located in the dataset/AUT/ directory.")
-    parser.add_argument("--sample", default=3, type=int, help="Number of times you want to sample")
+    # OPENAI KEY
+    api_key = os.getenv("OPENAI_API_KEY")
+
+    # PARSERS
+    parser = argparse.ArgumentParser(description="Evaluate responses based on specified criteria using OpenAI's API.")
+    parser.add_argument("-v", "--version", default="3", choices=["3", "4"], help="Version of the OpenAI model to use.")
+    parser.add_argument("-i", "--input_file", required=True, help="Name of the input file located in the dataset/AUT/ directory.")
+    parser.add_argument("-c", "--criterion", default="all", choices=["fluency", "flexibility", "criteria", "originality", "elaboration", "all"] ,help="Criterion for evaluation (fluency, flexibility, originality, elaboration, or all).")
+    parser.add_argument("-t", "--type", default="default", choices=["default", "fewshot", "criteria", "pairwise", "sampling"], help="Variant of the evaluation.")
+    parser.add_argument("-s", "--sample", default=3, type=int, help="Number of times to sample the evaluation.")
     args = parser.parse_args()
+    
+    # GPT VERSION
+    version = "gpt-4-1106-preview" if args.version == "4" else "gpt-3.5-turbo-1106"
+    print(f"Using GPT Version {version}, Input: {args.version}")
 
-    if args.version == "3":
-        version = "gpt-3.5-turbo-1106"
-        cache_file_name = "cache_35.pickle"
-    elif args.version == "4":
-        version = "gpt-4-1106-preview"
-        cache_file_name = "cache_4.pickle"
-    #filename = Path(__file__).parent.parent / 'dataset' / 'AUT' / f"{args.input_file}.json"
-    filename = os.path.join(Path(__file__).parent, '..', 'dataset', 'AUT', f"{args.input_file}.json")
+    # SETUP CACHE AND MODEL
+    cache_file_name = f"cache_{args.version}.pickle"
+    model = OpenAIModel(cache_file_name, version, api_key)
 
-    model = OpenAIModel(cache_file_name, version)
-    total_responses = []
-
-    with open(filename, "r") as file:
+    #INPUT FILE
+    input_file_path = os.path.join(Path(__file__).parent, '..', 'dataset', 'AUT', f"{args.input_file}.json")
+    with open(input_file_path, "r") as file:
         responses = json.load(file)
-    for response_obj in responses:
-        fluency_results = evaluate_fluency(model, response_obj, args.sample)
-        flexibility_results = evaluate_flexibility(model, response_obj, args.sample)
-        originality_results = evaluate_originality(model, response_obj, args.sample)
-        elaboration_results = evaluate_elaboration(model, response_obj, args.sample)
-        item_results = {
-            "item": response_obj['item'],
-            "response": response_obj['uses'],
-            "fluency": fluency_results,
-            "flexibility": flexibility_results,
-            "originality": originality_results,
-            "elaboration": elaboration_results
-        }
-        total_responses.append(item_results)
+    
+    total_results = []
 
-    output_file_path = os.path.join(Path(__file__).parent, 'result', f"evaluation_{args.input_file}_{args.version}.json")
+    # PAIRWISE EVALUATION
+    if args.type == "pairwise":
+        criteria = ["originality", "elaboration"]
+        selected_criteria = criteria if args.criterion == "all" else [args.criterion]
+        for response_obj in responses:
+            item_results = {"item": response_obj['item']}
+            for criterion in selected_criteria:
+                result = pairwise_judgement(model, response_obj, criterion, 5)
+                item_results["results"] = {
+                    "criteria": criterion,
+                    "pairwise_judgement": result
+                }
+            total_results.append(item_results)
+        output_file_path = os.path.join(Path(__file__).parent, 'result', f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
+    
+    # SAMPLING EVALUATION
+    elif args.type == "sampling":
+        criteria = ["originality", "elaboration"]
+        selected_criteria = criteria if args.criterion == "all" else [args.criterion]
+        for response_obj in responses:
+            item = response_obj['item'] 
+            uses = response_obj['uses']
+            item_results = {"item": item, "responses": []}
+            for use in uses:
+                use_results = {}
+                for criterion in selected_criteria:
+                    result = evaluate_criterion(model, {"item": item, "uses": [use]}, criterion, args.type, args.sample)
+                    use_results[criterion] = result
+                    print(f"Item: {item}, Use: {use}, {criterion.capitalize()} Score: {result['average_score']}")
+                item_results["responses"].append(use_results)
+            
+            for criterion in selected_criteria:
+                avg_score = sum(res[criterion]['average_score'] for res in item_results['responses']) / len(item_results['responses'])
+                item_results[f'average_{criterion}'] = avg_score
+
+            total_results.append(item_results)
+
+        output_file_path = os.path.join(Path(__file__).parent, 'result', f"evaluation_{args.input_file}_{args_type}_{args.version}_sample.json")
+
+    # 4 CRITERION EVALUATION (Fluency, Flexibility, Originality, Elaboration)
+    else:
+        criteria = ["fluency", "flexibility", "originality", "elaboration"]
+        selected_criteria = criteria if args.criterion == "all" else [args.criterion]
+
+        for response_obj in responses:
+            item_results = {"item": response_obj['item'], "uses": response_obj['uses']}
+            for criterion in selected_criteria:
+                item_results[criterion] = evaluate_criterion(model, response_obj, criterion, args.type, args.sample)
+            total_results.append(item_results)
+        
+        output_file_path = os.path.join(Path(__file__).parent, 'result', f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
+                
     
     with open(output_file_path, "w") as outfile:
-        json.dump(total_responses, outfile, indent=4)
+        json.dump(total_results, outfile, indent=4)
 
     model.save_cache()
-    
+
+
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     main()
 
-# python3 auto_grade.py --version 3 --input_file test_response_2 --sample 3
+
+# python3 auto_grade.py -v 3 -i pairwise_data -c all -t pairwise -s 1
+# python3 auto_grade.py -v 3 -i pairwise_data -c all -t sampling -s 1
+# python3 auto_grade.py -v 3 -i phoebe_response -c all -t criteria -s 3
+
+
+

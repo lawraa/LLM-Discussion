@@ -40,7 +40,7 @@ For `mean_std.py`, set the file path to the dataset you want to analyze:
 ### 2. Running the Script
   To run `auto_grade.py`:
   ```bash
-  python3 auto_grade.py --version {gpt version} --input_file {input file name}
+  python3 auto_grade.py --version {gpt version} --input_file {input file name} --sample {# of samples}
   ```
 
 

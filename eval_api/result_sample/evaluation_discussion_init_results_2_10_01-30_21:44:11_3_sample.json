@@ -1,0 +1,75 @@
+[
+    {
+        "item": "Fork",
+        "responses": [
+            {
+                "originality": {
+                    "use": "Creating art - You can dip the tines of a fork in paint and use it to create unique textures and patterns on a canvas.",
+                    "responses": [
+                        {
+                            "response": "I would rate the originality of this specific use for a fork as a 4. Using a fork to create art is a unique and unexpected idea that is not commonly associated with its typical use in eating. While it may not be entirely unheard of, it is still fairly rare and novel, especially for those who are not familiar with the concept. (4)",
+                            "score": 4
+                        }
+                    ],
+                    "average_score": 4.0
+                },
+                "elaboration": {
+                    "use": "Creating art - You can dip the tines of a fork in paint and use it to create unique textures and patterns on a canvas.",
+                    "responses": [
+                        {
+                            "response": "I would rate the level of elaboration for this specific use of a fork as a 3. While the idea is interesting and provides a simple explanation of how to use a fork for creating art, it lacks in depth and detail. More information on different techniques or examples of the types of textures and patterns that can be created would improve the elaboration. (3)",
+                            "score": 3
+                        }
+                    ],
+                    "average_score": 3.0
+                }
+            },
+            {
+                "originality": {
+                    "use": "Gardening - Forks can be used as a makeshift gardening tool for loosening soil, planting small seeds, or even creating decorative patterns in a garden bed.",
+                    "responses": [
+                        {
+                            "response": "I would rate the originality of this specific use for a fork as a 4. Using a fork for gardening is a somewhat surprising and unexpected idea, as forks are typically associated with eating utensils rather than gardening tools. While it's not entirely unheard of, it is still a fairly unique and novel use for a fork. (4)",
+                            "score": 4
+                        }
+                    ],
+                    "average_score": 4.0
+                },
+                "elaboration": {
+                    "use": "Gardening - Forks can be used as a makeshift gardening tool for loosening soil, planting small seeds, or even creating decorative patterns in a garden bed.",
+                    "responses": [
+                        {
+                            "response": "I would rate the level of elaboration for this specific use of a fork as a 3. While the idea of using a fork for gardening is briefly explained, it lacks detail and development. It could benefit from examples of how exactly a fork can be used for loosening soil, planting small seeds, and creating decorative patterns in a garden bed. (3)",
+                            "score": 3
+                        }
+                    ],
+                    "average_score": 3.0
+                }
+            },
+            {
+                "originality": {
+                    "use": "Hair styling - Use a fork as a hair accessory for creating unique braids or updos. It can also be used as a styling tool for creating texture or waves in hair.",
+                    "responses": [
+                        {
+                            "response": "I would rate the originality of this specific use for a fork as a 4. Using a fork as a hair styling tool is unexpected and not a common application for this item. It offers a unique and novel approach to hair styling, making it a rare and innovative idea. (4)",
+                            "score": 4
+                        }
+                    ],
+                    "average_score": 4.0
+                },
+                "elaboration": {
+                    "use": "Hair styling - Use a fork as a hair accessory for creating unique braids or updos. It can also be used as a styling tool for creating texture or waves in hair.",
+                    "responses": [
+                        {
+                            "response": "I would rate the elaboration of this specific use of a fork as a hair styling tool a 3. The idea is presented clearly and provides some detail on how the fork can be used for hair styling. However, it could benefit from more specific examples or techniques for using the fork in different hair styling scenarios. (3)",
+                            "score": 3
+                        }
+                    ],
+                    "average_score": 3.0
+                }
+            }
+        ],
+        "average_originality": 4.0,
+        "average_elaboration": 3.0
+    }
+]

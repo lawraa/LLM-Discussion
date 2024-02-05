@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 import os
+import argparse
 
 def calculate_mean_std(file_path):
     with open(file_path, 'r') as file:
@@ -17,44 +18,72 @@ def calculate_mean_std(file_path):
     mean_std = {category: {"mean": np.mean(scores[category]), "std": np.std(scores[category])} for category in scores}
     return scores, mean_std
 
-filename1  = "evaluation_Curr_classify_answers_50_3"
-filename2 = "evaluation_Prev_classify_answers_50_3"
-# File paths
-file_path_current = os.path.join(Path(__file__).parent, 'result', f"{filename1}.json")
-file_path_previous = os.path.join(Path(__file__).parent, 'result', f"{filename2}.json")
+def calculate_mean_std_sampling(file_path):
+    with open(file_path, 'r') as file:
+        data = json.load(file)
 
-# Calculate for current and previous files
-scores_current, mean_std_current = calculate_mean_std(file_path_current)
-scores_previous, mean_std_previous = calculate_mean_std(file_path_previous)
+    originality_scores = []
+    elaboration_scores = []
 
-# Plotting box plots
-categories = ["fluency", "flexibility", "originality", "elaboration"]
-for category in categories:
-    plt.figure()
-    
-    # Combine current and previous scores for box plotting
-    data_to_plot = [scores_current[category], scores_previous[category]]
+    for item in data:
+        originality_scores.append(item.get("average_originality", 0))
+        elaboration_scores.append(item.get("average_elaboration", 0))
 
-    # Create the box plot
-    plt.boxplot(data_to_plot, patch_artist=True)
+    averages = {
+        "originality": {"mean": np.mean(originality_scores), "std": np.std(originality_scores)},
+        "elaboration": {"mean": np.mean(elaboration_scores), "std": np.std(elaboration_scores)}
+    }
+    return originality_scores, elaboration_scores, averages
 
-    # Customizing the box plot
-    plt.xticks([1, 2], [filename1, filename2])
-    plt.title(f"{category.capitalize()} Scores Box Plot")
-    plt.ylabel('Score')
+def main(input_files, evaluation_type):
+    all_scores = []
+    all_averages = []
 
-    image_path = os.path.join(
-        Path(__file__).parent, 'analysis_img', 'boxplot', 
-        f"{filename1}_{filename2}_{category}_boxplot.png"
-    )
-    # Save the plot as an image
-    plt.savefig(image_path)
+    for file_name in input_files:
+        file_path = os.path.join(Path(__file__).parent, '..', 'result', f"{file_name}.json")
+        if evaluation_type == "sampling":
+            originality_scores, elaboration_scores, averages = calculate_mean_std_sampling(file_path)
+            all_scores.append((originality_scores, elaboration_scores))
+            all_averages.append(averages)
+        else:
+            scores, mean_std = calculate_mean_std(file_path)
+            all_scores.append(scores)
+            all_averages.append(mean_std)
 
-# Print the mean and standard deviation
-print(filename1)
-for category in mean_std_current:
-    print(f"{category} - Mean: {mean_std_current[category]['mean']}, Standard Deviation: {mean_std_current[category]['std']}")
+    # Plotting logic here, adjusted to handle multiple files
+    if evaluation_type == "sampling":
+        categories = ["originality", "elaboration"]
+    else:
+        categories = ["fluency", "flexibility", "originality", "elaboration"]
 
-print(filename2)
-for category in mean_std_previous:
-    print(f"{category} - Mean: {mean_std_previous[category]['mean']}, Standard Deviation: {mean_std_previous[category]['std']}")
+    for category in categories:
+        plt.figure()
+        if category in ["originality", "elaboration"]:  # For sampling evaluation
+            data_to_plot = [scores[0] for scores in all_scores] if category == "originality" else [scores[1] for scores in all_scores]
+        else:
+            data_to_plot = [scores[0] for scores in all_scores] if category == "fluency" else [scores[1] for scores in all_scores]
+        plt.boxplot(data_to_plot, patch_artist=True)
+        plt.xticks(range(1, len(input_files) + 1), [f"FILE {i+1}" for i in range(len(input_files))])
+        plt.title(f"{category.capitalize()} Scores Box Plot")
+        plt.ylabel('Score')
+        image_path = os.path.join(
+                Path(__file__).parent, 'img', 'boxplot', 
+                f"{category}_boxplot.png"
+            )
+            # Save the plot as an image
+        plt.savefig(image_path)
+        #plt.show()
+
+    # Example output of means and stds
+    for idx, averages in enumerate(all_averages):
+        print(f"File {idx + 1}:")
+        for category, stats in averages.items():
+            print(f"{category} - Mean: {stats['mean']}, Standard Deviation: {stats['std']}")
+            
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Process multiple JSON files for scoring analysis.")
+    parser.add_argument("-i", "--input_files", nargs='+', required=True, help="File paths of the JSON files")
+    parser.add_argument("-t", "--type", choices=['default', 'sampling'], default='default', help="Type of evaluation")
+    args = parser.parse_args()
+
+    main(args.input_files, args.type)

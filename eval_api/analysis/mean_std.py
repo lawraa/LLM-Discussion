@@ -14,7 +14,7 @@ def read_json_file(file_path: str):
         print(f"Invalid JSON in the file: {file_path}")
         exit(1)
 
-def mean_std_sample(data):
+def mean_std_sampling(data):
     originality = [item['average_originality'] for item in data if 'average_originality' in item]
     elaboration = [item['average_elaboration'] for item in data if 'average_elaboration' in item]
 
@@ -31,8 +31,8 @@ def mean_std(data):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Find mean and standard deviation of sample JSON files")
-    parser.add_argument("--input_file_path", required=True, help="File path of the JSON file")
-    parser.add_argument("--type", choices=['default', 'sample'], default='default', help="Type of evaluation")
+    parser.add_argument("-i","--input_file_path", required=True, help="File path of the JSON file")
+    parser.add_argument("-t","--type", choices=['default', 'sampling'], default='default', help="Type of evaluation")
     args = parser.parse_args()
 
     if not os.path.isfile(args.input_file_path):
@@ -41,8 +41,8 @@ if __name__ == "__main__":
 
     data = read_json_file(args.input_file_path)
 
-    if args.type == "sample":
-        mean_originality, std_originality, mean_elaboration, std_elaboration = mean_std_sample(data)
+    if args.type == "sampling":
+        mean_originality, std_originality, mean_elaboration, std_elaboration = mean_std_sampling(data)
         print(f"File: {args.input_file_path}\n"
               f"Average Originality - Mean: {mean_originality}, Standard Deviation: {std_originality}\n"
               f"Average Elaboration - Mean: {mean_elaboration}, Standard Deviation: {std_elaboration}")

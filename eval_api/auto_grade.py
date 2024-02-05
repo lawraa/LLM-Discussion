@@ -72,7 +72,7 @@ def main():
 
             total_results.append(item_results)
 
-        output_file_path = os.path.join(Path(__file__).parent, 'result', f"evaluation_{args.input_file}_{args_type}_{args.version}_sample.json")
+        output_file_path = os.path.join(Path(__file__).parent, 'result', f"evaluation_{args.input_file}_{args.type}_{args.version}_sample.json")
 
     # 4 CRITERION EVALUATION (Fluency, Flexibility, Originality, Elaboration)
     else:

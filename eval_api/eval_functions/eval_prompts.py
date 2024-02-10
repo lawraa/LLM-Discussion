@@ -13,7 +13,7 @@ aut_prompts = {
         """,
         'rubric': f"""
             You are a helpful assistant and a critical thinker. Participants were asked to list as many uses of an item as possible. Identify and count the number of unique, relevant responses and explain why. It is important to the total amount of unique, relevant, and practical responses in the specific format of (X) at the end of your response.
-        """
+        """  
     },
     'flexibility': {
         'default': f"""
@@ -60,7 +60,41 @@ aut_prompts = {
         'sampling': f"""
             You are a helpful assistant and a critical thinker. Please evaluate the originality of a specific use for an item as part of a divergent thinking task. Originality should be assessed based on the uniqueness and novelty of the idea. Consider factors like unexpectedness and rarity in your evaluation. Rate the originality of this specific use on a scale from 1 to 5, with 5 indicating the highest level of originality. Provide a brief justification for your score. It is important to present the originality score in the specific format of (X) at the end of your response.
         """,
-        'pairwise': "Please act as an impartial judge and evaluate the originality of the responses provided by two different people to the given task. Compare the responses in terms of their uniqueness, novelty, and creativity. Originality should be assessed based on how unique and innovative each response is, without being influenced by the order in which they are presented or the length of the responses. Your evaluation should be objective, focusing solely on the originality of the ideas presented in each response. After your comparison, conclude with a clear verdict using this format: '[[A]]' if Result A's response is more original, '[[B]]' if Result B's response is more original, or '[[C]]' for equal originality."
+        'pairwise': "Please act as an impartial judge and evaluate the originality of the responses provided by two different people to the given task. Compare the responses in terms of their uniqueness, novelty, and creativity. Originality should be assessed based on how unique and innovative each response is, without being influenced by the order in which they are presented or the length of the responses. Your evaluation should be objective, focusing solely on the originality of the ideas presented in each response. After your comparison, conclude with a clear verdict using this format: '[[A]]' if Result A's response is more original, '[[B]]' if Result B's response is more original, or '[[C]]' for equal originality.",
+        'combine': f"""
+            You are a helpful assistant and a critical thinker. In this task, participants were asked to list as many uses for an item as possible, a common divergent thinking task that measures creativity. Please evaluate the overall originality of the collective responses based on their uniqueness and novelty. Originality is key in determining how creatively participants think outside the norm. Rate the overall originality on a scale from 1 to 5, considering:
+            
+            Rating Scale:
+            - 1 point: Very Common - The ideas are mundane and frequently mentioned in everyday contexts. There's a notable lack of novelty, with responses being the most typical or expected uses.
+            - 2 points: Somewhat Common - The ideas are somewhat ordinary but show slight variations from typical uses, indicating a basic level of creativity.
+            - 3 points: Moderately Original - The ideas display a fair amount of creativity and novelty. They are not the usual thoughts but aren't highly rare or unexpected.
+            - 4 points: Very Original - The ideas are significantly unique, demonstrating a high level of creativity and innovation. They are unexpected and not commonly considered.
+            - 5 points: Extremely Original - The ideas are extraordinarily unique and rare, displaying a high degree of novelty, creativity, and unexpectedness. These ideas are seldom thought of in typical contexts.
+            
+            Here are some examples: 
+            Very Common (1): Using a rubber band to hold multiple objects together, like pencils.
+            Justification: This is a widespread and universally known use, lacking in novelty.
+            Originality Score: (1)
+
+            Somewhat Common (2): Employing a rubber band as a makeshift wristband or bracelet.
+            Justification: This shows a slight departure from the most common uses, introducing a basic creative twist.
+            Originality Score: (2)
+            
+            Moderately Original (3): Utilizing rubber bands for resistance exercises in a quick workout.
+            Justification: This use suggests a creative application not immediately obvious to all, displaying a moderate level of originality.
+            Originality Score: (3)
+
+            Very Original (4): Crafting a DIY rubber band guitar for educational or entertainment purposes.
+            Justification: This idea is innovative, turning a simple item into a musical instrument, which is not a widely recognized use.
+            Originality Score: (4)
+
+            Extremely Original (5): Using rubber bands in an art project to create large-scale geometric patterns on canvas.
+            Justification: This application is highly creative and unusual, showcasing a rare and innovative use of rubber bands.
+            Originality Score: (5)
+
+            After reviewing the responses, assign an overall originality score based on these criteria. Provide a brief but detailed justification for your rating, including examples of responses that exemplify the assigned score level. It is important to conclude your response by stating the collective originality score in the format: (X) 
+        """   
+
     },
     'elaboration': {
         'default': f"""
@@ -93,7 +127,45 @@ aut_prompts = {
         'sampling': f"""
             You are a helpful assistant and a critical thinker. Please evaluate the level of elaboration for a specific use of an item. Elaboration should be judged based on the detail, development, and thoroughness of the idea presented. Rate the elaboration of this specific use on a scale from 1 to 5, with 5 being the highest level of elaboration. Provide a brief justification for your score. It is important to present the elaboration score in the specific format of (X) at the end of your response.
         """,
-        'pairwise': "Please act as an impartial judge and evaluate the level of elaboration in the responses provided by two different people to the given task. Compare the responses in terms of their detail, development, and thoroughness. Elaboration should be assessed based on how well-developed and comprehensive each response is, considering the depth and complexity of the ideas presented, without being influenced by the order in which they are presented or the length of the responses. Your evaluation should be objective, focusing solely on the level of elaboration evident in each response. After your comparison, conclude with a clear verdict using this format: '[[A]]' if Result A's response is more elaborated, '[[B]]' if Result B's response is more elaborated, or '[[C]]' for equal levels of elaboration."
+        'pairwise': "Please act as an impartial judge and evaluate the level of elaboration in the responses provided by two different people to the given task. Compare the responses in terms of their detail, development, and thoroughness. Elaboration should be assessed based on how well-developed and comprehensive each response is, considering the depth and complexity of the ideas presented, without being influenced by the order in which they are presented or the length of the responses. Your evaluation should be objective, focusing solely on the level of elaboration evident in each response. After your comparison, conclude with a clear verdict using this format: '[[A]]' if Result A's response is more elaborated, '[[B]]' if Result B's response is more elaborated, or '[[C]]' for equal levels of elaboration.",
+        'combine': f"""
+            You are a helpful assistant and a critical thinker. Participants were asked to list as many uses for an item as possible. Please evaluate the overall level of elaboration in the set of responses on a scale of 1 to 5, where 1 is the least elaborated and 5 is the most elaborated. Elaboration should be judged based on the collective detail and development of the ideas across all responses. Consider the following criteria for each rating point:
+            
+            Rating Scale:
+            1 point: Very Basic - The responses are extremely basic with minimal detail or explanation. Ideas are presented in a very simple or cursory manner.
+            2 points: Somewhat Basic - The responses show a slight degree of detail, but remain on a basic level. Ideas are somewhat developed but lack depth.
+            3 points: Moderately Elaborated - The responses offer a moderate level of detail and development. Ideas are explained to a fair extent, showing some thought and consideration.
+            4 points: Highly Elaborated - The responses are well-developed and detailed. Ideas are thoroughly explained and exhibit a high level of thought and complexity.
+            5 points: Exceptionally Elaborated - The responses demonstrate exceptional elaboration. Ideas are not only detailed and fully developed but also exhibit depth, insight, and comprehensive explanation.
+            
+            Here are some examples: 
+            Very Basic (1): A rubber band can be used to keep a rolled-up poster from unrolling.
+            Description: It simply wraps around the poster.
+            Justification: This explanation is minimal, offering no insight into the method or reasoning beyond the most obvious application.
+            Elaboration Score: (1)
+            
+            Somewhat Basic (2): A rubber band can serve as an emergency hair tie.
+            Description: It's stretchy and can be easily wrapped around hair to hold it in place. This use adds a bit more detail about its practicality but remains fairly simple.
+            Justification: The response provides a practical application but lacks depth, offering only a surface-level explanation without exploring potential variations or considerations.
+            Elaboration Score: (2)
+            
+            Moderately Elaborated (3): Rubber bands can be used to improve grip on slippery objects, like jars.
+            Description: Wrapping a rubber band around the lid of a jar increases friction, making it easier to open. This explanation provides a practical application with a clear rationale.
+            Justification: This response offers a moderate level of detail, explaining both the method and its effect. It demonstrates some thought and consideration, moving beyond basic applications to how and why the solution works.
+            Elaboration Score: (3)
+            
+            Highly Elaborated (4): Constructing a rubber band-powered car as a physics lesson for students.
+            Description: This involves using the rubber band as a source of potential energy, which, when released, propels the car forward. This idea is explained with attention to the educational value and the principles of physics it demonstrates.
+            Justification: The response is well-developed, detailing the construction process, the scientific principles behind it, and its educational applications. It shows a high level of thought and complexity, making the explanation both thorough and insightful.
+            Elaboration Score: (4)
+           
+            Exceptionally Elaborated (5): Creating an interactive art installation where visitors can add their own rubber bands to a growing lattice structure, symbolizing community connections.
+            Description: This concept is not only detailed in its execution but also deep in its meaning, exploring themes of connectivity, community, and the cumulative impact of individual contributions.
+            Justification: This response demonstrates exceptional elaboration, detailing the setup, the interactive element, and the symbolic interpretation. It provides depth, insight, and a comprehensive explanation of the concept, showcasing a sophisticated understanding of the item's potential uses.
+            Elaboration Score: (5)
+
+            After reviewing the responses, assign an overall elaboration score based on these criteria. Provide a brief justification for your rating. It is important to conclude your response by stating the overall elaboration score in the format (X).
+        """
         }    
 }
 

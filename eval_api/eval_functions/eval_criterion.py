@@ -7,10 +7,10 @@ import time
 
 def evaluate_criterion(model: OpenAIModel, response_obj, criterion, eval_type, sample_time=3):
     item = response_obj['item']
+
     detect_empty_list = response_obj.get('uses', []) 
     uses = '\n'.join(response_obj['uses']) if isinstance(response_obj['uses'], list) else response_obj['uses']
-    if not detect_empty_list:  # Check if 'uses' is empty or not provided
-        # Return default response if 'uses' is empty
+    if not detect_empty_list:  # Check if 'uses' is not provided
         if eval_type == "sampling":
             return {
                 "use": "Empty List",
@@ -41,8 +41,8 @@ def evaluate_criterion(model: OpenAIModel, response_obj, criterion, eval_type, s
     while success_count < sample_time:
         try:
             response = model.generate_response(messages=messages, seed=seed)
-            print("Model Response ::: ", response)
             print("Given Seed ::: ", seed)
+            print("Model Response ::: ", response)
             individual_score = parse_number_score(response)
             sample_responses.append({"response": response, "score": individual_score})
             sample_score += individual_score

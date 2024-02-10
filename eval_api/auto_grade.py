@@ -16,7 +16,7 @@ def main():
     parser.add_argument("-v", "--version", default="3", choices=["3", "4"], help="Version of the OpenAI model to use.")
     parser.add_argument("-i", "--input_file", required=True, help="Name of the input file located in the dataset/AUT/ directory.")
     parser.add_argument("-c", "--criterion",nargs='+', default="all", choices=["fluency", "flexibility", "originality", "elaboration", "all"] ,help="Criterion for evaluation (fluency, flexibility, originality, elaboration, or all).")
-    parser.add_argument("-t", "--type", default="default", choices=["default", "fewshot", "rubric", "pairwise", "sampling"], help="Variant of the evaluation.")
+    parser.add_argument("-t", "--type", default="default", choices=["default", "fewshot", "rubric", "pairwise", "sampling","combine"], help="Variant of the evaluation.")
     parser.add_argument("-s", "--sample", default=3, type=int, help="Number of times to sample the evaluation.")
     parser.add_argument("-d", "--task", default="aut", choices = ["aut", "scientific"], help="Task for the evaluation. Default is AUT.")
     args = parser.parse_args()
@@ -39,7 +39,7 @@ def main():
     # PAIRWISE EVALUATION
     if args.type == "pairwise":
         criteria = ["originality", "elaboration"]
-        selected_criteria = criteria if args.criterion == "all" else args.criterion
+        selected_criteria = criteria if args.criterion == ["all"] else args.criterion
         for response_obj in responses:
             item_results = {"item": response_obj['item']}
             for criterion in selected_criteria:
@@ -56,7 +56,7 @@ def main():
     # SAMPLING EVALUATION
     elif args.type == "sampling":
         criteria = ["originality", "elaboration"]
-        selected_criteria = criteria if args.criterion == "all" else args.criterion
+        selected_criteria = criteria if args.criterion == ["all"] else args.criterion
         for response_obj in responses:
             item = response_obj['item'] 
             uses = response_obj.get('uses', [])  # Use get to avoid KeyError and provide an empty list as default
@@ -86,7 +86,7 @@ def main():
     # 4 CRITERION EVALUATION (Fluency, Flexibility, Originality, Elaboration)
     else:
         criteria = ["fluency", "flexibility", "originality", "elaboration"]
-        selected_criteria = criteria if args.criterion == "all" else args.criterion
+        selected_criteria = criteria if args.criterion == ["all"] else args.criterion
 
         for response_obj in responses:
             item_results = {"item": response_obj['item'], "uses": response_obj['uses']}

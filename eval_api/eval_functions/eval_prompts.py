@@ -1,4 +1,4 @@
-prompts = {
+aut_prompts = {
     'fluency': {
         'default': f"""
             You are a helpful assistant and a critical thinker. Participants were asked to list as many uses of an item as possible. Identify and count the number of unique, relevant responses and explain why. It is important to the total amount of unique, relevant, and practical responses in the specific format of (X) at the end of your response.
@@ -11,9 +11,9 @@ prompts = {
             \n
             Now, it's your turn:
         """,
-        'criteria': f"""
+        'rubric': f"""
             You are a helpful assistant and a critical thinker. Participants were asked to list as many uses of an item as possible. Identify and count the number of unique, relevant responses and explain why. It is important to the total amount of unique, relevant, and practical responses in the specific format of (X) at the end of your response.
-        """
+        """  
     },
     'flexibility': {
         'default': f"""
@@ -28,7 +28,7 @@ prompts = {
             \n
             Now, it's your turn:
         """,
-        'criteria': f"""
+        'rubric': f"""
             You are a helpful assistant and a critical thinker. Participants were asked to list as many uses for an item as possible. Please evaluate the flexibility of the relevant responses, where flexibility refers to the variety of distinct categories or perspectives represented in the responses. Define and count the number of unique categories or perspectives present, and provide a brief explanation for how you determined these categories. It is important to present the total number of categories or perspectives in the specific format of (X) at the end of your response.
         """
     },
@@ -46,7 +46,7 @@ prompts = {
             Now, it's your turn:
 
         """,
-        'criteria': f"""
+        'rubric': f"""
             You are a helpful assistant and a critical thinker. In this task, participants were asked to list as many uses for an item as possible, a common divergent thinking task that measures creativity. Please evaluate the overall originality of the collective responses based on their uniqueness and novelty. Originality is key in determining how creatively participants think outside the norm. Rate the overall originality on a scale from 1 to 5, considering:
 
             - 1 point: Very Common - The ideas are mundane and frequently mentioned in everyday contexts. There's a notable lack of novelty, with responses being the most typical or expected uses.
@@ -60,7 +60,41 @@ prompts = {
         'sampling': f"""
             You are a helpful assistant and a critical thinker. Please evaluate the originality of a specific use for an item as part of a divergent thinking task. Originality should be assessed based on the uniqueness and novelty of the idea. Consider factors like unexpectedness and rarity in your evaluation. Rate the originality of this specific use on a scale from 1 to 5, with 5 indicating the highest level of originality. Provide a brief justification for your score. It is important to present the originality score in the specific format of (X) at the end of your response.
         """,
-        'pairwise': "Please act as an impartial judge and evaluate the originality of the responses provided by two different people to the given task. Compare the responses in terms of their uniqueness, novelty, and creativity. Originality should be assessed based on how unique and innovative each response is, without being influenced by the order in which they are presented or the length of the responses. Your evaluation should be objective, focusing solely on the originality of the ideas presented in each response. After your comparison, conclude with a clear verdict using this format: '[[A]]' if Result A's response is more original, '[[B]]' if Result B's response is more original, or '[[C]]' for equal originality."
+        'pairwise': "Please act as an impartial judge and evaluate the originality of the responses provided by two different people to the given task. Compare the responses in terms of their uniqueness, novelty, and creativity. Originality should be assessed based on how unique and innovative each response is, without being influenced by the order in which they are presented or the length of the responses. Your evaluation should be objective, focusing solely on the originality of the ideas presented in each response. After your comparison, conclude with a clear verdict using this format: '[[A]]' if Result A's response is more original, '[[B]]' if Result B's response is more original, or '[[C]]' for equal originality.",
+        'combine': f"""
+            You are a helpful assistant and a critical thinker. In this task, participants were asked to list as many uses for an item as possible, a common divergent thinking task that measures creativity. Please evaluate the overall originality of the collective responses based on their uniqueness and novelty. Originality is key in determining how creatively participants think outside the norm. Rate the overall originality on a scale from 1 to 5, considering:
+            
+            Rating Scale:
+            - 1 point: Very Common - The ideas are mundane and frequently mentioned in everyday contexts. There's a notable lack of novelty, with responses being the most typical or expected uses.
+            - 2 points: Somewhat Common - The ideas are somewhat ordinary but show slight variations from typical uses, indicating a basic level of creativity.
+            - 3 points: Moderately Original - The ideas display a fair amount of creativity and novelty. They are not the usual thoughts but aren't highly rare or unexpected.
+            - 4 points: Very Original - The ideas are significantly unique, demonstrating a high level of creativity and innovation. They are unexpected and not commonly considered.
+            - 5 points: Extremely Original - The ideas are extraordinarily unique and rare, displaying a high degree of novelty, creativity, and unexpectedness. These ideas are seldom thought of in typical contexts.
+            
+            Here are some examples: 
+            Very Common (1): Using a rubber band to hold multiple objects together, like pencils.
+            Justification: This is a widespread and universally known use, lacking in novelty.
+            Originality Score: (1)
+
+            Somewhat Common (2): Employing a rubber band as a makeshift wristband or bracelet.
+            Justification: This shows a slight departure from the most common uses, introducing a basic creative twist.
+            Originality Score: (2)
+            
+            Moderately Original (3): Utilizing rubber bands for resistance exercises in a quick workout.
+            Justification: This use suggests a creative application not immediately obvious to all, displaying a moderate level of originality.
+            Originality Score: (3)
+
+            Very Original (4): Crafting a DIY rubber band guitar for educational or entertainment purposes.
+            Justification: This idea is innovative, turning a simple item into a musical instrument, which is not a widely recognized use.
+            Originality Score: (4)
+
+            Extremely Original (5): Using rubber bands in an art project to create large-scale geometric patterns on canvas.
+            Justification: This application is highly creative and unusual, showcasing a rare and innovative use of rubber bands.
+            Originality Score: (5)
+
+            After reviewing the responses, assign an overall originality score based on these criteria. Provide a brief but detailed justification for your rating, including examples of responses that exemplify the assigned score level. It is important to conclude your response by stating the collective originality score in the format: (X) 
+        """   
+
     },
     'elaboration': {
         'default': f"""
@@ -79,7 +113,7 @@ prompts = {
 
             Now, it's your turn:
         """,
-        'criteria': f"""
+        'rubric': f"""
             You are a helpful assistant and a critical thinker. Participants were asked to list as many uses for an item as possible. Please evaluate the overall level of elaboration in the set of responses on a scale of 1 to 5, where 1 is the least elaborated and 5 is the most elaborated. Elaboration should be judged based on the collective detail and development of the ideas across all responses. Consider the following criteria for each rating point:
 
             1 point: Very Basic - The responses are extremely basic with minimal detail or explanation. Ideas are presented in a very simple or cursory manner.
@@ -93,7 +127,156 @@ prompts = {
         'sampling': f"""
             You are a helpful assistant and a critical thinker. Please evaluate the level of elaboration for a specific use of an item. Elaboration should be judged based on the detail, development, and thoroughness of the idea presented. Rate the elaboration of this specific use on a scale from 1 to 5, with 5 being the highest level of elaboration. Provide a brief justification for your score. It is important to present the elaboration score in the specific format of (X) at the end of your response.
         """,
-        'pairwise': "Please act as an impartial judge and evaluate the level of elaboration in the responses provided by two different people to the given task. Compare the responses in terms of their detail, development, and thoroughness. Elaboration should be assessed based on how well-developed and comprehensive each response is, considering the depth and complexity of the ideas presented, without being influenced by the order in which they are presented or the length of the responses. Your evaluation should be objective, focusing solely on the level of elaboration evident in each response. After your comparison, conclude with a clear verdict using this format: '[[A]]' if Result A's response is more elaborated, '[[B]]' if Result B's response is more elaborated, or '[[C]]' for equal levels of elaboration."
-        }
+        'pairwise': "Please act as an impartial judge and evaluate the level of elaboration in the responses provided by two different people to the given task. Compare the responses in terms of their detail, development, and thoroughness. Elaboration should be assessed based on how well-developed and comprehensive each response is, considering the depth and complexity of the ideas presented, without being influenced by the order in which they are presented or the length of the responses. Your evaluation should be objective, focusing solely on the level of elaboration evident in each response. After your comparison, conclude with a clear verdict using this format: '[[A]]' if Result A's response is more elaborated, '[[B]]' if Result B's response is more elaborated, or '[[C]]' for equal levels of elaboration.",
+        'combine': f"""
+            You are a helpful assistant and a critical thinker. Participants were asked to list as many uses for an item as possible. Please evaluate the overall level of elaboration in the set of responses on a scale of 1 to 5, where 1 is the least elaborated and 5 is the most elaborated. Elaboration should be judged based on the collective detail and development of the ideas across all responses. Consider the following criteria for each rating point:
+            
+            Rating Scale:
+            1 point: Very Basic - The responses are extremely basic with minimal detail or explanation. Ideas are presented in a very simple or cursory manner.
+            2 points: Somewhat Basic - The responses show a slight degree of detail, but remain on a basic level. Ideas are somewhat developed but lack depth.
+            3 points: Moderately Elaborated - The responses offer a moderate level of detail and development. Ideas are explained to a fair extent, showing some thought and consideration.
+            4 points: Highly Elaborated - The responses are well-developed and detailed. Ideas are thoroughly explained and exhibit a high level of thought and complexity.
+            5 points: Exceptionally Elaborated - The responses demonstrate exceptional elaboration. Ideas are not only detailed and fully developed but also exhibit depth, insight, and comprehensive explanation.
+            
+            Here are some examples: 
+            Very Basic (1): A rubber band can be used to keep a rolled-up poster from unrolling.
+            Description: It simply wraps around the poster.
+            Justification: This explanation is minimal, offering no insight into the method or reasoning beyond the most obvious application.
+            Elaboration Score: (1)
+            
+            Somewhat Basic (2): A rubber band can serve as an emergency hair tie.
+            Description: It's stretchy and can be easily wrapped around hair to hold it in place. This use adds a bit more detail about its practicality but remains fairly simple.
+            Justification: The response provides a practical application but lacks depth, offering only a surface-level explanation without exploring potential variations or considerations.
+            Elaboration Score: (2)
+            
+            Moderately Elaborated (3): Rubber bands can be used to improve grip on slippery objects, like jars.
+            Description: Wrapping a rubber band around the lid of a jar increases friction, making it easier to open. This explanation provides a practical application with a clear rationale.
+            Justification: This response offers a moderate level of detail, explaining both the method and its effect. It demonstrates some thought and consideration, moving beyond basic applications to how and why the solution works.
+            Elaboration Score: (3)
+            
+            Highly Elaborated (4): Constructing a rubber band-powered car as a physics lesson for students.
+            Description: This involves using the rubber band as a source of potential energy, which, when released, propels the car forward. This idea is explained with attention to the educational value and the principles of physics it demonstrates.
+            Justification: The response is well-developed, detailing the construction process, the scientific principles behind it, and its educational applications. It shows a high level of thought and complexity, making the explanation both thorough and insightful.
+            Elaboration Score: (4)
+           
+            Exceptionally Elaborated (5): Creating an interactive art installation where visitors can add their own rubber bands to a growing lattice structure, symbolizing community connections.
+            Description: This concept is not only detailed in its execution but also deep in its meaning, exploring themes of connectivity, community, and the cumulative impact of individual contributions.
+            Justification: This response demonstrates exceptional elaboration, detailing the setup, the interactive element, and the symbolic interpretation. It provides depth, insight, and a comprehensive explanation of the concept, showcasing a sophisticated understanding of the item's potential uses.
+            Elaboration Score: (5)
 
+            After reviewing the responses, assign an overall elaboration score based on these criteria. Provide a brief justification for your rating. It is important to conclude your response by stating the overall elaboration score in the format (X).
+        """
+        }    
+}
+
+
+scientific_prompts = {
+        "fluency": {
+            "default": """
+                You are a thoughtful assistant with a focus on scientific creativity. Participants were asked to list as many scientific uses or inquiries as possible for a given scenario or object. Your task is to identify and count the number of unique, scientifically relevant responses. Explain why each response is relevant and scientifically sound. It is important to state the total amount of unique, scientifically relevant responses in the specific format of (X) at the end of your response.
+            """,
+            "rubric": """
+                Rate responses based on the quantity and uniqueness of scientific uses or inquiries mentioned. Consider:
+                - 1 point: Very few (1-2) relevant scientific uses or inquiries.
+                - 2 points: A small range (3-4) of relevant scientific uses or inquiries.
+                - 3 points: A moderate variety (5-6) of relevant scientific uses or inquiries, showing some unique ideas.
+                - 4 points: A broad range (7-8) of relevant and unique scientific uses or inquiries.
+                - 5 points: An extensive range (9+) of highly relevant and unique scientific uses or inquiries, demonstrating exceptional scientific fluency.
+                Provide a total count of unique, relevant scientific uses or inquiries in the format (X).
+            """
+        },
+        "flexibility": {
+            "default": """
+                Assess the diversity of scientific disciplines and approaches represented in the responses. Flexibility in scientific creativity refers to the ability to apply concepts across different branches of science and to think about a scenario or object from multiple scientific perspectives. Count and categorize the responses based on distinct scientific disciplines or methodologies they represent. Conclude with the total number of unique scientific perspectives in the format (X).
+            """,
+            "rubric": """
+                Evaluate the diversity of scientific disciplines and approaches in the responses. Consider:
+                - 1 point: Responses are limited to a single scientific discipline or approach.
+                - 2 points: Responses include a limited range (2) of scientific disciplines or approaches.
+                - 3 points: Responses show a moderate variety (3-4) of scientific disciplines or approaches.
+                - 4 points: Responses demonstrate a broad range (5-6) of distinct scientific disciplines or approaches.
+                - 5 points: Responses encompass a wide range (7+) of distinct and innovative scientific disciplines or approaches.
+                Conclude with the total number of unique scientific perspectives in the format (X).
+            """
+        },
+        "originality": {
+            "default": """
+                Focus on the originality and innovation of the proposed solutions or uses. Evaluate the responses for their novelty, especially solutions that demonstrate a significant departure from common knowledge or conventional approaches. Rate the overall novelty of the set of responses on a scale from 1 to 5, with 5 being the most novel. Justify your rating with examples from the responses and conclude with the novelty score in the format (X).
+            """,
+            "sampling": """
+                Evaluate the originality of a specific proposed solution or use. Consider its uniqueness and potential for innovation. Rate the originality on a scale from 1 to 5, with 5 being the most novel, and provide your reasoning in the format (X).
+            """,
+            "pairwise": """
+                Compare the originality of solutions or uses proposed by two different responses. Assess which response offers more novel or innovative ideas. Determine the more original set: '[[A]]' for the first response, '[[B]]' for the second, or '[[C]]' if they are equally original.
+            """,
+            "rubric": """
+                Rate the novelty and innovation of the proposed solutions or uses. Consider:
+                - 1 point: Solutions are common with little to no novelty.
+                - 2 points: Solutions show slight novelty or a new twist on common ideas.
+                - 3 points: Solutions are moderately novel, offering some unexpected uses or ideas.
+                - 4 points: Solutions are highly novel and innovative, showing unique and uncommon uses or ideas.
+                - 5 points: Solutions are exceptionally novel and innovative, presenting groundbreaking and rare ideas.
+                Provide an overall novelty score in the format (X).
+            """
+        },
+        "practical_application": {
+            "default": """
+                Evaluate the practicality and potential impact of the responses on real-world scientific problems or questions. Consider how these ideas could be implemented and the feasibility of their application. Rate the practicality of the responses on a scale from 1 to 5, providing justification for your assessment and concluding with the score in the format (X).
+            """,
+            "sampling": """
+                Assess the feasibility and practical impact of a specific proposed application. Rate its practicality on a scale from 1 to 5, with 5 being the most practical, and justify your assessment in the format (X).
+            """,
+            "pairwise": """
+                Compare the practicality of two different proposed applications. Evaluate which response suggests more feasible and impactful ideas. Conclude with '[[A]]' if the first is more practical, '[[B]]' for the second, or '[[C]]' for equal practicality.
+            """,
+            "rubric": """
+                Evaluate the feasibility and practical impact of the responses. Consider:
+                - 1 point: Solutions are impractical or infeasible with little to no real-world application.
+                - 2 points: Solutions have limited practicality or feasibility in real-world scenarios.
+                - 3 points: Solutions are moderately practical, with a fair potential for real-world application.
+                - 4 points: Solutions are highly practical and feasible, with strong potential for impactful real-world application.
+                - 5 points: Solutions are exceptionally practical and feasible, with clear, detailed plans for impactful real-world application.
+                Rate the practicality of the responses on a scale from 1 to 5 in the format (X).
+            """
+        },
+        "scientific_inquiry_methodology": {
+            "default": """
+                Assess the methodological soundness of the approaches suggested for scientific inquiry or experimentation. Consider the use of scientific principles, the clarity of the proposed methods, and the ability to generate testable hypotheses. Provide a brief evaluation of the methodological rigor demonstrated in the responses and conclude with an overall methodology score in the format (X).
+            """,
+            "sampling": """
+                Evaluate the methodological rigor of a single proposed scientific inquiry or experiment. Consider its scientific soundness and potential for generating meaningful results. Rate the methodology on a scale from 1 to 5, with 5 being the most rigorous, and explain your rating in the format (X).
+            """,
+            "pairwise": """
+                Compare the scientific inquiry methodologies proposed in two responses. Determine which response demonstrates a more methodologically sound approach to addressing a scientific question. Conclude with '[[A]]' for the first methodology, '[[B]]' for the second, or '[[C]]' for equal rigor.
+            """,
+            "rubric": """
+                Assess the methodological soundness and scientific rigor of the proposed inquiries. Consider:
+                - 1 point: Methods are unsound or lack scientific basis.
+                - 2 points: Methods show limited scientific soundness or are poorly explained.
+                - 3 points: Methods are moderately sound, with some scientific basis and explanation.
+                - 4 points: Methods are highly sound and well-explained, with a clear scientific basis.
+                - 5 points: Methods are exceptionally sound and rigorously designed, with comprehensive scientific explanations.
+                Conclude with an overall methodology score in the format (X).
+            """
+        },
+        "elaboration": {
+            "default": """
+                Evaluate the overall level of elaboration in the set of responses. Rate the elaboration on a scale of 1 to 5, with 5 being the highest level of detail and development. Provide a brief justification for your overall evaluation. Indicate the overall elaboration score in the specific format of (X).
+            """,
+            "rubric": """
+                Assess the level of detail and development in the responses:
+                - 1 point: Very Basic - Minimal detail, ideas are barely developed.
+                - 2 points: Somewhat Basic - Some details present, but development is lacking.
+                - 3 points: Moderately Elaborated - A fair amount of detail, ideas are reasonably developed.
+                - 4 points: Highly Elaborated - Detailed and well-developed ideas, showing depth.
+                - 5 points: Exceptionally Elaborated - Comprehensive detail, ideas are fully fleshed out and insightful.
+                Justify your rating and conclude with the elaboration score in the format (X).
+            """,
+            "sampling": """
+                Evaluate the level of elaboration for a specific proposed use or idea. Rate the detail and development on a scale from 1 to 5, with 5 indicating the highest level of elaboration, and provide a brief justification for your score. Present the elaboration score in the specific format of (X).
+            """,
+            "pairwise": """
+                Compare the level of elaboration in responses by two different participants. Determine which response is more detailed and well-developed. Conclude with '[[A]]' if the first response shows more elaboration, '[[B]]' if the second is more elaborated, or '[[C]]' for equal levels of elaboration.
+            """
+        }
 }

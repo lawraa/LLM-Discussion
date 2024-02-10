@@ -1,0 +1,402 @@
+[
+    {
+        "question": "Innovative Scientific Tools Using a Rubber Band: Think of as many scientific uses as possible for a rubber band. For example, using it as a simple measure of elasticity in a physics experiment.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Innovative Uses for a Water Bottle: Consider various scientific applications of a water bottle. For example, using it as a container for creating a water vortex.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Creative Scientific Applications of a Pencil: Explore different scientific ways to use a pencil. For example, using it to demonstrate principles of gravity and balance.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Exploring Scientific Concepts with a Spoon: Find different scientific uses for a spoon. For example, demonstrating principles of reflection or heat conduction.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "A Paperclip's Role in Science: Consider the scientific applications of a paperclip. For example, using it to understand magnetic properties.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Scientific Investigations with a Straw: Explore how a straw can be used in scientific studies. For example, demonstrating principles of air pressure and fluid dynamics.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Scientific Uses of a Balloon: Identify the different ways a balloon can be used in science. For example, demonstrating static electricity or understanding gas laws.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Exploring Science with a Button: Find scientific applications for a button. For example, using it to study materials science or color absorption.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Using a Matchstick in Science: Think of different scientific experiments using a matchstick. For example, studying combustion or chemical reactions.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Utilizing a Nail in Science Experiments: Consider the scientific uses of a nail. For example, studying rust formation or properties of metals.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Exploring Science with a Feather: Find scientific experiments involving a feather. For example, studying aerodynamics or bird biology.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Scientific Studies Using a Thread: Think of various ways a thread can be used in science. For example, demonstrating tension strength or capillary action.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "A Bowl's Contribution to Science: Explore how a bowl can be used in scientific settings. For example, understanding sound waves or using it in mixing chemicals.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Using a Lamp in Scientific Research: Consider the scientific uses of a lamp. For example, studying light properties or energy efficiency.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Scientific Uses of a Magnet: Think of various scientific experiments involving a magnet. For example, exploring magnetic fields or material magnetism.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Utilizing a Brick in Science: Consider the scientific applications of a brick. For example, studying material strength or thermal properties.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Scientific Investigations with a Battery: Identify different scientific uses for a battery. For example, understanding electrochemistry or energy storage.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Exploring Science with a Candle: Find various ways a candle can be used in science. For example, studying combustion or the properties of wax.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "Scientific Experiments with a Glass Jar: Explore different scientific uses for a glass jar. For example, creating a terrarium or studying gas laws.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "A Scissors' Contribution to Science: Consider how scissors can be utilized in scientific studies. For example, studying material properties or lever mechanics.",
+        "category": "Scientific Innovation"
+    },
+    {
+        "question": "If you could explore the deepest part of the ocean, what mysteries or unknown species would you expect to find?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "What scientific experiments would you conduct if you could become invisible at will?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "How would you investigate the sky if it suddenly turned permanently red worldwide?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "If you had the ability to communicate with animals, what scientific studies would you pursue to understand their thoughts and behaviors?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "If you discovered a way to become immortal, what long-term scientific experiments would you plan?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "How would you study and analyze a plant that could grow and shrink at command?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "What would be your approach to research if humans suddenly developed the ability to fly like birds?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "If you found an underwater city, what archaeological and historical investigations would you conduct?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "How would you scientifically explore a scenario where the moon changes color every night?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "If you had the power to control weather, what experiments would you design to understand its impact on ecosystems?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "What scientific studies would you conduct if you discovered an island where mythical creatures like dragons existed?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "How would you study the effects on human health and society if everyone stopped needing sleep?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "What scientific research would you pursue if you found a way to shrink to the size of an ant?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "If a new planet appeared in our solar system, visible to the naked eye, what would be your first research steps?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "What experiments would you design if you discovered a mirror that showed the future?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "If you could breathe underwater without any equipment, what underwater mysteries or scientific studies would you explore?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "How would you investigate the causes and effects of a phenomenon where time moved twice as fast for everyone?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "If a pill could make people understand and speak any language fluently, what sociolinguistic studies would you undertake?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "What scientific questions would you explore if you encountered a cloud that rained only over one specific house?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "How would you research the ecological and geological impacts if the Himalayas doubled in height overnight?",
+        "category": "Hypothetical Scenarios"
+    },
+    {
+        "question": "How would you improve a standard wristwatch to make it more useful, stylish, and innovative? For example, integrating a solar panel for self-charging.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "What enhancements can be made to a pair of eyeglasses to increase their functionality and aesthetic appeal? For instance, adding transition lenses that adjust to light conditions.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "How could you upgrade a common backpack to make it more versatile, comfortable, and attractive? Example: incorporating a built-in USB charging port.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "What improvements could be made to a standard umbrella to enhance its utility and design? Such as, designing it with wind-resistant features.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "How would you enhance a regular pair of shoes to make them more beneficial and fashionable? For example, adding self-tying laces.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "What could be done to improve a conventional car to increase its efficiency, safety, and beauty? For instance, integrating advanced autonomous driving capabilities.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "How can you upgrade a typical desk lamp to make it more functional and aesthetically pleasing? For example, adding color-changing LED options.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "How would you enhance a regular water bottle to make it more useful and attractive? For example, integrating a temperature control system.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "How can you upgrade a conventional pen to make it more innovative and stylish? For example, including a digital display for notes.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "In what ways could you improve a typical kitchen knife to enhance its utility and appearance? Such as using a self-sharpening blade.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "What improvements could be made to a standard chair to increase comfort and visual appeal? Like designing it with adjustable ergonomic features.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "How can you upgrade a traditional mirror to make it more useful and elegant? For instance, integrating a touchscreen interface with smart features.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "How can you upgrade a conventional pillow to make it more comfortable and beneficial? For instance, infusing it with temperature-regulating materials.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "In what ways could a standard light bulb be improved for better efficiency and ambience? Such as creating bulbs with adjustable color temperatures.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "How would you enhance a regular door to make it more secure and visually appealing? For example, adding a smart lock with biometric access.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "What improvements could be made to a standard window to increase its utility and design? Like integrating self-tinting glass technology.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "How would you enhance a regular notebook to make it more efficient and attractive? For example, incorporating reusable and digital pages.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "What improvements could be made to a standard coat to increase its warmth and fashion appeal? Like adding solar-powered heating elements.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "How can you upgrade a conventional bed to make it more comfortable and multifunctional? For instance, integrating a built-in adjustable massage system.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "In what ways could a standard trash can be improved for better usability and aesthetics? Such as adding smart waste sorting capabilities.",
+        "category": "Product Improvement"
+    },
+    {
+        "question": "Imagine if water was not transparent but colored. How would this change the appearance of oceans, rivers, and rain?",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "What if humans had the ability to photosynthesize like plants? How would our daily lives and food systems change?",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "Suppose all animals had the ability to speak. How would this transform our relationship with other species?",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "Imagine if the Earth spun twice as fast. What would be the implications for day and night cycles and life in general?",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "What if trees could walk? Consider how this would affect forests and ecosystems.",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "What if we could see a wider spectrum of colors beyond the current visible range? Describe the potential changes in art and design.",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "Suppose all humans had perfect memory recall. How would this impact learning and society?",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "Imagine if we had a sixth sense that allowed us to perceive magnetic fields. How would this change navigation and technology?",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "What if mountains could grow and shrink within a human lifetime? Consider the effects on geography and human settlements.",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "Imagine if we could hear ultrasonic frequencies. How would this alter our perception of sound and communication?",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "What if we could regenerate lost limbs like some animals? Discuss the implications for medicine and human ability.",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "Suppose we lived on a planet with two suns. How would this affect our daily life, culture, and environment?",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "Suppose gravity could be turned on and off like a switch. How would this change architecture, transportation, and sports?",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "Imagine if we could teleport to any location instantly. How would this revolutionize travel and society?",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "Imagine if sleep was not necessary for humans. Consider the changes in lifestyle and productivity.",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "Suppose we could manipulate time. How would this ability affect our perception of life and decision-making?",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "Imagine if the ocean was transparent. How would this change our understanding of marine life?",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "What if humans had a lifespan of 200 years? Consider the societal and personal impacts.",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "What if all food was nutritionally perfect? How would this affect health, cuisine, and agriculture?",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "Suppose humans could fly like birds. Consider the changes in transportation, architecture, and recreation.",
+        "category": "Imaginative Physics"
+    },
+    {
+        "question": "Two different light bulbs are available. How can you test which one is more energy-efficient? Consider the instruments needed, the principles of electricity, and a simple testing procedure.",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "How can you determine which of two sunscreens provides better UV protection? Outline the methods, necessary instruments, and a brief procedure for the test.",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "Two brands of batteries claim long-lasting power. How can you test which one lasts longer? Describe your approach, the instruments you'll use, and the testing process.",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "You have two different kinds of soil for planting. How can you test which one is better for plant growth? Explain your testing methods, required tools, and the procedure.",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "Compare two kinds of water filters for effectiveness. What are the possible methods, instruments needed, and the basic testing steps?",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "How can you test which of two computer monitors has better color accuracy? Describe the approach, tools needed, and a brief procedure.",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "Compare two types of bicycle helmets for safety. What testing methods, instruments, and procedures would you use?",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "How can you test which of two smartphones has a longer battery life? Explain your testing approach, the necessary tools, and the procedure.",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "Determine which of two kinds of toothpaste is more effective at whitening teeth. Describe the testing methods, instruments, and a simple procedure.",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "You have two brands of kitchen knives. How can you test which one stays sharp longer? Detail your testing strategy, required instruments, and the procedure.",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "Compare two types of hair shampoo for effectiveness. What methods, tools, and simple procedures would you use?",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "How can you test which of two types of laundry detergent cleans better? Explain your approach, necessary equipment, and a brief testing process.",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "You have two different types of car tires. How can you test which one has better traction? Outline your testing methods, necessary instruments, and the basic steps.",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "Compare two types of bread for freshness over time. What testing methods, tools, and procedures would you use?",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "Determine which of two types of blankets is more fire-resistant. Describe the testing methods, necessary tools, and a simple procedure.",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "Compare two types of garden hoses for durability. What methods, tools, and simple procedures would you use?",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "How can you test which of two types of paint is more fade-resistant? Explain your approach, the necessary instruments, and the testing process.",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "Determine which of two kinds of paper is more recyclable. Describe the testing methods, tools required, and a simple procedure.",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "Compare two types of yoga mats for grip and comfort. What methods, tools, and procedures would you use?",
+        "category": "Comparative Analysis"
+    },
+    {
+        "question": "Determine which of two types of hand sanitizers is more effective against germs. Describe the testing methods, tools required, and a simple procedure.",
+        "category": "Comparative Analysis"
+    }
+]

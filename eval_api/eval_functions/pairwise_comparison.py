@@ -1,6 +1,6 @@
 from utils.openai_model import OpenAIModel  # Adjust the import path as needed
 from utils.util import parse_judgement_result  # Importing the function from utils/util.py
-from eval_functions.eval_prompts import prompts
+from eval_functions.eval_prompts import aut_prompts
 
 def pairwise_judgement(model, response_obj, criteria, max_attempts=5):
     pairwise_results = []
@@ -10,7 +10,7 @@ def pairwise_judgement(model, response_obj, criteria, max_attempts=5):
     print("ITEM = ", item)
     print("USE = ", uses)
     
-    get_prompt = prompts[criteria]['pairwise']
+    get_prompt = aut_prompts[criteria]['pairwise']
 
     #SET SEED
     seed = 0

@@ -7,12 +7,12 @@ import json
 import datetime
 
 agent = 1
-# input_file_name = "datasets/aut_100.json"
+
 input_file_name = "../../datasets/dataset_aut_test.json"
 current_date = datetime.date.today().strftime("%m-%d_")
 current_time = datetime.datetime.now()
 formatted_time = current_time.strftime("%H:%M:%S")
-output_file_name = f"../results/reproduce/originality_result/AUT_reproduce_originality_{current_date}{formatted_time}.json"
+output_file_name = f"../../results/reproduce/originality_result/AUT_reproduce_originality_{current_date}{formatted_time}.json"
 
 yes = 0 
 no = 0

@@ -1,0 +1,102 @@
+[
+    {
+        "item": "Fork",
+        "uses": "Use a fork to hold a small plant or succulent as a whimsical and unique plant holder.",
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.0003000697,
+            "No": -8.382735
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": "Use a fork as a hair accessory to create a decorative and fashionable updo.",
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.0014330972,
+            "No": -6.606713
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": "Use a fork to create a DIY stamp for crafting or scrapbooking by dipping the tines in paint.",
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.008025338,
+            "No": -4.8448324
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": "Use a fork to create a unique piece of jewelry such as a pendant or earrings by bending and shaping the tines.",
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.00044032474,
+            "No": -7.8479724
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": "Use a fork to create textured patterns in clay or playdough for arts and crafts projects.",
+        "type": "No",
+        "full explanation": "No.",
+        "probabilities": {
+            "No": -0.366293,
+            "Yes": -1.1823063
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": "Use a fork as a makeshift back scratcher for hard-to-reach areas.",
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.065785535,
+            "No": -2.764146
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": "Use a fork as a tool for creating fun food presentations, such as making spiral-cut hot dogs or creating decorative patterns in mashed potatoes.",
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.3052415,
+            "No": -1.3375748
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": "Use a fork to create a custom texture on a painted surface for a unique and artistic effect.",
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.0010869937,
+            "No": -6.8883915
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": "Use a fork as a tool for precision in nail art or small detailed painting projects.",
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.0028550404,
+            "No": -5.8905444
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": "Use a fork as a guide for cutting even layers in a cake or other baked goods.",
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.038727984,
+            "No": -3.273246
+        }
+    }
+]

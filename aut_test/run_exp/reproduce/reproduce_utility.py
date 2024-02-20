@@ -63,7 +63,7 @@ def search_yes_no(logprobs_data):
             if top_logprob.token in search_tokens:
                 print(f"Probability of '{top_logprob.token}': {top_logprob.logprob}")
             else:
-                print("none.")
+                # print("none.")
     return None
 
 if __name__ == "__main__":
@@ -103,7 +103,7 @@ if __name__ == "__main__":
             final_answer = final_completion.message.content.strip()
             # if final_answer.startswith("Yes") or final_answer.startswith("No"):
             final_ans_prob = final_completion.logprobs
-            print(f"final_ans_prob = {final_ans_prob}")
+            # print(f"final_ans_prob = {final_ans_prob}")
             search_yes_no(final_ans_prob)
             # else:
             #     print("invalid final answer.")

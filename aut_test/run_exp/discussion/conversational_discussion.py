@@ -86,9 +86,9 @@ if __name__ == "__main__":
     agent_num = args.agent_num
     round_num = args.round_num
 
-    output_filename = f"../results/discussion/conv_result/history/conv_discussion_{current_date}{formatted_time}_{agent_num}_{round_num}.json"
-    final_ans_filename = f"../results/discussion/conv_result/final_ans/conv_discussion_final_{current_date}{formatted_time}_{agent_num}_{round_num}.json"
-    init_ans_filename = f"../results/discussion/conv_result/init_ans/conv_discussion_init_{current_date}{formatted_time}_{agent_num}_{round_num}.json"
+    output_filename = f"../../results/discussion/conv_result/history/conv_discussion_{current_date}{formatted_time}_{agent_num}_{round_num}.json"
+    final_ans_filename = f"../../results/discussion/conv_result/final_ans/conv_discussion_final_{current_date}{formatted_time}_{agent_num}_{round_num}.json"
+    init_ans_filename = f"../../results/discussion/conv_result/init_ans/conv_discussion_init_{current_date}{formatted_time}_{agent_num}_{round_num}.json"
 
     response_dict = {}
     init_results = []

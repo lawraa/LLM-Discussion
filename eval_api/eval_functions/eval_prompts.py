@@ -57,6 +57,16 @@ aut_prompts = {
 
             After reviewing the responses, assign an overall originality score based on these criteria. Provide a brief but detailed justification for your rating, including examples of responses that exemplify the assigned score level. It is important to conclude your response by stating the collective originality score in the format: (X) 
         """,
+        'pairwise_v2': f"""
+            Your task is to assess the creativity of responses in a divergent thinking exercise, focusing on originality and novelty. Rate their originality on a 1 to 5 scale, where 1 signifies very common ideas, and 5 indicates extremely original ideas. Consider:
+
+            1 point: Common, typical ideas with no novelty.
+            2 points: Slight variations from the norm, showing basic creativity.
+            3 points: Fairly creative, with a moderate level of novelty.
+            4 points: Highly unique and innovative ideas.
+            5 points: Exceptionally rare and creative ideas, displaying significant novelty.
+            After evaluating, assign an overall originality score and justify your rating by citing specific examples from the responses. Conclude with the score in the format: 'Overall Originality Score: (X).' Ensure your justification is concise and directly related to the examples cited.
+        """,
         'sampling': f"""
             You are a helpful assistant and a critical thinker. Please evaluate the originality of a specific use for an item as part of a divergent thinking task. Originality should be assessed based on the uniqueness and novelty of the idea. Consider factors like unexpectedness and rarity in your evaluation. Rate the originality of this specific use on a scale from 1 to 5, with 5 indicating the highest level of originality. Provide a brief justification for your score. It is important to present the originality score in the specific format of (X) at the end of your response.
         """,
@@ -123,6 +133,16 @@ aut_prompts = {
             5 points: Exceptionally Elaborated - The responses demonstrate exceptional elaboration. Ideas are not only detailed and fully developed but also exhibit depth, insight, and comprehensive explanation.
 
             After reviewing the responses, assign an overall elaboration score based on these criteria. Provide a brief justification for your rating. It is important to conclude your response by stating the overall elaboration score in the format (X).
+        """,
+        'rubric_v2': f"""
+            Your task is to evaluate the level of elaboration in responses from a divergent thinking exercise. Rate the elaboration on a scale of 1 to 5, with 1 indicating minimal elaboration and 5 representing exceptional elaboration. Elaboration refers to the detail and development of ideas presented in the responses. Use the following scale for guidance:
+
+            1 point: Very Basic - Responses are extremely basic, offering minimal detail. Ideas are presented simplistically.
+            2 points: Somewhat Basic - Responses include a slight degree of detail, remaining basic with somewhat developed ideas lacking depth.
+            3 points: Moderately Elaborated - Responses provide a moderate level of detail and development. Ideas are fairly explained, showing thoughtful consideration.
+            4 points: Highly Elaborated - Responses are detailed and well-developed. Ideas are thoroughly explained, reflecting high thought complexity.
+            5 points: Exceptionally Elaborated - Responses show exceptional elaboration, with detailed, in-depth, and comprehensive explanations of ideas.
+            After your evaluation, assign an overall elaboration score and justify your rating with specific examples from the responses. Conclude with the score in the format: 'Overall Elaboration Score: (X).' Your justification should be concise and directly relate to the examples cited.
         """,
         'sampling': f"""
             You are a helpful assistant and a critical thinker. Please evaluate the level of elaboration for a specific use of an item. Elaboration should be judged based on the detail, development, and thoroughness of the idea presented. Rate the elaboration of this specific use on a scale from 1 to 5, with 5 being the highest level of elaboration. Provide a brief justification for your score. It is important to present the elaboration score in the specific format of (X) at the end of your response.

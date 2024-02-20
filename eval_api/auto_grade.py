@@ -22,7 +22,7 @@ def main():
     args = parser.parse_args()
     
     # GPT VERSION
-    version = "gpt-4-1106-preview" if args.version == "4" else "gpt-3.5-turbo-1106"
+    version = "gpt-4-1106-preview" if args.version == "4" else "gpt-3.5-turbo-0125"
     print(f"Using GPT Version {version}, Input: {args.version}")
 
     # SETUP CACHE AND MODEL

@@ -20,7 +20,7 @@ Evaluation Results using **Pairwise**, **Sampling**, **Criteria**, and **Fewshot
 ### 1. Setting File Paths:
 For `auto_grade.py`, you don't have to edit path
   ```bash
-  Put your input json file into "/dataset/AUT" folder
+  Put your input json file into "/dataset/AUT/discussion_result/" folder
   ```
 Output for `auto_grade.py` will be stored in `eval_api/result` folder <br /><br />
 

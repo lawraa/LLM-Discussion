@@ -375,7 +375,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--version", default="3", choices=["3", "4"])
     # Add a new argument for the input file name
-    parser.add_argument("--input_file", required=True, help="File name in /home/chenlawrance/repo/LLM-Creativity/dataset/AUT/")
+    parser.add_argument("--input_file", required=True, help="File name in /home/chenlawrance/repo/LLM-Creativity/dataset/AUT/discussion_result/")
     args = parser.parse_args()
 
     if args.version == "3":
@@ -388,7 +388,7 @@ def main():
     model = OpenAIModel(cache_file_name, version)
 
     # Use the input file argument
-    filename = f"/home/chenlawrance/repo/LLM-Creativity/dataset/AUT/{args.input_file}.json"
+    filename = f"/home/chenlawrance/repo/LLM-Creativity/dataset/AUT/discussion_result/{args.input_file}.json"
     
     fluency_results = evaluate_fluency(model, filename)
     flexibility_results = evaluate_flexibility(model, filename)

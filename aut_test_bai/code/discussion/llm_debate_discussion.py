@@ -12,7 +12,7 @@ client = OpenAI()
 agents = 0  # Number of agents
 rounds = 0  # Number of rounds
 
-dataset_filename = "../../datasets/dataset_aut_test.json"
+dataset_filename = "../../datasets/aut_10.json"
 current_date = datetime.date.today().strftime("%m-%d_")
 current_time = datetime.datetime.now()
 formatted_time = current_time.strftime("%H:%M:%S")

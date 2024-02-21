@@ -1,0 +1,46 @@
+{
+  "Task": [
+    {
+      "problem": [
+        "What are some creative use for {object}? The goal is to come up with creative ideas,",
+        "which are ideas that strike people as clever, unusual, interesting, uncommon, humaorous,",
+        "innovative, or different. Present a list of as many creative and diverse uses for",
+        "{object} as possible."
+      ]
+    }
+  ],
+  "examples": [
+  {
+    "object": "Fork"
+  },
+  {
+    "object": "Jar"
+  },
+  {
+    "object": "Mirror"
+  },
+  {
+    "object": "Mug"
+  },
+  {
+    "object": "Needle"
+  },
+  {
+    "object": "Paper"
+  },
+  {
+    "object": "Ring"
+  },
+  {
+    "object": "Scarf"
+  },
+  {
+    "object": "Screwdriver"
+  },
+  {
+    "object": "Sheet"
+  }
+],
+"number of examples": 10,
+"prompt": "What are some creative uses for [object]? The goal is to come up with creative ideas, which are ideas that strike people as clever, unusual, interesting, uncommon, hu- morous, innovative, or different. List 10 creative uses for [object]."
+}

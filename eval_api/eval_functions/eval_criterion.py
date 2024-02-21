@@ -1,5 +1,5 @@
 from eval_functions.eval_prompts import aut_prompts, scientific_prompts
-from utils.util import parse_number_score
+from utils.util import parse_number_score, parse_number_score_2
 from utils.openai_model import OpenAIModel
 import traceback
 import logging
@@ -22,12 +22,11 @@ def evaluate_criterion(model: OpenAIModel, response_obj, criterion, eval_type, s
                 "responses": [{"response": "No uses provided", "score": 0}],
                 "average_score": 0
             }
-    # Fetch the specific prompt and append the common part
+
     get_prompt = aut_prompts[criterion].get(eval_type, aut_prompts[criterion]['default'])
+    
     if eval_type == 'sampling':
-        full_prompt = get_prompt +  f"\nThe item is {item}. The specific use is: {uses}"
-    else: 
-        full_prompt = get_prompt + f"\nThe item is {item}. The responses are: {uses}"
+        full_prompt = get_prompt + f"\nThe item is {item}. The response is: {uses}"
     print("Input Prompt ::: ", full_prompt)
     messages = [{"role": "user", "content": full_prompt}]
     sample_responses = []
@@ -43,7 +42,7 @@ def evaluate_criterion(model: OpenAIModel, response_obj, criterion, eval_type, s
             response = model.generate_response(messages=messages, seed=seed)
             print("Given Seed ::: ", seed)
             print("Model Response ::: ", response)
-            individual_score = parse_number_score(response)
+            individual_score = parse_number_score_2(response)
             sample_responses.append({"response": response, "score": individual_score})
             sample_score += individual_score
             print("Score ::: ", sample_score)
@@ -55,12 +54,13 @@ def evaluate_criterion(model: OpenAIModel, response_obj, criterion, eval_type, s
         seed += 1
 
     average_item_score = sample_score / sample_time
-    if eval_type == "sample":
+    if eval_type == "sampling":
         return {
-            "use": uses,
+            "use": response_obj['uses'],
             "responses": sample_responses,
             "average_score": average_item_score
         }
+        
     
     return {
         "responses": sample_responses,

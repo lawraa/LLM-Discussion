@@ -44,25 +44,12 @@ def plot_score(scores_dict, category, custom_xtick_labels=None, output_name=None
     data_to_plot = [scores for scores in scores_dict.values()]
     ax.boxplot(data_to_plot, patch_artist=True)
 
-
-
     new_xtick_labels = []
     for scores in data_to_plot:
         mean = np.mean(scores)
         std = np.std(scores)
         label = f'Mean: {mean:.2f}\nStd: {std:.2f}'
         new_xtick_labels.append(label)
-    # for i, scores in enumerate(data_to_plot, start=1):
-    #     mean = np.mean(scores)
-    #     std = np.std(scores)
-    #     # Calculate the middle y-position of the boxplot
-    #     q1, q3 = np.percentile(scores, [25, 75])
-    #     median_y_position = np.median(scores)
-    #     # Shift the x-position slightly to the left of the boxplot's center
-    #     left_offset = 0.15  # Adjust this value as needed to position the text appropriately
-    #     x_position = i - left_offset
-    #     ax.text(x_position, median_y_position, f'Mean: {mean:.2f}\nStd: {std:.2f}', ha='right', va='center')
-
 
     if custom_xtick_labels and len(custom_xtick_labels) == len(scores_dict):
         combined_labels = [f'{custom}\n\n{new}' for custom, new in zip(custom_xtick_labels, new_xtick_labels)]

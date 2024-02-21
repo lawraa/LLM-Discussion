@@ -110,3 +110,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     main(args.input_files, args.output_name, args.custom_labels, args.title)
+    

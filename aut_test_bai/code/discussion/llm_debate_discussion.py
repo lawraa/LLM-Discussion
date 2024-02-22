@@ -86,7 +86,7 @@ if __name__ == "__main__":
     agents = args.agents
     rounds = args.rounds
 
-    output_filename = f"../../results/discussion/llm_debate_result/history/discussion_{current_date}{formatted_time}_{agents}_{rounds}.json"
+    output_filename = f"../../results/discussion/llm_debate_result/history/discussion_{current_date}_{agents}_{rounds}.json"
     final_ans_filename = f"../../results/discussion/llm_debate_result/final_ans/discussion_final_results_{current_date}{formatted_time}_{agents}_{rounds}.json"
     init_ans_filename = f"../../results/discussion/llm_debate_result/init_ans/discussion_init_results_{current_date}{formatted_time}_{agents}_{rounds}.json"
 
@@ -147,3 +147,5 @@ if __name__ == "__main__":
 
     print("Discussion END!!!")
     print(f"output file at: {output_filename}")
+
+# time python3 llm_debate_discussion.py -a 2 -r 6

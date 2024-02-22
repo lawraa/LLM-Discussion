@@ -1,6 +1,6 @@
 import json
 
-file_path = '../../../eval_api/result/evaluation_discussion_final_results_02-21_2_2_sampling_3_sample.json'
+file_path = '../../../eval_api/result/evaluation_discussion_final_results_02-21_2_6_sampling_3_sample.json'
 
 with open(file_path, 'r') as f:
     data = json.load(f)

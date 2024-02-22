@@ -17,13 +17,15 @@ current_date = datetime.date.today().strftime("%m-%d_")
 current_time = datetime.datetime.now()
 formatted_time = current_time.strftime("%H:%M:%S")
 
-system_content =  "You are an active and helpful member in this discussion. \
-You should persuade each other that your answers are creative by giving reasonable explanations, be critical to verify each answer to see if it is creative enough,\
-justify your own answers, integrate with others replies, coming up with ideas inspired by others, \
-remove answers that is not creative enough, merge similar ideas, and ask questions for further understandings.\n\n"
+# system_content =  "You are an active and helpful member in this discussion. \
+# You should persuade each other that your answers are creative by giving reasonable explanations, be critical to verify each answer to see if it is creative enough,\
+# justify your own answers, integrate with others replies, coming up with ideas inspired by others, \
+# remove answers that is not creative enough, merge similar ideas, and ask questions for further understandings.\n\n"
 
-shot_prompt =f"For example, you can analyze if the usage is really suitable for the object by asking what could be adjusted, or if which two are too similar, etc."
+# shot_prompt =f"For example, you can analyze if the usage is really suitable for the object by asking what could be adjusted, or if which two are too similar, etc."
 
+system_content = ""
+shot_prompt = ""
 
 def parsing_arg():
     parser = argparse.ArgumentParser(description='Process some integers.')
@@ -101,7 +103,7 @@ if __name__ == "__main__":
         initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
         system_prompt = {"role": "system", "content": system_content}
         agent_contexts = [[ system_prompt, {"role": "user", "content": initial_prompt}] for _ in range(agents)]
-
+        # agent_contexts = [[] for _ in range(agents)]
         for round in range(rounds):
             print("-----------------------------------------Round", round)
             is_last_round = (round == rounds - 1)

@@ -1,0 +1,17 @@
+{
+    "Test1":{
+        "question": "Stream, Arm, Memory",
+        "answer": "Chip",
+        "reason": "(Stream Chip, Arm Chip, Memory Chip)"
+    },
+    "Test2":{
+        "question": "Fish, Mine, Rush",
+        "answer": "Gold",
+        "reason": "(Goldfish, Gold Mine, Gold Rush)"
+    },
+    "Test3":{
+        "question": "Flower, Friend, Scout",
+        "answer": "Girl",
+        "reason": "(Flower Girl, Girlfriend, Girl Scout)"
+    }
+}

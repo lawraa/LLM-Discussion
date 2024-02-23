@@ -37,12 +37,12 @@
         "Amount": n
     }
     ```
-    
-## AUT
 
-## Instances Test
+#### AUT
 
-## Similarities Test
+#### Instances Test
 
-### Scientific Creativity Test
+#### Similarities Test
+
+## Scientific Creativity Test
 

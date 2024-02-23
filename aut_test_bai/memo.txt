@@ -1,4 +1,4 @@
 1. How to use Law's boxplot
 For example:
 python3 boxplot_final.py -i file1 -o output_file_1 -t "Title Name" -l result_1
-python3 boxplot_final.py -i evaluation_discussion_final_results_02-21_2_2_sampling_3_sample evaluation_discussion_final_results_02-21_2_4_sampling_3_sample evaluation_discussion_final_results_02-21_2_6_sampling_3_sample evaluation_discussion_final_results_02-21_2_8_sampling_3_sample evaluation_discussion_final_results_02-21_2_10_sampling_3_sample -o Round_Test -t "Round Testing" -l "2 Rounds" "4 Rounds" "6 Rounds" "8 Rounds" "10 Rounds"
+python3 boxplot_final.py -i evaluation_discussion_2024-02-22_2_6_q1_final_results_sampling_3_sample evaluation_discussion_2024-02-22_2_6_q2_final_results_sampling_3_sample evaluation_discussion_2024-02-22_2_6_q3_final_results_sampling_3_sample evaluation_discussion_2024-02-22_2_6_q4_final_results_sampling_3_sample evaluation_discussion_2024-02-22_2_6_q5_final_results_sampling_3_sample -o Prompt_Test -t "Prompt Test" -l "Prompt 1" "Prompt 2" "Prompt 3" "Prompt 4" "Prompt 5"

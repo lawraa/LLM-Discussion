@@ -73,44 +73,7 @@ def plot_score(scores_dict, category, custom_xtick_labels=None, output_name=None
     print(f"Boxplot for {category} saved at {image_path}") 
     #plt.show()
 
-def plot_combined_subplots(scores_dicts, custom_xtick_labels, output_name, title):
-    fig, axs = plt.subplots(2, 2, figsize=(20, 12))
-    categories = ["Fluency", "Flexibility", "Originality", "Elaboration"]
-
-    for i, (ax, category) in enumerate(zip(axs.flatten(), categories)):
-        scores = scores_dicts[category]
-        data_to_plot = [score for score in scores.values()]
-        ax.boxplot(data_to_plot, patch_artist=True)
-        
-        new_xtick_labels = []
-        for score in data_to_plot:
-            mean = np.mean(score)
-            std = np.std(score)
-            label = f'Mean: {mean:.2f}\nStd: {std:.2f}'
-            new_xtick_labels.append(label)
-
-        if custom_xtick_labels and len(custom_xtick_labels) == len(scores):
-            combined_labels = [f'{custom}\n\n{new}' for custom, new in zip(custom_xtick_labels, new_xtick_labels)]
-            ax.set_xticklabels(combined_labels, ha='center', fontsize=12)
-        else:
-            original_labels = list(scores.keys())
-            combined_labels = [f'{orig}\n\n{new}' for orig, new in zip(original_labels, new_xtick_labels)]
-            ax.set_xticklabels(combined_labels, rotation=45, ha='right', fontsize=12)
-
-        ax.set_title(f'{category}: {title}', fontsize=20)
-        ax.set_ylabel('Score')
-
-    plt.tight_layout()  # Adjust layout to not cut off labels
-    combined_image_path = os.path.join(
-                Path(__file__).parent, 'img', 'boxplot',
-                f"Combined_{output_name}.png"
-            )
-    plt.savefig(combined_image_path)
-    print(f"Combined plot saved at {combined_image_path}")
-    plt.close(fig)
-
-
-
+# help me write the code the reads a json file and returns the scores and the mean and std of the scores of "average_fluency","average_flexibility","average_originality", "average_elaboration" , then a code for plotting the boxplot for each of them 
 def main(input_files, output_name, custom_labels, title):
     all_fluency_scores = {}
     all_flexibility_scores = {}
@@ -132,25 +95,19 @@ def main(input_files, output_name, custom_labels, title):
         print("File: ", file_name)
         print("Average: ", averages, "\n")
 
-    scores_dicts = {
-        "Fluency": all_fluency_scores,
-        "Flexibility": all_flexibility_scores,
-        "Originality": all_originality_scores,
-        "Elaboration": all_elaboration_scores
-    }
 
     plot_score(all_fluency_scores, "Fluency",custom_labels, output_name, title)
     plot_score(all_flexibility_scores, "Flexibility",custom_labels, output_name, title)
     plot_score(all_originality_scores, "Originality",custom_labels, output_name, title)
     plot_score(all_elaboration_scores, "Elaboration",custom_labels, output_name, title)
-    plot_combined_subplots(scores_dicts, custom_labels, output_name, title)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process multiple JSON files for scoring analysis.")
     parser.add_argument("-i", "--input_files", nargs='+', required=True, help="File paths of the JSON files")
-    parser.add_argument("-o", "--output_name", required=True, help="Give me the name of the output file without using json")
-    parser.add_argument("-l", "--custom_labels", nargs='+', required=False, help="Give me the custom labels for the boxplot")
-    parser.add_argument("-t", "--title", required=False, help="Give me the title of the plot")
+    parser.add_argument("-o", "--output_name", required = True, help = "Give me the name of the output file without using json")
+    parser.add_argument("-l", "--custom_labels", nargs='+', required = False, help = "Give me the custom labels for the boxplot")
+    parser.add_argument("-t", "--title", required = False, help = "Give me the title of the plot")
     args = parser.parse_args()
 
     main(args.input_files, args.output_name, args.custom_labels, args.title)
+    

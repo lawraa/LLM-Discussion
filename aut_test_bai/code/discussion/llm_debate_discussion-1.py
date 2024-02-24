@@ -115,8 +115,6 @@ if __name__ == "__main__":
                     if round == 1:
                         message["content"] += shot_prompt
                     agent_context.append(message)
-                
-                
 
                 completion = generate_answer(agent_context)
                 assistant_message = construct_assistant_message(completion)

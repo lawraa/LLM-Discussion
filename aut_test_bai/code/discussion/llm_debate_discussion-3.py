@@ -12,7 +12,7 @@ client = OpenAI()
 agents = 0  # Number of agents
 rounds = 0  # Number of rounds
 
-dataset_filename = "../../datasets/aut_30.json"
+dataset_filename = "../../datasets/aut_10-3.json"
 current_date = datetime.date.today().strftime("%m-%d_")
 current_time = datetime.datetime.now()
 formatted_time = current_time.strftime("%H:%M:%S")
@@ -86,9 +86,9 @@ if __name__ == "__main__":
     agents = args.agents
     rounds = args.rounds
 
-    output_filename = f"../../results/discussion/llm_debate_result/history/discussion_{current_date}_{agents}_{rounds}.json"
-    final_ans_filename = f"../../results/discussion/llm_debate_result/final_ans/discussion_final_results_{current_date}{formatted_time}_{agents}_{rounds}.json"
-    init_ans_filename = f"../../results/discussion/llm_debate_result/init_ans/discussion_init_results_{current_date}{formatted_time}_{agents}_{rounds}.json"
+    output_filename = f"../../results/discussion/llm_debate_result/history/discussion_{current_date}-3.json"
+    final_ans_filename = f"../../results/discussion/llm_debate_result/final_ans/discussion_final_results_{current_date}{formatted_time}-3.json"
+    init_ans_filename = f"../../results/discussion/llm_debate_result/init_ans/discussion_init_results_{current_date}{formatted_time}-3.json"
 
     with open(dataset_filename, "r") as file:
         data = json.load(file)

@@ -100,10 +100,12 @@ if __name__ == "__main__":
     agents = args.agents
     rounds = args.rounds
 
+    question_idx = 5 # if u wanna change the start index
+
     with open(dataset_filename, "r") as file:
         data = json.load(file)
 
-    for q_idx, q in enumerate(data["Task"]):
+    for q in data["Task"][question_idx:]:
         problem_template = " ".join(q["problem"])
         response_dict = {}
         init_results = []
@@ -111,14 +113,14 @@ if __name__ == "__main__":
 
         for example in tqdm(data["examples"]):
             current_date = datetime.date.today().strftime("%Y-%m-%d")
-            base_filename = f"discussion_{current_date}_{agents}_{rounds}_q{q_idx+1}"
+            base_filename = f"discussion_{current_date}_{agents}_{rounds}_q{question_idx+1}"
             output_filename = generate_filename(base_output_dir, base_filename, ".json")
             final_ans_filename = generate_filename(base_final_ans_dir, base_filename + "_final_results", ".json")
             init_ans_filename = generate_filename(base_init_ans_dir, base_filename + "_init_results", ".json")
 
             object = example["object"]
             question = problem_template.replace("{object}", object)
-            print(f"Question{q_idx+1}: {question}")
+            print(f"Question{question_idx+1}: {question}")
             # print()
 
             initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
@@ -164,5 +166,6 @@ if __name__ == "__main__":
 
         print("Discussion END!!!")
         print(f"output file at: {final_ans_filename}")
+        question_idx += 1 # add the question index
 
 # time python3 llm_debate_discussion-prompt.py -a 2 -r 6

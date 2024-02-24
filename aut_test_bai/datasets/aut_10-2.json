@@ -1,0 +1,164 @@
+{
+  "Task": [
+    {
+      "Problem": [
+        "What are some creative use for {object}? The goal is to come up with creative ideas,",
+        "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
+        "innovative, or different. Present a list of as many creative and diverse uses for",
+        "{object} as possible."
+      ],
+      "Purpose": "1. Baseline"
+    },
+    {
+      "Problem": [
+        "What are some creative use for {object}? The goal is to come up with creative ideas,",
+        "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
+        "innovative, or different. Present a list of as many creative and diverse uses for",
+        "{object} as possible!",
+
+        "This is very important to my career and research since I need to come up with creative ideas!"
+      ],
+      "Purpose": "2. LLM Stimuli 1"
+    },
+    {
+      "Problem": [
+        "What are some creative use for {object}? The goal is to come up with creative ideas,",
+        "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
+        "innovative, or different. Present a list of as many creative and diverse uses for",
+        "{object} as possible!",
+
+        "This is very important to my job since I need to come up with creative idea!",
+        "Hope you could come up as many as ideas to help me get through my career crisis!"
+      ],
+      "Purpose": "3. LLM Stimuli 2"
+    },
+    {
+      "Problem": [
+        "What are some creative use for {object}? The goal is to come up with creative ideas,",
+        "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
+        "innovative, or different. Present a list of as many creative and diverse uses for",
+        "{object} as possible!",
+
+        "Please come up with as many as you can since you are in a group discussion,",
+        "the more ideas you can think of, the more creative would this discussion be."
+      ],
+      "Purpose": "4. Prompt for teamwork -> as many as u can"
+    },
+    {
+      "Problem": [
+        "What are some creative use for {object}? The goal is to come up with creative ideas,",
+        "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
+        "innovative, or different. Present a list of as many creative and diverse uses for",
+        "{object} as possible!",
+
+        "Please come up with as many as you can since you are in a group discussion,",
+        "the more ideas you can think of, the more creative would this discussion be.",
+        "This is very important to my career and research since I need to come up with creative ideas!"
+      ],
+      "Purpose": "5. LLM Stimuli + Prompt for teamwork"
+    },
+    {
+      "Problem": [
+        "What are some creative use for {object}? The goal is to come up with creative ideas,",
+        "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
+        "innovative, or different. Present a list of as many creative and diverse uses for",
+        "{object} as possible!",
+
+        "Please come up with as many as you can since you are in a group discussion,",
+        "the more ideas you can think of, the more creative would this discussion be.",
+        "Imagine your group needs to use {object} in a talent show to impress a panel of judges.",
+        "What innovative uses can you come up with to showcase its versatility?"
+      ],
+      "Purpose": "6. Prompt for teamwork -> GPT-4 enforcement"
+    },
+    {
+      "Problem": [
+        "What are some creative use for {object}? The goal is to come up with creative ideas,",
+        "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
+        "innovative, or different. Present a list of as many creative and diverse uses for",
+        "{object} as possible!",
+
+        "Please come up with as many as you can since you are in a group discussion,",
+        "the more ideas you can think of, the more creative would this discussion be.",
+        "Pretend your group is a team of inventors presenting {object} as a revolutionary new product on a reality TV show.",
+        "How do you pitch its most creative uses to win the competition?"
+      ],
+      "Purpose": "7. Prompt for teamwork -> GPT-4 enforcement"
+    },
+    {
+      "Problem": [
+        "What are some creative use for {object}? The goal is to come up with creative ideas,",
+        "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
+        "innovative, or different. Present a list of as many creative and diverse uses for",
+        "{object} as possible!",
+
+        "Please come up with as many as you can since you are in a group discussion,",
+        "the more ideas you can think of, the more creative would this discussion be.",
+        "Pretend your group is a team of inventors presenting {object} as a revolutionary new product on a reality TV show.",
+        "How do you pitch its most creative uses to win the competition?",
+        "Imagine that your group has been asked to use {object} in an international exhibition to represent your country's innovation.",
+        "How can you showcase its unique applications?"
+      ],
+      "Purpose": "8. Prompt for teamwork -> GPT-4 enforcement"
+    },
+    {
+      "Problem": [
+        "What are some creative use for {object}? The goal is to come up with creative ideas,",
+        "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
+        "innovative, or different. Present a list of as many creative and diverse uses for",
+        "{object} as possible!",
+
+        "You would be in a group discussion with other teammates,",
+        "as a result, you should answer as diverge and creative as you can."
+      ],
+      "Purpose": "9. Prompt for teamwork"
+    },
+    {
+      "Problem": [
+        "What are some creative use for {object}? The goal is to come up with creative ideas,",
+        "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
+        "innovative, or different. Present a list of as many creative and diverse uses for",
+        "{object} as possible!",
+
+        "You would be in a group discussion with other teammates,",
+        "as a result, you should answer as diverge and creative as you can.",
+        "This could notably increase the performance of the group discussion",
+        "since you are an essential member in this group."
+      ],
+      "Purpose": "10. Prompt for teamwork"
+    }
+  ],
+  "Examples": [
+    {
+      "object": "Shirt"
+    },
+    {
+      "object": "Shovel"
+    },
+    {
+      "object": "Sunglasses"
+    },
+    {
+      "object": "Toothpaste"
+    },
+    {
+      "object": "Towel"
+    },
+    {
+      "object": "Vase"
+    },
+    {
+      "object": "Whistle"
+    },
+    {
+      "object": "Zipper"
+    },
+    {
+      "object": "Brush"
+    },
+    {
+      "object": "Can"
+    }
+  ],
+  "Amount": 10
+}

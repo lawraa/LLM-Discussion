@@ -8,7 +8,7 @@ from openai import OpenAI
 client = OpenAI()
 
 agent = 1
-input_file_name = "../../datasets/aut_10-1.json"
+input_file_name = "../../datasets/AUT/aut_100.json"
 
 def write_output_file(results):
     folder_path = f"../../results/single_agent/"

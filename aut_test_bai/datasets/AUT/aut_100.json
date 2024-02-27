@@ -1,7 +1,7 @@
 {
     "Task": [
       {
-        "problem": [
+        "Problem": [
           "What are some creative use for {object}? The goal is to come up with creative ideas,",
           "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
           "innovative, or different. Present a list of as many creative and diverse uses for",
@@ -9,7 +9,7 @@
         ]
       }
     ],
-    "examples": [
+    "Examples": [
     {
       "object": "Fork"
     },

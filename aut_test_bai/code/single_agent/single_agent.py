@@ -1,28 +1,29 @@
 import os
 import re
 import json
+import glob
 import datetime
+import argparse
 from tqdm import tqdm
 from openai import OpenAI
 
 client = OpenAI()
 
 agent = 1
-dataset = 'Scientific_test'
-# dataset = 'AUT'
 
 def write_output_file(results, purpose):
-    folder_path = f"../../results/single_agent/"
-    if purpose == 'answer':
-        base_file_name = f'{dataset}_single_result'
-    elif purpose == 'history':
-        base_file_name = f'{dataset}_single_history'
-
-    file_extension = '.json'
-
+    folder_path = f"../../results/single_agent/{dataset}"
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
+    if purpose == 'answer':
+        base_file_name = f'{dataset}_single_result-{num}'
+    elif purpose == 'history':
+        base_file_name = f'{dataset}_single_history-{num}'
+
+    file_extension = '.json'
+
+    # ================== Handling repeated files ==================
     counter = 0
     file_name = f"{base_file_name}-{counter}{file_extension}"
     full_file_path = os.path.join(folder_path, file_name)
@@ -35,6 +36,14 @@ def write_output_file(results, purpose):
     with open(full_file_path, "w") as outfile:
         json.dump(results, outfile, indent=4)
         print(f"output file save at: {full_file_path}")
+
+
+def parsing_arg():
+    parser = argparse.ArgumentParser(description='Process some integers.')
+    parser.add_argument('-d', '--dataset', type=str, default='AUT', help='Which dataset')
+    parser.add_argument('-n', '--num', type=int, default=10, help='Number of questions')
+    args = parser.parse_args()
+    return args
 
 
 def call_openai_api(prompt):
@@ -74,76 +83,97 @@ def extract_uses(content):
     uses = [use[use.find('.') + 2:] for use in uses]
     return uses
 
+    
+def getting_answer(question, history, results, dataset, object_item):
+    system_prompt = {"role": "system", "content": question}
+    question += initial_prompt
+    user_prompt = {"role": "user", "content": question}
+    answer_context = [system_prompt, user_prompt]
 
-# ========================= main function =========================
-if __name__ == "__main__":
+    completion = generate_answer(answer_context)
+    assistant_message = construct_assistant_message(completion)
+    answers = extract_uses(assistant_message["content"])
+
     if dataset == 'AUT':
-        input_file_name = f"../../datasets/{dataset}/aut_10-1.json"
-        with open(input_file_name, "r") as file:
-            data = json.load(file)
+        history.append({
+            f"item {idx}": object_item,
+            "response": [line for line in assistant_message["content"].split('\n') if line.strip()],
+        })
+        
+        results.append({
+            f"item {idx}": object_item,
+            "uses": answers,
+        })
 
-        results = []
+    else:
+        history.append({
+            f"question {idx}": question,
+            "response": [line for line in assistant_message["content"].split('\n') if line.strip()],
+        })
+
+        results.append({
+            f"question {idx}": question,
+            "answer": answers,
+        })
+
+
+# ================================================== main function ==================================================
+if __name__ == "__main__":
+    args = parsing_arg()
+    dataset = args.dataset
+    num = args.num
+
+    global results
+    global history
+
+    results = []
+    history = []
+
+    idx = 0
+
+    initial_prompt = ' Please list the answer in 1. ... 2. ... 3. ... and so on.'
+
+    input_file_name = f"../../datasets/{dataset}/{dataset.lower()}_{num}.json"
+    with open(input_file_name, "r") as file:
+        print(input_file_name)
+        data = json.load(file)
+    
+    if dataset == 'AUT':
         for example in tqdm(data["Examples"], desc="Processing Examples"):
+            idx += 1
             object_item = example["object"]
             problem_template = " ".join(data["Task"][0]["Problem"])
             question = problem_template.replace("{object}", object_item)
             print(question)
             print()
 
-            # initial_prompt = f"Initiate a discussion with others to collectively complete the following task: {question}"
-            system_prompt = {"role": "system", "content": question}
-            user_prompt = {"role": "user", "content": question}
-            answer_context = [system_prompt, user_prompt]
-
-            completion = generate_answer(answer_context)
-            assistant_message = construct_assistant_message(completion)
-            uses = extract_uses(assistant_message["content"])
-
-            results.append({
-                "item": object_item,
-                "uses": uses,
-            })
+            getting_answer(question, history, results, dataset, object_item)
             print('================= NEXT OBJECT =================')
     
 
-    elif dataset == "Scientific_test":
-        input_file_name = f"../../datasets/{dataset}/scientific_10.json"
-
-        with open(input_file_name, "r") as file:
-            data = json.load(file)
-        
-        results = []
-        history = []
-        idx = 0
+    elif dataset == "Scientific_Test":
         for example in tqdm(data['Task']):
             for question in example['Example']:
                 idx += 1
                 print(idx, ": ", question)
                 print()
-
-                system_prompt = {"role": "system", "content": question}
-                user_prompt = {"role": "user", "content": question}
-                answer_context = [system_prompt, user_prompt]
-
-                completion = generate_answer(answer_context)
-                assistant_message = construct_assistant_message(completion)
-                answers = extract_uses(assistant_message["content"])
-
-                history.append({
-                    f"question {idx}": question,
-                    "response": [line for line in assistant_message["content"].split('\n') if line.strip()],
-                    # "response": assistant_message["content"].split('\n'),
-                })
-
-                results.append({
-                    f"question {idx}": question,
-                    "answer": answers,
-                })
+                getting_answer(question, history, results, dataset, object_item=None)
                 
-
             print(results)
             print()
     
-    write_output_file(results, 'answer')
-    write_output_file(history, 'history')
+    elif dataset == 'Instances_Test' or dataset == 'Similarities_Test':
+        for question in tqdm(data['Examples']):
+            idx += 1
+            print(idx, ": ", question)
+            print()
 
+            getting_answer(question, history, results, dataset, object_item=None)
+
+    else:
+        print('ERROR!!!')
+
+    write_output_file(history, 'history')
+    write_output_file(results, 'answer')
+    
+# usage: python3 single_agent.py -d Scientific_Test -n 10

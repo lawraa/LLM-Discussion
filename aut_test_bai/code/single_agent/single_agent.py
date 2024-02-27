@@ -8,11 +8,16 @@ from openai import OpenAI
 client = OpenAI()
 
 agent = 1
-input_file_name = "../../datasets/aut_10-1.json"
+dataset = 'Scientific_test'
+# dataset = 'AUT'
 
-def write_output_file(results):
+def write_output_file(results, purpose):
     folder_path = f"../../results/single_agent/"
-    base_file_name = 'AUT_single_result'
+    if purpose == 'answer':
+        base_file_name = f'{dataset}_single_result'
+    elif purpose == 'history':
+        base_file_name = f'{dataset}_single_history'
+
     file_extension = '.json'
 
     if not os.path.exists(folder_path):
@@ -46,6 +51,7 @@ def construct_assistant_message(completion):
     content = completion.choices[0].message.content
     return {"role": "assistant", "content": content}
 
+
 def generate_answer(answer_context):
     try:
         completion = client.chat.completions.create(
@@ -56,8 +62,8 @@ def generate_answer(answer_context):
         print("Error:", e)
         time.sleep(10)
         return generate_answer(answer_context)
-
     return completion
+
 
 def extract_uses(content):
     # Split the content into lines and remove the introductory sentence
@@ -69,32 +75,75 @@ def extract_uses(content):
     return uses
 
 
+# ========================= main function =========================
 if __name__ == "__main__":
-    with open(input_file_name, "r") as file:
-        data = json.load(file)
+    if dataset == 'AUT':
+        input_file_name = f"../../datasets/{dataset}/aut_10-1.json"
+        with open(input_file_name, "r") as file:
+            data = json.load(file)
 
-    results = []
+        results = []
+        for example in tqdm(data["Examples"], desc="Processing Examples"):
+            object_item = example["object"]
+            problem_template = " ".join(data["Task"][0]["Problem"])
+            question = problem_template.replace("{object}", object_item)
+            print(question)
+            print()
 
-    for example in tqdm(data["Examples"], desc="Processing Examples"):
-        object_item = example["object"]
-        problem_template = " ".join(data["Task"][0]["Problem"])
-        question = problem_template.replace("{object}", object_item)
-        print(question)
-        print()
+            # initial_prompt = f"Initiate a discussion with others to collectively complete the following task: {question}"
+            system_prompt = {"role": "system", "content": question}
+            user_prompt = {"role": "user", "content": question}
+            answer_context = [system_prompt, user_prompt]
 
-        # initial_prompt = f"Initiate a discussion with others to collectively complete the following task: {question}"
-        system_prompt = {"role": "system", "content": question}
-        user_prompt = {"role": "user", "content": question}
-        answer_context = [system_prompt, user_prompt]
+            completion = generate_answer(answer_context)
+            assistant_message = construct_assistant_message(completion)
+            uses = extract_uses(assistant_message["content"])
 
-        completion = generate_answer(answer_context)
-        assistant_message = construct_assistant_message(completion)
-        uses = extract_uses(assistant_message["content"])
-
-        results.append({
-            "item": object_item,
-            "uses": uses,
-        })
-        print('================= NEXT OBJECT =================')
+            results.append({
+                "item": object_item,
+                "uses": uses,
+            })
+            print('================= NEXT OBJECT =================')
     
-    write_output_file(results)
+
+    elif dataset == "Scientific_test":
+        input_file_name = f"../../datasets/{dataset}/scientific_10.json"
+
+        with open(input_file_name, "r") as file:
+            data = json.load(file)
+        
+        results = []
+        history = []
+        idx = 0
+        for example in tqdm(data['Task']):
+            for question in example['Example']:
+                idx += 1
+                print(idx, ": ", question)
+                print()
+
+                system_prompt = {"role": "system", "content": question}
+                user_prompt = {"role": "user", "content": question}
+                answer_context = [system_prompt, user_prompt]
+
+                completion = generate_answer(answer_context)
+                assistant_message = construct_assistant_message(completion)
+                answers = extract_uses(assistant_message["content"])
+
+                history.append({
+                    f"question {idx}": question,
+                    "response": [line for line in assistant_message["content"].split('\n') if line.strip()],
+                    # "response": assistant_message["content"].split('\n'),
+                })
+
+                results.append({
+                    f"question {idx}": question,
+                    "answer": answers,
+                })
+                
+
+            print(results)
+            print()
+    
+    write_output_file(results, 'answer')
+    write_output_file(history, 'history')
+

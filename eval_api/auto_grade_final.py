@@ -20,7 +20,8 @@ def main():
     parser.add_argument("-s", "--sample", default=3, type=int, help="Number of times to sample the evaluation.")
     parser.add_argument("-d", "--task", default="aut", choices = ["aut", "scientific", "wkct"], help="Task for the evaluation. Default is AUT.")
     args = parser.parse_args()
-    # python3 auto_grade_final.py -v 3 -i phoebe_response -t sampling -s 3 -d aut
+    # python3 auto_grade_final.py -v 3 -i Scientific_Test_single_result-10-1 -t sampling -s 3 -d scientific
+    #Scientific_Test_single_result-10-1
     # GPT VERSION
     version = "gpt-4-1106-preview" if args.version == "4" else "gpt-3.5-turbo-0125"
     print(f"Using GPT Version {version}, Input: {args.version}")
@@ -82,11 +83,11 @@ def main():
         print("Scientific Task")
         for response_obj in responses:
             question = response_obj['question']
-            task_responses = response_obj.get('response',[])
+            answer = response_obj.get('answer',[])
             question_results = {"question": question}
-            if not task_responses:  # Check if 'task_responses' is empty
+            if not answer:  # Check if 'answer' is empty
                 for criterion in selected_criteria:
-                    responses = [{"response": "No responses provided", "score": 0}]
+                    responses = [{"answer": "No responses provided", "score": 0}]
                     question_results[criterion] = responses
                     log_score = {f"average_{criterion}": 0}
                     question_results[criterion].append(log_score)
@@ -97,10 +98,10 @@ def main():
                     model.save_cache()
                 for criterion in sampling_criteria:
                     total = []
-                    for task_response in task_responses:
-                        result = evaluate_scientific(model, {"question": question, "response": [task_response]}, criterion, args.type, 1)
+                    for ans in answer:
+                        result = evaluate_scientific(model, {"question": question, "answer": [ans]}, criterion, args.type, 1)
                         total.append(result)
-                        print(f"Question: {question}, Response: {task_response}, {criterion.capitalize()} Score: {result['average_score']}")
+                        print(f"Question: {question}, Answer: {ans}, {criterion.capitalize()} Score: {result['average_score']}")
                     question_results[criterion] = total
                     model.save_cache()
                 for criterion in evaluation_criteria:
@@ -116,25 +117,25 @@ def main():
         print("WKCT Task")
         for response_obj in responses:
             question = response_obj['question']
-            task_responses = response_obj.get('response',[])
+            answer = response_obj.get('answer',[])
             question_results = {"question": question}
-            if not task_responses:
+            if not answer:  # Check if 'answer' is empty
                 for criterion in selected_criteria:
-                    responses = [{"response": "No responses provided", "score": 0}]
+                    responses = [{"answer": "No responses provided", "score": 0}]
                     question_results[criterion] = responses
                     log_score = {f"average_{criterion}": 0}
                     question_results[criterion].append(log_score)
             else:
                 for criterion in evaluation_criteria:
-                    result = evaluate_wkct(model, response_obj, criterion, args.type, args.sample)
+                    result = evaluate_scientific(model, response_obj, criterion, args.type, args.sample)
                     question_results[criterion] = [result]
                     model.save_cache()
                 for criterion in sampling_criteria:
                     total = []
-                    for task_response in task_responses:
-                        result = evaluate_wkct(model, {"question": question, "response": [task_response]}, criterion, args.type, 1)
+                    for ans in answer:
+                        result = evaluate_scientific(model, {"question": question, "answer": [ans]}, criterion, args.type, 1)
                         total.append(result)
-                        print(f"Question: {question}, Response: {task_response}, {criterion.capitalize()} Score: {result['average_score']}")
+                        print(f"Question: {question}, Answer: {ans}, {criterion.capitalize()} Score: {result['average_score']}")
                     question_results[criterion] = total
                     model.save_cache()
                 for criterion in evaluation_criteria:

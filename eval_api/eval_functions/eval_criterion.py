@@ -27,7 +27,7 @@ def evaluate_aut(model: OpenAIModel, response_obj, criterion, eval_type, sample_
     get_prompt = aut_prompts[criterion].get(eval_type, aut_prompts[criterion]['default'])
     
     if eval_type == 'sampling':
-        full_prompt = get_prompt + f"\nThe item is {item}. The response is: {uses}"
+        full_prompt = get_prompt + f"\nThe item is {item}\nThe response is: {uses}"
     print("Input Prompt ::: ", full_prompt)
     messages = [{"role": "user", "content": full_prompt}]
     sample_responses = []
@@ -73,12 +73,12 @@ def evaluate_scientific(model: OpenAIModel, response_obj, criterion, eval_type, 
     # When originality and elaboration are evaluated, the response_obj is a single response
     # eval_type is set to 'sampling'
     question = response_obj['question']
-    task_response = '\n'.join(response_obj['response']) if isinstance(response_obj['response'], list) else response_obj['response']
-
+    answer = '\n'.join(response_obj['answer']) if isinstance(response_obj['answer'], list) else response_obj['answer']
+    #task_response
     get_prompt = aut_prompts[criterion].get(eval_type, aut_prompts[criterion]['default'])
     
     if eval_type == 'sampling':
-        full_prompt = get_prompt + f"\nThe task question is {question}. The response is: {task_response}"
+        full_prompt = get_prompt + f"\nThe question is {question}\nThe response is: {answer}"
     print("Input Prompt ::: ", full_prompt)
     messages = [{"role": "user", "content": full_prompt}]
     sample_responses = []
@@ -108,7 +108,7 @@ def evaluate_scientific(model: OpenAIModel, response_obj, criterion, eval_type, 
     average_item_score = sample_score / sample_time
     if eval_type == "sampling":
         return {
-            "task result": task_response,
+            "answer": answer,
             "responses": sample_responses,
             "average_score": average_item_score
         }
@@ -123,13 +123,14 @@ def evaluate_scientific(model: OpenAIModel, response_obj, criterion, eval_type, 
 def evaluate_wkct(model: OpenAIModel, response_obj, criterion, eval_type, sample_time=3):
     # When fluency and flexibility are evaluated, the response_obj is a list of responses
     # When originality and elaboration are evaluated, the response_obj is a single response
+    # eval_type is set to 'sampling'
     question = response_obj['question']
-    task_response = '\n'.join(response_obj['response']) if isinstance(response_obj['response'], list) else response_obj['response']
-
+    answer = '\n'.join(response_obj['answer']) if isinstance(response_obj['answer'], list) else response_obj['answer']
+    #task_response
     get_prompt = aut_prompts[criterion].get(eval_type, aut_prompts[criterion]['default'])
     
     if eval_type == 'sampling':
-        full_prompt = get_prompt + f"\nThe task question is {question}. The response is: {task_response}"
+        full_prompt = get_prompt + f"\nThe question is {question}\nThe response is: {answer}"
     print("Input Prompt ::: ", full_prompt)
     messages = [{"role": "user", "content": full_prompt}]
     sample_responses = []
@@ -159,7 +160,7 @@ def evaluate_wkct(model: OpenAIModel, response_obj, criterion, eval_type, sample
     average_item_score = sample_score / sample_time
     if eval_type == "sampling":
         return {
-            "task result": task_response,
+            "answer": answer,
             "responses": sample_responses,
             "average_score": average_item_score
         }

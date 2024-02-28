@@ -112,6 +112,8 @@ if __name__ == "__main__":
                     agent_contexts_other = agent_contexts[:i] + agent_contexts[i+1:]
                     # print(f"agent_contexts_other = {agent_contexts_other}")
                     message = construct_message(agent_contexts_other, question, 2 * round, is_last_round, object)
+                    #message = {"role": "user", "content": prefix_string}
+                    
                     if round == 1:
                         message["content"] += shot_prompt
                     agent_context.append(message)

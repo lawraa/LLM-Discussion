@@ -209,7 +209,7 @@ aut_prompts = {
 scientific_prompts = {
         "fluency": {
             "default": """
-                You are a thoughtful assistant with a focus on scientific creativity. Participants were asked to list as many scientific uses or inquiries as possible for a given scenario or object. Your task is to identify and count the number of unique, scientifically relevant responses. Explain why each response is relevant and scientifically sound. It is important to state the total amount of unique, scientifically relevant responses in the specific format of (X) at the end of your response.
+                You are a thoughtful assistant with a focus on scientific creativity. Identify and count the number of unique, relevant responses and explain why. It is important to the total amount of unique, relevant, and practical responses in the specific format of [[X]] at the end of your response.
             """,
             "rubric": """
                 Rate responses based on the quantity and uniqueness of scientific uses or inquiries mentioned. Consider:
@@ -223,7 +223,7 @@ scientific_prompts = {
         },
         "flexibility": {
             "default": """
-                Assess the diversity of scientific disciplines and approaches represented in the responses. Flexibility in scientific creativity refers to the ability to apply concepts across different branches of science and to think about a scenario or object from multiple scientific perspectives. Count and categorize the responses based on distinct scientific disciplines or methodologies they represent. Conclude with the total number of unique scientific perspectives in the format (X).
+                You are a helpful assistant and a critical thinker. Please evaluate the flexibility of the relevant responses, where flexibility refers to the variety of distinct categories or perspectives represented in the responses. Define and count the number of unique categories or perspectives present, and provide a brief explanation for how you determined these categories. It is important to present the total number of categories or perspectives in the specific format of [[X]] at the end of your response. 
             """,
             "rubric": """
                 Evaluate the diversity of scientific disciplines and approaches in the responses. Consider:
@@ -240,7 +240,15 @@ scientific_prompts = {
                 Focus on the originality and innovation of the proposed solutions or uses. Evaluate the responses for their novelty, especially solutions that demonstrate a significant departure from common knowledge or conventional approaches. Rate the overall novelty of the set of responses on a scale from 1 to 5, with 5 being the most novel. Justify your rating with examples from the responses and conclude with the novelty score in the format (X).
             """,
             "sampling": """
-                Evaluate the originality of a specific proposed solution or use. Consider its uniqueness and potential for innovation. Rate the originality on a scale from 1 to 5, with 5 being the most novel, and provide your reasoning in the format (X).
+                You are a helpful assistant and a critical thinker. Please evaluate the originality of the response based on their uniqueness and novelty. Originality is key in determining how creatively participants think outside the norm. Rate the overall originality on a scale from 1 to 5, and conclude with the score in the format: '[[X]]'. Consider the following guidance:
+
+                - 1 point: Very Common - The idea is mundane and frequently mentioned in everyday contexts. There's a notable lack of novelty, with response being the most typical or expected uses.
+                - 2 points: Somewhat Common - The idea is somewhat ordinary but show slight variations from typical responses, indicating a basic level of creativity.
+                - 3 points: Moderately Original - The idea displays a fair amount of creativity and novelty. They are not the usual thoughts but aren't highly rare or unexpected.
+                - 4 points: Very Original - The idea is significantly unique, demonstrating a high level of creativity and innovation. They are unexpected and not commonly considered.
+                - 5 points: Extremely Original - The idea is extraordinarily unique and rare, displaying a high degree of novelty, creativity, and unexpectedness. The idea is seldom thought of in typical contexts.
+
+                After reviewing the responses, assign an originality score based on these criteria. Provide a brief but detailed justification for your rating, including examples of responses that exemplify the assigned score level. It is extremely important to put  the score in this format: '[[X]]'    
             """,
             "pairwise": """
                 Compare the originality of solutions or uses proposed by two different responses. Assess which response offers more novel or innovative ideas. Determine the more original set: '[[A]]' for the first response, '[[B]]' for the second, or '[[C]]' if they are equally original.
@@ -253,46 +261,6 @@ scientific_prompts = {
                 - 4 points: Solutions are highly novel and innovative, showing unique and uncommon uses or ideas.
                 - 5 points: Solutions are exceptionally novel and innovative, presenting groundbreaking and rare ideas.
                 Provide an overall novelty score in the format (X).
-            """
-        },
-        "practical_application": {
-            "default": """
-                Evaluate the practicality and potential impact of the responses on real-world scientific problems or questions. Consider how these ideas could be implemented and the feasibility of their application. Rate the practicality of the responses on a scale from 1 to 5, providing justification for your assessment and concluding with the score in the format (X).
-            """,
-            "sampling": """
-                Assess the feasibility and practical impact of a specific proposed application. Rate its practicality on a scale from 1 to 5, with 5 being the most practical, and justify your assessment in the format (X).
-            """,
-            "pairwise": """
-                Compare the practicality of two different proposed applications. Evaluate which response suggests more feasible and impactful ideas. Conclude with '[[A]]' if the first is more practical, '[[B]]' for the second, or '[[C]]' for equal practicality.
-            """,
-            "rubric": """
-                Evaluate the feasibility and practical impact of the responses. Consider:
-                - 1 point: Solutions are impractical or infeasible with little to no real-world application.
-                - 2 points: Solutions have limited practicality or feasibility in real-world scenarios.
-                - 3 points: Solutions are moderately practical, with a fair potential for real-world application.
-                - 4 points: Solutions are highly practical and feasible, with strong potential for impactful real-world application.
-                - 5 points: Solutions are exceptionally practical and feasible, with clear, detailed plans for impactful real-world application.
-                Rate the practicality of the responses on a scale from 1 to 5 in the format (X).
-            """
-        },
-        "scientific_inquiry_methodology": {
-            "default": """
-                Assess the methodological soundness of the approaches suggested for scientific inquiry or experimentation. Consider the use of scientific principles, the clarity of the proposed methods, and the ability to generate testable hypotheses. Provide a brief evaluation of the methodological rigor demonstrated in the responses and conclude with an overall methodology score in the format (X).
-            """,
-            "sampling": """
-                Evaluate the methodological rigor of a single proposed scientific inquiry or experiment. Consider its scientific soundness and potential for generating meaningful results. Rate the methodology on a scale from 1 to 5, with 5 being the most rigorous, and explain your rating in the format (X).
-            """,
-            "pairwise": """
-                Compare the scientific inquiry methodologies proposed in two responses. Determine which response demonstrates a more methodologically sound approach to addressing a scientific question. Conclude with '[[A]]' for the first methodology, '[[B]]' for the second, or '[[C]]' for equal rigor.
-            """,
-            "rubric": """
-                Assess the methodological soundness and scientific rigor of the proposed inquiries. Consider:
-                - 1 point: Methods are unsound or lack scientific basis.
-                - 2 points: Methods show limited scientific soundness or are poorly explained.
-                - 3 points: Methods are moderately sound, with some scientific basis and explanation.
-                - 4 points: Methods are highly sound and well-explained, with a clear scientific basis.
-                - 5 points: Methods are exceptionally sound and rigorously designed, with comprehensive scientific explanations.
-                Conclude with an overall methodology score in the format (X).
             """
         },
         "elaboration": {
@@ -309,10 +277,64 @@ scientific_prompts = {
                 Justify your rating and conclude with the elaboration score in the format (X).
             """,
             "sampling": """
-                Evaluate the level of elaboration for a specific proposed use or idea. Rate the detail and development on a scale from 1 to 5, with 5 indicating the highest level of elaboration, and provide a brief justification for your score. Present the elaboration score in the specific format of (X).
+                You are a helpful assistant and a critical thinker. Please evaluate the level of elaboration in the set of responses on a scale of 1 to 5. Elaboration should be judged based on the detail and development of the ideas across the response. Conclude with the score in this format: '[[X]]' Consider the following guidance:
+
+                1 point: Very Basic - The response is extremely basic with minimal detail or explanation. Idea is presented in a very simple or cursory manner.
+                2 points: Somewhat Basic - The response shows a slight degree of detail, but remain on a basic level. Idea is somewhat developed but lack depth.
+                3 points: Moderately Elaborated - The response offers a moderate level of detail and development. Idea is explained to a fair extent, showing some thought and consideration.
+                4 points: Highly Elaborated - The response is well-developed and detailed. Idea is thoroughly explained and exhibit a high level of thought and complexity.
+                5 points: Exceptionally Elaborated - The response demonstrates exceptional elaboration. Idea is not only detailed and fully developed but also exhibit depth, insight, and comprehensive explanation.
+
+                After reviewing the responses, assign an elaboration score based on these criteria. Provide a brief justification for your rating. It is extremely important to put the score in this format: '[[X]]'
             """,
             "pairwise": """
                 Compare the level of elaboration in responses by two different participants. Determine which response is more detailed and well-developed. Conclude with '[[A]]' if the first response shows more elaboration, '[[B]]' if the second is more elaborated, or '[[C]]' for equal levels of elaboration.
+            """
+        }
+}
+
+
+wkct_prompts = {
+        "fluency": {
+            "default": """
+                You are a thoughtful assistant with a focus on scientific creativity. Identify and count the number of unique, relevant responses and explain why. It is important to the total amount of unique, relevant, and practical responses in the specific format of [[X]] at the end of your response.
+            """
+        },
+        "flexibility": {
+            "default": """
+                You are a helpful assistant and a critical thinker. Please evaluate the flexibility of the relevant responses, where flexibility refers to the variety of distinct categories or perspectives represented in the responses. Define and count the number of unique categories or perspectives present, and provide a brief explanation for how you determined these categories. It is important to present the total number of categories or perspectives in the specific format of [[X]] at the end of your response. 
+            """
+        },
+        "originality": {
+            "default": """
+                Focus on the originality and innovation of the proposed solutions or uses. Evaluate the responses for their novelty, especially solutions that demonstrate a significant departure from common knowledge or conventional approaches. Rate the overall novelty of the set of responses on a scale from 1 to 5, with 5 being the most novel. Justify your rating with examples from the responses and conclude with the novelty score in the format (X).
+            """,
+            "sampling": """
+                You are a helpful assistant and a critical thinker. Please evaluate the originality of the response based on their uniqueness and novelty. Originality is key in determining how creatively participants think outside the norm. Rate the overall originality on a scale from 1 to 5, and conclude with the score in the format: '[[X]]'. Consider the following guidance:
+
+                - 1 point: Very Common - The idea is mundane and frequently mentioned in everyday contexts. There's a notable lack of novelty, with response being the most typical or expected uses.
+                - 2 points: Somewhat Common - The idea is somewhat ordinary but show slight variations from typical responses, indicating a basic level of creativity.
+                - 3 points: Moderately Original - The idea displays a fair amount of creativity and novelty. They are not the usual thoughts but aren't highly rare or unexpected.
+                - 4 points: Very Original - The idea is significantly unique, demonstrating a high level of creativity and innovation. They are unexpected and not commonly considered.
+                - 5 points: Extremely Original - The idea is extraordinarily unique and rare, displaying a high degree of novelty, creativity, and unexpectedness. The idea is seldom thought of in typical contexts.
+
+                After reviewing the responses, assign an originality score based on these criteria. Provide a brief but detailed justification for your rating, including examples of responses that exemplify the assigned score level. It is extremely important to put  the score in this format: '[[X]]'    
+            """
+        },
+        "elaboration": {
+            "default": """
+                Evaluate the overall level of elaboration in the set of responses. Rate the elaboration on a scale of 1 to 5, with 5 being the highest level of detail and development. Provide a brief justification for your overall evaluation. Indicate the overall elaboration score in the specific format of (X).
+            """,
+            "sampling": """
+                You are a helpful assistant and a critical thinker. Please evaluate the level of elaboration in the set of responses on a scale of 1 to 5. Elaboration should be judged based on the detail and development of the ideas across the response. Conclude with the score in this format: '[[X]]' Consider the following guidance:
+
+                1 point: Very Basic - The response is extremely basic with minimal detail or explanation. Idea is presented in a very simple or cursory manner.
+                2 points: Somewhat Basic - The response shows a slight degree of detail, but remain on a basic level. Idea is somewhat developed but lack depth.
+                3 points: Moderately Elaborated - The response offers a moderate level of detail and development. Idea is explained to a fair extent, showing some thought and consideration.
+                4 points: Highly Elaborated - The response is well-developed and detailed. Idea is thoroughly explained and exhibit a high level of thought and complexity.
+                5 points: Exceptionally Elaborated - The response demonstrates exceptional elaboration. Idea is not only detailed and fully developed but also exhibit depth, insight, and comprehensive explanation.
+
+                After reviewing the responses, assign an elaboration score based on these criteria. Provide a brief justification for your rating. It is extremely important to put the score in this format: '[[X]]'
             """
         }
 }

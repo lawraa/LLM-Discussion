@@ -78,7 +78,7 @@ def evaluate_scientific(model: OpenAIModel, response_obj, criterion, eval_type, 
     get_prompt = aut_prompts[criterion].get(eval_type, aut_prompts[criterion]['default'])
     
     if eval_type == 'sampling':
-        full_prompt = get_prompt + f"\nThe question is {question}\nThe response is: {answer}"
+        full_prompt = get_prompt + f"\nThe task/question is {question}\nThe response is: {answer}"
     print("Input Prompt ::: ", full_prompt)
     messages = [{"role": "user", "content": full_prompt}]
     sample_responses = []
@@ -130,7 +130,7 @@ def evaluate_wkct(model: OpenAIModel, response_obj, criterion, eval_type, sample
     get_prompt = aut_prompts[criterion].get(eval_type, aut_prompts[criterion]['default'])
     
     if eval_type == 'sampling':
-        full_prompt = get_prompt + f"\nThe question is {question}\nThe response is: {answer}"
+        full_prompt = get_prompt + f"\nThe task/question is {question}\nThe response is: {answer}"
     print("Input Prompt ::: ", full_prompt)
     messages = [{"role": "user", "content": full_prompt}]
     sample_responses = []

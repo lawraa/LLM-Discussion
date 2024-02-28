@@ -1,0 +1,15 @@
+1. How to use Law's boxplot
+For example:
+python3 boxplot_final.py -i file1 -o output_file_1 -t "Title Name" -l result_1
+python3 boxplot_final.py -i evaluation_discussion_final_results_02-24__final_results_sampling_3_sample evaluation_discussion_final_results_02-24__final_results_sampling_3_sample evaluation_discussion_final_results_02-24__final_results_sampling_3_sample evaluation_discussion_final_results_02-24__final_results_sampling_3_sample evaluation_discussion_final_results_02-24_0_final_results_sampling_3_sample -o Prompt_Test_2 -t "Prompt Test" -l "Prompt 6" "Prompt 7" "Prompt 8" "Prompt 9" "Prompt 10"
+python3 boxplot_final.py -i evaluation_discussion_final_results_02-24_10-1_sampling_3_sample evaluation_discussion_final_results_02-24_10-2_sampling_3_sample evaluation_discussion_final_results_02-24_10-3_sampling_3_sample evaluation_discussion_final_results_02-24_30_sampling_3_sample -o Amount_Test -t "Amount Test" -l "10-1" "10-2" "10-3" "30"
+python3 boxplot_final.py -i evaluation_AUT_single_result-1_sampling_3_sample evaluation_AUT_single_few_shot_result-0_sampling_3_sample evaluation_AUT_single_CoT_result-0_sampling_3_sample evaluation_AUT_single_deep_breath_result-0_sampling_3_sample -o Single_Agent -t "Single Agent Test" -l "Zero Shot" "Few Shot" "CoT" "Deep Breath"
+
+
+2. How to use Law's auto_grade.py
+python3 auto_grade.py -v 3 -i AUT_single_CoT_result-0 -c all -t sampling -s 3 -d aut
+python3 auto_grade.py -v 3 -i AUT_single_deep_breath_result-0 -c all -t sampling -s 3 -d aut
+python3 auto_grade.py -v 3 -i AUT_single_few-shot_result-0 -c all -t sampling -s 3 -d aut
+
+2. scp method
+scp -r dataset vincentpai@192.168.11.37:/home/vincentpai

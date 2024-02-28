@@ -1,0 +1,192 @@
+[
+    {
+        "question 1": "Name all the round things you can think of.Please list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Basketball",
+            "Soccer ball",
+            "Tennis ball",
+            "Apple",
+            "Orange",
+            "Tomato",
+            "Clock",
+            "Plate",
+            "Wheel",
+            "Frisbee"
+        ]
+    },
+    {
+        "question 2": "Name all the things you can think of that will make a noise.Please list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Car horn",
+            "Dog barking",
+            "Telephone ringing",
+            "Doorbell",
+            "Rain falling",
+            "Thunder",
+            "Music from a radio",
+            "Baby crying",
+            "Firecrackers",
+            "Siren",
+            "Laughter",
+            "Waves crashing",
+            "Birds chirping",
+            "Motorcycle engine",
+            "Construction work",
+            "Whistle blowing",
+            "Alarm clock",
+            "Microwave beeping",
+            "Drum beating",
+            "Church bells ringing"
+        ]
+    },
+    {
+        "question 3": "Name all the square things you can think of.Please list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "A Rubik's cube",
+            "A square piece of paper",
+            "A square window",
+            "A square tile",
+            "A square chessboard",
+            "A square book",
+            "A square picture frame",
+            "A square chocolate bar",
+            "A square door",
+            "A square sponge"
+        ]
+    },
+    {
+        "question 4": "Name all the things you can think of that move on wheels.Please list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Cars",
+            "Bicycles",
+            "Trucks",
+            "Skateboards",
+            "Rollerblades",
+            "Wheelchairs",
+            "Scooters",
+            "Trains",
+            "Roller coasters",
+            "Shopping carts"
+        ]
+    },
+    {
+        "question 5": "Name all the things you can think of that are red.Please list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Apples",
+            "Roses",
+            "Fire trucks",
+            "Strawberries",
+            "Tomatoes",
+            "Red peppers",
+            "Red velvet cake",
+            "Red wine",
+            "Red lipstick",
+            "Stop signs"
+        ]
+    },
+    {
+        "question 6": "Name all the animals you can think of that live in the water.Please list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Fish",
+            "Dolphin",
+            "Shark",
+            "Whale",
+            "Seal",
+            "Sea turtle",
+            "Octopus",
+            "Crab",
+            "Lobster",
+            "Seahorse"
+        ]
+    },
+    {
+        "question 7": "Name all the fruits you can think of.Please list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Apple",
+            "Banana",
+            "Orange",
+            "Grape",
+            "Strawberry",
+            "Blueberry",
+            "Pineapple",
+            "Watermelon",
+            "Kiwi",
+            "Mango",
+            "Papaya",
+            "Pear",
+            "Cherry",
+            "Peach",
+            "Plum",
+            "Raspberry",
+            "Blackberry",
+            "Lemon",
+            "Lime",
+            "Avocado"
+        ]
+    },
+    {
+        "question 8": "Name all the instruments you can think of.Please list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Piano",
+            "Violin",
+            "Guitar",
+            "Flute",
+            "Trumpet",
+            "Drum",
+            "Saxophone",
+            "Cello",
+            "Clarinet",
+            "Trombone",
+            "Banjo",
+            "Harp",
+            "Ukulele",
+            "Xylophone",
+            "Electric bass",
+            "French horn",
+            "Oboe",
+            "Viola",
+            "Organ",
+            "Mandolin"
+        ]
+    },
+    {
+        "question 9": "Name all the things you can think of that can fly.Please list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Birds",
+            "Insects",
+            "Aircraft",
+            "Helicopters",
+            "Air balloons",
+            "Kites",
+            "Bats",
+            "Butterflies",
+            "Eagles",
+            "Falcons",
+            "Hawks",
+            "Drones",
+            "Dragonflies",
+            "Flying squirrels",
+            "Paragliders"
+        ]
+    },
+    {
+        "question 10": "Name all the flowers you can think of.Please list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Rose",
+            "Lily",
+            "Daisy",
+            "Sunflower",
+            "Tulip",
+            "Orchid",
+            "Carnation",
+            "Peony",
+            "Hydrangea",
+            "Gardenia",
+            "Daffodil",
+            "Iris",
+            "Poppy",
+            "Jasmine",
+            "Lilac"
+        ]
+    }
+]

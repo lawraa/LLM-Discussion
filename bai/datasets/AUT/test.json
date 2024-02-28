@@ -1,0 +1,31 @@
+{
+  "Task": [
+    {
+      "problem": [
+        "What are some creative use for {object}? The goal is to come up with creative ideas,",
+        "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
+        "innovative, or different. Present a list of as many creative and diverse uses for",
+        "{object} as possible."
+      ],
+      "purpose": "1. Baseline"
+    },
+    {
+      "problem": [
+        "What are some creative use for {object}? The goal is to come up with creative ideas,",
+        "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
+        "innovative, or different. Present a list of as many creative and diverse uses for",
+        "{object} as possible!",
+        "This is very important to my career and research since I need to come up with creative ideas!"
+      ],
+      "purpose": "2. LLM Stimuli 1"
+    }
+  ],
+  "examples": [
+    {
+      "object": "Fork"
+    },
+    {
+      "object": "Jar"
+    }
+  ]
+}

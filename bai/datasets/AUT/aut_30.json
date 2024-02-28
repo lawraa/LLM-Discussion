@@ -1,0 +1,105 @@
+{
+    "Task": [
+      {
+        "Problem": [
+          "What are some creative use for {object}? The goal is to come up with creative ideas,",
+          "which are ideas that strike people as clever, unusual, interesting, uncommon, humorous,",
+          "innovative, or different. Present a list of as many creative and diverse uses for",
+          "{object} as possible."
+        ]
+      }
+    ],
+    "Examples": [
+    {
+      "object": "Fork"
+    },
+    {
+      "object": "Jar"
+    },
+    {
+      "object": "Mirror"
+    },
+    {
+      "object": "Mug"
+    },
+    {
+      "object": "Needle"
+    },
+    {
+      "object": "Paper"
+    },
+    {
+      "object": "Ring"
+    },
+    {
+      "object": "Scarf"
+    },
+    {
+      "object": "Screwdriver"
+    },
+    {
+      "object": "Sheet"
+    },
+    {
+      "object": "Shirt"
+    },
+    {
+      "object": "Shovel"
+    },
+    {
+      "object": "Sunglasses"
+    },
+    {
+      "object": "Toothpaste"
+    },
+    {
+      "object": "Towel"
+    },
+    {
+      "object": "Vase"
+    },
+    {
+      "object": "Whistle"
+    },
+    {
+      "object": "Zipper"
+    },
+    {
+      "object": "Brush"
+    },
+    {
+      "object": "Can"
+    },
+    {
+      "object": "Candlestick"
+    },
+    {
+      "object": "Flashlight"
+    },
+    {
+      "object": "Basket"
+    },
+    {
+      "object": "Coaster"
+    },
+    {
+      "object": "Magnet"
+    },
+    {
+      "object": "Straw"
+    },
+    {
+      "object": "Clip"
+    },
+    {
+      "object": "Belt"
+    },
+    {
+      "object": "Lid"
+    },
+    {
+      "object": "Mat"
+    }
+  ],
+"Amount": 30
+}

@@ -6,6 +6,6 @@
     - Submission date: March 29, 2024 (Anywhere on Earth)
     - Conference date: October 7-9, 2024
     
-- Group Member: [Li-Chun Lu](https://github.com/lichun-19), [Lawrence Chen](https://github.com/lawraa) and [Tsung-Min Pai](https://github.com/Bai1026)
+- Group Member: [Li-Chun Lu](https://github.com/lichun-19), [Shou-Jen Chen](https://github.com/lawraa) and [Tsung-Min Pai](https://github.com/Bai1026)
 
 

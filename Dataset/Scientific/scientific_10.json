@@ -1,0 +1,41 @@
+{
+    "Task":[
+        {
+            "Original": "Please write down as many as possible scientific uses as you can for a piece of glass. For example, make a test tube.",
+            "Example": [
+                "Innovative Scientific Tools Using a Rubber Band: Think of as many scientific uses as possible for a rubber band. For example, using it as a simple measure of elasticity in a physics experiment.",
+                "Innovative Uses for a Water Bottle: Consider various scientific applications of a water bottle. For example, using it as a container for creating a water vortex."
+                ],
+            "Amount": "1"
+        },
+        {
+            "Original": "If you can take a spaceship to travel in outer space and go to a planet, what scientific questions do you want to research? For example, are there any living things on the planet?",
+            "Example": [
+                "If you could explore the deepest part of the ocean, what mysteries or unknown species would you expect to find?",
+                "What scientific experiments would you conduct if you could become invisible at will?"
+                ],
+            "Amount": "1"
+        },
+        {
+            "Original": "Please think up as many possible improvements as you can to a regular bicycle, making it more interesting, more useful and more beautiful. For example, make the tires reflective, so they can be seen in the dark.",
+            "Example": [
+                "Please think up as many possible improvements as you can to a regular bicycle, making it more interesting, more useful and more beautiful. For example, make the tires reflective, so they can be seen in the dark."
+            ],
+            "Amount": "1"
+        },
+        {
+            "Original": "Suppose there was no gravity, describe what the world would be like? For example, human beings would be floating.",
+            "Example": [
+                "Suppose there was no gravity, describe what the world would be like? For example, human beings would be floating."
+            ],
+            "Amount": "1"
+        },
+        {
+            "Original": "There are two kinds of napkins. How can you test which is better? Please write down as many possible methods as you can and the instruments, principles and simple procedure.",
+            "Example": [
+                "There are two kinds of napkins. How can you test which is better? Please write down as many possible methods as you can and the instruments, principles and simple procedure."
+            ],
+            "Amount": "1"
+        }
+    ]
+}

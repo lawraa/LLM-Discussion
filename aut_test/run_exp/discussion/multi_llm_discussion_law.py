@@ -129,7 +129,7 @@ class Llama2Agent(Agent):
         self.tokenizer_path = tokenizer_path
         self.agent_name = agent_name
 
-    def generate_answer(self, answer_context, temperature=0.6, top_p=0.9, max_seq_len=2048, max_batch_size=4): # return pure text
+    def generate_answer(self, answer_context, temperature=0.6, top_p=0.9, max_seq_len=100000, max_batch_size=4): # return pure text
         return generate_response_llama2_torchrun(
             message=answer_context,
             ckpt_dir=self.ckpt_dir,

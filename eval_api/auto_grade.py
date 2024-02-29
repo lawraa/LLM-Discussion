@@ -36,7 +36,7 @@ def main():
         responses = json.load(file)
     
     total_results = []
-
+    
     # PAIRWISE EVALUATION
     if args.type == "pairwise":
         criteria = ["originality", "elaboration"]

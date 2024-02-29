@@ -42,6 +42,7 @@ def parsing_arg():
     parser = argparse.ArgumentParser(description='Process some integers.')
     parser.add_argument('-d', '--dataset', type=str, default='AUT', help='Which dataset')
     parser.add_argument('-n', '--num', type=int, default=10, help='Number of questions')
+    parser.add_argument('-t', '--type', type=str, default='basic', help='Type of the prompt')
     args = parser.parse_args()
     return args
 
@@ -122,6 +123,7 @@ if __name__ == "__main__":
     args = parsing_arg()
     dataset = args.dataset
     num = args.num
+    prompt_type = args.type
 
     global results
     global history
@@ -130,7 +132,31 @@ if __name__ == "__main__":
     history = []
 
     idx = 0
-    initial_prompt = ' Please list the answer in 1. ... 2. ... 3. ... and so on.'
+    initial_prompt = '\nPlease list the answer in 1. ... 2. ... 3. ... and so on.'
+
+    if prompt_type == 'CoT':
+        initial_prompt += ' And please think step by step.'
+    elif prompt_type == 'deep_breath':
+        initial_prompt += ' And take a deep breath.'
+
+    # For few-shot 
+    objects_and_uses = [
+        ("Shoe", [
+            "Plant holder: Use old shoes as quirky plant holders for small plants or succulents.",
+            "Doorstop: Fill a shoe with sand or pebbles and use it as a decorative doorstop.",
+            "Birdhouse: Transform an old boot into a cozy home for birds by hanging it from a tree."
+        ]),
+        ("Spoon", [
+            "Candle holder: Bend the handle of spoons to create unique candle holders.",
+            "Garden markers: Use old spoons as plant markers in the garden by writing the names of plants on them.",
+            "Art piece: Weld spoons together to create a stunning wall sculpture."
+        ]),
+        ("Book", [
+            "Hidden storage: Hollow out a book to create a secret storage space for valuables.",
+            "Bookshelf: Stack books horizontally to build a creative and unique bookshelf.",
+            "Phone stand: Use an open book as a makeshift stand for your phone or tablet."
+        ])
+    ]
 
     input_file_name = f"../../datasets/{dataset}/{dataset.lower()}_{num}.json"
     with open(input_file_name, "r") as file:
@@ -143,6 +169,19 @@ if __name__ == "__main__":
             object_item = example["object"]
             problem_template = " ".join(data["Task"][0]["Problem"])
             question = problem_template.replace("{object}", object_item)
+
+            if prompt_type == 'few_shot':
+                question += '\n\nI will give you some examples.\n'
+                for example_number, (object_item, uses) in enumerate(objects_and_uses, start=1):
+                    example_text = problem_template.format(example_number=example_number, object=object_item)
+                    for use in uses:
+                        example_text += f"{uses.index(use) + 1}. {use}\n"
+                    question += example_text + "\n"
+                
+                question += 'Not to remember these answers, just use these as template to answer.\n'
+                # print(initial_prompt)
+            
+            question += initial_prompt
             print(idx, ": ", question)
             print()
 

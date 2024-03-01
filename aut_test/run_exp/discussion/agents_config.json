@@ -5,9 +5,10 @@
       "agent_name": "GPT Agent 1"
     },
     {
-      "type": "gemini",
-      "model_name": "gemini-pro",
-      "agent_name": "Gemini Agent 1"
+      "type": "llama2",
+      "ckpt_dir": "/tmp2/llama-2-7b-chat",
+      "tokenizer_path": "/home/chenlawrance/repo/LLM-Creativity/model/tokenizer.model",
+      "agent_name": "Llama2 Agent 1"
     }
 ]
   

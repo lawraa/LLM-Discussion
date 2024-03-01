@@ -16,16 +16,17 @@ current_date = datetime.date.today().strftime("%m-%d_")
 current_time = datetime.datetime.now()
 formatted_time = current_time.strftime("%H:%M:%S")
 
-
+#os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
 def generate_response_llama2_torchrun(
-    message: str,
+    message,
     ckpt_dir: str = "/tmp2/llama-2-7b-chat",
-    tokenizer_path: str = "/home/chenlawrance/repo/LLM-Creativity/model/llama/tokenizer.model",
+    tokenizer_path: str = "/home/chenlawrance/repo/LLM-Creativity/model/tokenizer.model",
     temperature: float = 0.6,
     top_p: float = 0.9,
     max_seq_len: int = 2048,
     max_batch_size: int = 4):
+    message_json = json.dumps(message)  # Serialize the message to a JSON string
     command = [
         "torchrun", "--nproc_per_node=1", "/home/chenlawrance/repo/LLM-Creativity/model_discuss/llama_chat_completion.py",
         "--ckpt_dir", ckpt_dir,
@@ -34,7 +35,7 @@ def generate_response_llama2_torchrun(
         "--max_batch_size", str(max_batch_size),
         "--temperature", str(temperature),
         "--top_p", str(top_p),
-        "--message", message
+        "--message", message_json
     ]
     try:
         result = subprocess.run(command, capture_output=True, text=True, check=True)
@@ -116,7 +117,7 @@ class GeminiAgent(Agent):
             time.sleep(1)
             return self.generate_answer(answer_context)
     def construct_assistant_message(self, content):
-        response = {"role": "assistant", "parts": [content]}
+        response = {"role": "model", "parts": [content]}
         return response
     
     def construct_user_message(self, content):
@@ -179,12 +180,12 @@ class Discussion:
         all_responses = {}
         init_results = []
         final_results = []
-        for example in dataset['examples']:
+        for example in dataset['Examples']:
             chat_history = {agent.agent_name: [] for agent in self.agents}
             print("initial chat_history: ", chat_history, "\n")
             # --------------->>>> set the system content
             object = example['object']
-            problem_template = " ".join(dataset["Task"][0]["problem"])
+            problem_template = " ".join(dataset["Task"][0]["Problem"])
             question = problem_template.replace("{object}", object)
             initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
             # ------------------------------------------
@@ -201,7 +202,7 @@ class Discussion:
                         print("formatted_initial_prompt: ", formatted_initial_prompt, "\n")
                         print(f"Agent {agent.agent_name} chat history: {chat_history[agent.agent_name]}","\n")
                         response = agent.generate_answer(chat_history[agent.agent_name])
-
+                        print("OUTPUT FROM GENERATE: ", response, "\n")
                         # Save the initial response for the agent
                         uses_list = self.extract_uses(response)
                         print(f"uses_list = {uses_list}")
@@ -260,7 +261,7 @@ class Discussion:
             prefix_string += other_agent_response
 
         if is_last_round:
-            prefix_string += f"This is the last round of the discussion, please only present a list of the most creative uses of {object} as your final answers. \n\n"
+            prefix_string += f"This is the last round of the discussion, please only present a list of the most creative uses of {object} as your final answers. Please list the final response in 1. ... 2. ... 3. ... and so on. \n\n"
         else:
             discussion_prompt =  "You are an active and helpful member in this discussion. \
 You should persuade each other that your answers are creative by giving reasonable explanations, be critical to verify each answer to see if it is creative enough,\

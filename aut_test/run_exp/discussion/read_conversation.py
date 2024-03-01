@@ -16,9 +16,10 @@ def main(filename: str):
     <style>
     body { font-family: 'Roboto', sans-serif; margin: 20px; }
     .chat-container { background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 10px; padding: 10px; margin-bottom: 20px; }
-    .user, .assistant { border-radius: 10px; padding: 10px; margin: 5px 0; max-width: 55%; line-height: 1.5;}
-    .user { color: white; background-color: #007bff; float: left; clear: both; }
-    .assistant { color: white; background-color: #28a745; float: right; clear: both; }
+    .message { border-radius: 10px; padding: 10px; margin: 5px 0; max-width: 55%; line-height: 1.5;}
+    .user, .model { color: white; float: left; clear: both; }
+    .user { background-color: #007bff; float: left; clear: both; }
+    .model { background-color: #28a745; float: right; clear: both; }
     h2, h3 { font-weight: 1000; }
     .clearfix { clear: both; }
     </style>
@@ -32,9 +33,14 @@ def main(filename: str):
         for agent, responses in agents_responses.items():
             html_content += f"<div class='chat-container'>\n<h3>{agent}</h3>\n"
             
-            for message in responses:
-                css_class = "user" if message["role"] == "user" else "assistant"
-                html_content += f"<div class='{css_class}'>{message['content']}</div>\n"
+            for response in responses:
+                role = response["role"]
+                css_class = "user" if role == "user" else "model"
+                if "content" in response:
+                    message = response["content"]
+                elif "parts" in response:
+                    message = " ".join(response["parts"])
+                html_content += f"<div class='{css_class} message'>{message}</div>\n"
             
             html_content += "<div class='clearfix'></div></div>\n"
 
@@ -44,7 +50,7 @@ def main(filename: str):
     """
 
     # Save the HTML content to a file
-    file_path = 'chat_history_ui.html'
+    file_path = 'chat_history_ui_2.html'
     with open(file_path, 'w') as file:
         file.write(html_content)
 

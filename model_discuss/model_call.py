@@ -8,6 +8,7 @@ from llama import Llama, Dialog
 import subprocess
 import torch
 
+os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
 client = OpenAI()
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
@@ -49,9 +50,9 @@ def generate_response_openai(messages, temperature=1, top_p=1, seed=0):
 
 
 def generate_response_llama2_torchrun(
-    message: str,
+    message,
     ckpt_dir: str = "/tmp2/llama-2-7b-chat",
-    tokenizer_path: str = "/home/chenlawrance/repo/LLM-Creativity/model/llama/tokenizer.model",
+    tokenizer_path: str = "/home/chenlawrance/repo/LLM-Creativity/model/tokenizer.model",
     temperature: float = 0.6,
     top_p: float = 0.9,
     max_seq_len: int = 2048,

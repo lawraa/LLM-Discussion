@@ -7,6 +7,7 @@ import sys
 from llama import Llama, Dialog
 
 def main(
+    message,
     ckpt_dir: str,
     tokenizer_path: str,
     temperature: float = 0.6,
@@ -14,7 +15,6 @@ def main(
     max_seq_len: int = 512,
     max_batch_size: int = 8,
     max_gen_len: Optional[int] = None,
-    message: Optional[str] = None,  # If this was added without a default and after a default arg
 ):
     """
     Entry point of the program for generating text using a pretrained model.
@@ -39,20 +39,20 @@ def main(
         max_batch_size=max_batch_size,
     )
 
-    if message:
-        dialogs = [
-            [{"role": "user", "content": message}]
-        ]
+    # if message:
+    #     dialogs = [
+    #         [{"role": "user", "content": message}]
+    #     ]
 
     results = generator.chat_completion(
-        dialogs,  # type: ignore
+        message,  # type: ignore
         max_gen_len=max_gen_len,
         temperature=temperature,
         top_p=top_p,
     )
 
 
-    for dialog, result in zip(dialogs, results):
+    for dialog, result in zip(message, results):
         for msg in dialog:
             print(f"{msg['role'].capitalize()}: {msg['content']}\n")
         print(

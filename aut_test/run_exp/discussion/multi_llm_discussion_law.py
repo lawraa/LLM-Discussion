@@ -215,6 +215,8 @@ class Discussion:
                         print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
                         response = agent.generate_answer(chat_history[agent.agent_name])
                         print("OUTPUT FROM GENERATE: ", response, "\n")
+
+                        # Save Final Result
                         if is_last_round:
                             uses_list = self.extract_uses(response)
                             print(f"uses_list = {uses_list}")
@@ -226,11 +228,11 @@ class Discussion:
                     round_responses[agent.agent_name].append(formatted_response)
                 most_recent_responses = round_responses
             all_responses[question] = chat_history
-        output_filename = f"../../results/discussion/llm_debate_result/history/discussion_{current_date}{formatted_time}_{len(self.agents)}_{self.rounds}.json"
-        final_ans_filename = f"../../results/discussion/llm_debate_result/final_ans/discussion_final_{current_date}{formatted_time}_{len(self.agents)}_{self.rounds}.json"
-        init_ans_filename = f"../../results/discussion/llm_debate_result/init_ans/discussion_init_{current_date}{formatted_time}_{len(self.agents)}_{self.rounds}.json"
-        self.save_conversation(output_filename, all_responses)
 
+        output_filename = f"../../../Result/AUT/Output/discussion_log_{current_date}{formatted_time}_{len(self.agents)}_{self.rounds}.json"
+        final_ans_filename = f"../../../Result/AUT/Output/discussion_final_{current_date}{formatted_time}_{len(self.agents)}_{self.rounds}.json"
+        init_ans_filename = f"../../../Result/AUT/Output/discussion_init_{current_date}{formatted_time}_{len(self.agents)}_{self.rounds}.json"
+        self.save_conversation(output_filename, all_responses)
         self.save_conversation(final_ans_filename, final_results)
         self.save_conversation(init_ans_filename, init_results)
     

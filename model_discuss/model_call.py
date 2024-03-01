@@ -91,7 +91,7 @@ def generate_response_llama2_torchrun(
 message = "Give me some creative use of ring."
 
 response_gemini = generate_response_gemini(message, temperature=1, top_p=1, seed=0)
-print("Gemine Response ::: ", response_gemini,"\n")
+print("Gemini Response ::: ", response_gemini,"\n")
 
 response_openai = generate_response_openai([{"role": "user", "content": message}], temperature=1, top_p=1, seed=0)
 print("OpenAI Response ::: ", response_openai,"\n")

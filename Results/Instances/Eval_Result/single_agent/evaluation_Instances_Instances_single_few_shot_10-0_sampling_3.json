@@ -1,0 +1,3132 @@
+[
+    {
+        "question": "Name all the round things you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "fluency": [
+            {
+                "answer": "Basketball\nTennis ball\nGlobe\nOrange\nMoon\nPing pong ball\nWheel\nPizza\nPlate\nButton",
+                "responses": [
+                    {
+                        "response": "1. Basketball\n2. Tennis ball\n3. Globe\n4. Orange\n5. Moon\n6. Ping pong ball\n7. Wheel\n8. Pizza\n9. Plate\n10. Button\n\nThere are 10 unique, relevant responses in total. Each item listed is a round object and has multiple practical uses in various contexts. [[10]]",
+                        "score": 10
+                    },
+                    {
+                        "response": "1. Basketball\n2. Tennis ball\n3. Globe\n4. Orange\n5. Moon\n6. Ping pong ball\n7. Wheel\n8. Pizza\n9. Plate\n10. Button\n\nThere are 10 unique, relevant responses in the list. Each item listed is a round object and can be easily associated with the term \"round things.\" These items are commonly recognized as round objects and have practical uses in various aspects of life. [[10]]",
+                        "score": 10
+                    },
+                    {
+                        "response": "1. Basketball\n2. Tennis ball\n3. Globe\n4. Orange\n5. Moon\n6. Ping pong ball\n7. Wheel\n8. Pizza\n9. Plate\n10. Button\n\nThere are 10 unique, relevant, and practical responses listed above. [[10]]",
+                        "score": 10
+                    }
+                ],
+                "average_score": 10.0
+            },
+            {
+                "average_fluency": 10.0
+            }
+        ],
+        "flexibility": [
+            {
+                "answer": "Basketball\nTennis ball\nGlobe\nOrange\nMoon\nPing pong ball\nWheel\nPizza\nPlate\nButton",
+                "responses": [
+                    {
+                        "response": "1. Basketball (Sports equipment)\n2. Tennis ball (Sports equipment)\n3. Globe (Geography)\n4. Orange (Fruit)\n5. Moon (Celestial body)\n6. Ping pong ball (Sports equipment)\n7. Wheel (Transportation)\n8. Pizza (Food)\n9. Plate (Kitchenware)\n10. Button (Clothing accessory)\n\nThere are [[9]] unique categories or perspectives represented in the responses. These categories were determined by grouping the different round items according to their distinct characteristics or features.",
+                        "score": 9
+                    },
+                    {
+                        "response": "1. Sports equipment: Basketball, tennis ball, ping pong ball\n2. Earth representation: Globe\n3. Fruit: Orange\n4. Celestial body: Moon\n5. Transportation: Wheel\n6. Food: Pizza\n7. Dishware: Plate\n8. Clothing accessory: Button\n\nThere are a total of [[8]] unique categories or perspectives represented in the responses. Unique categories were determined based on the distinct purposes or contexts in which the round items were mentioned.",
+                        "score": 8
+                    },
+                    {
+                        "response": "1. Basketball - sports equipment\n2. Tennis ball - sports equipment\n3. Globe - educational tool\n4. Orange - fruit\n5. Moon - celestial body\n6. Ping pong ball - sports equipment\n7. Wheel - mechanical component\n8. Pizza - food item\n9. Plate - tableware\n10. Button - clothing accessory\n\nThere are a total of [[10]] unique categories or perspectives present in the responses. These categories were determined based on the distinct uses or functions associated with each item listed.",
+                        "score": 10
+                    }
+                ],
+                "average_score": 9.0
+            },
+            {
+                "average_flexibility": 9.0
+            }
+        ],
+        "originality": [
+            {
+                "answer": "Basketball",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While a basketball is a common round object, it does show a slight variation from typical round objects like balls in general. It demonstrates some level of creativity in naming a specific type of round object, hence earning a score of 2. An example of a response that would be considered a 1 would be \"baseball\", which is another common round sports ball frequently mentioned. An example of a 3 response would be \"roomba (robot vacuum)\", as it is a unique and less commonly thought of round object compared to typical ones like balls or wheels.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Tennis ball",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nThe response \"Tennis ball\" is somewhat common as it is a commonly associated round object in everyday contexts. While it does show a slight variation from the most typical responses like \"ball\" or \"wheel,\" tennis balls are still commonly thought of as round objects. To achieve a higher originality score, the participant could have listed more unexpected round objects that are less commonly associated with round shapes, such as a donut, a planet, or a coin.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Globe",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While a globe is a common round object, it does require a certain level of creativity to think of it when prompted to list all round things. It falls into the category of moderately original because it is not as expected as more common round objects like balls or coins. Some examples of responses that would be considered very common include things like \"ball\" or \"coin\" which are commonly associated with round shapes in everyday contexts.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Orange",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While an orange is a common round object, the response falls into the \"Moderately Original\" category as it is not the most expected answer for this task. It displays a fair amount of creativity and novelty as it is not a typical response that immediately comes to mind when thinking of round objects. Some examples of \"Moderately Original\" answers would include a basketball, a pie, or a wheel.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Moon",
+                "responses": [
+                    {
+                        "response": "[[5]]\n\nJustification: Naming the moon as a round thing is extremely original because it is not typically thought of in everyday contexts when listing round objects. The moon is inherently round in shape, but it is not commonly included in lists of round objects due to its celestial nature. This response stands out for its unique and unexpected inclusion of a celestial body in a list of tangible round objects.",
+                        "score": 5
+                    }
+                ],
+                "average_score": 5.0
+            },
+            {
+                "answer": "Ping pong ball",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While a ping pong ball is a common round object, it is not the most typical response compared to items like a ball or a wheel. However, it is still recognizable and moderately original in the context of round objects. Some more common responses like a basketball or a baseball would be rated lower on the originality scale.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Wheel",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nI have rated this response as '2' for somewhat common originality. While a wheel is a round object, it is a very common response in this context as it is the most typical round object that comes to mind. It shows slight variations from typical uses but lacks a higher level of creativity or novelty. For example, more original responses could include things like a hula hoop, a frisbee, a donut, a coin, or a CD. These examples showcase a higher level of creativity and uniqueness compared to simply stating \"wheel.\"",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Pizza",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nI have rated this response as a 2, somewhat common. While pizza is a round item, it is a commonly mentioned food item that is typically associated with being round. While it shows a basic level of creativity by identifying a round object, it lacks significant uniqueness or novelty. Some more creative responses could include items like a compass, a vinyl record, or a wheel.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Plate",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While a plate is a common round object used for serving food, it is not necessarily the most typical response when brainstorming round objects. Therefore, it shows a slight variation from expected responses and demonstrates a basic level of creativity. Some more common responses could include items like a ball or a clock, which would be considered more mundane and receive a lower originality score.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Button",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While a button is a round object, it is a common and expected item to be listed when thinking of round things. Many people would naturally associate buttons with being round, so it does not demonstrate a high level of originality. An example of a more original response would be listing a monocle or a compass as they are less common and not typically associated with round objects.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "average_originality": 2.6
+            }
+        ],
+        "elaboration": [
+            {
+                "answer": "Basketball",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nThe response is somewhat basic. While a basketball is a round object, there is minimal detail or elaboration provided beyond just naming the item. The response could be improved with additional examples of round objects and more descriptive detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Tennis ball",
+                "responses": [
+                    {
+                        "response": "[[2]] The response is somewhat basic as it provides a single example (Tennis ball) without further elaboration or additional examples. To achieve a higher score, more round objects should be listed with further details or explanations.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Globe",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nThe response \"Globe\" is moderately elaborated as it provides one specific example of a round object. While it lacks additional examples, it still offers detail and a clear image of a round item.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Orange",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It gives only one example without any further elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Moon",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It is a simple one-word answer without any elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Ping pong ball",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: While the response provides a specific example of a round object, it lacks further elaboration or additional examples to demonstrate a deeper level of detail and development.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Wheel",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nThe response is moderately elaborated as it provides a single item (wheel) in a straightforward and concise manner. While it meets the criteria for a moderate level of detail, there is room for further development by adding more round objects to enhance the elaboration.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Pizza",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It gives only one example without any further elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Plate",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It gives only one example without any further elaboration or exploration of other round objects.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Button",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It gives only one example without any further elaboration or exploration of other round things.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "average_elaboration": 1.7
+            }
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "fluency": [
+            {
+                "answer": "Dog barking\nCar honking\nDoorbell ringing\nWhistle blowing\nPhone ringing\nWater dripping\nThunder rumbling\nAlarm beeping\nBirds chirping\nMusic playing",
+                "responses": [
+                    {
+                        "response": "1. Dog barking\n2. Car honking\n3. Doorbell ringing\n4. Whistle blowing\n5. Phone ringing\n6. Water dripping\n7. Thunder rumbling\n8. Alarm beeping\n9. Birds chirping\n10. Music playing\n\nThere are 10 unique, relevant, and practical responses in total. Each item listed serves as a different source of noise, showcasing a variety of sounds that can be made in different situations. [[10]]",
+                        "score": 10
+                    },
+                    {
+                        "response": "1. Dog barking\n2. Car honking\n3. Doorbell ringing\n4. Whistle blowing\n5. Phone ringing\n6. Water dripping\n7. Thunder rumbling\n8. Alarm beeping\n9. Birds chirping\n10. Music playing\n\nThere are 10 unique, relevant, and practical responses listed. Each item serves as a source of noise in everyday life, making them all appropriate and practical answers. [[10]]",
+                        "score": 10
+                    },
+                    {
+                        "response": "1. Dog barking\n2. Car honking\n3. Doorbell ringing\n4. Whistle blowing\n5. Phone ringing\n6. Water dripping\n7. Thunder rumbling\n8. Alarm beeping\n9. Birds chirping\n10. Music playing\n\nThere are 10 unique, relevant, and practical responses listed. Each item mentioned has the potential to make a noise, and they cover a variety of sources such as animals, vehicles, instruments, and environmental sounds.[[10]]",
+                        "score": 10
+                    }
+                ],
+                "average_score": 10.0
+            },
+            {
+                "average_fluency": 10.0
+            }
+        ],
+        "flexibility": [
+            {
+                "answer": "Dog barking\nCar honking\nDoorbell ringing\nWhistle blowing\nPhone ringing\nWater dripping\nThunder rumbling\nAlarm beeping\nBirds chirping\nMusic playing",
+                "responses": [
+                    {
+                        "response": "1. Dog barking\n2. Car honking\n3. Doorbell ringing\n4. Whistle blowing\n5. Phone ringing\n6. Water dripping\n7. Thunder rumbling\n8. Alarm beeping\n9. Birds chirping\n10. Music playing\n\nUnique categories or perspectives:\n1. Animal sounds (Dog barking, Birds chirping)\n2. Vehicle sounds (Car honking)\n3. Household sounds (Doorbell ringing, Alarm beeping)\n4. Human-made sounds (Whistle blowing)\n5. Communication sounds (Phone ringing)\n6. Nature sounds (Thunder rumbling)\n7. Environmental sounds (Water dripping)\n8. Musical sounds (Music playing)\n\n[[8]]",
+                        "score": 8
+                    },
+                    {
+                        "response": "1. Dog barking\n2. Car honking\n3. Doorbell ringing\n4. Whistle blowing\n5. Phone ringing\n6. Water dripping\n7. Thunder rumbling\n8. Alarm beeping\n9. Birds chirping\n10. Music playing\n\nIn evaluating the flexibility of the responses, I identified the following unique categories or perspectives:\n1. Animal sounds (Dog barking, Birds chirping)\n2. Mechanical sounds (Car honking, Doorbell ringing, Alarm beeping)\n3. Environmental sounds (Thunder rumbling, Water dripping)\n4. Communication devices (Phone ringing)\n5. Musical sounds (Music playing)\n\nTherefore, there are [[5]] unique categories or perspectives present in the responses.",
+                        "score": 5
+                    },
+                    {
+                        "response": "1. Dog barking\n2. Car honking\n3. Doorbell ringing\n4. Whistle blowing\n5. Phone ringing\n6. Water dripping\n7. Thunder rumbling\n8. Alarm beeping\n9. Birds chirping\n10. Music playing\n\nUnique categories or perspectives present:\n1. Animal noises (Dog barking, Birds chirping)\n2. Vehicle noises (Car honking)\n3. Household noises (Doorbell ringing, Alarm beeping)\n4. Personal noise-making instrument (Whistle blowing)\n5. Communication devices (Phone ringing)\n6. Nature noises (Thunder rumbling)\n7. Water noises (Water dripping)\n8. Music-related noises (Music playing)\n\nTotal number of categories or perspectives: [[8]]",
+                        "score": 8
+                    }
+                ],
+                "average_score": 7.0
+            },
+            {
+                "average_flexibility": 7.0
+            }
+        ],
+        "originality": [
+            {
+                "answer": "Dog barking",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nWhile the sound of a dog barking is a common noise and not particularly unique or rare, it does show a slight variation from the most typical or expected noises. While dogs barking are frequently heard in everyday contexts, it still requires some level of creativity to think of as a potential noise-making item. Therefore, I have rated this response as a 2 for being somewhat common. Examples of more common responses that would be rated a 1 include things like car honking, doorbell ringing, or sirens blaring.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Car honking",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nI have rated this response as a 2 because the idea of a car honking is somewhat common and expected in the context of things that make noise. While car honking is a typical and everyday noise, it still shows a slight variation from the most typical or expected uses of the item. It displays a basic level of creativity as it is a noise-producing object that many people interact with daily. \n\nIn comparison, if a participant had listed something like \"a cat meowing in Morse code,\" that would be considered a more unique and unexpected response, potentially deserving a higher originality score.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Doorbell ringing",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While a doorbell ringing is a common noise-making item, it does show a slight variation from typical uses like loud noises or musical instruments. It falls under the \"Somewhat Common\" category as it is a noise produced by a specific item with a slight twist. For example, \"car horn honking\" would also fall under this category.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Whistle blowing",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While whistle blowing is not a commonly thought of item in response to this prompt, it falls into the category of moderately original as it is a noise-making object that is fairly well-known and expected. It is not as typical as a bell ringing or a horn honking, but still not entirely unexpected. An example of a very original response could be \"a rubber band being plucked in a cave,\" which combines two unrelated elements in a unique way to create a novel sound-making scenario.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Phone ringing",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification:\n\"Phone ringing\" is a somewhat common response as it is a typical sound that many people encounter daily. While it shows a slight variation from more basic responses like \"bell ringing\" or \"alarm sounding,\" it is still a commonly heard noise in everyday life. For a higher originality score, more unique and unexpected sounds could have been listed such as \"penguin squawking\" or \"balloon popping.\"",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Water dripping",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While the sound of water dripping is a common noise and not particularly unique, it does show some level of creativity in thinking about ambient sounds. It is not the most typical response and could be considered moderately original in the context of this task. Some more common answers that would be considered very common include things like \"car horn\" or \"dog barking.\" An example of a response that would be considered very original could be \"a feather gently falling on snow,\" which is a highly unique and unexpected noise.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Thunder rumbling",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While thunder rumbling is a commonly recognized noise, it still stands out as a moderately original response in the context of this task. Thunder is a natural phenomenon that is not frequently listed alongside more typical sources of noise such as cars honking or dogs barking. While it may not be extremely rare or unexpected, it demonstrates a fair amount of creativity and novelty compared to more common responses.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Alarm beeping",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification:\nWhile the response \"Alarm beeping\" is a common noise that many people hear frequently, it does show a slight variation from the typical responses like \"car honking\" or \"dog barking.\" It demonstrates a basic level of creativity by including a specific type of noise rather than a general sound. However, it lacks significant novelty or unexpectedness to be considered highly original. Some examples of responses that would be rated higher for originality could include \"the crackling of a campfire,\" \"the rustling of leaves in the wind,\" or \"the fizzing of a carbonated drink.\"",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Birds chirping",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While the sound of birds chirping is a common noise heard in nature, it is not a response that is overly mundane or expected in all contexts. While it is not extremely original, it still shows a fair amount of creativity and novelty compared to more typical or expected responses like \"cars honking\" or \"phone ringing.\" Some less common or unexpected responses could be \"dancing leaves in the wind\" or \"popcorn kernels popping,\" which would score higher on the originality scale.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Music playing",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification:\nWhile music playing is a common noise and not particularly original in itself, it does show a slight variation from more typical responses like a car honking or a dog barking. However, it is still a common noise that is frequently mentioned in everyday contexts, so it falls into the \"Somewhat Common\" category. An example of a \"Very Original\" response could be something like \"a butterfly flapping its wings,\" which is unexpected and not commonly considered when thinking of things that make noise.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "average_originality": 2.4
+            }
+        ],
+        "elaboration": [
+            {
+                "answer": "Dog barking",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or further explanation. Only one idea is presented with minimal elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Car honking",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nWhile the response of \"Car honking\" provides a specific example of something that makes a noise, it lacks depth and detail. Additional examples or explanations would have increased the level of elaboration.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Doorbell ringing",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nThis response is somewhat basic as it provides only one example of something that makes a noise without further elaboration or additional ideas. It lacks depth and detail in exploring various possibilities for items that can produce noise.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Whistle blowing",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nThis response is somewhat basic as it provides only one example of something that can make a noise - a whistle blowing. While the idea is developed to a small extent, the lack of additional examples or further elaboration limits the overall depth of the response.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Phone ringing",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response only provides one example without any further elaboration or additional ideas. It lacks depth and detail, therefore deserving a low score of 1.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Water dripping",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nWhile the response provides a basic example of something that makes a noise (water dripping), it lacks depth and detail. The response could be more elaborate by including a wider range of examples of things that make noise.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Thunder rumbling",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nThis response is moderately elaborated because it provides a specific example of something that makes a noise - thunder rumbling. While the response is not highly detailed, it shows some thought and consideration by mentioning a natural phenomenon that produces a distinct sound.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Alarm beeping",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nThis response is somewhat basic as it provides only one example of something that makes a noise without further detail or explanation. Additional examples and further elaboration would be needed to score higher.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Birds chirping",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response provided is somewhat basic as it only includes one example without any further elaboration or additional ideas.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Music playing",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nWhile the response of \"Music playing\" provides a slight degree of detail and is a valid answer, it lacks depth and elaboration. Additional examples or explanations would have increased the level of detail and development in the overall set of responses.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "average_elaboration": 1.9
+            }
+        ]
+    },
+    {
+        "question": "Name all the square things you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "fluency": [
+            {
+                "answer": "Picture frames\nRubik's cube\nPost-it notes\nCheese slices\nCardboard boxes\nChess boards\nChocolate bars\nBuilding blocks\nTiles\nSandwiches (when cut into square halves)",
+                "responses": [
+                    {
+                        "response": "1. Picture frames\n2. Rubik's cube\n3. Post-it notes\n4. Cheese slices\n5. Cardboard boxes\n6. Chess boards\n7. Chocolate bars\n8. Building blocks\n9. Tiles\n10. Sandwiches (when cut into square halves)\n\nThere are 10 unique, relevant, and practical responses in total. [[10]]",
+                        "score": 10
+                    },
+                    {
+                        "response": "1. Picture frames\n2. Rubik's cube\n3. Post-it notes\n4. Cheese slices\n5. Cardboard boxes\n6. Chess boards\n7. Chocolate bars\n8. Building blocks\n9. Tiles\n10. Sandwiches (when cut into square halves)\n\nThere are 10 unique, relevant, and practical responses in the specific format of [[10]]",
+                        "score": 10
+                    },
+                    {
+                        "response": "1. Picture frames\n2. Rubik's cube\n3. Post-it notes\n4. Cheese slices\n5. Cardboard boxes\n6. Chess boards\n7. Chocolate bars\n8. Building blocks\n9. Tiles\n10. Sandwiches (when cut into square halves)\n\nThere are 10 unique, relevant, and practical responses in this list. [[10]]",
+                        "score": 10
+                    }
+                ],
+                "average_score": 10.0
+            },
+            {
+                "average_fluency": 10.0
+            }
+        ],
+        "flexibility": [
+            {
+                "answer": "Picture frames\nRubik's cube\nPost-it notes\nCheese slices\nCardboard boxes\nChess boards\nChocolate bars\nBuilding blocks\nTiles\nSandwiches (when cut into square halves)",
+                "responses": [
+                    {
+                        "response": "1. Picture frames (for displaying photographs or artwork)\n2. Rubik's cube (a 3D combination puzzle)\n3. Post-it notes (for writing reminders or messages)\n4. Cheese slices (for sandwiches or snacks)\n5. Cardboard boxes (for packaging and storage)\n6. Chess boards (for playing the game of chess)\n7. Chocolate bars (a sweet treat)\n8. Building blocks (for constructing structures)\n9. Tiles (for flooring or walls)\n10. Sandwiches (when cut into square halves for eating)\n\nThere are [[10]] unique categories or perspectives represented in the responses. Categories were determined based on the different uses or functions associated with each square item listed.",
+                        "score": 10
+                    },
+                    {
+                        "response": "1. Picture frames\n2. Rubik's cube\n3. Post-it notes\n4. Cheese slices\n5. Cardboard boxes\n6. Chess boards\n7. Chocolate bars\n8. Building blocks\n9. Tiles\n10. Sandwiches (when cut into square halves)\n\nUnique categories or perspectives present:\n1. Home decor (Picture frames)\n2. Toys/games (Rubik's cube, Chess boards, Building blocks)\n3. Office supplies (Post-it notes)\n4. Food items (Cheese slices, Chocolate bars, Sandwiches)\n5. Packaging (Cardboard boxes)\n6. Home improvement (Tiles)\n\nTotal number of categories or perspectives: [[6]]",
+                        "score": 6
+                    },
+                    {
+                        "response": "1. Picture frames\n2. Rubik's cube\n3. Post-it notes\n4. Cheese slices\n5. Cardboard boxes\n6. Chess boards\n7. Chocolate bars\n8. Building blocks\n9. Tiles\n10. Sandwiches (when cut into square halves)\n\nBased on the responses provided, the unique categories or perspectives present are:\n1. Art/Decor (Picture frames)\n2. Puzzle (Rubik's cube)\n3. Stationery/Office supplies (Post-it notes)\n4. Food (Cheese slices, Chocolate bars, Sandwiches)\n5. Packaging (Cardboard boxes)\n6. Game (Chess boards)\n7. Construction/Building (Building blocks)\n8. Home decor/Flooring (Tiles)\n\nTotal number of categories or perspectives: [[8]]",
+                        "score": 8
+                    }
+                ],
+                "average_score": 8.0
+            },
+            {
+                "average_flexibility": 8.0
+            }
+        ],
+        "originality": [
+            {
+                "answer": "Picture frames",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response \"Picture frames\" earns a score of 3 for originality. While picture frames are a common square object, the response demonstrates some creativity as it is not the first thing that comes to mind when thinking about square objects. It is a moderately original response that shows some level of creativity and thoughtfulness. Some examples of more common responses could include things like windows, tiles, or boxes.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Rubik's cube",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nRubik's cube is a very original response in the context of square things. While cubes are often associated with squares, mentioning a specific brand like Rubik's cube adds an extra layer of uniqueness and specificity to the response. It is unexpected and not commonly considered when thinking about square objects, therefore deserving a high score of 4 for originality.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Post-it notes",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While Post-it notes are a common and widely used square item, they also serve a unique purpose as removable and sticky notes that can be used for lists, reminders, and creative projects. This response shows a moderate level of originality as it combines the common square shape with a specific function that may not initially come to mind when thinking of square objects. An example of a more common response would be a square photo frame, which is a typical square item but lacks the unique usage aspect of Post-it notes.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Cheese slices",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response \"Cheese slices\" is moderately original. While the concept of square cheese slices is not extremely rare or unexpected, it does show some creativity in associating square shapes with food items. This response demonstrates a fair level of creativity as it involves thinking beyond typical inanimate objects and includes a unique twist by incorporating a food product into the list. Overall, this response falls within the moderately original category.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Cardboard boxes",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While cardboard boxes are a common square object, the response is still moderately original as it involves an everyday item that may not initially come to mind when thinking of square things. While not extremely unique, it is not as expected as something like a square tile or a square picture frame. Some very common responses would include things like a square window, a square table, or a square book.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Chess boards",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response \"Chess boards\" earns a score of 3 for originality. While chess boards are a common square object, they also show some level of creativity in thinking of a specific item that fits the criteria. It is not the most typical or expected response when thinking of square things, but it is also not highly rare or unexpected. \n\nFor comparison:\n- A response like \"windows\" would be a 1 as it is a very common and mundane answer.\n- On the other hand, a response like \"rubik's cube\" would be a 4 as it is a unique and unexpected square item.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Chocolate bars",
+                "responses": [
+                    {
+                        "response": "[[2]]\nThe response \"Chocolate bars\" earns a score of 2 for originality. While chocolate bars are a common item that is square-shaped, it is a slightly creative answer compared to more expected responses like TV screens or picture frames. However, it still falls under the category of somewhat common because chocolate bars are frequently associated with their square shape. An example of a more original response could be \"Rubik's cubes\" or \"Post-it notes\" which are also square but less commonly thought of.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Building blocks",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response \"Building blocks\" earns a score of 3 for originality. While building blocks are a common square-shaped item, the use of them for imaginative play and creating structures adds a level of creativity beyond simply stating the object itself. This response showcases a fair amount of creativity by considering the interactive and constructive nature of building blocks, which goes beyond the typical association with squares. \n\nIn comparison, a response such as \"Picture frames\" or \"Computer screens\" would be more common and expected when thinking of square objects, potentially receiving a lower originality score. On the other hand, if a participant had mentioned something highly unexpected like \"Square-shaped kites for indoor flying,\" that would demonstrate a significantly unique and rare idea, deserving a higher originality score.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Tiles",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While tiles are a common square object, they still show a fair amount of creativity in thinking about square things. Tiles can come in various sizes, colors, and materials, making them versatile and allowing for different uses beyond just being flooring or wall coverings. The response falls under the \"Moderately Original\" category as it displays some creativity and uniqueness but is not extremely rare or unexpected. An example of a more common response would be \"box\" or \"book\".",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Sandwiches (when cut into square halves)",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nThis response falls under the category of \"Somewhat Common.\" While mentioning sandwiches being cut into square halves does show a slight variation from the typical square shapes, it is still a relatively common and expected use of squares. A more creative and original approach could include ideas such as Rubik's cubes, post-it notes, or pixel art.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "average_originality": 2.9
+            }
+        ],
+        "elaboration": [
+            {
+                "answer": "Picture frames",
+                "responses": [
+                    {
+                        "response": "[[2]] The response is somewhat basic as it provides only one example (picture frames) without further elaboration or additional examples. More detail and a wider range of square things would have increased the elaboration score.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Rubik's cube",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response is extremely basic and lacks any further elaboration or additional square objects.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Post-it notes",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is somewhat basic as it provides one example of a square thing without further elaboration or detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Cheese slices",
+                "responses": [
+                    {
+                        "response": "[[1]]\nThe response \"Cheese slices\" is extremely basic and lacks any further elaboration or detail. There is no development or explanation provided, resulting in a score of 1.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Cardboard boxes",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nThe response of \"cardboard boxes\" is moderately elaborated as it gives a specific example of a square item and provides a common and practical use for it. However, there could have been more variety in the examples given to show a broader range of square things.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Chess boards",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: While the response provides a specific example of a square item (Chess boards), it lacks further elaboration or additional examples of square things. It is somewhat basic and would benefit from more detail and development.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Chocolate bars",
+                "responses": [
+                    {
+                        "response": "[[1]]\nThe response is very basic as it only provides one example without any further elaboration or detail. There is a lack of depth or thought in the response.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Building blocks",
+                "responses": [
+                    {
+                        "response": "[[2]] The response is somewhat basic as it only provides one example (building blocks) without further elaboration or additional examples. More detail and a wider range of square things would have increased the elaboration score.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Tiles",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nThe response is somewhat basic. While \"Tiles\" is a valid answer to the question, it lacks additional examples or details to enhance the overall elaboration of the set of responses.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Sandwiches (when cut into square halves)",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nThis response is somewhat basic as it provides a simple example of how a square shape can be associated with sandwiches when cut into halves. However, it lacks further elaboration or exploration of other square items.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "average_elaboration": 1.8
+            }
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "fluency": [
+            {
+                "answer": "Cars\nBicycles\nTrucks\nRoller skates\nTrains\nWheelchairs\nScooters\nShopping carts\nSkateboards\nCarts\nStrollers\nSegways",
+                "responses": [
+                    {
+                        "response": "In the given list, there are a total of 11 unique, relevant, and practical responses. Each item listed is a type of transportation or a device that moves on wheels, fulfilling the criteria of the task. \n\n[[11]]",
+                        "score": 11
+                    },
+                    {
+                        "response": "There are a total of 11 unique, relevant responses: Cars, Bicycles, Trucks, Roller skates, Trains, Wheelchairs, Scooters, Shopping carts, Skateboards, Carts, and Strollers. Each of these items moves on wheels and is a practical and common use of wheeled transportation. [[11]]",
+                        "score": 11
+                    },
+                    {
+                        "response": "1. Cars\n2. Bicycles\n3. Trucks\n4. Roller skates\n5. Trains\n6. Wheelchairs\n7. Scooters\n8. Shopping carts\n9. Skateboards\n10. Carts\n11. Strollers\n12. Segways\n\nThere are a total of 12 unique, relevant, and practical responses in the specific format of [[12]] at the end of the response.",
+                        "score": 12
+                    }
+                ],
+                "average_score": 11.333333333333334
+            },
+            {
+                "average_fluency": 11.333333333333334
+            }
+        ],
+        "flexibility": [
+            {
+                "answer": "Cars\nBicycles\nTrucks\nRoller skates\nTrains\nWheelchairs\nScooters\nShopping carts\nSkateboards\nCarts\nStrollers\nSegways",
+                "responses": [
+                    {
+                        "response": "The unique categories or perspectives present in the responses are:\n1. Motor vehicles (Cars, Trucks)\n2. Human-powered vehicles (Bicycles, Roller skates, Wheelchairs, Scooters)\n3. Public transportation (Trains)\n4. Recreational vehicles (Skateboards, Segways)\n5. Shopping/convenience (Shopping carts, Carts, Strollers)\n\nTotal number of categories or perspectives: [[5]]",
+                        "score": 5
+                    },
+                    {
+                        "response": "The unique categories or perspectives present in the responses are as follows:\n\n1. Motor vehicles (Cars, Trucks)\n2. Non-motorized vehicles (Bicycles, Roller skates, Skateboards, Scooters)\n3. Public transportation (Trains)\n4. Mobility aids (Wheelchairs, Strollers)\n5. Shopping/conveying items (Shopping carts, Carts)\n6. Personal transportation devices (Segways)\n\nTherefore, the total number of categories or perspectives is [[6]].",
+                        "score": 6
+                    },
+                    {
+                        "response": "The unique categories or perspectives present in the responses are:\n1. Vehicles (Cars, Trucks, Trains, Scooters, Segways)\n2. Personal transportation devices (Bicycles, Roller skates, Wheelchairs, Skateboards)\n3. Shopping-related items (Shopping carts)\n4. Child transportation (Strollers)\n5. General carts for moving items (Carts)\n\nTherefore, the total number of unique categories or perspectives is [[5]].",
+                        "score": 5
+                    }
+                ],
+                "average_score": 5.333333333333333
+            },
+            {
+                "average_flexibility": 5.333333333333333
+            }
+        ],
+        "originality": [
+            {
+                "answer": "Cars",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response \"Cars\" is a very common and expected use of things that move on wheels. It is the most typical example that comes to mind when thinking about objects that have wheels.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Bicycles",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nWhile bicycles are a common mode of transportation that moves on wheels, they are still somewhat common in terms of originality. Many people would naturally think of bicycles when asked about things that move on wheels. However, there are still variations and creativity in the types of bicycles (e.g. mountain bike, tandem bike, etc.) and the uses of bicycles (e.g. leisure riding, commuting, etc.). Therefore, the response falls under the category of somewhat common.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Trucks",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response \"Trucks\" is a very common answer when asked to list things that move on wheels. It is a typical and expected response in everyday contexts, lacking novelty or uniqueness. Examples of more original responses could include roller coasters, wheelchairs, or grocery carts.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Roller skates",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: Roller skates are a moderately original response. While they are not as common as items like cars or bicycles, they are still a relatively typical object that moves on wheels. Roller skates show some creativity as they are less expected compared to more common answers, but they are not highly unique or unheard of. An example of a very common response would be \"bicycles,\" while a very original response might be \"segways.\"",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Trains",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: Trains are a common mode of transportation that is typically associated with moving on tracks rather than wheels. While trains do have wheels, the concept of a train is not considered highly original in the context of items that move on wheels. More original responses would include items like rollerblades, wheelchairs, or shopping carts.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Wheelchairs",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nWhile wheelchairs are a common and expected item that moves on wheels, the usage in the context of this task demonstrates some level of originality. While it may not be extremely rare or unexpected, it does show a fair amount of creativity as it is not a typical response when thinking about items that move on wheels. \n\nFor comparison:\n- A response like \"bicycles\" would be considered very common (1 point) as it is a highly expected answer.\n- On the other hand, a response like \"office chairs\" may be considered somewhat common (2 points) as it deviates slightly from the most typical uses but is still relatively common.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Scooters",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nI have assigned a score of 2 to the response \"Scooters\" for being somewhat common. While scooters are indeed a form of transportation that moves on wheels, they are a fairly typical and expected response when thinking of things that move on wheels. While they show a slight variation from the most typical responses like cars or bicycles, they are still frequently mentioned in everyday contexts. A more original response would be something less common or unexpected, such as rollerblades or strollers.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Shopping carts",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: The response of \"shopping carts\" falls under the category of somewhat common. While it is a typical item that moves on wheels, it does show a slight variation from the most expected responses like cars or bicycles. Shopping carts are commonly seen in everyday contexts, so the originality is not extremely high. For a higher score, the response would need to include more unique and unexpected items that move on wheels.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Skateboards",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nJustification:\n\nThe response \"skateboards\" is a very original and unique response because it falls under a category of items that move on wheels but is not commonly thought of in everyday contexts when listing such items. While items like cars, bicycles, and roller skates are more typical answers, \"skateboards\" adds a level of unexpectedness and creativity to the list. This demonstrates a high level of creativity and innovation in thinking outside the norm, earning it a score of 4.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Carts",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nI have assigned a score of 2 to the response \"Carts\" in terms of originality. While carts are commonly associated with moving on wheels, the concept itself is not extremely unique or unexpected. It falls under the category of being somewhat common as it is a typical response when thinking about items that move on wheels. \n\nFor example, more original responses could include \"Rollerblades,\" which are a less common form of wheeled transportation, or \"Wheelchairs,\" which serve a specific purpose beyond just general transportation. These examples demonstrate a higher level of creativity and uniqueness compared to the response of \"Carts.\"",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Strollers",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nI have assigned a score of 2 to the response \"Strollers\" in terms of originality. While strollers are a common item that moves on wheels, they do show a slight variation from typical uses of wheels, which generally involve vehicles like cars or bikes. Strollers are a specific type of wheeled object used for transporting infants or young children, making them somewhat ordinary but still demonstrating a basic level of creativity in the context of the task. \n\nTo provide some examples:\n- A response like \"cars\" or \"bikes\" would be considered very common as they are the most typical uses of wheels.\n- On the other hand, a response like \"office chairs\" or \"rolling suitcases\" might be rated as moderately original, as they involve wheels but in unique and non-standard ways.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Segways",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nSegways are a very original response as they are not commonly thought of or listed when brainstorming things that move on wheels. They are a unique mode of transportation that differs from typical vehicles like cars, bikes, or scooters. Segways were specifically designed to offer a different kind of transportation experience, making them a rare and unexpected choice in this context. This level of uniqueness and unexpectedness warrants a high originality score of 4.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "average_originality": 2.3333333333333335
+            }
+        ],
+        "elaboration": [
+            {
+                "answer": "Cars",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response is very basic and lacks any further elaboration or detail. There is a clear lack of additional examples or explanations provided.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Bicycles",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nWhile the response only provides one example (bicycles), it demonstrates a moderate level of elaboration by focusing on a specific type of item that moves on wheels. However, the lack of additional examples or details prevents it from being rated higher than a moderate level of elaboration.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Trucks",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response is extremely basic and lacks any further elaboration or detail. There is a clear lack of additional examples or explanations provided.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Roller skates",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nWhile the response provides a clear example of something that moves on wheels, it lacks further detail or additional examples to demonstrate a higher level of elaboration.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Trains",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nWhile the response is straightforward and lacks additional details or examples, it does convey a moderately elaborated idea by mentioning trains, which is a common and relevant item that moves on wheels. However, more variety and depth in examples would have enhanced the level of elaboration further.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Wheelchairs",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nWhile the response only provides one example (wheelchairs), it demonstrates a moderate level of detail and thought in considering a specific item that moves on wheels. The response could be more elaborated by mentioning more examples, but it shows a fair amount of consideration for the question.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Scooters",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nWhile the response is somewhat basic with only one example given, the idea is moderately elaborated as it clearly identifies a specific item that moves on wheels. However, in order to receive a higher score, more examples and details could have been provided to enhance the overall level of elaboration.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Shopping carts",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nThe response of \"Shopping carts\" offers a moderate level of detail and development. While it is a specific item that moves on wheels, it lacks additional examples or elaboration to fully demonstrate a range of ideas related to things that move on wheels.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Skateboards",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nWhile the response is somewhat basic with only one example given, the idea of skateboards moving on wheels is moderately elaborated as it provides a specific item that moves on wheels. However, additional examples or further explanation would have increased the level of elaboration.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Carts",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nWhile the response is straightforward and to the point, it provides a moderate level of detail by mentioning carts specifically. However, it lacks further elaboration or additional examples of things that move on wheels.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Strollers",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nThe response of \"Strollers\" offers a moderate level of detail by providing one specific example of an item that moves on wheels. While the response is not highly elaborated, it contributes to the overall list of items that move on wheels.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Segways",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nWhile the response is somewhat basic with only one example given, the use of Segways shows a moderate level of detail and consideration. However, more examples could have been provided to further enhance the elaboration level.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "average_elaboration": 2.5833333333333335
+            }
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that are red.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "fluency": [
+            {
+                "answer": "Apples\nRoses\nFire trucks\nStop signs\nRed peppers\nTomatoes\nLipstick\nStrawberries\nRed velvet cake\nCherries",
+                "responses": [
+                    {
+                        "response": "There are 9 unique, relevant responses in total.\n1. Apples\n2. Roses\n3. Fire trucks\n4. Stop signs\n5. Red peppers\n6. Tomatoes\n7. Lipstick\n8. Strawberries\n9. Red velvet cake\n\n[[9]]",
+                        "score": 9
+                    },
+                    {
+                        "response": "There are 10 unique, relevant responses listed.\n\n1. Apples\n2. Roses\n3. Fire trucks\n4. Stop signs\n5. Red peppers\n6. Tomatoes\n7. Lipstick\n8. Strawberries\n9. Red velvet cake\n10. Cherries\n\nThese responses are all related to items that are commonly associated with the color red. Each item serves a unique purpose or function, making them relevant to the prompt. [[10]]",
+                        "score": 10
+                    },
+                    {
+                        "response": "1. Apples\n2. Roses\n3. Fire trucks\n4. Stop signs\n5. Red peppers\n6. Tomatoes\n7. Lipstick\n8. Strawberries\n9. Red velvet cake\n10. Cherries\n\nThere are 10 unique, relevant and practical responses. Each item listed is a common object associated with the color red. [[10]]",
+                        "score": 10
+                    }
+                ],
+                "average_score": 9.666666666666666
+            },
+            {
+                "average_fluency": 9.666666666666666
+            }
+        ],
+        "flexibility": [
+            {
+                "answer": "Apples\nRoses\nFire trucks\nStop signs\nRed peppers\nTomatoes\nLipstick\nStrawberries\nRed velvet cake\nCherries",
+                "responses": [
+                    {
+                        "response": "The unique categories or perspectives present in the responses are:\n1. Fruits (Apples, Strawberries, Tomatoes, Cherries)\n2. Flowers (Roses)\n3. Vehicles (Fire trucks)\n4. Traffic signs (Stop signs)\n5. Vegetables (Red peppers)\n6. Makeup products (Lipstick)\n7. Dessert (Red velvet cake)\n\nTherefore, the total number of categories or perspectives is [[7]].",
+                        "score": 7
+                    },
+                    {
+                        "response": "The unique categories or perspectives present in the responses are:\n1. Fruits (Apples, Strawberries, Tomatoes, Cherries)\n2. Flowers (Roses)\n3. Vehicles (Fire trucks)\n4. Traffic signs (Stop signs)\n5. Vegetables (Red peppers)\n6. Makeup/beauty products (Lipstick)\n7. Desserts (Red velvet cake)\n\nThe total number of categories or perspectives is [[7]].",
+                        "score": 7
+                    },
+                    {
+                        "response": "In evaluating the flexibility of the responses provided, I have identified the following unique categories or perspectives:\n\n1. Fruits (Apples, Strawberries, Tomatoes, Cherries)\n2. Flowers (Roses)\n3. Vehicles (Fire trucks)\n4. Traffic signals/safety (Stop signs)\n5. Vegetables (Red peppers)\n6. Beauty products (Lipstick)\n7. Food (Red velvet cake)\n\nTherefore, the total number of unique categories or perspectives present is [[7]].",
+                        "score": 7
+                    }
+                ],
+                "average_score": 7.0
+            },
+            {
+                "average_flexibility": 7.0
+            }
+        ],
+        "originality": [
+            {
+                "answer": "Apples",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: Apples being red is a very common and expected association, as red apples are a prevalent and frequently mentioned item in everyday contexts. This response lacks novelty or uniqueness, leading to a score of 1.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Roses",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nWhile roses are a common item that is red, they do show a slight variation from the most typical answers such as apples or fire trucks. This response falls into the somewhat common category as it is a widely recognized red object but has a touch of creativity compared to the most expected answers. For a higher originality score, more unexpected and less commonly thought of red items could have been listed.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Fire trucks",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nI would rate the originality of \"Fire trucks\" as a 2. While fire trucks are commonly associated with the color red, it is a somewhat common response when asked to list things that are red. It shows a slight variation from just stating the color itself, indicating a basic level of creativity. Some examples of more common responses could include apples, stop signs, and roses.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Stop signs",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nI would rate the originality of \"Stop signs\" as a 2. While it is a common association with the color red, it is somewhat expected in the context of the question. Stop signs are frequently linked to the color red due to their universal use of the color for signaling drivers to stop. A slightly more creative response would involve thinking of less common items or objects that are also red, such as pomegranates or red pandas. These examples would demonstrate a higher level of creativity and originality in the responses.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Red peppers",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nI would rate this response as somewhat common (2) in terms of originality. While red peppers are indeed red, mentioning them as a red item is a fairly common association. While it does show a slight level of creativity as it's not the most typical or expected answer for the color red, it still falls within the category of commonly mentioned red items. An example of a response that would fall under a 1 would be \"red apples\" as it is a very typical response when asked to name red items. An example of a response that would be rated higher, perhaps a 4, would be something like \"red coral reefs\" as it is a unique and unexpected association with the color red.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Tomatoes",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nI would rate the originality of the response \"Tomatoes\" as a 2 out of 5. While tomatoes being red is a common association, it still shows a slight variation from the most typical or expected uses of the color red. Tomatoes being red is a well-known fact, but it still requires some level of creativity to make the connection between the color and the item itself. \n\nExamples of responses that would fall under a 1 would be things like \"Apples\" or \"Fire trucks\", as these are very common associations with the color red and lack any real novelty. An example of a 3 would be something like \"Red lipstick\", as it displays a fair amount of creativity in linking the color red to a specific product or object.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Lipstick",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nWhile lipstick is a common item that is typically associated with the color red, it still demonstrates a fair amount of creativity and novelty in the context of this task. While it may not be extremely rare or unexpected, it is not as mundane as more typical items like apples or stop signs. Therefore, the response deserves a score of 3. An example of a 1-point response would be \"apples,\" as it is a very common association with the color red. An example of a 4 or 5-point response could be something like \"a red velvet curtain made from recycled wine corks,\" which is significantly more unique and unexpected.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Strawberries",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: Strawberries are a moderately original response when listing red items. While they are a common red object, they also have some unique qualities such as being a fruit known for its bright red color and sweetness. It is not as mundane as listing items like apples or stop signs but also not extremely rare or unexpected. Therefore, it falls into the moderately original category.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Red velvet cake",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While red velvet cake is a common and well-known item that is indeed red, it does not fall into the category of being extremely original or innovative. This response displays a fair amount of creativity as it relates to a specific item that is red, but it is not highly unexpected or rare. It falls into the \"Moderately Original\" category as it shows some level of creativity and novelty. An example of a response that would be considered \"Very Original\" or \"Extremely Original\" could be something like \"Red panda fur dye for fashion\" or \"Red planet terraforming project\".",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Cherries",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While cherries are a common item that is red, the response falls into the category of moderately original. Cherries are a typical example of a red object, but they still demonstrate a fair amount of creativity as they are not as expected as items like apples or fire trucks. Some very common responses would include things like \"apples\" or \"stop signs,\" while more original responses could include things like \"red velvet cake\" or \"a cardinal bird.\" Cherries fall in the middle in terms of originality.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "average_originality": 2.3
+            }
+        ],
+        "elaboration": [
+            {
+                "answer": "Apples",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response is extremely basic and lacks any further elaboration or detail. There is a clear lack of additional ideas or examples provided beyond apples.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Roses",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: While the response provides a specific item that is red, it lacks further elaboration or additional examples to demonstrate a higher level of detail and development.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Fire trucks",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While the response provides a specific item that is red, it lacks further elaboration or additional examples to demonstrate a range of ideas related to the prompt.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Stop signs",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While the response provides a clear example of something red, it lacks further elaboration or additional examples to demonstrate a higher level of detail and development.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Red peppers",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While the response provides a specific item that is red, it lacks further elaboration or additional examples to demonstrate a higher level of detail and development.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Tomatoes",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response is extremely basic and lacks any further elaboration or detail.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Lipstick",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response is very basic and lacks any further elaboration or additional items that are red.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Strawberries",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response provides only one example of something red without further elaboration or additional details.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Red velvet cake",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nWhile the response is clear and specific with the mention of red velvet cake, it lacks further detail or additional examples of red items. It falls into the moderately elaborated category as it offers a moderate level of detail but could benefit from more examples to enhance the response.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Cherries",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is somewhat basic as it provides only one example of something that is red (cherries) without further elaboration or additional examples.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "average_elaboration": 1.8
+            }
+        ]
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "fluency": [
+            {
+                "answer": "Fish\nDolphins\nWhales\nSharks\nTurtles\nSeals\nOtters\nOctopus\nJellyfish\nSea anemone",
+                "responses": [
+                    {
+                        "response": "There are 9 unique, relevant, and practical responses in the list provided. These responses include animals that actually live in the water and are commonly known for doing so. [[9]]",
+                        "score": 9
+                    },
+                    {
+                        "response": "1. Fish\n2. Dolphins\n3. Whales\n4. Sharks\n5. Turtles\n6. Seals\n7. Otters\n8. Octopus\n9. Jellyfish\n10. Sea anemone\n\nThere are 10 unique, relevant responses provided. Each item listed is a different type of animal that lives in the water, fulfilling the criteria of the task. [[10]]",
+                        "score": 10
+                    },
+                    {
+                        "response": "There are 9 unique, relevant responses in the list provided. Each item listed is a distinct animal that lives in the water, making them unique. The responses are practical as they all accurately answer the question by mentioning animals specifically living in water. [[9]]",
+                        "score": 9
+                    }
+                ],
+                "average_score": 9.333333333333334
+            },
+            {
+                "average_fluency": 9.333333333333334
+            }
+        ],
+        "flexibility": [
+            {
+                "answer": "Fish\nDolphins\nWhales\nSharks\nTurtles\nSeals\nOtters\nOctopus\nJellyfish\nSea anemone",
+                "responses": [
+                    {
+                        "response": "The unique categories or perspectives present in the responses are:\n1. Fish\n2. Mammals (Dolphins, Whales, Seals)\n3. Sharks\n4. Reptiles (Turtles)\n5. Marine mammals (Otters)\n6. Cephalopods (Octopus)\n7. Invertebrates (Jellyfish, Sea anemone)\n\nTotal number of categories or perspectives: [[7]]",
+                        "score": 7
+                    },
+                    {
+                        "response": "The categories or perspectives present in the responses are:\n1. Fish\n2. Mammals (Dolphins, Whales, Seals, Otters)\n3. Sharks\n4. Reptiles (Turtles)\n5. Invertebrates (Octopus, Jellyfish, Sea anemone)\n\nTherefore, there are [[5]] unique categories or perspectives present in the responses.",
+                        "score": 5
+                    },
+                    {
+                        "response": "The unique categories or perspectives present in the responses are:\n1. Fish\n2. Mammals (Dolphins, Whales, Seals, Otters)\n3. Sharks\n4. Turtles\n5. Invertebrates (Octopus, Jellyfish, Sea anemone)\n\nTotal number of categories or perspectives: [[5]]",
+                        "score": 5
+                    }
+                ],
+                "average_score": 5.666666666666667
+            },
+            {
+                "average_flexibility": 5.666666666666667
+            }
+        ],
+        "originality": [
+            {
+                "answer": "Fish",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response \"Fish\" is the most commonly thought of and expected answer when listing animals that live in the water. It lacks originality and novelty as it is the most typical response in this context.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Dolphins",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: Dolphins are a moderately original response in the context of animals living in the water. While they are well-known marine mammals, they are not among the first animals that come to mind when listing aquatic animals. However, they are not exceedingly rare or unexpected either. Some examples of very common responses would include fish, whales, and sharks, while very original responses might include more obscure aquatic creatures such as narwhals or sea otters.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Whales",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: Whales are a very common and frequently mentioned animal that live in the water. They are one of the most typical responses when thinking of animals that live in the water, lacking novelty or uniqueness.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Sharks",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While sharks are a common response when thinking of animals that live in the water, they do show slight variation from the most typical answers like fish or dolphins. Sharks are still a fairly common and expected response when considering aquatic animals, so they fall under the somewhat common category. Some very original responses would include more unconventional water-dwelling creatures like sea otters or jellyfish.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Turtles",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nWhile turtles are a common animal that lives in the water, they do display a fair amount of creativity in thinking about water-dwelling animals. Turtles are not the most typical response when listing animals that live in water, as they may not be as frequently mentioned as fish or dolphins. Therefore, their inclusion adds a moderate level of originality to the list. An example of a very common response would be \"fish\" or \"sharks,\" while a very original response might include more obscure animals like \"axolotls\" or \"mantis shrimp.\"",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Seals",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nWhile seals are a common marine animal that live in the water, they are still not the first animal that comes to mind for everyone. Therefore, I would rate this response as somewhat common (2). Some examples of more common responses that would receive a lower originality score would be fish or dolphins, as they are the most typical aquatic animals people think of when asked this question.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Otters",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nWhile otters are a commonly known water-dwelling animal, they are not often the first animal that comes to mind when listing aquatic creatures. Therefore, their inclusion in the list demonstrates a moderate level of originality. Some examples of very common responses for this task would include fish, dolphins, and sharks, as these are the most typical and expected answers. In contrast, more original responses could include creatures like seahorses, manatees, or sea turtles.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Octopus",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nJustification: While an octopus is a common and well-known animal that lives in the water, it is also a unique and interesting choice compared to more typical responses like fish or dolphins. Octopuses are not always the first animal that comes to mind when thinking of aquatic life, making this response significantly more original compared to the most common answers.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Jellyfish",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nJustification: While jellyfish are a common aquatic animal, they are not typically one of the first animals that come to mind when listing creatures that live in the water. While still recognizable, they are not as commonly mentioned as fish, dolphins, or sharks, making this response more creative and unexpected. Therefore, I would rate this response as a '4' on the originality scale.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Sea anemone",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response \"Sea anemone\" is moderately original. While sea anemones are not as commonly mentioned as fish or dolphins when thinking of animals that live in water, they are still known to many people. They show creativity in thinking beyond the most typical aquatic animals but are not highly rare or unexpected. An example of a very common response would be \"fish\" or \"dolphin\" as they are animals almost immediately associated with living in the water. An example of a very original response would be something like \"mantis shrimp\" or \"nudibranch,\" which are not as commonly thought of when considering aquatic animals.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "average_originality": 2.6
+            }
+        ],
+        "elaboration": [
+            {
+                "answer": "Fish",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response only lists one animal without any further elaboration or detail. It is extremely basic and lacks any depth or explanation.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Dolphins",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nWhile the response is straightforward and lacks multiple examples, it provides a moderate level of detail by naming a specific animal that lives in the water. Additional examples would have increased the score, but the response is still moderately elaborated.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Whales",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response only lists one animal without any further elaboration or detail.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Sharks",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response only provides one animal without any additional detail or explanation. There is a lack of elaboration in the set of responses.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Turtles",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response only lists one animal without any further elaboration or detail.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Seals",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response only lists one animal without any further elaboration or detail. It is extremely basic and lacks any depth or development.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Otters",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response only lists one animal without any further elaboration or additional animals mentioned. Therefore, it falls under the category of very basic with minimal detail.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Octopus",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nThis response is extremely basic as it only provides one animal without any further elaboration or detail. There is no additional information or explanation provided, leading to a very low score for elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Jellyfish",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nThis response is very basic as it only provides one animal without any further elaboration or detail. Additional animals that live in water could have been listed to increase the level of elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Sea anemone",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response is very basic and lacks detail or elaboration. Only one animal is listed with no additional information provided.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "average_elaboration": 1.2
+            }
+        ]
+    },
+    {
+        "question": "Name all the fruits you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "fluency": [
+            {
+                "answer": "Apple\nBanana\nOrange\nStrawberry\nGrapes\nPineapple\nWatermelon\nMango\nKiwi\nPear\nPeach\nCherry\nBlueberry\nRaspberry\nBlackberry\nPapaya\nGuava\nPlum\nAvocado\nLemon\nLime\nFig\nCoconut\nCantaloupe\nHoneydew melon\nPomegranate\nPersimmon\nPassionfruit\nLychee\nDragonfruit",
+                "responses": [
+                    {
+                        "response": "The total unique, relevant, and practical responses are 27.\n\nExplanation: Each fruit listed is unique and relevant to the category of fruits. Additionally, all the fruits listed are practical examples that are commonly known and consumed. [[27]]",
+                        "score": 27
+                    },
+                    {
+                        "response": "There are a total of 27 unique, relevant, and practical responses in the list. The responses include commonly known fruits such as apple, banana, orange, and strawberry, as well as a variety of other fruits like persimmon, lychee, dragonfruit, and passionfruit. Each response is distinct and adds to the diversity of the list. [[27]]",
+                        "score": 27
+                    },
+                    {
+                        "response": "1. Apple\n2. Banana\n3. Orange\n4. Strawberry\n5. Grapes\n6. Pineapple\n7. Watermelon\n8. Mango\n9. Kiwi\n10. Pear\n11. Peach\n12. Cherry\n13. Blueberry\n14. Raspberry\n15. Blackberry\n16. Papaya\n17. Guava\n18. Plum\n19. Avocado\n20. Lemon\n21. Lime\n22. Fig\n23. Coconut\n24. Cantaloupe\n25. Honeydew melon\n26. Pomegranate\n27. Persimmon\n28. Passionfruit\n29. Lychee\n30. Dragonfruit\n\nThere are a total of 30 unique, relevant, and practical responses in the specific format of [[30]]. These fruits cover a wide range of commonly known fruits, showcasing a good variety and diversity of choices.",
+                        "score": 30
+                    }
+                ],
+                "average_score": 28.0
+            },
+            {
+                "average_fluency": 28.0
+            }
+        ],
+        "flexibility": [
+            {
+                "answer": "Apple\nBanana\nOrange\nStrawberry\nGrapes\nPineapple\nWatermelon\nMango\nKiwi\nPear\nPeach\nCherry\nBlueberry\nRaspberry\nBlackberry\nPapaya\nGuava\nPlum\nAvocado\nLemon\nLime\nFig\nCoconut\nCantaloupe\nHoneydew melon\nPomegranate\nPersimmon\nPassionfruit\nLychee\nDragonfruit",
+                "responses": [
+                    {
+                        "response": "The responses provided demonstrate a high level of flexibility in terms of the variety of distinct categories or perspectives represented. Each fruit listed belongs to a different category based on their unique characteristics, flavors, and uses. \n\n1. Apple \n2. Banana \n3. Orange \n4. Strawberry \n5. Grapes \n6. Pineapple \n7. Watermelon \n8. Mango \n9. Kiwi \n10. Pear \n11. Peach \n12. Cherry \n13. Blueberry \n14. Raspberry \n15. Blackberry \n16. Papaya \n17. Guava \n18. Plum \n19. Avocado \n20. Lemon \n21. Lime \n22. Fig \n23. Coconut \n24. Cantaloupe \n25. Honeydew melon \n26. Pomegranate \n27. Persimmon \n28. Passionfruit \n29. Lychee \n30. Dragonfruit \n\nOverall, there are [[30]] unique categories or perspectives present in the responses provided.",
+                        "score": 30
+                    },
+                    {
+                        "response": "In evaluating the flexibility of the responses provided for the task of naming all fruits, I have identified the following unique categories or perspectives:\n\n1. Common fruits: Apple, Banana, Orange, Strawberry, Grapes, Pineapple, Watermelon, Mango, Kiwi, Pear, Peach, Cherry, Blueberry, Raspberry, Blackberry, Guava, Plum, Lemon, Lime, Coconut.\n2. Exotic fruits: Papaya, Avocado, Fig, Lychee, Dragonfruit, Passionfruit.\n3. Melons: Cantaloupe, Honeydew melon.\n4. Uncommon fruits: Pomegranate, Persimmon.\n\nTherefore, the total number of unique categories or perspectives present is [[4]].",
+                        "score": 4
+                    },
+                    {
+                        "response": "The unique categories or perspectives present in the responses include common fruits (e.g., apple, banana, orange), berries (e.g., strawberry, blueberry, raspberry), tropical fruits (e.g., pineapple, mango, passionfruit), citrus fruits (e.g., lemon, lime), exotic fruits (e.g., dragonfruit, lychee), melons (e.g., watermelon, cantaloupe), stone fruits (e.g., peach, plum), and others (e.g., avocado, fig, pomegranate). \n\nTherefore, the total number of categories or perspectives is [[8]].",
+                        "score": 8
+                    }
+                ],
+                "average_score": 14.0
+            },
+            {
+                "average_flexibility": 14.0
+            }
+        ],
+        "originality": [
+            {
+                "answer": "Apple",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While \"Apple\" is a common response when asked to name fruits, it is not the most typical or expected response like \"banana\" or \"orange.\" It shows a slight variation from the most common responses, indicating a basic level of creativity. A score of 2 is appropriate in this case.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Banana",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJust listing \"Banana\" as the response does not show much originality or creativity. It is a very common and expected fruit to mention when asked to name fruits. The lack of additional fruits listed makes this response fairly mundane and typical. Therefore, it falls into the category of very common with a score of 1.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Orange",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While \"Orange\" is a common response when asked to name fruits, it is not the most typical or expected response like \"apple\" or \"banana.\" It shows a slight variation from the most common responses, indicating a basic level of creativity. A score of 2 is appropriate in this case.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Strawberry",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: While strawberries are a common type of fruit, they are one of the most easily and frequently thought of fruits. As such, mentioning strawberries does not demonstrate a high level of originality in response to the task.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Grapes",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: Grapes are a moderately original response. While grapes are a commonly known fruit, they may not be the first fruit that comes to mind for everyone when asked to list fruits. The response displays some creativity by not going with the most typical fruits like apples or bananas. Some very common responses would include apples, bananas, and oranges, while more original responses could include less common fruits like jackfruit, dragon fruit, or starfruit.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Pineapple",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While pineapples are a common fruit that most people are familiar with, they are not as frequently mentioned as apples, bananas, or oranges. Therefore, I would rate this response as moderately original (3). A score of 3 acknowledges that while pineapples are not extremely unique or rare, they still demonstrate a fair amount of creativity compared to the most typical or expected fruits.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Watermelon",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nI have rated this response as a 2, somewhat common. While watermelon is a well-known fruit and a common response in discussions about fruits, it does show a slight variation from the most typical fruits like apples and oranges. It introduces a different shape, size, and flavor profile compared to the more traditional fruits, which gives it a touch of creativity within the context of naming fruits. An example of a 1-point response would be \"apple,\" as it is one of the most common and expected fruits to be named in such a task.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Mango",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While mango is a common fruit, it is not the first one that comes to mind for many individuals, making it a moderately original response in this context. Some participants may have listed more common fruits like apples, oranges, or bananas, but choosing mango demonstrates a slightly higher level of creativity in their fruit selection. A \"Very Common\" response would include fruits like apples or bananas, while a \"Very Original\" response may include more uncommon fruits like dragon fruit or starfruit.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Kiwi",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While Kiwi is a relatively common fruit that most people are familiar with, it is not as frequently mentioned as apples or bananas. It falls into the moderately original category as it is not an everyday response, but it is also not exceptionally rare or unexpected. Some examples of very common responses would be apple, banana, and orange, while an example of a very original response would be rambutan or durian.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Pear",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJust listing \"Pear\" as a fruit is a very common and expected response when asked to name fruits. Pears are a widely known and commonly consumed fruit, so there is a lack of novelty or uniqueness in this response.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Peach",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nWhile Peach is a common fruit that most people are familiar with, it does show a slight variation from the most typical fruits like apples or bananas. It falls under the category of somewhat common as it is not extremely unique or unexpected.\n\nExamples of responses that would fall under different originality scores:\n\n1. Apple - This would be considered a very common response as apples are one of the most frequently mentioned fruits.\n2. Durian - This could be rated as very original as durian is not a fruit that is commonly thought of in typical contexts.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Cherry",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJust listing \"Cherry\" as a response is a very common and expected answer when asked to name fruits. Cherries are widely known and commonly mentioned in everyday contexts, so this response lacks novelty or uniqueness.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Blueberry",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nJustification: Blueberry is a very original response in the context of listing fruits. While common fruits like apples, oranges, and bananas are frequently mentioned in everyday contexts, blueberries are not as commonly thought of when listing fruits. Blueberries are known for their small size, unique color, and distinct flavor, setting them apart from more traditional fruits. Therefore, including blueberries in the list demonstrates a higher level of creativity and novelty, earning a score of 4.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Raspberry",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nThe response \"Raspberry\" is a very original answer in the context of listing fruits. While common fruits like apples, oranges, and bananas are frequently mentioned in everyday contexts, raspberries are not as commonly thought of or listed. This demonstrates a higher level of creativity and uniqueness compared to more typical fruit varieties. Additionally, raspberries have a distinct flavor and appearance that sets them apart from more common fruits, further contributing to their originality in this context.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Blackberry",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nThe response of \"Blackberry\" earns a score of 4 for originality. While blackberries are a common fruit, they are not typically one of the first fruits that come to mind for most people when asked to list fruits. The mention of blackberries demonstrates a slightly higher level of creativity compared to more typical responses like \"apple\" or \"banana.\" The inclusion of less commonly thought of fruits like blackberries adds a unique element to the list and shows a bit of unexpectedness. Overall, this response displays a moderate level of originality in the context of naming fruits.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Papaya",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response of \"Papaya\" falls under the category of moderately original. While papaya is not as commonly mentioned as fruits like apples or bananas, it is still a widely known fruit. It displays a fair amount of creativity as it is not one of the top fruits that come to mind immediately for everyone. More unique and unexpected fruits like dragon fruit or durian would have been considered very original or extremely original. Overall, the response of \"Papaya\" earns a score of 3 for its moderate level of originality.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Guava",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response of \"Guava\" earns a score of 3 for originality. While Guava is not as commonly mentioned as fruits like apples or bananas, it is still a relatively known fruit that many people are familiar with. It falls under the category of moderately original as it may not be the first fruit that comes to mind for everyone, but it is not considered extremely rare or unexpected either. An example of a 4 or 5 point originality response would be listing a fruit like dragon fruit or durian, which are less common and not typically thought of in everyday contexts when naming fruits.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Plum",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nThe response \"Plum\" is moderately original. While plums are a common and well-known fruit, they are not the first fruit that comes to mind for everyone when asked to list fruits. The response shows some creativity by not going with the most typical fruits like apples or bananas. However, plums are still relatively common and not considered extremely unique or rare in this context. An example of a response that would be considered very original could be \"dragon fruit\" or \"starfruit\", as these fruits are less common and not often listed in typical fruit categories.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Avocado",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While avocado is a common fruit, it still falls under the category of fruits and is not an extremely rare or unexpected response. It demonstrates a fair amount of creativity as it is not one of the first fruits that come to mind for many people. Some examples of responses that would fall into the higher originality categories include dragon fruit, star fruit, or durian, as these are fruits that are less commonly known or thought of.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Lemon",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: While lemon is a fruit, it is a very common and frequently mentioned fruit in everyday contexts. Its inclusion in a list of fruits is expected and lacks novelty or creativity compared to more unusual or less common fruits.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Lime",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nJustification: While \"Lime\" is a common fruit, it is not typically one of the first fruits that come to mind for most people when asked to list fruits. It is not as common as apples, bananas, or oranges, showing a higher level of creativity compared to the most typical or expected responses. This level of uniqueness and unexpectedness warrants a rating of 4 for originality. An example of a response that would warrant a lower originality score would be \"Apple\" or \"Banana\", as these are often the first fruits that come to mind for most people.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Fig",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nJustification: While figs are a type of fruit, they are not one of the most commonly listed fruits when asked to name as many fruits as possible. Figs have a unique taste, texture, and appearance compared to more common fruits like apples, bananas, and oranges. Therefore, including figs as a response demonstrates a higher level of creativity and originality in this context.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Coconut",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nThe response \"Coconut\" is moderately original. While coconuts are a commonly known fruit, they are not as frequently mentioned in everyday contexts compared to more common fruits like apples or bananas. The uniqueness of the coconut lies in its hard outer shell, tropical origins, and the versatility of its parts - from the water inside to the meat and oil extracted. Overall, while not extremely rare, mentioning coconuts does show a fair amount of creativity in thinking beyond the most typical fruits.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Cantaloupe",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nCantaloupe is a moderately original response in the context of listing fruits. While it is a common fruit, it may not be the first fruit that comes to mind for everyone, making it slightly less predictable compared to fruits like apples or bananas. It falls between being somewhat common and moderately original. More unique fruits such as durian or rambutan would be considered more original responses.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Honeydew melon",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While naming a honeydew melon is a fairly common and expected response when listing fruits, it falls into the category of moderately original due to the fact that it is not the first fruit that typically comes to mind for many people. It displays a fair amount of creativity compared to more common fruits like apples or bananas. Therefore, a rating of 3 is appropriate for this response.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Pomegranate",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nJustification: While pomegranate is a common fruit and not typically considered rare or unexpected, it does not fall into the most typical or mundane category. It displays a fair amount of creativity and novelty as it is not as commonly listed as fruits like apples or oranges. Therefore, a score of 3 is appropriate for this response.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Persimmon",
+                "responses": [
+                    {
+                        "response": "[[5]]\n\nThe response \"Persimmon\" is extremely original as it is a less common fruit compared to more well-known ones like apples, bananas, or oranges. Persimmons are not typically the first fruits that come to mind for most people, which adds to its novelty and uniqueness in this list. This response stands out for its rarity and unexpectedness, showcasing a high degree of creativity.",
+                        "score": 5
+                    }
+                ],
+                "average_score": 5.0
+            },
+            {
+                "answer": "Passionfruit",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nPassionfruit is a moderately original response. While it is a common fruit and not extremely rare, it is not one of the first fruits that come to mind for most people when asked to list all fruits. It shows a level of creativity as it may not be as commonly thought of as apples or oranges. Some examples of \"very common\" responses could include apples, bananas, and oranges, while \"extremely original\" responses could include dragon fruit or star fruit. Passionfruit falls in between these categories, making it a moderately original choice.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Lychee",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response \"Lychee\" is moderately original. While lychee is not as common as apples or oranges, it is also not an extremely rare or unexpected fruit to mention. It falls somewhere in the middle in terms of how commonly it is thought of in a list of fruits. \n\nFor example, a very common response would be \"apple\" or \"banana\" as these are fruits that are often the first to come to mind. On the other hand, an extremely original response would be something like \"durian\" or \"dragon fruit\" as these are less commonly thought of fruits. \"Lychee\" falls in between these extremes, making it a moderately original response.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Dragonfruit",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nDragonfruit is a moderately original response because while it is not as common as apples or bananas, it is still a well-known fruit. It demonstrates some level of creativity in thinking of a less typical fruit. \n\nExamples:\n1. Apple (1)\n2. Banana (1)\n3. Dragonfruit (4)",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "average_originality": 2.9
+            }
+        ],
+        "elaboration": [
+            {
+                "answer": "Apple",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is somewhat basic as it only lists one fruit (Apple) without any further elaboration or detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Banana",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is somewhat basic as it only lists one fruit (banana) without any further elaboration or detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Orange",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response only provides one fruit without any additional detail or explanation. It is extremely basic and lacks any elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Strawberry",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is somewhat basic as it only lists one fruit (strawberry). There is minimal detail or explanation provided.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Grapes",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is extremely basic and lacks any further elaboration or additional fruits listed.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Pineapple",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It is a simple one-word answer without any elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Watermelon",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks any additional details or elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Mango",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response only provides one fruit without any additional detail or explanation.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Kiwi",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is somewhat basic in nature as it provides one fruit without further elaboration or additional details.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Pear",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is very basic as it only lists one fruit (pear) without any further elaboration or detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Peach",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is very basic as it only lists one fruit (Peach) without further elaboration or detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Cherry",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is very basic as it only lists one fruit without any further elaboration or detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Blueberry",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It is a simple one-word answer without any elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Raspberry",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is very basic as it only lists one fruit without any further elaboration or detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Blackberry",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nThe response is somewhat basic. While it does provide a fruit name, it lacks further elaboration or additional details.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Papaya",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It gives only one fruit without any additional information or elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Guava",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks any further elaboration or additional fruits listed.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Plum",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is somewhat basic as it only lists one fruit (plum) without further elaboration or detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Avocado",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks any further elaboration or additional fruits listed.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Lemon",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is very basic as it only lists one fruit (Lemon) without further elaboration or detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Lime",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response only provides one fruit without any additional detail or explanation. It is very basic and lacks elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Fig",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is somewhat basic as it only lists one fruit (Fig) without any further elaboration or detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Coconut",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is very basic as it only lists one fruit (coconut) without further elaboration or detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Cantaloupe",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response is extremely basic and lacks any further elaboration or detail.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Honeydew melon",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: The response is extremely basic and lacks any further elaboration or detail. There is no additional information provided beyond the name of the fruit.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Pomegranate",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response is extremely basic and lacks any further elaboration or detail.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Persimmon",
+                "responses": [
+                    {
+                        "response": "[[1]]\nThe response is extremely basic and lacks detail or explanation. It provides only one fruit without any further elaboration or development.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Passionfruit",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nThe response is moderately elaborated as it provides a specific fruit (passionfruit) but lacks further details or additional fruits. While the response is clear and focused, it could benefit from more examples to enhance the level of elaboration.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Lychee",
+                "responses": [
+                    {
+                        "response": "[[1]]\nThe response \"Lychee\" is very basic and lacks any further elaboration or additional fruits listed. Therefore, it earns a score of 1.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Dragonfruit",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It gives only one fruit without any additional information or elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "average_elaboration": 1.5333333333333334
+            }
+        ]
+    },
+    {
+        "question": "Name all the instruments you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "fluency": [
+            {
+                "answer": "Piano\nGuitar\nViolin\nFlute\nTrumpet\nDrum set\nCello\nSaxophone\nClarinet\nFrench horn",
+                "responses": [
+                    {
+                        "response": "The unique, relevant, and practical responses are:\n\n1. Piano\n2. Guitar\n3. Violin\n4. Flute\n5. Trumpet\n6. Drum set\n7. Cello\n8. Saxophone\n9. Clarinet\n10. French horn\n\nThere are a total of 10 unique, relevant, and practical responses. [[10]]",
+                        "score": 10
+                    },
+                    {
+                        "response": "There are a total of 9 unique, relevant responses in this list. Each instrument listed serves a distinct purpose and is commonly used in various musical settings. The specific format of [[9]] unique, relevant, and practical responses demonstrates the comprehensive nature of the list provided.",
+                        "score": 9
+                    },
+                    {
+                        "response": "There are 9 unique, relevant responses in the list provided. Each instrument listed is unique in its sound, structure, and function which makes it a relevant choice for the question about naming different instruments. [[9]]",
+                        "score": 9
+                    }
+                ],
+                "average_score": 9.333333333333334
+            },
+            {
+                "average_fluency": 9.333333333333334
+            }
+        ],
+        "flexibility": [
+            {
+                "answer": "Piano\nGuitar\nViolin\nFlute\nTrumpet\nDrum set\nCello\nSaxophone\nClarinet\nFrench horn",
+                "responses": [
+                    {
+                        "response": "Based on the responses provided, the unique categories or perspectives represented in the answers include:\n1. Keyboard instrument - Piano\n2. String instrument - Guitar, Violin, Cello\n3. Wind instrument - Flute, Trumpet, Saxophone, Clarinet, French horn\n4. Percussion instrument - Drum set\n\nTherefore, the total number of unique categories or perspectives represented is [[4]].",
+                        "score": 4
+                    },
+                    {
+                        "response": "The unique categories or perspectives present in the responses are: \n\n1. Keyboard instruments (Piano)\n2. String instruments (Guitar, Violin, Cello)\n3. Wind instruments (Flute, Trumpet, Saxophone, Clarinet, French horn)\n4. Percussion instruments (Drum set)\n\nTherefore, the total number of categories or perspectives is [[4]].",
+                        "score": 4
+                    },
+                    {
+                        "response": "Upon evaluation, the responses can be categorized into the following distinct categories or perspectives:\n1. Keyboard instruments (Piano)\n2. String instruments (Guitar, Violin, Cello)\n3. Wind instruments (Flute, Trumpet, Saxophone, Clarinet, French horn)\n4. Percussion instruments (Drum set)\n\nTherefore, there are [[4]] unique categories or perspectives present in the responses.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "average_flexibility": 4.0
+            }
+        ],
+        "originality": [
+            {
+                "answer": "Piano",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nJustification: While the piano is a well-known and commonly mentioned musical instrument, it still holds a significant level of originality when considering the vast array of musical instruments available. The piano is a very versatile and unique instrument due to its range, variety of sounds, and playing techniques. While it is a popular instrument, it still stands out as a very original choice when compared to more common instruments like the guitar or drums. Some examples of responses that would be considered more common include guitar, drums, and flute.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Guitar",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While the guitar is a common and well-known musical instrument, it is not the most typical response and does show some level of creativity in thinking of musical instruments. However, it is not highly unique or unexpected, as guitars are commonly mentioned in musical contexts. An example of a very common response would be \"piano,\" as it is one of the first instruments that come to mind for many people. An example of a very original response would be \"hang drum,\" as it is a lesser-known instrument that not everyone would immediately think of.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Violin",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While the violin is a well-known musical instrument, it falls into the \"Somewhat Common\" category as it is a popular and widely recognized instrument. However, it does show slight variations from the most typical or expected instruments like the piano or guitar. More original responses would include less common or unconventional instruments such as the hurdy-gurdy or theremin.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Flute",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response \"Flute\" is moderately original. While the flute is a commonly known musical instrument, it is not the most frequently mentioned or expected in a list of instruments. It displays a fair amount of creativity and novelty as it is not as typical as instruments like the guitar or piano. Some examples of very common responses would include the guitar, piano, drums, and violin, while a very original response could be something like the theremin or hang drum. Therefore, \"Flute\" falls into the moderately original category.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Trumpet",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response \"Trumpet\" is a moderately original answer. While the trumpet is a common and well-known musical instrument, it is not the most typical or expected response when listing various instruments. It displays a fair amount of creativity compared to more commonly mentioned instruments such as the guitar or piano. Some examples of very common responses would include \"Guitar\" or \"Drums,\" while more original answers could be \"Theremin\" or \"Harpsichord.\" Overall, \"Trumpet\" falls in the middle in terms of originality.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Drum set",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nI have rated this response as a 2, somewhat common. While a drum set is a common response when listing musical instruments, it does show some variation from just naming a single drum or a cymbal. However, it is still a typical and expected answer when thinking of instruments. Some examples of more original responses could include naming more specific instruments such as a tabla, marimba, or theremin.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Cello",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While the cello is a well-known classical instrument, it is not among the most commonly mentioned instruments in everyday contexts. It demonstrates some level of originality in the list of instruments, as it is not as frequently mentioned as others like the piano or guitar. However, it is not as unique or unexpected as less common instruments like the didgeridoo or theremin. Overall, it falls into the category of moderately original.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Saxophone",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response \"Saxophone\" earns a score of 3 for originality. While the saxophone is a common instrument, it also demonstrates some creativity as it is not the first instrument that comes to mind for many people when asked to list instruments. The response falls in the category of \"Moderately Original\" as it is not the most typical or expected choice, but it is also not exceedingly rare or unexpected. Some examples of responses that would be rated lower include \"piano\" or \"guitar\" which are more common instruments that are frequently mentioned in everyday contexts.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Clarinet",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response of \"Clarinet\" earns a score of 3 for originality. While the clarinet is a common instrument, it is not as frequently mentioned as the more typical instruments like piano, guitar, or drums. It shows a fair amount of creativity and novelty compared to the most expected answers. Additionally, the clarinet is not always the first instrument that comes to mind for many people, so it adds a touch of uniqueness to the list of instruments. Overall, it falls into the category of moderately original responses.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "French horn",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response of \"French horn\" earns a score of 3 for originality. While the French horn is a common instrument, it is not as frequently mentioned as the more popular instruments like the piano or guitar. This shows a fair amount of creativity and uniqueness compared to the most typical answers in a list of musical instruments. It displays a moderate level of originality as it is not the first instrument that comes to mind for many people. \n\nIf the response had been something more common like \"clarinet\" or \"drums,\" it would have scored lower due to their frequent mention in everyday contexts. Conversely, if the response had been something highly unusual like \"theremin\" or \"hang drum,\" it would have scored higher for being more unexpected and rarely thought of in typical contexts.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "average_originality": 2.9
+            }
+        ],
+        "elaboration": [
+            {
+                "answer": "Piano",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJust listing the piano as an instrument is a somewhat basic response. It lacks detail and depth as it only mentions one instrument without any additional elaboration.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Guitar",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJust listing \"Guitar\" is somewhat basic in terms of elaboration. While it gives one instrument as requested, it lacks depth and detail that would be needed for a higher score.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Violin",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response only provides one instrument without any additional details or explanations. It lacks elaboration and depth.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Flute",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It gives only one instrument without any additional information or elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Trumpet",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nThe response provided is extremely basic and lacks any additional detail or explanation. It simply lists one instrument without any further elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Drum set",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nThe response is somewhat basic as it only lists one instrument (drum set) without any further elaboration or detail. Additional instruments could have been included to demonstrate a more elaborate and in-depth response.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Cello",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It gives only one instrument without any additional information or elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Saxophone",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It gives only one instrument without any additional information or elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Clarinet",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response only provides one instrument without any additional details or explanations. It lacks elaboration and depth.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "French horn",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It gives only one instrument without any additional information or elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "average_elaboration": 1.3
+            }
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that can fly.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "fluency": [
+            {
+                "answer": "Birds\nAirplanes\nHelicopters\nInsects\nBats\nKites\nHot air balloons\nParagliders\nDrones\nSuperman (fictional)",
+                "responses": [
+                    {
+                        "response": "The unique, relevant, and practical responses are:\n\n1. Birds\n2. Airplanes\n3. Helicopters\n4. Insects\n5. Bats\n6. Kites\n7. Hot air balloons\n8. Paragliders\n9. Drones\n\nThere are a total of 9 unique, relevant, and practical responses. [[9]]",
+                        "score": 9
+                    },
+                    {
+                        "response": "1. Birds\n2. Airplanes\n3. Helicopters\n4. Insects\n5. Bats\n6. Kites\n7. Hot air balloons\n8. Paragliders\n9. Drones\n10. Superman (fictional)\n\nThere are 10 unique and relevant responses listed. Each item mentioned is a different category of flying object or entity, showcasing a diverse range of things that can fly. [[10]]",
+                        "score": 10
+                    },
+                    {
+                        "response": "1. Birds\n2. Airplanes\n3. Helicopters\n4. Insects\n5. Bats\n6. Kites\n7. Hot air balloons\n8. Paragliders\n9. Drones\n10. Superman (fictional) \n\nThere are a total of 10 unique, relevant, and practical responses. Each of the items listed can fly in some form or another, whether naturally or with the help of technology. [[10]]",
+                        "score": 10
+                    }
+                ],
+                "average_score": 9.666666666666666
+            },
+            {
+                "average_fluency": 9.666666666666666
+            }
+        ],
+        "flexibility": [
+            {
+                "answer": "Birds\nAirplanes\nHelicopters\nInsects\nBats\nKites\nHot air balloons\nParagliders\nDrones\nSuperman (fictional)",
+                "responses": [
+                    {
+                        "response": "The unique categories or perspectives present in the responses are:\n\n1. Natural flyers (birds, insects, bats)\n2. Man-made flying machines (airplanes, helicopters, drones)\n3. Recreational flying objects (kites, hot air balloons, paragliders)\n4. Fictional flying characters (Superman)\n\nThe total number of categories or perspectives is [[4]].",
+                        "score": 4
+                    },
+                    {
+                        "response": "The unique categories or perspectives represented in the responses are as follows:\n1. Living creatures (birds, insects, bats)\n2. Man-made flying machines (airplanes, helicopters, drones)\n3. Recreational flying objects (kites, hot air balloons, paragliders)\n4. Fictional characters (Superman)\n\nTherefore, there are [[4]] unique categories or perspectives present in the responses.",
+                        "score": 4
+                    },
+                    {
+                        "response": "The unique categories or perspectives identified in the responses are:\n1. Birds\n2. Airplanes\n3. Helicopters\n4. Insects\n5. Bats\n6. Kites\n7. Hot air balloons\n8. Paragliders\n9. Drones\n10. Superman (fictional)\n\nTherefore, the total number of categories or perspectives is [[10]].",
+                        "score": 10
+                    }
+                ],
+                "average_score": 6.0
+            },
+            {
+                "average_flexibility": 6.0
+            }
+        ],
+        "originality": [
+            {
+                "answer": "Birds",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While birds are a common example of things that can fly, they are a somewhat common response in this context. Many people initially think of birds when asked about flying objects, so it is not particularly original or unique. Some more original responses could include hot air balloons, drones, or hang gliders.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Airplanes",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While airplanes are a common and expected answer when thinking of things that can fly, they do show a slight variation from the most typical responses like birds or insects. Airplanes still demonstrate a level of creativity as they are man-made objects that can fly, setting them apart from natural flying creatures. Some examples of more common responses include birds, butterflies, and drones.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Helicopters",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nThe response \"Helicopters\" is somewhat common as it is a typical mode of aerial transportation that can fly. While helicopters do offer a different method of flying compared to airplanes or birds, they are still a common and expected answer in a discussion about flying objects. To earn a higher originality score, responses that are less conventional and more unexpected, such as \"paper airplanes\" or \"flying squirrels,\" would be needed.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Insects",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While the response of insects as things that can fly is not extremely rare or unexpected, it does show a fair amount of creativity and novelty. While insects are commonly known for their ability to fly, they are not the first thing that may come to mind when thinking of flying objects. This response falls under the category of \"Moderately Original\" as it displays some creativity but is not highly rare or unexpected like other more unique responses such as \"paper airplanes made from recycled materials\" or \"hot air balloons shaped like animals.\"",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Bats",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While bats are a commonly known flying mammal, they are not the first thing that comes to mind for many people when listing things that can fly. This response falls under moderately original because bats are not as commonly mentioned as birds or airplanes when thinking of flying objects. Other examples of moderately original responses could include drones or hot air balloons.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Kites",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While kites are a common and expected response when thinking of things that can fly, they do show some level of creativity as they are not the most typical or expected answer. Kites are objects purposely designed to fly in the air and can be seen as moderately original in this context. More unique responses such as \"feathered wingsuits\" or \"hoverboards\" would be considered very original or extremely original.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Hot air balloons",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nJustification:\n\nHot air balloons are a fairly unique and creative response to the prompt of naming things that can fly. While more common answers such as birds, airplanes, and helicopters are typically expected, hot air balloons are not as frequently mentioned. They require a different mechanism for flight compared to traditional aircraft, making them a more innovative choice. Overall, this response demonstrates a higher level of creativity and originality, earning it a score of 4.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Paragliders",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nParagliders are a very original response as they are not as commonly thought of compared to more mainstream flying objects like birds, airplanes, or drones. Paragliders are recreational aircraft that are foot-launched and can stay aloft for hours or travel long distances. This response demonstrates a high level of creativity by thinking outside the box of traditional flying objects.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Drones",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nJustification: The response of \"Drones\" is very original (4) in terms of originality. While mentioning birds, planes, and insects might be more common responses, suggesting drones is a unique and modern take on items that can fly. Drones are not traditionally thought of as flying objects by everyone, especially in the context of a divergent thinking task. This unexpected response demonstrates a high level of creativity and innovation, making it significantly unique compared to more typical answers.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Superman (fictional)",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nWhile the concept of Superman flying is not a commonly thought of or everyday response, it falls under the category of fictional or imaginary beings that have the ability to fly. While it is not a mundane or typical answer, it also does not reach the level of being extremely unique or unexpected. Therefore, a score of 3 is appropriate as it displays a fair amount of creativity and novelty. Examples of responses that would warrant a 5 would be completely unconventional ideas such as \"flying toaster\" or \"levitating rock.\"",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "average_originality": 3.0
+            }
+        ],
+        "elaboration": [
+            {
+                "answer": "Birds",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nJustification: While the response is clear and straightforward, it only provides one example (birds) without any further elaboration or additional ideas. This falls within the \"Moderately Elaborated\" category as it lacks depth and variety in responses.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Airplanes",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While the response provides a clear answer, it lacks detail and depth. There could have been further elaboration by listing other flying objects or discussing different types of airplanes.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Helicopters",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nWhile the response is somewhat basic, mentioning helicopters as an item that can fly shows a moderate level of detail and thought. However, the elaboration could be improved by including more examples of items that can fly.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Insects",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While the response is concise, it provides a specific category of flying objects (insects) without further elaboration or examples. It shows a moderate level of detail but lacks depth in exploring other potential flying entities.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Bats",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While the response provides a valid example of something that can fly, it lacks additional details or further elaboration on other flying objects or animals.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Kites",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While the response only provides one item (kites) as an example of something that can fly, it offers a moderate level of detail and development by specifying a unique and creative example. However, to receive a higher score, the response would need to include additional examples and further detail.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Hot air balloons",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nThe response of \"hot air balloons\" provides a moderate level of detail and development. While it is a unique and specific answer, it lacks further elaboration or explanation of how hot air balloons fly. Additional examples or details would have enhanced the overall elaboration of the response.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Paragliders",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nWhile the response only provides one item, a paraglider, it offers a moderate level of detail by specifying a specific type of flying object. However, in order to receive a higher score, the response would need to provide more examples of things that can fly.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Drones",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While the response is straightforward and concise, it showcases a moderate level of detail by providing a specific type of item that can fly (drones). However, there could have been more elaboration by mentioning other examples of things that can fly to enhance the response further.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Superman (fictional)",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nThis response only provides one example, which is a fictional character. There is no further elaboration or exploration of other potential flying objects or beings.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "average_elaboration": 2.6
+            }
+        ]
+    },
+    {
+        "question": "Name all the flowers you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "fluency": [
+            {
+                "answer": "Rose\nLily\nSunflower\nTulip\nDaisy\nOrchid\nDaffodil\nPeony\nHydrangea\nMarigold\nCarnation\nLavender\nPoppy\nIris\nGerbera Daisy",
+                "responses": [
+                    {
+                        "response": "In the list provided, there are 15 unique, relevant, and practical responses. Each flower listed is distinct from the others and is commonly known and recognized. The responses are: Rose, Lily, Sunflower, Tulip, Daisy, Orchid, Daffodil, Peony, Hydrangea, Marigold, Carnation, Lavender, Poppy, Iris, Gerbera Daisy. [[15]]",
+                        "score": 15
+                    },
+                    {
+                        "response": "In the list provided, there are a total of 14 unique, relevant, and practical responses. These responses cover a wide range of popular and recognizable flowers, showcasing the diversity of floral options. Each flower mentioned is distinct and commonly known, making them relevant to the task at hand. [[14]]",
+                        "score": 14
+                    },
+                    {
+                        "response": "There are a total of 14 unique, relevant, and practical responses:\n1. Rose\n2. Lily\n3. Sunflower\n4. Tulip\n5. Daisy\n6. Orchid\n7. Daffodil\n8. Peony\n9. Hydrangea\n10. Marigold\n11. Carnation\n12. Lavender\n13. Poppy\n14. Iris[[14]]",
+                        "score": 14
+                    }
+                ],
+                "average_score": 14.333333333333334
+            },
+            {
+                "average_fluency": 14.333333333333334
+            }
+        ],
+        "flexibility": [
+            {
+                "answer": "Rose\nLily\nSunflower\nTulip\nDaisy\nOrchid\nDaffodil\nPeony\nHydrangea\nMarigold\nCarnation\nLavender\nPoppy\nIris\nGerbera Daisy",
+                "responses": [
+                    {
+                        "response": "The unique categories or perspectives present in the responses are:\n1. Rose, Lily, Sunflower, Tulip, Daisy, Orchid, Daffodil, Peony, Hydrangea, Marigold, Carnation (Specific flower names)\n2. Lavender (Specific flower name with unique properties)\n3. Poppy, Iris, Gerbera Daisy (Specific flower names different from the initial list)\n\nOverall, there are [[3]] unique categories or perspectives in the responses.",
+                        "score": 3
+                    },
+                    {
+                        "response": "The unique categories or perspectives present in the responses include: \n1. Roses\n2. Lilies\n3. Sunflowers\n4. Tulips\n5. Daisies\n6. Orchids\n7. Daffodils\n8. Peonies\n9. Hydrangeas\n10. Marigolds\n11. Carnations\n12. Lavender\n13. Poppies\n14. Irises\n15. Gerbera Daisies\n\nTherefore, the total number of categories or perspectives is [[15]].",
+                        "score": 15
+                    },
+                    {
+                        "response": "The unique categories or perspectives present in the responses are:\n\n1. Rose, Lily, Tulip, Daisy, Marigold, Carnation, Poppy, Iris (Common flowers)\n2. Sunflower (Flowers based on size/appearance)\n3. Orchid (Exotic/unique flowers)\n4. Daffodil, Peony, Hydrangea, Lavender, Gerbera Daisy (Flowers based on color or fragrance)\n\nTherefore, there are [[4]] unique categories or perspectives present in the responses.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 7.333333333333333
+            },
+            {
+                "average_flexibility": 7.333333333333333
+            }
+        ],
+        "originality": [
+            {
+                "answer": "Rose",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While \"Rose\" is a well-known and commonly mentioned flower, it is still a classic and popular choice. It is somewhat ordinary but does show some level of creativity as it is a typical flower that people often associate with romance and beauty. An example of a response that would be considered a 1 would be \"Daisy\", which is another common flower that is frequently listed in similar tasks.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Lily",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nWhile the response of \"Lily\" is a common flower that most people would be familiar with, it still demonstrates a fair amount of creativity and novelty in the context of this task. It is not the most typical or expected answer, as there are many other flowers that could have been listed instead. For example, if the response had been something like \"Rose\" or \"Tulip,\" those would have been more common and expected answers. \"Lily\" falls into a category of flowers that are well-known but not always the first ones that come to mind, making it moderately original in this context.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Sunflower",
+                "responses": [
+                    {
+                        "response": "[[2]]\n\nJustification: While a sunflower is a well-known and common flower, it is still a specific response and shows some level of creativity compared to more general responses like \"rose\" or \"daisy.\" The response falls under the \"Somewhat Common\" category as it is somewhat ordinary but still demonstrates a slight variation from typical uses. For higher originality scores, less common or more unique flower names could be listed.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Tulip",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While a tulip is a well-known and commonly mentioned flower, it is not the most typical or expected response like \"rose\" or \"daisy.\" Tulips are popular flowers, but they do not hold the same level of commonality as some other flowers. Therefore, the response of \"Tulip\" falls into the \"Moderately Original\" category as it displays a fair amount of creativity compared to more common responses.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Daisy",
+                "responses": [
+                    {
+                        "response": "[[1]]\n\nJustification: Daisy is a very common type of flower that is frequently mentioned and commonly known. While it is a valid response to the task, it lacks originality as it is one of the most typical and expected flowers to be listed.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Orchid",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nJustification: Orchid is a very unique and specific flower compared to more commonly known flowers like roses or daisies. While not extremely obscure, it is not as frequently mentioned in everyday contexts, making it fairly original. This response stands out for its specificity and less common association compared to more typical flower names.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Daffodil",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nThe response \"Daffodil\" is a moderately original answer. While Daffodils are a widely known and popular type of flower, they are not as commonly mentioned as roses or daisies. This response shows some creativity and thought beyond just the most typical flower names. For example, if the response had been \"Rose\" or \"Daisy,\" it would have been more common and scored lower. Therefore, \"Daffodil\" falls into the moderately original category.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Peony",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While a peony is a well-known flower, it falls into the category of moderately original because it's not as commonly listed as roses or sunflowers. It shows a fair amount of creativity and novelty compared to the most typical responses. An example of a very common response would be \"rose,\" while a very original response might be \"bird of paradise.\"",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Hydrangea",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response \"Hydrangea\" is a moderately original answer. While Hydrangeas are a common type of flower, they are not as frequently mentioned in everyday conversations compared to more popular flowers like roses or daisies. The mention of Hydrangeas adds a fair amount of creativity and novelty to the list of flowers, as it is less expected than more common answers. Therefore, a score of 3 is appropriate in this case.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Marigold",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response \"Marigold\" falls under the category of somewhat common. While Marigold is a well-known flower, it does show some variation from the most typical or expected responses like rose or daisy. It demonstrates a basic level of creativity as it is not the first flower that comes to mind for many people. \n\nFor example, if the response had been something more common like rose or daisy, it would have been considered very common. On the other hand, if the response had been a highly unique and rare flower that is seldom thought of, it would have been rated as very original or extremely original. The response \"Marigold\" falls somewhere in between, hence a score of 3 is appropriate.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Carnation",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nThe response of \"Carnation\" earns a score of 3 for originality. While Carnations are a common flower, they are not as frequently mentioned as roses or daisies, showing a fair amount of creativity and uniqueness. However, Carnations are still a relatively well-known flower, so it doesn't fall into the category of being \"very original\" or \"extremely original.\" An example of a \"very original\" response might be \"Bleeding Heart\" or \"Bird of Paradise,\" which are not as commonly thought of when listing flowers.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Lavender",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While lavender is a fairly well-known flower, it falls into the category of being moderately original. It's a common flower that most people are familiar with, but it does show a fair amount of creativity and novelty compared to more typical responses like roses or sunflowers. Some examples of very common responses would be roses, daisies, and tulips. Some examples of extremely original responses would be heliconias, amaryllis, and bird of paradise flowers. Lavender fits in between these two extremes, making it a moderately original response.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Poppy",
+                "responses": [
+                    {
+                        "response": "[[3]]\n\nJustification: While a poppy is a well-known flower, it falls into the category of moderately original because it's not as common or expected as roses or daisies, but still recognizable by many. It shows some level of creativity as it's not always the first flower that comes to mind when listing flowers. Some examples of more common responses could include roses, daisies, tulips, etc.",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "answer": "Iris",
+                "responses": [
+                    {
+                        "response": "[[4]]\n\nIris is a moderately original response. While Iris is a well-known flower, it is not as commonly thought of compared to widely known flowers like roses or daisies. It demonstrates a fair amount of creativity and uniqueness in the context of listing flowers. An example of a very common response would be \"Rose,\" while an extremely original response might be \"Bird of Paradise.\" Therefore, Iris falls into the moderately original category.",
+                        "score": 4
+                    }
+                ],
+                "average_score": 4.0
+            },
+            {
+                "answer": "Gerbera Daisy",
+                "responses": [
+                    {
+                        "response": "[[3]] \n\nGerbera Daisy is a moderately original response. While Gerbera Daisies are a common type of flower, mentioning them in this context does show a fair amount of creativity as it is not the first flower that comes to mind for everyone. It is not as expected or typical as roses or tulips, but it also isn't an extremely unique or rare flower. An example of a very common response would be \"rose\" or \"daisy,\" while an extremely original response might include a more obscure or less commonly known flower like \"Bleeding Heart\" or \"Bird of Paradise.\"",
+                        "score": 3
+                    }
+                ],
+                "average_score": 3.0
+            },
+            {
+                "average_originality": 2.8666666666666667
+            }
+        ],
+        "elaboration": [
+            {
+                "answer": "Rose",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response only provides one flower without any additional detail or explanation. It is somewhat basic as it lacks depth or development.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Lily",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is very basic as it only lists one flower (Lily) without further elaboration or detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Sunflower",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response only provides one flower without any additional details or explanations. It lacks elaboration and depth.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Tulip",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It gives only one flower without any additional information, therefore, it falls under the category of a very basic response.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Daisy",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response is somewhat basic as it only lists one flower (Daisy) without further elaboration or detail.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Orchid",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It gives only one flower without any additional information or elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Daffodil",
+                "responses": [
+                    {
+                        "response": "[[1]]\nThe response provided is very basic as it only lists one flower without any additional information or elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Peony",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is extremely basic and lacks any additional detail or explanation. Only one flower is mentioned without any further elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Hydrangea",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response is extremely basic and lacks any further elaboration or detail. There is no additional information provided beyond the name of the flower.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Marigold",
+                "responses": [
+                    {
+                        "response": "[[1]]\nThe response provided is very basic and lacks any additional flowers listed. There is minimal detail or elaboration, therefore, it falls into the category of being the least elaborated option.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Carnation",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nThe response is somewhat basic. While Carnation is provided as a flower name, there is minimal detail or explanation offered. Additional flower names or further elaboration would enhance the response and increase the score.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Lavender",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is very basic and lacks detail or explanation. It gives only one flower without any additional information or elaboration.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Poppy",
+                "responses": [
+                    {
+                        "response": "[[1]] \n\nJustification: The response provided is extremely basic and lacks any further elaboration or detail.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "answer": "Iris",
+                "responses": [
+                    {
+                        "response": "[[2]] \n\nJustification: The response only provides one flower name without any additional details or explanations. While it shows some degree of detail, it lacks depth and development, resulting in a somewhat basic level of elaboration.",
+                        "score": 2
+                    }
+                ],
+                "average_score": 2.0
+            },
+            {
+                "answer": "Gerbera Daisy",
+                "responses": [
+                    {
+                        "response": "[[1]]\nThe response provided is very basic as it only lists one flower without any further elaboration or additional details.",
+                        "score": 1
+                    }
+                ],
+                "average_score": 1.0
+            },
+            {
+                "average_elaboration": 1.3333333333333333
+            }
+        ]
+    }
+]

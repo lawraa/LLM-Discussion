@@ -1,0 +1,187 @@
+[
+    {
+        "question": "Name all the round things you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Basketball",
+            "Orange",
+            "Clock",
+            "Balloon",
+            "Baseball",
+            "Soccer ball",
+            "Pizza",
+            "Plate",
+            "Coin",
+            "Button"
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Car horns",
+            "Doorbells",
+            "Alarms",
+            "Dogs barking",
+            "Birds chirping",
+            "Music",
+            "Thunder",
+            "Construction equipment",
+            "Voices talking or shouting",
+            "Clocks ticking",
+            "Whistles",
+            "Fireworks",
+            "Sirens",
+            "Trains",
+            "Lawnmowers"
+        ]
+    },
+    {
+        "question": "Name all the square things you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Rubik's Cube",
+            "Chocolate bar",
+            "Post-it note",
+            "Picture frame",
+            "Checkerboard",
+            "Carpet tile",
+            "Tissue box",
+            "Building block",
+            "Windowpane",
+            "Graph paper"
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Cars",
+            "Buses",
+            "Trucks",
+            "Motorcycles",
+            "Bicycles",
+            "Skateboards",
+            "Roller skates",
+            "Rollerblades",
+            "Wheelchairs",
+            "Shopping carts"
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that are red.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Apples",
+            "Roses",
+            "Fire trucks",
+            "Strawberries",
+            "Stop signs",
+            "Red peppers",
+            "Red lipstick",
+            "Ladybugs",
+            "Tomatoes",
+            "Red velvet cake"
+        ]
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Fish",
+            "Sharks",
+            "Dolphins",
+            "Whales",
+            "Seals",
+            "Sea turtles",
+            "Octopus",
+            "Squid",
+            "Jellyfish",
+            "Seahorses"
+        ]
+    },
+    {
+        "question": "Name all the fruits you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Apple",
+            "Banana",
+            "Orange",
+            "Strawberry",
+            "Grape",
+            "Pineapple",
+            "Watermelon",
+            "Cherry",
+            "Kiwi",
+            "Mango",
+            "Papaya",
+            "Peach",
+            "Pear",
+            "Raspberry",
+            "Blueberry",
+            "Lemon",
+            "Lime",
+            "Guava",
+            "Avocado",
+            "Plum"
+        ]
+    },
+    {
+        "question": "Name all the instruments you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Piano",
+            "Violin",
+            "Guitar",
+            "Flute",
+            "Trumpet",
+            "Trombone",
+            "Saxophone",
+            "Drums",
+            "Cello",
+            "Clarinet",
+            "Harp",
+            "French horn",
+            "Organ",
+            "Accordion",
+            "Ukulele",
+            "Banjo",
+            "Mandolin",
+            "Bagpipes",
+            "Double bass",
+            "Xylophone"
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that can fly.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Birds",
+            "Airplanes",
+            "Helicopters",
+            "Insects (such as bees, butterflies, and dragonflies)",
+            "Hot air balloons",
+            "Kites",
+            "Bats",
+            "Rockets",
+            "Paragliders",
+            "Drones"
+        ]
+    },
+    {
+        "question": "Name all the flowers you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on.",
+        "answer": [
+            "Rose",
+            "Lily",
+            "Sunflower",
+            "Tulip",
+            "Daisy",
+            "Orchid",
+            "Daffodil",
+            "Hydrangea",
+            "Peony",
+            "Carnation",
+            "Gerbera",
+            "Iris",
+            "Jasmine",
+            "Poppy",
+            "Chrysanthemum",
+            "Lavender",
+            "Violet",
+            "Marigold",
+            "Snapdragon",
+            "Daisy"
+        ]
+    }
+]

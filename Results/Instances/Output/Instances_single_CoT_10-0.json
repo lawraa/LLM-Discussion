@@ -1,0 +1,209 @@
+[
+    {
+        "question": "Name all the round things you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on. And please think step by step.",
+        "answer": [
+            "Basketball",
+            "Soccer ball",
+            "Tennis ball",
+            "Baseball",
+            "Golf ball",
+            "Ping pong ball",
+            "Bowling ball",
+            "Frisbee",
+            "Steering wheel",
+            "Clock",
+            "Plate",
+            "Wheel",
+            "Orange",
+            "Apple",
+            "Lemon"
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.\nPlease list the answer in 1. ... 2. ... 3. ... and so on. And please think step by step.",
+        "answer": [
+            "Alarm clock",
+            "Barking dog",
+            "Car horn",
+            "Doorbell",
+            "Fireworks",
+            "Guitar",
+            "Hammer hitting a nail",
+            "Ice cream truck music",
+            "Jackhammer",
+            "Kettle boiling",
+            "Laughter",
+            "Motorcycle revving",
+            "Newspaper rustling",
+            "Oven timer",
+            "Police siren"
+        ]
+    },
+    {
+        "question": "Name all the square things you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on. And please think step by step.",
+        "answer": [
+            "A square",
+            "A rubik's cube",
+            "Post-it notes",
+            "Picture frames",
+            "Puzzle pieces",
+            "Tiles",
+            "Building blocks",
+            "Windows",
+            "Chocolate bars"
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.\nPlease list the answer in 1. ... 2. ... 3. ... and so on. And please think step by step.",
+        "answer": [
+            "Cars",
+            "Bicycles",
+            "Skateboards",
+            "Roller skates",
+            "Wheelchairs",
+            "Scooters",
+            "Trucks",
+            "Trains",
+            "Rollercoasters",
+            "Shopping carts",
+            "Strollers",
+            "Segways",
+            "Golf carts",
+            "Rollerblades",
+            "Farm equipment (tractors, combine harvesters)",
+            "Forklifts",
+            "Motorcycles",
+            "Roller shoes",
+            "Dollys and hand trucks",
+            "Trolleys in airports and train stations"
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that are red.\nPlease list the answer in 1. ... 2. ... 3. ... and so on. And please think step by step.",
+        "answer": [
+            "Apples",
+            "Roses",
+            "Fire trucks",
+            "Tomatoes",
+            "Stop signs",
+            "Red peppers",
+            "Red velvet cake",
+            "Red lipstick",
+            "Cardinal birds",
+            "Strawberries",
+            "Red chili peppers",
+            "Red wine",
+            "Rubies",
+            "Red sports cars",
+            "Red bell peppers",
+            "Ladybugs",
+            "Red chili sauce",
+            "Red chili powder",
+            "Red scarves",
+            "Red bricks"
+        ]
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.\nPlease list the answer in 1. ... 2. ... 3. ... and so on. And please think step by step.",
+        "answer": [
+            "Fish",
+            "Dolphin",
+            "Shark",
+            "Octopus",
+            "Whale",
+            "Sea turtle",
+            "Crab",
+            "Lobster",
+            "Jellyfish",
+            "Sealion"
+        ]
+    },
+    {
+        "question": "Name all the fruits you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on. And please think step by step.",
+        "answer": [
+            "Apple",
+            "Banana",
+            "Orange",
+            "Pear",
+            "Strawberry",
+            "Watermelon",
+            "Pineapple",
+            "Grapes",
+            "Mango",
+            "Kiwi",
+            "Blueberries",
+            "Papaya",
+            "Peach",
+            "Cherry",
+            "Raspberry",
+            "Plum",
+            "Avocado",
+            "Lemon",
+            "Lime",
+            "Lychee"
+        ]
+    },
+    {
+        "question": "Name all the instruments you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on. And please think step by step.",
+        "answer": [
+            "Piano",
+            "Guitar",
+            "Violin",
+            "Flute",
+            "Trumpet",
+            "Trombone",
+            "Saxophone",
+            "Clarinet",
+            "Drums",
+            "Cello",
+            "Double bass",
+            "Harp",
+            "Accordion",
+            "Banjo",
+            "Ukulele",
+            "Mandolin",
+            "French horn",
+            "Oboe",
+            "Bassoon",
+            "Xylophone",
+            "Marimba",
+            "Vibraphone",
+            "Organ",
+            "Synthesizer",
+            "Bagpipes"
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that can fly.\nPlease list the answer in 1. ... 2. ... 3. ... and so on. And please think step by step.",
+        "answer": [
+            "Birds",
+            "Insects",
+            "Airplanes",
+            "Balloons",
+            "Helicopters",
+            "Kites",
+            "Bats",
+            "Superman (in fiction)"
+        ]
+    },
+    {
+        "question": "Name all the flowers you can think of.\nPlease list the answer in 1. ... 2. ... 3. ... and so on. And please think step by step.",
+        "answer": [
+            "Rose",
+            "Tulip",
+            "Daisy",
+            "Sunflower",
+            "Lily",
+            "Orchid",
+            "Hydrangea",
+            "Peony",
+            "Carnation",
+            "Daffodil",
+            "Dandelion",
+            "Marigold",
+            "Gardenia",
+            "Poppy",
+            "Iris"
+        ]
+    }
+]

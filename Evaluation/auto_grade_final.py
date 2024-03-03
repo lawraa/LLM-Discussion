@@ -18,7 +18,7 @@ def main():
     parser.add_argument("-i", "--input_file", required=True, help="Name of the input file located in the dataset/AUT/discussion_result directory.")
     parser.add_argument("-t", "--type", default="default", choices=["default", "fewshot", "rubric", "pairwise", "sampling"], help="Variant of the evaluation.")
     parser.add_argument("-s", "--sample", default=3, type=int, help="Number of times to sample the evaluation.")
-    parser.add_argument("-d", "--task", default="aut", choices = ["aut", "scientific", "instances", "similarities"], help="Task for the evaluation. Default is AUT.")
+    parser.add_argument("-d", "--task", default="AUT", choices = ["AUT", "Scientific", "Instances", "Similarities"], help="Task for the evaluation. Default is AUT.")
     args = parser.parse_args()
     # python3 auto_grade_final.py -v 3 -i Scientific_Test_single_result-10-1 -t sampling -s 3 -d scientific
     #Scientific_Test_single_result-10-1
@@ -31,13 +31,13 @@ def main():
     model = OpenAIModel(cache_file_name, version, api_key)
 
     #INPUT FILE
-    if args.task == "aut":
+    if args.task == "AUT":
         input_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'AUT','Output', f"{args.input_file}.json")
-    elif args.task == "scientific":
+    elif args.task == "Scientific":
         input_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'Scientific','Output', f"{args.input_file}.json")
-    elif args.task == "instances":
+    elif args.task == "Instances":
         input_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'Instances','Output', f"{args.input_file}.json")
-    elif args.task == "similarities":
+    elif args.task == "Similarities":
         input_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'Similarities','Output', f"{args.input_file}.json")
 
     with open(input_file_path, "r") as file:
@@ -48,7 +48,7 @@ def main():
     evaluation_criteria = ["fluency", "flexibility"]
     selected_criteria = evaluation_criteria + sampling_criteria 
 
-    if args.task == "aut":
+    if args.task == "AUT":
         for response_obj in responses:
             item = response_obj['item'] 
             uses = response_obj.get('uses', [])
@@ -81,7 +81,8 @@ def main():
                     log_score = {f"average_{criterion}": avg_score}
                     item_results[criterion].append(log_score)
             total_results.append(item_results)      
-    elif args.task == "scientific":
+
+    elif args.task == "Scientific":
         print("Scientific Task")
         for response_obj in responses:
             question = response_obj['question']
@@ -115,7 +116,8 @@ def main():
                     log_score = {f"average_{criterion}": avg_score}
                     question_results[criterion].append(log_score)
             total_results.append(question_results)
-    elif args.task == "instances" or args.task == "similarities":
+
+    elif args.task == "Instances" or args.task == "Similarities":
         print("WKCT Task")
         for response_obj in responses:
             question = response_obj['question']
@@ -150,13 +152,13 @@ def main():
                     question_results[criterion].append(log_score)
             total_results.append(question_results)
     
-    if args.task == "aut":
+    if args.task == "AUT":
         output_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'AUT','Eval_Result', f"evaluation_{args.task}_{args.input_file}_{args.type}_{args.version}.json")
-    elif args.task == "scientific":
+    elif args.task == "Scientific":
         output_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'Scientific','Eval_Result', f"evaluation_{args.task}_{args.input_file}_{args.type}_{args.version}.json")
-    elif args.task == "instances":
+    elif args.task == "Instances":
         output_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'Instances','Eval_Result', f"evaluation_{args.task}_{args.input_file}_{args.type}_{args.version}.json")
-    elif args.task == "similarities":
+    elif args.task == "Similarities":
         output_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'Similarities','Eval_Result', f"evaluation_{args.task}_{args.input_file}_{args.type}_{args.version}.json")
 
     with open(output_file_path, "w") as outfile:
@@ -167,7 +169,3 @@ def main():
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     main()
-
-
-
-

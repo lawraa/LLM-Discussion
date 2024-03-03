@@ -1,0 +1,34 @@
+[
+    {
+        "item": "Fork",
+        "uses": [
+            "Turning a fork into a mini easel for displaying small pieces of art or photographs.",
+            "Using a fork as a hair accessory by bending the tines to create a unique hair pin or hair clip.",
+            "Crafting a fork into a trivet for hot pots and pans by bending the tines to create a flat surface.",
+            "Creating a unique pendant by stringing a fork through a chain and adding beads or charms.",
+            "Using a fork as a gardening tool to help plant seeds or loosen soil in small pots.",
+            "Fashioning a fork into a key holder by attaching it to a piece of wood or decorative board.",
+            "Implementing a fork as a utensil to hold jewelry or accessories on a dresser or vanity.",
+            "Using a fork to create textured patterns in clay or playdough for art projects.",
+            "Turning a fork into a bookmark by bending the tines to create a clip that can hold a page in a book.",
+            "Using a fork in mixed media art projects by incorporating it into collages or assemblages."
+        ],
+        "Agent": "GPT Agent 1 - Analyst"
+    },
+    {
+        "item": "Fork",
+        "uses": [
+            "Using a fork as a makeshift back scratcher for those hard-to-reach spots",
+            "Sculpting clay or other malleable materials with a fork to add texture",
+            "Creating a DIY fork garden marker by labeling plants with the prongs",
+            "Using a fork as a hair accessory by weaving it into braids or updos",
+            "Turning a fork into a unique piece of jewelry by bending the prongs into designs",
+            "Using a fork as a tool for marbling paint on paper or fabric",
+            "Making a fork photo holder by bending the prongs to create a stand",
+            "Turning a fork into a plant hanger by attaching string to the handle and hanging it upside down",
+            "Using a fork as a stencil for painting patterns on walls or furniture",
+            "Creating a fork wind chime by hanging multiple forks from a string or wire and allowing them to clink together in the wind."
+        ],
+        "Agent": "GPT Agent 2 - Classifier"
+    }
+]

@@ -1,0 +1,19 @@
+{
+    "Task":[
+        {
+            "Original": "Please write down as many as possible scientific uses as you can for a piece of glass. For example, make a test tube.",
+            "Example": [
+                "Innovative Scientific Tools Using a Rubber Band: Think of as many scientific uses as possible for a rubber band. For example, using it as a simple measure of elasticity in a physics experiment.",
+                "Innovative Uses for a Water Bottle: Consider various scientific applications of a water bottle. For example, using it as a container for creating a water vortex."
+                ],
+            "Amount": "2"
+        },
+        {
+            "Original": "If you can take a spaceship to travel in outer space and go to a planet, what scientific questions do you want to research? For example, are there any living things on the planet?",
+            "Example": [
+                "If you could explore the deepest part of the ocean, what mysteries or unknown species would you expect to find?"
+                ],
+            "Amount": "1"
+        }
+    ]
+}

@@ -5,6 +5,9 @@ import subprocess
 import time
 from openai import OpenAI
 import google.generativeai as genai
+import pickle
+
+
 
 def generate_response_llama2_torchrun(
     message,
@@ -57,7 +60,7 @@ class OpenAIAgent(Agent):
         self.model_name = model_name
         self.client = OpenAI()
         self.agent_name = agent_name
-
+    
     def generate_answer(self, answer_context, temperature=1):
         try:
             completion = self.client.chat.completions.create(

@@ -48,17 +48,18 @@ For `mean_std.py`, set the file path to the dataset you want to analyze:
    -c, --criterion: Criterion for evaluation (options: fluency, flexibility, criteria, originality, elaboration, all). <br />
    -t, --type: Variant of the evaluation (options: default, fewshot, criteria, pairwise, sampling). <br />
    -s, --sample: Number of times to sample the evaluation.<br />
+   -d, --dataset: which dataset we used. (AUT, Instances, Similarities and Scientific)
 
 For example: 
   ```bash
    # Evaluate using GPT-3, pairwise comparison, for all criteria
-   python3 auto_grade.py -v 3 -i dataname -c all -t pairwise -s 1
+   python3 auto_grade.py -v 3 -i dataname -c all -t pairwise -s 1 -d AUT
    
    # Evaluate using GPT-4, sampling method, for all criteria
-   python3 auto_grade.py -v 4 -i dataname -c all -t sampling -s 1
+   python3 auto_grade.py -v 4 -i dataname -c all -t sampling -s 1 -d Scientific
    
    # Evaluate using GPT-3, for all criteria in the default evaluation type
-   python3 auto_grade.py -v 3 -i dataname -c all -t criteria -s 3
+   python3 auto_grade.py -v 3 -i dataname -c all -t criteria -s 3 -d Instances
   ```
 
 

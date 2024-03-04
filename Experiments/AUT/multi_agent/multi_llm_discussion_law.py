@@ -12,8 +12,6 @@ import logging
 import subprocess
 
 current_date = datetime.date.today().strftime("%m-%d")
-
-
 current_time = datetime.datetime.now()
 formatted_time = current_time.strftime("%H:%M:%S")
 

@@ -48,7 +48,7 @@ For `mean_std.py`, set the file path to the dataset you want to analyze:
    -c, --criterion: Criterion for evaluation (options: fluency, flexibility, criteria, originality, elaboration, all). <br />
    -t, --type: Variant of the evaluation (options: default, fewshot, criteria, pairwise, sampling). <br />
    -s, --sample: Number of times to sample the evaluation.<br />
-   -d, --dataset: which dataset we used. (AUT, Instances, Similarities and Scientific)
+   -d, --dataset: which dataset we used. (AUT, Instances, Similarities and Scientific)  
    -o, --output: output in oue leader board or not
 
 For example: 

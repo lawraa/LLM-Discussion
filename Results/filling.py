@@ -50,32 +50,44 @@ for input_file_name in input_paths:
     data = []
     fluency_scores, flexibility_scores, originality_scores, elaboration_scores, averages = calculate_mean_std(input_file_name)
 
-    input_file_name = input_file_name.split('_')[2:]
+    # input_file_name = input_file_name.split('_')[2:]
 
-    Task_Type = input_file_name[0]
-    Subtask_Type = input_file_name[2]
+    # Task_Type = input_file_name[0]
+    # Subtask_Type = input_file_name[2]
 
-    Agent = input_file_name[1]
+    # Agent = input_file_name[1]
     
-    version = 3.5
-    if Agent == "single":
-        Agent = 1
-        rounds = 1
-        Agent_Description = f"gpt-{version}"
-    elif Agent == 'multi':
-        Agent = input_file_name[3]
-        rounds = input_file_name[4]
-        Agent_Description = f"gpt-{version}, gpt-{version}"
-    else:
-        print('ERROR AGENT!!')
+    # version = 3.5
+    # if Agent == "single":
+    #     Agent = 1
+    #     rounds = 1
+    #     Agent_Description = f"gpt-{version}"
+    # elif Agent == 'multi':
+    #     Agent = input_file_name[3]
+    #     rounds = input_file_name[4]
+    #     Agent_Description = f"gpt-{version}, gpt-{version}"
+    # else:
+    #     print('ERROR AGENT!!')
 
-    data_num = input_file_name[3].split('-')[0]
+    # data_num = input_file_name[3].split('-')[0]
 
-    row = [Task_Type, Subtask_Type, Agent, Agent_Description, data_num, rounds, 
+    # prompt = input_file_name.split('_')[-6]
+    # print(prompt)
+    Task_Type = 'AUT'
+    Subtask_Type = 'round-test'
+    Agent = 2
+    Agent_Description = 'gpt-3.5, gpt-3.5'
+    data_num = 10
+    # rounds = 6
+    rounds = input_file_name.split('_')[-4]
+    # print(rounds)
+
+    # row = [Task_Type, f"{Subtask_Type}-{prompt}", Agent, Agent_Description, data_num, rounds, 
+    row = [Task_Type, f"{Subtask_Type}", Agent, Agent_Description, data_num, rounds, 
             averages['fluency']['mean'], averages['flexibility']['mean'], averages['originality']['mean'], averages['elaboration']['mean'], averages['fluency']['std'], averages['flexibility']['std'], averages['originality']['std'], averages['elaboration']['std']]
 
     print(row)
 
-    with open("./LeaderBoard.csv", mode="a", newline="") as file:
+    with open("./unsorted-LeaderBoard.csv", mode="a", newline="") as file:
         writer = csv.writer(file)
         writer.writerow(row)

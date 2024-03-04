@@ -1,12 +1,15 @@
 import argparse
 import json
 import os
+import csv
+import numpy as np
 from pathlib import Path
 from utils.openai_model import OpenAIModel
 from eval_functions.eval_criterion import evaluate_aut, evaluate_scientific, evaluate_wkct
 from eval_functions.pairwise_comparison import pairwise_judgement
 import logging
-import csv
+
+from automation_csv import calculate_mean_std, write_results_to_csv
 
 def main():
     # OPENAI KEY
@@ -30,15 +33,18 @@ def main():
     cache_file_name = f"cache_{args.version}.pickle"
     model = OpenAIModel(cache_file_name, version, api_key)
 
+    # This is for assign the input folder
+    print(f"{args.input_file.split('_')[1]}_agent")
+
     #INPUT FILE
     if args.task == "AUT":
-        input_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'AUT','Output', f"{args.input_file}.json")
+        input_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'AUT', f"{args.input_file.split('_')[1]}_agent", 'Output', f"{args.input_file}.json")
     elif args.task == "Scientific":
-        input_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'Scientific','Output', f"{args.input_file}.json")
+        input_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Scientific','Output', f"{args.input_file.split('_')[1]}_agent", f"{args.input_file}.json")
     elif args.task == "Instances":
-        input_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'Instances','Output', f"{args.input_file}.json")
+        input_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Instances','Output', f"{args.input_file.split('_')[1]}_agent", f"{args.input_file}.json")
     elif args.task == "Similarities":
-        input_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'Similarities','Output', f"{args.input_file}.json")
+        input_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Similarities','Output', f"{args.input_file.split('_')[1]}_agent", f"{args.input_file}.json")
 
     with open(input_file_path, "r") as file:
         responses = json.load(file)
@@ -150,22 +156,35 @@ def main():
                     avg_score = sum(res['average_score'] for res in question_results[criterion]) / len(question_results[criterion])
                     log_score = {f"average_{criterion}": avg_score}
                     question_results[criterion].append(log_score)
+
             total_results.append(question_results)
+            print(total_results)
+            mean_std_results = calculate_mean_std(total_results)
+            print()
+            print(mean_std_results)
+            # print(0/0)
     
     if args.task == "AUT":
-        output_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'AUT','Eval_Result', f"evaluation_{args.task}_{args.input_file}_{args.type}_{args.version}.json")
+        output_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'AUT', f"{args.input_file.split('_')[1]}_agent", 'Eval_Result', f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
     elif args.task == "Scientific":
-        output_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'Scientific','Eval_Result', f"evaluation_{args.task}_{args.input_file}_{args.type}_{args.version}.json")
+        output_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Scientific','Eval_Result', f"{args.input_file.split('_')[1]}_agent", f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
     elif args.task == "Instances":
-        output_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'Instances','Eval_Result', f"evaluation_{args.task}_{args.input_file}_{args.type}_{args.version}.json")
+        output_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Instances','Eval_Result', f"{args.input_file.split('_')[1]}_agent", f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
     elif args.task == "Similarities":
-        output_file_path = os.path.join(Path(__file__).parent, '..', 'Result', 'Similarities','Eval_Result', f"evaluation_{args.task}_{args.input_file}_{args.type}_{args.version}.json")
+        output_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Similarities','Eval_Result', f"{args.input_file.split('_')[1]}_agent", f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
 
-    with open(output_file_path, "w") as outfile:
-        json.dump(total_results, outfile, indent=4)
-    print(f"Results saved to {output_file_path}")
+    # with open(output_file_path, "w") as outfile:
+    #     json.dump(total_results, outfile, indent=4)
+    # print(f"Results saved to {output_file_path}")
+    
+    mean_std_results = calculate_mean_std(total_results)
+    output_csv_path = os.path.join(Path(__file__).parent, '..', 'Results', 'LeaderBoard.csv')
+    write_results_to_csv(args.input_file, mean_std_results, output_csv_path, args.version)
+    print(f"Mean and standard deviation results saved to {output_csv_path}")
 
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     main()
+
+# python3 auto_grade_bai.py -v 3 -i Instances_single_few-shot_10-0 -t sampling -s 3 -d Instances

@@ -22,9 +22,9 @@ def main():
     parser.add_argument("-t", "--type", default="default", choices=["default", "fewshot", "rubric", "pairwise", "sampling"], help="Variant of the evaluation.")
     parser.add_argument("-s", "--sample", default=3, type=int, help="Number of times to sample the evaluation.")
     parser.add_argument("-d", "--task", default="AUT", choices = ["AUT", "Scientific", "Instances", "Similarities"], help="Task for the evaluation. Default is AUT.")
+    parser.add_argument("-o", "--output", default="n", choices=["y", "n"], help="Output into LeaderBoard or not")
     args = parser.parse_args()
-    # python3 auto_grade_final.py -v 3 -i Scientific_Test_single_result-10-1 -t sampling -s 3 -d scientific
-    #Scientific_Test_single_result-10-1
+
     # GPT VERSION
     version = "gpt-4-1106-preview" if args.version == "4" else "gpt-3.5-turbo-0125"
     print(f"Using GPT Version {version}, Input: {args.version}")
@@ -177,14 +177,18 @@ def main():
     #     json.dump(total_results, outfile, indent=4)
     # print(f"Results saved to {output_file_path}")
     
-    mean_std_results = calculate_mean_std(total_results)
-    output_csv_path = os.path.join(Path(__file__).parent, '..', 'Results', 'LeaderBoard.csv')
-    write_results_to_csv(args.input_file, mean_std_results, output_csv_path, args.version)
-    print(f"Mean and standard deviation results saved to {output_csv_path}")
+    if args.output == 'y':
+        mean_std_results = calculate_mean_std(total_results)
+        output_csv_path = os.path.join(Path(__file__).parent, '..', 'Results', 'LeaderBoard', f'LeaderBoard-{args.task}.csv')
+        print(output_csv_path)
+        write_results_to_csv(args.input_file, mean_std_results, output_csv_path, args.version)
+        print(f"Mean and standard deviation results saved to {output_csv_path}")
+    else:
+        print('Output will not be saved in Leader Board!')
 
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     main()
 
-# python3 auto_grade_bai.py -v 3 -i Instances_single_few-shot_10-0 -t sampling -s 3 -d Instances
+# python3 auto_grade_final.py -v 3 -i Instances_single_few-shot_2-0 -t sampling -s 3 -d Instances -o y

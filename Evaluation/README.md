@@ -53,15 +53,18 @@ For `mean_std.py`, set the file path to the dataset you want to analyze:
 
 For example: 
   ```bash
-   # Evaluate using GPT-3, pairwise comparison, for all criteria
-   python3 auto_grade.py -v 3 -i dataname -c all -t pairwise -s 1 -d AUT -o y
+  python3 auto_grade_final.py -v 3 -i Instances_single_few-shot_2-0 -t sampling -s 3 -d Instances -o y
+  #  # Evaluate using GPT-3, pairwise comparison, for all criteria
+  #  python3 auto_grade.py -v 3 -i dataname -c all -t pairwise -s 1 -d AUT -o y
    
-   # Evaluate using GPT-4, sampling method, for all criteria
-   python3 auto_grade.py -v 4 -i dataname -c all -t sampling -s 1 -d Scientific -o n
+  #  # Evaluate using GPT-4, sampling method, for all criteria
+  #  python3 auto_grade.py -v 4 -i dataname -c all -t sampling -s 1 -d Scientific -o n
    
-   # Evaluate using GPT-3, for all criteria in the default evaluation type
-   python3 auto_grade.py -v 3 -i dataname -c all -t criteria -s 3 -d Instances -o y
+  #  # Evaluate using GPT-3, for all criteria in the default evaluation type
+  #  python3 auto_grade.py -v 3 -i dataname -c all -t criteria -s 3 -d Instances -o y
   ```
+
+  - This would use auto_grade_final.py in Instances_single_few-shot_2-0.json with sampling=3 and dataset = Instances while automatically output the results into LeaderBoard-Instances.csv
 
 
 -----

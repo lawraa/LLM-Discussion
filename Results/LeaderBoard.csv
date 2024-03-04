@@ -1,0 +1,25 @@
+Task_Type,Subtask_type,Agent,Agent Description,Data,Rounds,mean_fluency,mean_flexibility,mean_originality,mean_elaboration,std_fluency,std_flexibility,std_originality,std_elaboration
+Similarities,few-shot,1,gpt-3.5,10,1,7.3,7.3,2.64,2.92,1.1,1.42,0.3,0.19
+Instances,CoT,1,gpt-3.5,100,1,16.31,8.93,2.71,2.49,7.23,4.1,0.35,0.45
+Scientific,few-shot,1,gpt-3.5,10,1,8.13,8.4,3.62,3.63,2.59,2.54,0.29,0.41
+Similarities,CoT,1,gpt-3.5,100,1,8.0,7.87,2.85,3.05,1.72,1.65,0.22,0.28
+Similarities,basic,1,gpt-3.5,10,1,7.8,7.83,2.63,2.82,1.54,1.67,0.3,0.23
+Scientific,CoT,1,gpt-3.5,10,1,8.5,8.13,3.6,3.69,2.38,2.28,0.39,0.38
+Similarities,deep-breath,1,gpt-3.5,100,1,8.24,7.96,2.69,2.75,1.81,1.73,0.33,0.3
+Scientific,basic,1,gpt-3.5,10,1,7.67,7.57,3.63,3.57,2.47,2.86,0.31,0.42
+Instances,basic,1,gpt-3.5,100,1,16.26,8.92,2.83,2.2,5.33,4.13,0.35,0.46
+Instances,deep-breath,1,gpt-3.5,100,1,18.39,10.5,2.83,2.42,9.08,6.22,0.31,0.42
+Similarities,basic,1,gpt-3.5,100,1,7.39,7.13,2.66,2.88,1.64,1.74,0.3,0.27
+Scientific,CoT,1,gpt-3.5,100,1,7.94,8.26,3.48,3.6,3.31,2.36,0.31,0.44
+Instances,few-shot,1,gpt-3.5,10,1,12.17,7.33,2.68,1.78,5.47,2.6,0.25,0.47
+Scientific,few-shot,1,gpt-3.5,100,1,8.28,8.61,3.57,3.58,2.54,2.53,0.35,0.41
+Similarities,CoT,1,gpt-3.5,10,1,8.3,8.33,2.79,3.09,1.85,1.86,0.18,0.29
+Scientific,deep-breath,1,gpt-3.5,10,1,7.6,7.63,3.57,3.39,2.14,2.33,0.44,0.45
+Instances,CoT,1,gpt-3.5,10,1,15.4,7.03,2.52,2.12,5.43,2.79,0.33,0.43
+Instances,few-shot,1,gpt-3.5,100,1,15.61,9.41,2.81,2.22,6.39,5.06,0.36,0.41
+Scientific,basic,1,gpt-3.5,100,1,7.98,8.28,3.55,3.61,2.52,2.25,0.32,0.37
+Similarities,deep-breath,1,gpt-3.5,10,1,8.6,8.23,2.51,2.71,1.43,1.24,0.34,0.34
+Instances,basic,1,gpt-3.5,10,1,13.0,6.97,2.6,1.76,4.19,2.72,0.35,0.44
+Instances,deep-breath,1,gpt-3.5,10,1,15.43,9.37,2.68,2.0,4.76,4.28,0.28,0.52
+Similarities,few-shot,1,gpt-3.5,100,1,7.49,7.15,2.65,2.88,1.71,1.63,0.29,0.28
+Scientific,deep-breath,1,gpt-3.5,100,1,7.85,7.99,3.56,3.58,2.36,2.03,0.32,0.38

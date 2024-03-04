@@ -1,0 +1,9 @@
+Task_Type,Subtask_type,Agent,Agent Description,Data,Rounds,mean_fluency,mean_flexibility,mean_originality,mean_elaboration,std_fluency,std_flexibility,std_originality,std_elaboration
+Similarities,CoT,1,gpt-3.5,10,1,8.3,8.33,2.79,3.09,1.85,1.86,0.18,0.29
+Similarities,CoT,1,gpt-3.5,100,1,8.0,7.87,2.85,3.05,1.72,1.65,0.22,0.28
+Similarities,basic,1,gpt-3.5,10,1,7.8,7.83,2.63,2.82,1.54,1.67,0.3,0.23
+Similarities,basic,1,gpt-3.5,100,1,7.39,7.13,2.66,2.88,1.64,1.74,0.3,0.27
+Similarities,deep-breath,1,gpt-3.5,10,1,8.6,8.23,2.51,2.71,1.43,1.24,0.34,0.34
+Similarities,deep-breath,1,gpt-3.5,100,1,8.24,7.96,2.69,2.75,1.81,1.73,0.33,0.3
+Similarities,few-shot,1,gpt-3.5,10,1,7.3,7.3,2.64,2.92,1.1,1.42,0.3,0.19
+Similarities,few-shot,1,gpt-3.5,100,1,7.49,7.15,2.65,2.88,1.71,1.63,0.29,0.28

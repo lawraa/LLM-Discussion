@@ -173,9 +173,9 @@ def main():
     elif args.task == "Similarities":
         output_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Similarities','Eval_Result', f"{args.input_file.split('_')[1]}_agent", f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
 
-    # with open(output_file_path, "w") as outfile:
-    #     json.dump(total_results, outfile, indent=4)
-    # print(f"Results saved to {output_file_path}")
+    with open(output_file_path, "w") as outfile:
+        json.dump(total_results, outfile, indent=4)
+    print(f"Results saved to {output_file_path}")
     
     if args.output == 'y':
         mean_std_results = calculate_mean_std(total_results)

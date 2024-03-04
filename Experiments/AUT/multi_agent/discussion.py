@@ -44,14 +44,15 @@ class Discussion:
         uses = [use[use.find('.') + 2:] for use in uses]
         return uses
     
-    def save_debate_conversations(self, all_responses, init_results, final_results, amount_of_data, task_type="AUT"):
+    def save_debate_conversations(self, agents, all_responses, init_results, final_results, amount_of_data, task_type="AUT"):
         current_time = datetime.datetime.now()
         current_date = datetime.date.today().strftime("%Y-%m-%d_")
         formatted_time = current_time.strftime("%H-%M-%S")
-
-        output_filename = f"../../../Results/{task_type}/chat_log/{task_type}_debate_{len(self.agents)}_{self.rounds}_{amount_of_data}_log_{current_date}{formatted_time}_{len(self.agents)}_{self.rounds}.json"
-        final_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_debate_{len(self.agents)}_{self.rounds}_{amount_of_data}_discussion_final_{current_date}{formatted_time}_{len(self.agents)}_{self.rounds}.json"
-        init_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_debate_{len(self.agents)}_{self.rounds}_{amount_of_data}_discussion_init_{current_date}{formatted_time}_{len(self.agents)}_{self.rounds}.json"
+        model_names_concatenated = "-".join(agent.model_name.replace(".", "-") for agent in agents)
+            
+        output_filename = f"../../../Results/{task_type}/chat_log/{task_type}_multi_debate_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_log_{current_date}{formatted_time}_{amount_of_data}.json"
+        final_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_discussion_final_{current_date}{formatted_time}_{amount_of_data}.json"
+        init_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_discussion_init_{current_date}{formatted_time}_{amount_of_data}.json"
         self.save_conversation(output_filename, all_responses)
         self.save_conversation(final_ans_filename, final_results)
         self.save_conversation(init_ans_filename, init_results)
@@ -119,7 +120,7 @@ class LLM_Debate_AUT(Discussion):
                 most_recent_responses = round_responses
             all_responses[question] = chat_history
 
-        self.save_debate_conversations(all_responses, init_results, final_results, amount_of_data, task_type="AUT")
+        self.save_debate_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type="AUT")
 
     def construct_response(self, question, most_recent_responses, current_agent, object, is_last_round):
         prefix_string = "These are the solutions to the problem from other agents:\n"
@@ -215,7 +216,7 @@ class LLM_Debate_Scientific(Discussion):
                     most_recent_responses = round_responses
                 all_responses[question] = chat_history
 
-        self.save_debate_conversations(all_responses, init_results, final_results, amount_of_data, task_type="Scientific")
+        self.save_debate_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type="Scientific")
 
     def construct_response(self, question, most_recent_responses, current_agent, is_last_round):
         prefix_string = "These are the solutions to the problem from other agents:\n"
@@ -307,7 +308,7 @@ class LLM_Debate_Instance_Similarities(Discussion):
                     round_responses[agent.agent_name].append(formatted_response)
                 most_recent_responses = round_responses
             all_responses[question] = chat_history
-        self.save_debate_conversations(all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
+        self.save_debate_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
 
 
     def construct_response(self, question, most_recent_responses, current_agent, is_last_round):

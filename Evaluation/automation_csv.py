@@ -42,11 +42,13 @@ def write_results_to_csv(input_file_name, results, csv_file_path, version):
     if Agent == "single":
         Agent = 1
         rounds = 1
-        Agent_Description = f"gpt-{version}"
+        Agent_Description = "gpt-3.5" if version == 3 else "gpt-4"
+        # Agent_Description = f"gpt-{version}"
     elif Agent == 'multi':
         Agent = input_file_name.split('_')[3]
         rounds = input_file_name.split('_')[4]
-        Agent_Description = f"gpt-{version}, gpt-{version}"
+        Agent_Description = input_file_name.split('_')[5]
+        # Agent_Description = f"gpt-{version}, gpt-{version}"
     else:
         print('ERROR AGENT!!')
 

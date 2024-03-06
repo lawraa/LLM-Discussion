@@ -7,5 +7,5 @@ Instances ,CoT             ,    1 ,gpt-3.5                     , 100 ,     1 ,  
 Instances ,basic           ,    1 ,gpt-3.5                     , 100 ,     1 ,       16.26 ,            8.92 ,            2.83 ,            2.2  ,       5.33 ,           4.13 ,           0.35 ,           0.46
 Instances ,deep-breath     ,    1 ,gpt-3.5                     , 100 ,     1 ,       18.39 ,           10.5  ,            2.83 ,            2.42 ,       9.08 ,           6.22 ,           0.31 ,           0.42
 Instances ,few-shot        ,    1 ,gpt-3.5                     , 100 ,     1 ,       15.61 ,            9.41 ,            2.81 ,            2.22 ,       6.39 ,           5.06 ,           0.36 ,           0.41
-Instances ,debate-prompt-9 ,    2 ,gpt-3-5-turbo-gpt-3-5-turbo ,  10 ,     6 ,        1.7  ,            5.83 ,            8.52 ,            3.56 ,       0.63 ,           3.13 ,           5.02 ,           0.51
-Instances ,debate-prompt-9 ,    2 ,gpt-3-5-turbo-gpt-3-5-turbo ,  10 ,     6 ,        1.7  ,            5.83 ,            8.52 ,            3.56 ,       0.63 ,           3.13 ,           5.02 ,           0.51
+Instances ,debate-prompt-9 ,    2 ,gpt-3-5-turbo-gpt-3-5-turbo ,  10 ,     6 ,        8.52 ,            5.83 ,            3.56 ,            1.7  ,       5.02 ,           3.13 ,           0.51 ,           0.63
+

@@ -32,7 +32,6 @@ def write_results_to_csv(input_file_name, results, csv_file_path, version):
     # csv_data = [
     #     ["Task_Type", "Subtask_type", "Agent", "Agent Description", "Data", "Rounds", "mean_fluency", "mean_flexibility", "mean_originality", "mean_elaboration", "std_fluency", "std_flexibility", "std_originality", "std_elaboration"]
     # ]
-
     
     print(input_file_name.split('_'))
     Task_Type = input_file_name.split('_')[0]
@@ -56,10 +55,13 @@ def write_results_to_csv(input_file_name, results, csv_file_path, version):
     # Agent_Description = "gpt-3.5"
     data_num = input_file_name.split('_')[-1].split('-')[0]
     
-
+    # fill in the leader board with correct order
     row = [Task_Type, Subtask_Type, Agent, Agent_Description, data_num, rounds]
-    row.extend([results[key] for key in sorted(results.keys())])  # Ensure the order is correct
-    row.extend([])
+    expected_order = [
+        "mean_fluency", "mean_flexibility", "mean_originality", "mean_elaboration",
+        "std_fluency", "std_flexibility", "std_originality", "std_elaboration"]
+    
+    row.extend([results[key] for key in expected_order])
     csv_data.append(row)
 
     print(csv_file_path)
@@ -86,5 +88,5 @@ def write_results_to_csv(input_file_name, results, csv_file_path, version):
 
     print(f'Data sorted by Task_Type and Data and saved to {csv_file_path}')
 
-        # python3 auto_grade_bai.py -v 3 -i Instances_single_few-shot_2-0 -t sampling -s 3 -d Instances
+        # python3 auto_grade_final.py -v 3 -i Instances_single_few-shot_2-0 -t sampling -s 3 -d Instances -o y
         # python3 auto_grade_bai.py -v 3 -i Instances_multi_debate_2_3_discussion_final_3-0 -t sampling -s 3 -d Instances

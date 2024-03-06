@@ -182,7 +182,7 @@ def main():
         output_csv_path = os.path.join(Path(__file__).parent, '..', 'Results', 'LeaderBoard', f'LeaderBoard-{args.task}.csv')
         print(output_csv_path)
         write_results_to_csv(args.input_file, mean_std_results, output_csv_path, args.version)
-        print(f"Mean and standard deviation results saved to {output_csv_path}")
+        
     else:
         print('Output will not be saved in Leader Board!')
 

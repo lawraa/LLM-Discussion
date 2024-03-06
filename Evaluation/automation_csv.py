@@ -35,13 +35,17 @@ def write_results_to_csv(input_file_name, results, csv_file_path, version):
     
     print(input_file_name.split('_'))
     Task_Type = input_file_name.split('_')[0]
-    Subtask_Type = input_file_name.split('_')[2]
-
     Agent = input_file_name.split('_')[1]
+    Subtask_Type = input_file_name.split('_')[2]
+    
     if Agent == "single":
         Agent = 1
         rounds = 1
-        Agent_Description = "gpt-3.5" if version == 3 else "gpt-4"
+        # place the model name in the 4th place
+        # Agent_Description = input_file_name.split('_')[3]
+
+        # use gpt-3.5 for single agent now.
+        Agent_Description = "gpt-3.5"
         # Agent_Description = f"gpt-{version}"
     elif Agent == 'multi':
         Agent = input_file_name.split('_')[3]

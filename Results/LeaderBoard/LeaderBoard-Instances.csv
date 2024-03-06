@@ -1,9 +1,11 @@
-Task_Type,Subtask_type,Agent,Agent Description,Data,Rounds,mean_fluency,mean_flexibility,mean_originality,mean_elaboration,std_fluency,std_flexibility,std_originality,std_elaboration
-Instances,CoT,1,gpt-3.5,10,1,15.4,7.03,2.52,2.12,5.43,2.79,0.33,0.43
-Instances,CoT,1,gpt-3.5,100,1,16.31,8.93,2.71,2.49,7.23,4.1,0.35,0.45
-Instances,basic,1,gpt-3.5,10,1,13.0,6.97,2.6,1.76,4.19,2.72,0.35,0.44
-Instances,basic,1,gpt-3.5,100,1,16.26,8.92,2.83,2.2,5.33,4.13,0.35,0.46
-Instances,deep-breath,1,gpt-3.5,10,1,15.43,9.37,2.68,2.0,4.76,4.28,0.28,0.52
-Instances,deep-breath,1,gpt-3.5,100,1,18.39,10.5,2.83,2.42,9.08,6.22,0.31,0.42
-Instances,few-shot,1,gpt-3.5,10,1,12.17,7.33,2.68,1.78,5.47,2.6,0.25,0.47
-Instances,few-shot,1,gpt-3.5,100,1,15.61,9.41,2.81,2.22,6.39,5.06,0.36,0.41
+Task_Type ,Subtask_type    ,Agent ,Agent Description           ,Data ,Rounds ,mean_fluency ,mean_flexibility ,mean_originality ,mean_elaboration ,std_fluency ,std_flexibility ,std_originality ,std_elaboration
+Instances ,CoT             ,    1 ,gpt-3.5                     ,  10 ,     1 ,       15.4  ,            7.03 ,            2.52 ,            2.12 ,       5.43 ,           2.79 ,           0.33 ,           0.43
+Instances ,basic           ,    1 ,gpt-3.5                     ,  10 ,     1 ,       13.0  ,            6.97 ,            2.6  ,            1.76 ,       4.19 ,           2.72 ,           0.35 ,           0.44
+Instances ,deep-breath     ,    1 ,gpt-3.5                     ,  10 ,     1 ,       15.43 ,            9.37 ,            2.68 ,            2.0  ,       4.76 ,           4.28 ,           0.28 ,           0.52
+Instances ,few-shot        ,    1 ,gpt-3.5                     ,  10 ,     1 ,       12.17 ,            7.33 ,            2.68 ,            1.78 ,       5.47 ,           2.6  ,           0.25 ,           0.47
+Instances ,CoT             ,    1 ,gpt-3.5                     , 100 ,     1 ,       16.31 ,            8.93 ,            2.71 ,            2.49 ,       7.23 ,           4.1  ,           0.35 ,           0.45
+Instances ,basic           ,    1 ,gpt-3.5                     , 100 ,     1 ,       16.26 ,            8.92 ,            2.83 ,            2.2  ,       5.33 ,           4.13 ,           0.35 ,           0.46
+Instances ,deep-breath     ,    1 ,gpt-3.5                     , 100 ,     1 ,       18.39 ,           10.5  ,            2.83 ,            2.42 ,       9.08 ,           6.22 ,           0.31 ,           0.42
+Instances ,few-shot        ,    1 ,gpt-3.5                     , 100 ,     1 ,       15.61 ,            9.41 ,            2.81 ,            2.22 ,       6.39 ,           5.06 ,           0.36 ,           0.41
+Instances ,debate-prompt-9 ,    2 ,gpt-3-5-turbo-gpt-3-5-turbo ,  10 ,     6 ,        1.7  ,            5.83 ,            8.52 ,            3.56 ,       0.63 ,           3.13 ,           5.02 ,           0.51
+Instances ,debate-prompt-9 ,    2 ,gpt-3-5-turbo-gpt-3-5-turbo ,  10 ,     6 ,        1.7  ,            5.83 ,            8.52 ,            3.56 ,       0.63 ,           3.13 ,           5.02 ,           0.51

@@ -1,0 +1,306 @@
+[
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "Circular storytelling narrative",
+            "Circular unity in diversity movements",
+            "Halo symbolism in religious iconography",
+            "Circular connectivity in digital networks",
+            "Spiral cycle of growth and transformation",
+            "Halo of protection in cultural beliefs",
+            "Cosmic spiral of interconnectedness",
+            "Spiral of fate in storytelling narratives",
+            "Circular negotiation tactics in business strategies",
+            "Vortex of change in societal revolutions"
+        ],
+        "Agent": "GPT Agent 1 - Analyst"
+    },
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "Whirlpool",
+            "Spiral staircase",
+            "Circle of life",
+            "Cosmic spiral",
+            "Orb of enlightenment",
+            "Halo effect",
+            "Circular power dynamics",
+            "Vortex of emotions",
+            "Circular reasoning",
+            "Circle of trust"
+        ],
+        "Agent": "GPT Agent 2 - Classifier"
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.",
+        "answer": [
+            "Bamboo leaves rustling in a breeze",
+            "Sound of a thunderstorm brewing",
+            "Hummingbird's wings fluttering",
+            "Child's laughter",
+            "Ice cream truck's music playing",
+            "Mime artist performing silently",
+            "Carnival carousel spinning"
+        ],
+        "Agent": "GPT Agent 1 - Analyst"
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.",
+        "answer": [
+            "Bamboo leaves rustling in a breeze",
+            "Thunderstorm brewing",
+            "Hummingbird's wings fluttering",
+            "Child's laughter",
+            "Ice cream truck's music playing",
+            "Carnival carousel spinning"
+        ],
+        "Agent": "GPT Agent 2 - Classifier"
+    },
+    {
+        "question": "Name all the square things you can think of.",
+        "answer": [
+            "Rubik's Cube",
+            "Chessboard",
+            "Post-it note",
+            "TV screen",
+            "Toast",
+            "Brick",
+            "Waffle",
+            "Window pane",
+            "Quilt",
+            "Smartphone screen"
+        ],
+        "Agent": "GPT Agent 1 - Analyst"
+    },
+    {
+        "question": "Name all the square things you can think of.",
+        "answer": [
+            "Modular storage system made up of interlocking square containers",
+            "Square wall shelves with integrated LED lighting",
+            "Geometric pendant lamp with a square metal frame",
+            "Square wall art installation with LED panels"
+        ],
+        "Agent": "GPT Agent 2 - Classifier"
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.",
+        "answer": [
+            "Ice resurfacing machines (like the Zamboni)",
+            "Mobile libraries (bookmobiles)",
+            "Robot delivery vehicles",
+            "Mobile art studios (converted buses or trailers)",
+            "Mobile medical clinics",
+            "Food delivery robots"
+        ],
+        "Agent": "GPT Agent 1 - Analyst"
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.",
+        "answer": [
+            "Aquatic vehicles with wheels (such as amphibious cars or hovercrafts)",
+            "Ice cream trucks",
+            "Mobile farmers' markets",
+            "Parade floats",
+            "Unicycles",
+            "Electric skateboards",
+            "Street sweepers",
+            "Moon rovers",
+            "Wi-Fi-enabled rolling robots",
+            "Autonomous lawnmowers"
+        ],
+        "Agent": "GPT Agent 2 - Classifier"
+    },
+    {
+        "question": "Name all the things you can think of that are red.",
+        "answer": [
+            "Red clay pottery",
+            "Red terracotta rooftops",
+            "Red silk ribbons",
+            "Red antique mechanical typewriters",
+            "Red tour buses",
+            "Red paddleboats",
+            "Red brick pathways"
+        ],
+        "Agent": "GPT Agent 1 - Analyst"
+    },
+    {
+        "question": "Name all the things you can think of that are red.",
+        "answer": [
+            "Red clay pottery",
+            "Red terracotta rooftops",
+            "Red silk ribbons",
+            "Red antique mechanical typewriters",
+            "Red tour buses",
+            "Red paddleboats",
+            "Red brick pathways"
+        ],
+        "Agent": "GPT Agent 2 - Classifier"
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.",
+        "answer": [
+            "Pyrosome",
+            "Firefly squid",
+            "Vampire squid",
+            "Sea sapphire"
+        ],
+        "Agent": "GPT Agent 1 - Analyst"
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.",
+        "answer": [
+            "Pyrosome",
+            "Firefly squid",
+            "Vampire squid",
+            "Sea sapphire",
+            "Sea serpents",
+            "Selkies",
+            "Water nymphs and naiads",
+            "Water dragons"
+        ],
+        "Agent": "GPT Agent 2 - Classifier"
+    },
+    {
+        "question": "Name all the fruits you can think of.",
+        "answer": [
+            "Horned melon (kiwano)",
+            "Tamarind",
+            "Pomelo",
+            "Persimmon"
+        ],
+        "Agent": "GPT Agent 1 - Analyst"
+    },
+    {
+        "question": "Name all the fruits you can think of.",
+        "answer": [
+            "Carambola (Star Fruit)",
+            "Pitahaya (Dragon Fruit)",
+            "Tamarind",
+            "Pomelo",
+            "Persimmon",
+            "Buddha's Hand",
+            "Finger Lime (Caviar Lime)",
+            "Saskatoon Berry",
+            "Ugli Fruit",
+            "Feijoa (Pineapple Guava)",
+            "Horned Melon (Kiwano)",
+            "Soursop",
+            "Mangosteen",
+            "Tamarillo",
+            "Tangerinequat"
+        ],
+        "Agent": "GPT Agent 2 - Classifier"
+    },
+    {
+        "question": "Name all the instruments you can think of.",
+        "answer": [
+            "Handpan",
+            "Kalimba",
+            "Glass harp",
+            "Thunder drum"
+        ],
+        "Agent": "GPT Agent 1 - Analyst"
+    },
+    {
+        "question": "Name all the instruments you can think of.",
+        "answer": [
+            "Glass harp",
+            "Thunder drum",
+            "Kalimba",
+            "Tongue drum",
+            "Handpan"
+        ],
+        "Agent": "GPT Agent 2 - Classifier"
+    },
+    {
+        "question": "Name all the things you can think of that can fly.",
+        "answer": [
+            "Birds",
+            "Insects",
+            "Airplanes",
+            "Helicopters",
+            "Hot air balloons",
+            "Kites",
+            "Superman",
+            "Fairy dust",
+            "Witches on broomsticks",
+            "Magic carpets",
+            "Pegasus",
+            "Phoenixes",
+            "Griffins",
+            "Harpies",
+            "Flying snakes",
+            "The Flying Spaghetti Monster",
+            "Dreams",
+            "Imagination",
+            "Music",
+            "Spirits of the Wind"
+        ],
+        "Agent": "GPT Agent 1 - Analyst"
+    },
+    {
+        "question": "Name all the things you can think of that can fly.",
+        "answer": [
+            "Birds",
+            "Insects",
+            "Airplanes",
+            "Helicopters",
+            "Hot air balloons",
+            "Kites",
+            "Superman",
+            "Paragliders",
+            "Frisbees",
+            "Pterodactyls (extinct flying reptiles)",
+            "Drones",
+            "Bats",
+            "Flying fish",
+            "Mary Poppins with her umbrella",
+            "Paper airplanes",
+            "Fairies",
+            "Dragonflies",
+            "Space shuttles",
+            "UFOs",
+            "Magic carpets",
+            "Peter Pan and Tinker Bell",
+            "Dreams",
+            "Music",
+            "Flying snakes",
+            "The Flying Spaghetti Monster",
+            "Pegasus-inspired artworks",
+            "Spirits of the Wind"
+        ],
+        "Agent": "GPT Agent 2 - Classifier"
+    },
+    {
+        "question": "Name all the flowers you can think of.",
+        "answer": [
+            "Stardust Lily Delight",
+            "Moonlit Serenity Roses",
+            "Whispering Willow Wisteria",
+            "Mystical Moonstone Magnolias",
+            "Twilight Jasmine Whispers",
+            "Enchanted Aurora Lily",
+            "Celestial Twilight Orchid",
+            "Luna Star Lily",
+            "Stardust Serenade Carnations",
+            "Cosmic Cascade Hyacinths"
+        ],
+        "Agent": "GPT Agent 1 - Analyst"
+    },
+    {
+        "question": "Name all the flowers you can think of.",
+        "answer": [
+            "Ethereal Starlight Tulips",
+            "Celestial Iris Nebula",
+            "Moonlit Star Blossoms",
+            "Nebula Nectar Tulips",
+            "Celestial Lotus Spirals",
+            "Stardust Serenade Lilies",
+            "Moonbeam Magnolias",
+            "Celestial Harmony Hyacinths",
+            "Twilight Cascade Roses",
+            "Mystical Moonlight Daisies"
+        ],
+        "Agent": "GPT Agent 2 - Classifier"
+    }
+]

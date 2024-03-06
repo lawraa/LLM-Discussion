@@ -1,9 +1,10 @@
 Task_Type,Subtask_type,Agent,Agent Description,Data,Rounds,mean_fluency,mean_flexibility,mean_originality,mean_elaboration,std_fluency,std_flexibility,std_originality,std_elaboration
 Scientific,CoT,1,gpt-3.5,10,1,8.5,8.13,3.6,3.69,2.38,2.28,0.39,0.38
-Scientific,CoT,1,gpt-3.5,100,1,7.94,8.26,3.48,3.6,3.31,2.36,0.31,0.44
 Scientific,basic,1,gpt-3.5,10,1,7.67,7.57,3.63,3.57,2.47,2.86,0.31,0.42
-Scientific,basic,1,gpt-3.5,100,1,7.98,8.28,3.55,3.61,2.52,2.25,0.32,0.37
 Scientific,deep-breath,1,gpt-3.5,10,1,7.6,7.63,3.57,3.39,2.14,2.33,0.44,0.45
-Scientific,deep-breath,1,gpt-3.5,100,1,7.85,7.99,3.56,3.58,2.36,2.03,0.32,0.38
 Scientific,few-shot,1,gpt-3.5,10,1,8.13,8.4,3.62,3.63,2.59,2.54,0.29,0.41
+Scientific,CoT,1,gpt-3.5,100,1,7.94,8.26,3.48,3.6,3.31,2.36,0.31,0.44
+Scientific,basic,1,gpt-3.5,100,1,7.98,8.28,3.55,3.61,2.52,2.25,0.32,0.37
+Scientific,deep-breath,1,gpt-3.5,100,1,7.85,7.99,3.56,3.58,2.36,2.03,0.32,0.38
 Scientific,few-shot,1,gpt-3.5,100,1,8.28,8.61,3.57,3.58,2.54,2.53,0.35,0.41
+Scientific,debate-prompt-9,2,gpt-3-5-turbo-gpt-3-5-turbo,10,6,3.6,4.9,5.53,4.17,0.62,1.18,1.62,0.42

@@ -120,7 +120,7 @@ def main(input_files, output_name, custom_labels, title):
     print("CUSTOM LABEL:", custom_labels, "\n", "OUTPUT_NAME:", output_name, "\n", "TITLE:", title, "\n", "INPUT_FILES:", input_files, "\n")
 
     for file_name in input_files:
-        file_path = os.path.join(Path(__file__).parent, '..', 'result', f"{file_name}.json")
+        file_path = file_name
         fluency_scores, flexibility_scores, originality_scores, elaboration_scores, averages = calculate_mean_std(file_path)
 
         # Store scores from each file

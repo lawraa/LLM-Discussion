@@ -24,7 +24,7 @@ def main():
     parser.add_argument("-d", "--task", default="AUT", choices = ["AUT", "Scientific", "Instances", "Similarities"], help="Task for the evaluation. Default is AUT.")
     parser.add_argument("-o", "--output", default="n", choices=["y", "n"], help="Output into LeaderBoard or not")
     args = parser.parse_args()
-    
+
     # GPT VERSION
     version = "gpt-4-1106-preview" if args.version == "4" else "gpt-3.5-turbo-0125"
     print(f"Using GPT Version {version}, Input: {args.version}")
@@ -38,7 +38,7 @@ def main():
 
     #INPUT FILE
     if args.task == "AUT":
-        input_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'AUT', f"{args.input_file.split('_')[1]}_agent", 'Output', f"{args.input_file}.json")
+        input_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'AUT', 'Output', f"{args.input_file.split('_')[1]}_agent", f"{args.input_file}.json")
     elif args.task == "Scientific":
         input_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Scientific','Output', f"{args.input_file.split('_')[1]}_agent", f"{args.input_file}.json")
     elif args.task == "Instances":
@@ -165,7 +165,7 @@ def main():
             # print(0/0)
     
     if args.task == "AUT":
-        output_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'AUT', f"{args.input_file.split('_')[1]}_agent", 'Eval_Result', f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
+        output_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'AUT', 'Eval_Result', f"{args.input_file.split('_')[1]}_agent", f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
     elif args.task == "Scientific":
         output_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Scientific','Eval_Result', f"{args.input_file.split('_')[1]}_agent", f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
     elif args.task == "Instances":

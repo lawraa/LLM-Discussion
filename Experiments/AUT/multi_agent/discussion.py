@@ -50,9 +50,9 @@ class Discussion:
         formatted_time = current_time.strftime("%H-%M-%S")
         model_names_concatenated = "-".join(agent.model_name.replace(".", "-") for agent in agents)
             
-        output_filename = f"../../../Results/{task_type}/chat_log/{task_type}_multi_debate_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_log_{current_date}{formatted_time}_{amount_of_data}.json"
-        final_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_discussion_final_{current_date}{formatted_time}_{amount_of_data}.json"
-        init_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_discussion_init_{current_date}{formatted_time}_{amount_of_data}.json"
+        output_filename = f"../../../Results/{task_type}/chat_log/{task_type}_multi_debate-prompt-9_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_log_{current_date}{formatted_time}_{amount_of_data}.json"
+        final_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate-prompt-9_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_discussion_final_{current_date}{formatted_time}_{amount_of_data}.json"
+        init_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate-prompt-9_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_discussion_init_{current_date}{formatted_time}_{amount_of_data}.json"
         self.save_conversation(output_filename, all_responses)
         self.save_conversation(final_ans_filename, final_results)
         self.save_conversation(init_ans_filename, init_results)
@@ -77,7 +77,9 @@ class LLM_Debate_AUT(Discussion):
             object = example['object']
             problem_template = " ".join(dataset["Task"][0]["Problem"])
             question = problem_template.replace("{object}", object)
-            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
+            prompt_9 = "You would be in a group discussion with other teammates as a result, you should answer as diverge and creative as you can."
+            question_prompt_9 = question + "\n" + prompt_9
+            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
             # ------------------------------------------
             most_recent_responses = {}
             for round in range(self.rounds):
@@ -100,7 +102,7 @@ class LLM_Debate_AUT(Discussion):
                         init_results.append(init_result)
                     else:
                         print("most_recent_responses: ", most_recent_responses)
-                        combined_prompt = self.construct_response(question, most_recent_responses, agent, object, is_last_round)
+                        combined_prompt = self.construct_response(question_prompt_9, most_recent_responses, agent, object, is_last_round)
                         formatted_combined_prompt = agent.construct_user_message(combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
@@ -173,7 +175,9 @@ class LLM_Debate_Scientific(Discussion):
                 print("initial chat_history: ", chat_history, "\n")
                 # --------------->>>> set the system content
                 question = example
-                initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
+                prompt_9 = "You would be in a group discussion with other teammates as a result, you should answer as diverge and creative as you can."
+                question_prompt_9 = question + "\n" + prompt_9
+                initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
                 # ------------------------------------------
                 most_recent_responses = {}
                 for round in range(self.rounds):
@@ -196,7 +200,7 @@ class LLM_Debate_Scientific(Discussion):
                             init_results.append(init_result)
                         else:
                             print("most_recent_responses: ", most_recent_responses)
-                            combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round)
+                            combined_prompt = self.construct_response(question_prompt_9, most_recent_responses, agent, is_last_round)
                             formatted_combined_prompt = agent.construct_user_message(combined_prompt)
                             chat_history[agent.agent_name].append(formatted_combined_prompt)
                             print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
@@ -266,7 +270,9 @@ class LLM_Debate_Instance_Similarities(Discussion):
             print("initial chat_history: ", chat_history, "\n")
             # --------------->>>> set the system content
             question = example
-            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
+            prompt_9 = "You would be in a group discussion with other teammates as a result, you should answer as diverge and creative as you can."
+            question_prompt_9 = question + "\n" + prompt_9
+            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
             # ------------------------------------------
             most_recent_responses = {}
             for round in range(self.rounds):
@@ -289,7 +295,7 @@ class LLM_Debate_Instance_Similarities(Discussion):
                         init_results.append(init_result)
                     else:
                         print("most_recent_responses: ", most_recent_responses)
-                        combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round)
+                        combined_prompt = self.construct_response(question_prompt_9, most_recent_responses, agent, is_last_round)
                         formatted_combined_prompt = agent.construct_user_message(combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")

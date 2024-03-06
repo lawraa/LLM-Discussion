@@ -1,0 +1,34 @@
+[
+    {
+        "item": "Fork",
+        "uses": [
+            "Use a fork as a cooking tool by using the prongs to create a hole in a piece of meat and fill it with herbs or spices for added flavor.",
+            "Use a fork as a gardening tool by using it to aerate the soil or create small holes for planting seeds.",
+            "Use a fork as a fashion statement by turning it into a unique piece of jewelry, such as a necklace or bracelet.",
+            "Use a fork as a musical instrument by tapping it against different surfaces to create unique sounds and rhythms.",
+            "Use a fork as a DIY hair accessory by bending the prongs to create a decorative hairpin or hair clip.",
+            "Use a fork as a tool for painting by using the prongs to create texture or patterns in your artwork.",
+            "Use a fork as a tool for building by using it to hold small pieces together while glue dries.",
+            "Use a fork as a tool for organizing by bending the prongs to create hooks for hanging keys, jewelry, or other small items.",
+            "Use a fork as a tool for massage by gently pressing the prongs against tense muscles for a DIY pressure point massage.",
+            "Use a fork as a tool for cleaning by using the prongs to scrape off tough residue or grime from surfaces."
+        ],
+        "Agent": "GPT Agent 1 - Analyst"
+    },
+    {
+        "item": "Fork",
+        "uses": [
+            "Using a fork as a mini rake to create tiny zen garden designs in a small tray of sand.",
+            "Using a fork as a hair accessory by bending the tines into a unique shape and attaching it to a hair clip or headband.",
+            "Using a fork as a plant marker by labeling the tines with the names of different herbs or flowers in a garden.",
+            "Using a fork as a doorstop by wedging the handle under a door to keep it open.",
+            "Using a fork as a candle holder by sticking the tines into a cork or piece of clay to securely hold a candle upright.",
+            "Using a fork as a key holder by attaching hooks to the tines and hanging it on the wall to store keys in a decorative way.",
+            "Using a fork as a makeshift antenna by attaching aluminum foil to the tines to improve TV reception.",
+            "Using a fork as a cheese grater by running a piece of cheese along the tines to create shredded cheese.",
+            "Using a fork as a bookmark by slipping it between the pages of a book to keep your place.",
+            "Using a fork as a pot scrubber by using the tines to scrape off stuck-on food from pots and pans."
+        ],
+        "Agent": "GPT Agent 2 - Classifier"
+    }
+]

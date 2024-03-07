@@ -6,15 +6,15 @@ import argparse
 
 # Assuming OpenAI and other necessary libraries are installed
 from openai import OpenAI
-import google.generativeai as genai
+# import google.generativeai as genai
 import os
 import logging
 import subprocess
 import datetime
 
-current_date = datetime.date.today().strftime("%m-%d_")
+current_date = datetime.date.today().strftime("%m-%d-")
 current_time = datetime.datetime.now()
-formatted_time = current_time.strftime("%H:%M:%S")
+formatted_time = current_time.strftime("%H:%M")
 
 parsing_prompt = "Please list the answer in 1. ... 2. ... 3. ... and so on."
 
@@ -92,65 +92,66 @@ class OpenAIAgent(Agent):
     def construct_user_message(self, content):
         return {"role": "user", "content": content}
     
-class GeminiAgent(Agent):
-    def __init__(self, model_name, agent_name):
-        self.model_name = model_name
-        genai.configure(api_key=os.environ["GEMINI_API_KEY"]) # ~/.bashrc save : export GEMINI_API_KEY="YOUR_API" 
-        self.model = genai.GenerativeModel(self.model_name)
-        self.agent_name = agent_name
+# class GeminiAgent(Agent):
+#     def __init__(self, model_name, agent_name):
+#         self.model_name = model_name
+#         genai.configure(api_key=os.environ["GEMINI_API_KEY"]) # ~/.bashrc save : export GEMINI_API_KEY="YOUR_API" 
+#         self.model = genai.GenerativeModel(self.model_name)
+#         self.agent_name = agent_name
 
-    def generate_answer(self, answer_context,temperature= 1.0):
-        try: 
-            response = self.model.generate_content(
-                answer_context,
-                generation_config=genai.types.GenerationConfig(temperature=temperature),
-                safety_settings=[
-                    {"category": "HARM_CATEGORY_HARASSMENT","threshold": "BLOCK_NONE",},
-                    {"category": "HARM_CATEGORY_HATE_SPEECH","threshold": "BLOCK_NONE",},
-                    {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT","threshold": "BLOCK_NONE",},
-                    {"category": "HARM_CATEGORY_DANGEROUS_CONTENT","threshold": "BLOCK_NONE",},
-                    ]
-            )
-            # for pure text -> return response.text
-            # return response.candidates[0].content
-            return response.text
-        except Exception as e:
-            logging.exception("Exception occurred during response generation: " + str(e))
-            time.sleep(1)
-            return self.generate_answer(answer_context)
-    def construct_assistant_message(self, content):
-        response = {"role": "assistant", "parts": [content]}
-        return response
+#     def generate_answer(self, answer_context,temperature= 1.0):
+#         try: 
+#             response = self.model.generate_content(
+#                 answer_context,
+#                 generation_config=genai.types.GenerationConfig(temperature=temperature),
+#                 safety_settings=[
+#                     {"category": "HARM_CATEGORY_HARASSMENT","threshold": "BLOCK_NONE",},
+#                     {"category": "HARM_CATEGORY_HATE_SPEECH","threshold": "BLOCK_NONE",},
+#                     {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT","threshold": "BLOCK_NONE",},
+#                     {"category": "HARM_CATEGORY_DANGEROUS_CONTENT","threshold": "BLOCK_NONE",},
+#                     ]
+#             )
+#             # for pure text -> return response.text
+#             # return response.candidates[0].content
+#             return response.text
+#         except Exception as e:
+#             logging.exception("Exception occurred during response generation: " + str(e))
+#             time.sleep(1)
+#             return self.generate_answer(answer_context)
+#     def construct_assistant_message(self, content):
+#         response = {"role": "assistant", "parts": [content]}
+#         return response
     
-    def construct_user_message(self, content):
-        response = {"role": "user", "parts": [content]}
-        return response
+#     def construct_user_message(self, content):
+#         response = {"role": "user", "parts": [content]}
+#         return response
         
-class Llama2Agent(Agent):
-    def __init__(self, ckpt_dir, tokenizer_path, agent_name):
-        self.ckpt_dir = ckpt_dir
-        self.tokenizer_path = tokenizer_path
-        self.agent_name = agent_name
+# class Llama2Agent(Agent):
+#     def __init__(self, ckpt_dir, tokenizer_path, agent_name):
+#         self.ckpt_dir = ckpt_dir
+#         self.tokenizer_path = tokenizer_path
+#         self.agent_name = agent_name
 
-    def generate_answer(self, answer_context, temperature=0.6, top_p=0.9, max_seq_len=100000, max_batch_size=4): # return pure text
-        return generate_response_llama2_torchrun(
-            message=answer_context,
-            ckpt_dir=self.ckpt_dir,
-            tokenizer_path=self.tokenizer_path,
-            temperature=temperature,
-            top_p=top_p,
-            max_seq_len=max_seq_len,
-            max_batch_size=max_batch_size
-        )
+#     def generate_answer(self, answer_context, temperature=0.6, top_p=0.9, max_seq_len=100000, max_batch_size=4): # return pure text
+#         return generate_response_llama2_torchrun(
+#             message=answer_context,
+#             ckpt_dir=self.ckpt_dir,
+#             tokenizer_path=self.tokenizer_path,
+#             temperature=temperature,
+#             top_p=top_p,
+#             max_seq_len=max_seq_len,
+#             max_batch_size=max_batch_size
+#         )
     
-    def construct_assistant_message(self, content):
-        return {"role": "assistant", "content": content}
+#     def construct_assistant_message(self, content):
+#         return {"role": "assistant", "content": content}
     
-    def construct_user_message(self, content):
-        return {"role": "user", "content": content}
+#     def construct_user_message(self, content):
+#         return {"role": "user", "content": content}
 
 class Discussion:
-    def __init__(self, agents_config, dataset_file, rounds):
+    def __init__(self, agents_config, dataset_file, rounds, agent_roles_str = ""):
+        self.agent_roles_str = agent_roles_str
         self.agents = self.initialize_agents(agents_config)
         self.dataset_file = os.path.join("../../../Datasets/AUT/", dataset_file)
         self.rounds = rounds
@@ -164,6 +165,7 @@ class Discussion:
             #     agents.append(GeminiAgent(model_name=config['model_name'], agent_name = config['agent_name']))
             # elif config['type'] == 'llama2':
             #     agents.append(Llama2Agent(ckpt_dir=config['ckpt_dir'], tokenizer_path=config['tokenizer_path'], agent_name = config['agent_name']))
+                self.agent_roles_str += config['agent_role'].replace(" ", "") + "-"
             else:
                 raise ValueError(f"Unsupported agent type: {config['type']}")
         print(f"Initialized {len(agents)} agents.")
@@ -182,13 +184,13 @@ class Discussion:
         all_responses = {}
         init_results = []
         final_results = []
-        for example in dataset['examples']:
+        for example in dataset['Examples']:
             round_empty = True
             chat_history = {agent.agent_name: [] for agent in self.agents}
             # print("initial chat_history: ", chat_history, "\n")
             # --------------->>>> set the system content
             object = example['object']
-            problem_template = " ".join(dataset["Task"][0]["problem"])
+            problem_template = " ".join(dataset["Task"][8]["Problem"])
             question = problem_template.replace("{object}", object)
             initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
             # ------------------------------------------
@@ -251,9 +253,9 @@ class Discussion:
 
                 # most_recent_responses = round_responses
             all_responses[question] = chat_history
-        output_filename = f"../../../Results/AUT/chat_log/AUT_rolePlay_conv_history_{current_date}{formatted_time}_{len(self.agents)}_{self.rounds}.json"
-        final_ans_filename = f"../../../Results/AUT/Output/AUT_rolePlay_conv_final_{current_date}{formatted_time}_{len(self.agents)}_{self.rounds}.json"
-        init_ans_filename = f"../../../Results/AUT/chat_log/AUT_rolePlay_conv_init_{current_date}{formatted_time}_{len(self.agents)}_{self.rounds}.json"
+        output_filename = f"../../../Results/AUT/chat_log/multi_agent/AUT_multi_rolePlay-conv_{len(self.agents)}_{self.rounds}_history-{self.agent_roles_str}{current_date}{formatted_time}_10.json"
+        final_ans_filename = f"../../../Results/AUT/Output/multi_agent/AUT_multi_rolePlay-conv_{len(self.agents)}_{self.rounds}_final-{self.agent_roles_str}{current_date}{formatted_time}_10.json"
+        init_ans_filename = f"../../../Results/AUT/chat_log/multi_agent/AUT_multi_rolePlay-conv_{len(self.agents)}_{self.rounds}_init-{self.agent_roles_str}{current_date}{formatted_time}_10.json"
         self.save_conversation(output_filename, all_responses)
 
         self.save_conversation(final_ans_filename, final_results)

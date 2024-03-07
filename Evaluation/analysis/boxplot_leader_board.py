@@ -2,195 +2,85 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
+from glob import glob
 import os
 import argparse
 
-def calculate_mean_std(file_path):
+
+def calculate_scores(file_path):
     with open(file_path, 'r') as file:
         data = json.load(file)
-    fluency_scores = []
-    flexibility_scores = []
-    originality_scores = []
-    elaboration_scores = []
+
+    score_categories = ['fluency', 'flexibility', 'originality', 'elaboration']
+    scores_dict = {category: [] for category in score_categories}
 
     for item in data:
-        if 'fluency' in item:
-            for fluency in item['fluency']:
-                if 'average_fluency' in fluency:
-                    fluency_scores.append(fluency['average_fluency'])
-        if 'flexibility' in item:
-            for flexibility in item['flexibility']:
-                if 'average_flexibility' in flexibility:
-                    flexibility_scores.append(flexibility['average_flexibility'])
-        if 'originality' in item:
-            for originality in item['originality']:
-                if 'average_originality' in originality:
-                    originality_scores.append(originality['average_originality'])
-        if 'elaboration' in item:
-            for elaboration in item['elaboration']:
-                if 'average_elaboration' in elaboration:
-                    elaboration_scores.append(elaboration['average_elaboration'])
+        for category in score_categories:
+            if category in item:
+                for score_item in item[category]:
+                    if f'average_{category}' in score_item:
+                        scores_dict[category].append(score_item[f'average_{category}'])
 
-    averages = {
-        "fluency": {"mean": np.mean(fluency_scores), "std": np.std(fluency_scores)},
-        "flexibility": {"mean": np.mean(flexibility_scores), "std": np.std(flexibility_scores)},
-        "originality": {"mean": np.mean(originality_scores), "std": np.std(originality_scores)},
-        "elaboration": {"mean": np.mean(elaboration_scores), "std": np.std(elaboration_scores)}
-    }
-    return fluency_scores, flexibility_scores, originality_scores, elaboration_scores, averages
+    return scores_dict
 
-# def plot_score(scores_dict, category, custom_xtick_labels=None, output_name=None, title=None):
-#     fig, ax = plt.subplots(figsize=(10, 6))
-#     data_to_plot = [scores for scores in scores_dict.values()]
-#     ax.boxplot(data_to_plot, patch_artist=True)
+def process_scores_folder(input_folder):
+    json_files = sorted(Path(input_folder).glob('*.json'), key=lambda x: str(x))
 
-#     new_xtick_labels = []
-#     for scores in data_to_plot:
-#         mean = np.mean(scores)
-#         std = np.std(scores)
-#         label = f'Mean: {mean:.2f}\nStd: {std:.2f}'
-#         new_xtick_labels.append(label)
+    all_scores = {category: [] for category in ['fluency', 'flexibility', 'originality', 'elaboration']}
+    labels = []
 
-#     if custom_xtick_labels and len(custom_xtick_labels) == len(scores_dict):
-#         combined_labels = [f'{custom}\n\n{new}' for custom, new in zip(custom_xtick_labels, new_xtick_labels)]
-#         ax.set_xticklabels(combined_labels, ha='center',fontsize=12)
-#     else:
-#         original_labels = list(scores_dict.keys())
-#         combined_labels = [f'{orig}\n\n{new}' for orig, new in zip(original_labels, new_xtick_labels)]
-#         ax.set_xticklabels(combined_labels, rotation=45, ha='right',fontsize=12)
+    for json_file in json_files:
+        input_file_name_list = str(json_file.stem).split('_')  # Use stem to get filename without suffix
+        # print(input_file_name_list)
+        dataset = input_file_name_list[2]
+        label = f"{input_file_name_list[3]}_{input_file_name_list[4]}_{input_file_name_list[5]}"
+        labels.append(label)
+        scores = calculate_scores(json_file)
+        for category in all_scores.keys():
+            all_scores[category].append(scores[category])
+    # print(labels)
+    # Plotting for each score category with the labels list
+    for category, scores_by_file in all_scores.items():
+        plot_score(scores_by_file, category, dataset, labels, title='Leader Board')
 
-#     plt.title(f'{category}: {title}', fontsize = 20)
-#     plt.ylabel('Score')
-#     plt.xticks()
-#     plt.tight_layout()  # Adjust layout to not cut off labels
+
+def plot_score(scores_by_file, category, dataset, x_labels, title=None):
+    fig, ax = plt.subplots(figsize=(20, 12))
+    data_to_plot = []
+
+    # 计算每个文件的分数，只包括在两倍标准差之内的值
+    for scores in scores_by_file:
+        mean = np.mean(scores)
+        std = np.std(scores)
+        filtered_scores = [s for s in scores if (mean - 2.5*std) <= s <= (mean + 2.5*std)]
+        data_to_plot.append(filtered_scores)
+
+    means = [np.mean(scores) for scores in data_to_plot]
+    stds = [np.std(scores) for scores in data_to_plot]
+
+    # bp = ax.boxplot(data_to_plot, patch_artist=True, showfliers=False)
+    # Boxplot with conditional coloring
+    box_colors = ['grey' if 'multi' in label.split('_')[0] else 'blue' for label in x_labels]
+    bp = ax.boxplot(data_to_plot, patch_artist=True, showfliers=False)
+
+    # Apply colors to boxes based on condition
+    for box, color in zip(bp['boxes'], box_colors):
+        box.set_facecolor(color)
     
+    for i, (mean, std) in enumerate(zip(means, stds), start=1):
+        ax.errorbar(i, mean, yerr=std, fmt='o', color='red', ecolor='red', capsize=5, capthick=2)
+    
+        # Set custom xtick labels with mean and std below each boxplot
+    custom_xtick_labels = [f'{label}\nMean: {mean:.2f}\nStd: {std:.2f}' for label, mean, std in zip(x_labels, means, stds)]
+    ax.set_xticklabels(custom_xtick_labels, fontsize=10, ha='center')
+    # ax.set_xticklabels(x_labels, fontsize=12, ha='center')
 
-#     image_path = os.path.join(
-#                 Path(__file__).parent, 'img', 'boxplot', 
-#                 f"{category}_{output_name}.png"
-#             )
-#     plt.savefig(image_path)
-#     print(f"Boxplot for {category} saved at {image_path}") 
-#     #plt.show()
+    ax.set_title(f'{dataset} {category.capitalize()} Scores: {title}', fontsize=20)
+    ax.set_ylabel('Scores')
+    
+    plt.tight_layout()
+    # plt.show()
+    plt.savefig("./f'{dataset} {category.capitalize()} Scores: {title}'.png")
 
-def plot_score(scores_dict, category, custom_xtick_labels=None, output_name=None, title=None):
-    fig, ax = plt.subplots(figsize=(10, 6))
-    data_to_plot = [scores for scores in scores_dict.values()]
-    ax.boxplot(data_to_plot, patch_artist=True)
-
-    new_xtick_labels = []
-    for scores in data_to_plot:
-        mean = np.mean(scores)
-        std = np.std(scores)
-        label = f'Mean: {mean:.2f}\nStd: {std:.2f}'
-        new_xtick_labels.append(label)
-
-    if custom_xtick_labels and len(custom_xtick_labels) == len(scores_dict):
-        combined_labels = [f'{custom}\n\n{new}' for custom, new in zip(custom_xtick_labels, new_xtick_labels)]
-        ax.set_xticklabels(combined_labels, ha='center',fontsize=12)
-    else:
-        original_labels = list(scores_dict.keys())
-        combined_labels = [f'{orig}\n\n{new}' for orig, new in zip(original_labels, new_xtick_labels)]
-        ax.set_xticklabels(combined_labels, rotation=45, ha='right',fontsize=12)
-
-    plt.title(f'{category}: {title}', fontsize = 20)
-    plt.ylabel('Score')
-    plt.xticks()
-    plt.tight_layout()  # Adjust layout to not cut off labels
-
-    # Add mean and standard deviation figures
-    for i, scores in enumerate(data_to_plot):
-        mean = np.mean(scores)
-        std = np.std(scores)
-        ax.axhline(mean, color='r', linestyle='-', linewidth=1.5)
-        ax.axvspan(mean-std, mean+std, color='r', alpha=0.2)
-
-    image_path = os.path.join(
-                Path(__file__).parent, 'img', 'boxplot', 
-                f"{category}_{output_name}.png"
-            )
-    plt.savefig(image_path)
-    print(f"Boxplot for {category} saved at {image_path}")
-    plt.close(fig)
-
-def plot_combined_subplots(scores_dicts, custom_xtick_labels, output_name, title):
-    fig, axs = plt.subplots(2, 2, figsize=(20, 12))
-    categories = ["Fluency", "Flexibility", "Originality", "Elaboration"]
-
-    for i, (ax, category) in enumerate(zip(axs.flatten(), categories)):
-        scores = scores_dicts[category]
-        data_to_plot = [score for score in scores.values()]
-        ax.boxplot(data_to_plot, patch_artist=True)
-        
-        new_xtick_labels = []
-        for score in data_to_plot:
-            mean = np.mean(score)
-            std = np.std(score)
-            label = f'Mean: {mean:.2f}\nStd: {std:.2f}'
-            new_xtick_labels.append(label)
-
-        if custom_xtick_labels and len(custom_xtick_labels) == len(scores):
-            combined_labels = [f'{custom}\n\n{new}' for custom, new in zip(custom_xtick_labels, new_xtick_labels)]
-            ax.set_xticklabels(combined_labels, ha='center', fontsize=12)
-        else:
-            original_labels = list(scores.keys())
-            combined_labels = [f'{orig}\n\n{new}' for orig, new in zip(original_labels, new_xtick_labels)]
-            ax.set_xticklabels(combined_labels, rotation=45, ha='right', fontsize=12)
-
-        ax.set_title(f'{category}: {title}', fontsize=20)
-        ax.set_ylabel('Score')
-
-    plt.tight_layout()  # Adjust layout to not cut off labels
-    combined_image_path = os.path.join(
-                Path(__file__).parent, 'img', 'boxplot',
-                f"Combined_{output_name}.png"
-            )
-    plt.savefig(combined_image_path)
-    print(f"Combined plot saved at {combined_image_path}")
-    plt.close(fig)
-
-
-
-def main(input_files, output_name, custom_labels, title):
-    all_fluency_scores = {}
-    all_flexibility_scores = {}
-    all_originality_scores = {}
-    all_elaboration_scores = {}
-
-    print("CUSTOM LABEL:", custom_labels, "\n", "OUTPUT_NAME:", output_name, "\n", "TITLE:", title, "\n", "INPUT_FILES:", input_files, "\n")
-
-    for file_name in input_files:
-        file_path = file_name
-        fluency_scores, flexibility_scores, originality_scores, elaboration_scores, averages = calculate_mean_std(file_path)
-
-        # Store scores from each file
-        all_fluency_scores[file_name] = fluency_scores
-        all_flexibility_scores[file_name] = flexibility_scores
-        all_originality_scores[file_name] = originality_scores
-        all_elaboration_scores[file_name] = elaboration_scores
-
-        print("File: ", file_name)
-        print("Average: ", averages, "\n")
-
-    scores_dicts = {
-        "Fluency": all_fluency_scores,
-        "Flexibility": all_flexibility_scores,
-        "Originality": all_originality_scores,
-        "Elaboration": all_elaboration_scores
-    }
-
-    plot_score(all_fluency_scores, "Fluency",custom_labels, output_name, title)
-    plot_score(all_flexibility_scores, "Flexibility",custom_labels, output_name, title)
-    plot_score(all_originality_scores, "Originality",custom_labels, output_name, title)
-    plot_score(all_elaboration_scores, "Elaboration",custom_labels, output_name, title)
-    plot_combined_subplots(scores_dicts, custom_labels, output_name, title)
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Process multiple JSON files for scoring analysis.")
-    parser.add_argument("-i", "--input_files", nargs='+', required=True, help="File paths of the JSON files")
-    parser.add_argument("-o", "--output_name", required=True, help="Give me the name of the output file without using json")
-    parser.add_argument("-l", "--custom_labels", nargs='+', required=False, help="Give me the custom labels for the boxplot")
-    parser.add_argument("-t", "--title", required=False, help="Give me the title of the plot")
-    args = parser.parse_args()
-
-    main(args.input_files, args.output_name, args.custom_labels, args.title)
+input_folder = '../../Results/Instances/Eval_Result/single_agent/'
+process_scores_folder(input_folder)

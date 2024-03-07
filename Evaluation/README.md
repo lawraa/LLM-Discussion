@@ -63,7 +63,7 @@ For example:
   # Evaluate using GPT-3, for all criteria in the default evaluation type
   python3 auto_grade.py -v 3 -i dataname -c all -t criteria -s 3 -d Instances -o y -->
 
-  - This would use auto_grade_final.py in Instances_single_few-shot_2-0.json with sampling=3 and dataset = Instances while automatically output the results into LeaderBoard-Instances.csv
+  - This would use auto_grade_final.py in Instances_single_few-shot_2-0.json which stored at: ```../Results/Instances/``` with sampling=3 and dataset = Instances while automatically output the results into LeaderBoard-Instances.csv
   - File Name Format:
     - single agent: ```{Task_Type}_{single}_{Subtask_Type}_{other info}_{data #}.json```
     - multi agent: ```{Task_Type}_{multi}_{Subtask_Type}_{agent #}_{round #}_{Agent Description}_{other info}_{data #}.json```

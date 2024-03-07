@@ -93,6 +93,6 @@ if __name__ == "__main__":
     parser.add_argument("-d", "--dataset", default="AUT", choices=["AUT", "Instances", "Similarities", "scientific"], help="Input the dataset you want to plot")
     args = parser.parse_args()
 
-    csv_file_path = f'./LeaderBoard-{args.dataset}.csv'
-    output_folder = f'./plots/{args.dataset}/'
+    csv_file_path = f'../LeaderBoard-{args.dataset}.csv'
+    output_folder = f'./{args.dataset}/'
     main(csv_file_path, output_folder, args.dataset)

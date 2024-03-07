@@ -144,12 +144,12 @@ class LLM_Debate_AUT(Discussion):
 
         if is_last_round:
             prefix_string += f"This is the last round of the discussion. Please present only the most creative uses of {object} as your final answers. List your responses as: 1. ..., 2. ..., 3. ..., and so on.\n\n"
-        else:
-            discussion_prompt =  "You are an active and helpful member in this discussion. \
-You should persuade each other that your answers are creative by giving reasonable explanations, be critical to verify each answer to see if it is creative enough,\
-justify your own answers, integrate with others' replies, coming up with ideas inspired by others, \
-remove answers that is not creative enough, merge similar ideas, and ask questions for further understandings.\n\n"
-            prefix_string += discussion_prompt
+#         else:
+#             discussion_prompt =  "You are an active and helpful member in this discussion. \
+# You should persuade each other that your answers are creative by giving reasonable explanations, be critical to verify each answer to see if it is creative enough,\
+# justify your own answers, integrate with others' replies, coming up with ideas inspired by others, \
+# remove answers that is not creative enough, merge similar ideas, and ask questions for further understandings.\n\n"
+#             prefix_string += discussion_prompt
         prefix_string += question
         print("Constructed Response", prefix_string)
         return prefix_string
@@ -242,12 +242,12 @@ class LLM_Debate_Scientific(Discussion):
 
         if is_last_round:
             prefix_string += f"This is the last round of the discussion, please only present a list of your final answers. Please list the final response in 1. ... 2. ... 3. ... and so on. \n\n"
-        else:
-            discussion_prompt =  "You are an active and helpful member in this discussion. \
-You should persuade each other that your answers are creative by giving reasonable explanations, be critical to verify each answer to see if it is creative enough,\
-justify your own answers, integrate with others' replies, coming up with ideas inspired by others, \
-remove answers that is not creative enough, merge similar ideas, and ask questions for further understandings.\n\n"
-            prefix_string += discussion_prompt
+#         else:
+#             discussion_prompt =  "You are an active and helpful member in this discussion. \
+# You should persuade each other that your answers are creative by giving reasonable explanations, be critical to verify each answer to see if it is creative enough,\
+# justify your own answers, integrate with others' replies, coming up with ideas inspired by others, \
+# remove answers that is not creative enough, merge similar ideas, and ask questions for further understandings.\n\n"
+#             prefix_string += discussion_prompt
         prefix_string += question
         print("Constructed Response", prefix_string)
         return prefix_string
@@ -337,12 +337,12 @@ class LLM_Debate_Instance_Similarities(Discussion):
 
         if is_last_round:
             prefix_string += f"This is the last round of the discussion, please only present a list of your final answers. Please list the final response in 1. ... 2. ... 3. ... and so on. \n\n"
-        else:
-            discussion_prompt =  "You are an active and helpful member in this discussion. \
-You should persuade each other that your answers are creative by giving reasonable explanations, be critical to verify each answer to see if it is creative enough,\
-justify your own answers, integrate with others' replies, coming up with ideas inspired by others, \
-remove answers that is not creative enough, merge similar ideas, and ask questions for further understandings.\n\n"
-            prefix_string += discussion_prompt
+#         else:
+#             discussion_prompt =  "You are an active and helpful member in this discussion. \
+# You should persuade each other that your answers are creative by giving reasonable explanations, be critical to verify each answer to see if it is creative enough,\
+# justify your own answers, integrate with others' replies, coming up with ideas inspired by others, \
+# remove answers that is not creative enough, merge similar ideas, and ask questions for further understandings.\n\n"
+#             prefix_string += discussion_prompt
         prefix_string += question
         print("Constructed Response", prefix_string)
         return prefix_string

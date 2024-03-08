@@ -343,7 +343,7 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
                         print("OUTPUT FROM GENERATE: ", response, "\n")
                     else:
                         # print("most_recent_responses: ", most_recent_responses)
-                        combined_prompt = self.construct_response(question, most_recent_responses, agent, object, is_last_round)
+                        combined_prompt = self.construct_response(question_prompt_9, most_recent_responses, agent, object, is_last_round)
                         formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")

@@ -77,13 +77,13 @@ class LLM_Debate(Discussion):
             
             other_agent_response = f"One agent solution: ```{response_content}```\n"
             prefix_string += other_agent_response
-
+        prefix_string += question
         if is_last_round:
             if self.task_type == "AUT":
                 prefix_string += f"This is the last round of the discussion, please only present a list of the most creative uses of {object} as your final answers. Please list the answer in 1. ... 2. ... 3. ... and so on.\n\n"
             else:
                 prefix_string += f"This is the last round of the discussion, please only present a list of your final answers. Please list the final response in 1. ... 2. ... 3. ... and so on. \n\n"
-        prefix_string += question
+        
         return prefix_string
 
     
@@ -103,7 +103,7 @@ class LLM_Debate_AUT(LLM_Debate):
             object = example['object']
             problem_template = " ".join(dataset["Task"][0]["Problem"])
             question = problem_template.replace("{object}", object)
-            prompt_9 = "You would be in a group discussion with other teammates as a result, you should answer as diverge and creative as you can."
+            prompt_9 = "You are in a group discussion with other teammates as a result, you should answer as diverge and creative as you can."
             question_prompt_9 = question + "\n" + prompt_9
             initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
             # ------------------------------------------
@@ -165,7 +165,7 @@ class LLM_Debate_Scientific(LLM_Debate):
                 print("initial chat_history: ", chat_history, "\n")
                 # --------------->>>> set the system content
                 question = example
-                prompt_9 = "You would be in a group discussion with other teammates as a result, you should answer as diverge and creative as you can."
+                prompt_9 = "You are in a group discussion with other teammates as a result, you should answer as diverge and creative as you can."
                 question_prompt_9 = question + "\n" + prompt_9
                 initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
                 # ------------------------------------------
@@ -221,7 +221,7 @@ class LLM_Debate_Instance_Similarities(LLM_Debate):
             print("initial chat_history: ", chat_history, "\n")
             # --------------->>>> set the system content
             question = example
-            prompt_9 = "You would be in a group discussion with other teammates as a result, you should answer as diverge and creative as you can."
+            prompt_9 = "You are in a group discussion with other teammates as a result, you should answer as diverge and creative as you can."
             question_prompt_9 = question + "\n" + prompt_9
             initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
             # ------------------------------------------
@@ -307,7 +307,7 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
             object = example['object']
             problem_template = " ".join(dataset["Task"][0]["Problem"])
             question = problem_template.replace("{object}", object)
-            prompt_9 = "You would be in a group discussion with other teammates as a result, you should answer as diverge and creative as you can."
+            prompt_9 = "You are in a group discussion with other teammates as a result, you should answer as diverge and creative as you can."
             question_prompt_9 = question + "\n" + prompt_9
             initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
             # ------------------------------------------
@@ -379,10 +379,11 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
 
             other_agent_response = f"One agent solution: ```{response_content}```\n"
             prefix_string += other_agent_response
-
+            
+        prefix_string += question
         if is_last_round:
             prefix_string += f"This is the last round of the discussion, please only present a list of the most creative uses of {object} as your final answers. Please list the answer in 1. ... 2. ... 3. ... and so on.\n\n"
-        prefix_string += question
+        
         print("Constructed Response", prefix_string)
         return prefix_string
     

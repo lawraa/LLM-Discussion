@@ -5,7 +5,8 @@
     "agent_name": "GPT Agent 1",
     "agent_role": "None",
     "agent_speciality": "None",
-    "agent_role_prompt": "None"
+    "agent_role_prompt": "None",
+    "speaking_rate": 1
   },
   {
     "type": "openai",
@@ -13,7 +14,8 @@
     "agent_name": "GPT Agent 2",
     "agent_role": "None",
     "agent_speciality": "None",
-    "agent_role_prompt": "None"
+    "agent_role_prompt": "None",
+    "speaking_rate": 1
   },
   {
     "type": "openai",
@@ -21,7 +23,8 @@
     "agent_name": "GPT Agent 3",
     "agent_role": "None",
     "agent_speciality": "None",
-    "agent_role_prompt": "None"
+    "agent_role_prompt": "None",
+    "speaking_rate": 1
   },
   {
     "type": "openai",
@@ -29,7 +32,8 @@
     "agent_name": "GPT Agent 4",
     "agent_role": "None",
     "agent_speciality": "None",
-    "agent_role_prompt": "None"
+    "agent_role_prompt": "None",
+    "speaking_rate": 1
   },
   {
     "type": "openai",
@@ -37,7 +41,8 @@
     "agent_name": "GPT Agent 5",
     "agent_role": "None",
     "agent_speciality": "None",
-    "agent_role_prompt": "None"
+    "agent_role_prompt": "None",
+    "speaking_rate": 1
   },
   {
     "type": "openai",
@@ -45,6 +50,7 @@
     "agent_name": "GPT Agent 6",
     "agent_role": "None",
     "agent_speciality": "None",
-    "agent_role_prompt": "None"
+    "agent_role_prompt": "None",
+    "speaking_rate": 1
   }
 ]

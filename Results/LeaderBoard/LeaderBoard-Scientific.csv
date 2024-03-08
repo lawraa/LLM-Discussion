@@ -7,4 +7,5 @@ Scientific ,CoT             ,    1 ,gpt-3.5                     , 100 ,     1 , 
 Scientific ,basic           ,    1 ,gpt-3.5                     , 100 ,     1 ,        7.98 ,            8.28 ,            3.55 ,            3.61 ,       2.52 ,           2.25 ,           0.32 ,           0.37
 Scientific ,deep-breath     ,    1 ,gpt-3.5                     , 100 ,     1 ,        7.85 ,            7.99 ,            3.56 ,            3.58 ,       2.36 ,           2.03 ,           0.32 ,           0.38
 Scientific ,few-shot        ,    1 ,gpt-3.5                     , 100 ,     1 ,        8.28 ,            8.61 ,            3.57 ,            3.58 ,       2.54 ,           2.53 ,           0.35 ,           0.41
+Scientific ,debate-prompt-9 ,    2 ,gpt-3-5-turbo-gpt-3-5-turbo ,  10 ,     6 ,        5.28 ,            5.52 ,            3.95 ,            3.18 ,       1.71 ,           1.9  ,           0.33 ,           0.93
 Scientific ,debate-prompt-9 ,    2 ,gpt-3-5-turbo-gpt-3-5-turbo ,  10 ,     6 ,        5.53 ,            4.9  ,            4.17 ,            3.6  ,       1.62 ,           1.18 ,           0.42 ,           0.62

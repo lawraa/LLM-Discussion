@@ -1,0 +1,254 @@
+[
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "Basketball",
+            "Soccer ball",
+            "Tennis ball",
+            "Volleyball",
+            "Bowling ball",
+            "Beach ball",
+            "Globe",
+            "Apple",
+            "Orange",
+            "Wheel",
+            "Frisbee",
+            "Pie",
+            "Clock",
+            "CD",
+            "Coin"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "The sun",
+            "A basketball",
+            "A volleyball",
+            "A soccer ball",
+            "A baseball",
+            "A tennis ball",
+            "A bowling ball",
+            "A donut",
+            "A clock",
+            "A lemon",
+            "A watermelon",
+            "A grapefruit",
+            "A tomato",
+            "A pancake",
+            "A frisbee",
+            "A cookie",
+            "A wheel",
+            "A ring",
+            "A button",
+            "A coin"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the square things you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the square things you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.",
+        "answer": [
+            "Cars",
+            "Buses",
+            "Bicycles",
+            "Skateboards",
+            "Roller skates",
+            "Wheelchairs",
+            "Scooters",
+            "Segways",
+            "Rollerblades",
+            "Strollers",
+            "Tricycles",
+            "Golf carts",
+            "Shopping carts",
+            "Suitcases with wheels",
+            "Roller coasters",
+            "Zambonis",
+            "Forklifts",
+            "Electric scooters",
+            "Wheelbarrows",
+            "Go-karts"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.",
+        "answer": [
+            "Cars",
+            "Bicycles",
+            "Roller skates",
+            "Skateboards",
+            "Scooters",
+            "Wheelchairs",
+            "Shopping carts",
+            "Strollers",
+            "Suitcases",
+            "Segways",
+            "Rollerblades",
+            "Golf carts",
+            "Skateboard trucks",
+            "Roller coasters",
+            "Zambonis",
+            "Dolly carts",
+            "RVs",
+            "Lawn mowers",
+            "Tractors",
+            "Forklifts"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are red.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are red.",
+        "answer": [
+            "Red apples",
+            "Red roses",
+            "Red lipstick",
+            "Red fire trucks",
+            "Red stop signs",
+            "Red strawberries",
+            "Red chili peppers",
+            "Red Coca-Cola cans",
+            "Red velvet cake",
+            "Red ladybugs",
+            "Red cardinal birds",
+            "Red wine",
+            "Red tomatoes",
+            "Red watermelon",
+            "Red barns",
+            "Red cherries",
+            "Red peppers",
+            "Red hot air balloons",
+            "Red fire hydrants",
+            "Red cars."
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the fruits you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the fruits you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the instruments you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the instruments you can think of.",
+        "answer": [
+            "Piano",
+            "Guitar",
+            "Violin",
+            "Drums",
+            "Flute",
+            "Saxophone",
+            "Trumpet",
+            "Cello",
+            "Harp",
+            "Banjo",
+            "Ukulele",
+            "Accordion",
+            "Xylophone",
+            "Clarinet",
+            "Trombone",
+            "Bagpipes",
+            "Tambourine",
+            "Maracas",
+            "Didgeridoo",
+            "Theremin"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that can fly.",
+        "answer": [
+            "Birds",
+            "Insects (such as butterflies, bees, and dragonflies)",
+            "Bats",
+            "Airplanes",
+            "Helicopters",
+            "Hot air balloons",
+            "Kites",
+            "Drones",
+            "Flying squirrels",
+            "Pterosaurs",
+            "Eagles",
+            "Seagulls",
+            "Owls",
+            "Albatrosses",
+            "Butterflies",
+            "Moths",
+            "Dragonflies",
+            "Flies",
+            "Paragliders",
+            "Gliders",
+            "Rockets",
+            "Flying fish",
+            "Superman",
+            "Valkyries",
+            "Peter Pan",
+            "Mary Poppins with her umbrella",
+            "Elves with their enchanted wings",
+            "Wizards riding on broomsticks",
+            "Flying carpets",
+            "Time travelers in a time machine."
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that can fly.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the flowers you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the flowers you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    }
+]

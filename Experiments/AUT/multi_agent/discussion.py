@@ -52,7 +52,7 @@ class LLM_Debate(Discussion):
         agents = []
         for config in agents_config:
             if config['type'] == 'openai':
-                agents.append(OpenAIAgent(model_name=config['model_name'], agent_name = config['agent_name']))
+                agents.append(OpenAIAgent(model_name=config['model_name'], agent_name = config['agent_name'], agent_role = config['agent_role'], agent_speciality = config['agent_speciality'], agent_role_prompt = config['agent_role_prompt'], speaking_rate = config['speaking_rate']))
             elif config['type'] == 'gemini':
                 agents.append(GeminiAgent(model_name=config['model_name'], agent_name = config['agent_name']))
             elif config['type'] == 'llama2':
@@ -63,7 +63,7 @@ class LLM_Debate(Discussion):
         print("The agents are: ", agents)
         return agents
     
-    def construct_response(self, question, most_recent_responses, current_agent, object, is_last_round):
+    def construct_response(self, question, most_recent_responses, current_agent, is_last_round, object = "None"):
         prefix_string = "These are the solutions to the problem from other agents:\n"
         for agent_name, responses in most_recent_responses.items():
             if agent_name == current_agent.agent_name:
@@ -103,7 +103,7 @@ class LLM_Debate_AUT(LLM_Debate):
             object = example['object']
             problem_template = " ".join(dataset["Task"][0]["Problem"])
             question = problem_template.replace("{object}", object)
-            prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can."
+            prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can. "
             question_prompt_9 = question + "\n" + prompt_9
             initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
             # ------------------------------------------
@@ -128,7 +128,7 @@ class LLM_Debate_AUT(LLM_Debate):
                         init_results.append(init_result)
                     else:
                         print("most_recent_responses: ", most_recent_responses)
-                        combined_prompt = self.construct_response(question_prompt_9, most_recent_responses, agent, object, is_last_round)
+                        combined_prompt = self.construct_response(question_prompt_9, most_recent_responses, agent, is_last_round, object)
                         formatted_combined_prompt = agent.construct_user_message(combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
@@ -165,7 +165,7 @@ class LLM_Debate_Scientific(LLM_Debate):
                 print("initial chat_history: ", chat_history, "\n")
                 # --------------->>>> set the system content
                 question = example
-                prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can."
+                prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can. "
                 question_prompt_9 = question + "\n" + prompt_9
                 initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
                 # ------------------------------------------
@@ -221,7 +221,7 @@ class LLM_Debate_Instance_Similarities(LLM_Debate):
             print("initial chat_history: ", chat_history, "\n")
             # --------------->>>> set the system content
             question = example
-            prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can."
+            prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can. "
             question_prompt_9 = question + "\n" + prompt_9
             initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
             # ------------------------------------------
@@ -307,7 +307,7 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
             object = example['object']
             problem_template = " ".join(dataset["Task"][0]["Problem"])
             question = problem_template.replace("{object}", object)
-            prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can."
+            prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can. "
             question_prompt_9 = question + "\n" + prompt_9
             initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
             # ------------------------------------------

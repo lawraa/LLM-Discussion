@@ -9,3 +9,4 @@ Instances ,deep-breath     ,    1 ,gpt-3.5                     , 100 ,     1 ,  
 Instances ,few-shot        ,    1 ,gpt-3.5                     , 100 ,     1 ,       15.61 ,            9.41 ,            2.81 ,            2.22 ,       6.39 ,           5.06 ,           0.36 ,           0.41
 Instances ,debate-prompt-9 ,    2 ,gpt-3-5-turbo-gpt-3-5-turbo ,  10 ,     6 ,        8.52 ,            5.83 ,            3.56 ,            1.7  ,       5.02 ,           3.13 ,           0.51 ,           0.63
 
+Instances ,debate-prompt-9 ,    2 ,gpt-3-5-turbo-gpt-3-5-turbo ,  10 ,     6 ,       10.57 ,            6.98 ,            3.63 ,            1.77 ,       3.87 ,           3.67 ,           0.75 ,           0.51

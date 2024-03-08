@@ -2,49 +2,49 @@
   {
     "type": "openai",
     "model_name": "gpt-3.5-turbo",
-    "agent_name": "GPT Agent 1 - Analyst",
-    "agent_role": "Analyst",
-    "agent_speciality": "Critical Thinking",
-    "agent_role_prompt": "Examines the validity, logic, and strength of arguments, contributing to a more rigorous and thoughtful discussion."
+    "agent_name": "GPT Agent 1",
+    "agent_role": "None",
+    "agent_speciality": "None",
+    "agent_role_prompt": "None"
   },
   {
     "type": "openai",
     "model_name": "gpt-3.5-turbo",
-    "agent_name": "GPT Agent 2 - Classifier",
-    "agent_role": "Classifier",
-    "agent_speciality": "Classification",
-    "agent_role_prompt": "Skillfully groups related ideas or concepts, assigning them labels to clarify and simplify the complexity of discussions, enhancing the group's understanding."
+    "agent_name": "GPT Agent 2",
+    "agent_role": "None",
+    "agent_speciality": "None",
+    "agent_role_prompt": "None"
   },
   {
     "type": "openai",
     "model_name": "gpt-3.5-turbo",
-    "agent_name": "GPT Agent 3 - Questioner",
-    "agent_role": "Questioner",
-    "agent_speciality": "Questioning",
-    "agent_role_prompt": "Asks insightful questions that stimulate critical thinking and challenge assumptions, leading to a deeper understanding of the topic at hand."
+    "agent_name": "GPT Agent 3",
+    "agent_role": "None",
+    "agent_speciality": "None",
+    "agent_role_prompt": "None"
   },
   {
     "type": "openai",
     "model_name": "gpt-3.5-turbo",
-    "agent_name": "GPT Agent 4 - Summarizer",
-    "agent_role": "Summarizer",
-    "agent_speciality": "Summarization",
-    "agent_role_prompt": "Concisely captures the key points of the discussion, distilling complex information into clear and digestible summaries that aid in comprehension and decision-making."
+    "agent_name": "GPT Agent 4",
+    "agent_role": "None",
+    "agent_speciality": "None",
+    "agent_role_prompt": "None"
   },
   {
     "type": "openai",
     "model_name": "gpt-3.5-turbo",
-    "agent_name": "GPT Agent 5 - Persuader",
-    "agent_role": "Persuader",
-    "agent_speciality": "Persuasion",
-    "agent_role_prompt": "Crafts compelling arguments and persuasive narratives that influence opinions, inspire action, and drive the group towards consensus or decision."
+    "agent_name": "GPT Agent 5",
+    "agent_role": "None",
+    "agent_speciality": "None",
+    "agent_role_prompt": "None"
   },
   {
     "type": "openai",
     "model_name": "gpt-3.5-turbo",
-    "agent_name": "GPT Agent 6 - Creative",
-    "agent_role": "Creative",
-    "agent_speciality": "Creativity",
-    "agent_role_prompt": "Injects creativity and fresh perspectives into the discussion, offering novel ideas, solutions, and approaches that spark innovation and break through intellectual barriers."
+    "agent_name": "GPT Agent 6",
+    "agent_role": "None",
+    "agent_speciality": "None",
+    "agent_role_prompt": "None"
   }
 ]

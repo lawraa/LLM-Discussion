@@ -12,10 +12,10 @@ def main():
     
     if args.type == "AUT":
         agents_config = LLM_Debate_AUT.load_config(args.config)
-        discussion_runner = LLM_Debate_AUT(agents_config, args.dataset, args.rounds)
+        discussion_runner = LLM_Debate_AUT(agents_config, args.dataset, args.rounds, args.type)
     elif args.type == "Scientific":
         agents_config = LLM_Debate_Scientific.load_config(args.config)
-        discussion_runner = LLM_Debate_Scientific(agents_config, args.dataset, args.rounds)
+        discussion_runner = LLM_Debate_Scientific(agents_config, args.dataset, args.rounds, args.type)
     elif args.type == "Similarities" or args.type == "Instances":
         agents_config = LLM_Debate_Instance_Similarities.load_config(args.config)
         discussion_runner = LLM_Debate_Instance_Similarities(agents_config, args.dataset, args.rounds, args.type)

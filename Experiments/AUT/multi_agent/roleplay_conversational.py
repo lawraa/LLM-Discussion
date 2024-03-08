@@ -1,5 +1,5 @@
 import argparse
-from discussion import RolePlayDiscussion
+from discussion import RolePlayDiscussion_AUT
 
 def main():
     parser = argparse.ArgumentParser(description="Orchestrate a discussion with multiple AI agents.")
@@ -9,8 +9,8 @@ def main():
     parser.add_argument("-t", "--type", choices= ["AUT", "Scientific","Similarities", "Instances"], help="Type of task to run.")
     args = parser.parse_args()
 
-    agents_config = RolePlayDiscussion.load_config(args.config)
-    discussion_runner = RolePlayDiscussion(agents_config, args.dataset, args.rounds, args.type)
+    agents_config = RolePlayDiscussion_AUT.load_config(args.config)
+    discussion_runner = RolePlayDiscussion_AUT(agents_config, args.dataset, args.rounds, args.type)
     discussion_runner.run()
 
 

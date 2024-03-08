@@ -28,16 +28,16 @@ class Discussion:
         uses = [line.strip() for line in lines if line.strip() and re.match(r"^\d+\.", line)]
         uses = [use[use.find('.') + 2:] for use in uses]
         return uses
-    
+
     def save_debate_conversations(self, agents, all_responses, init_results, final_results, amount_of_data, task_type="AUT"):
         current_time = datetime.datetime.now()
         current_date = datetime.date.today().strftime("%Y-%m-%d_")
         formatted_time = current_time.strftime("%H-%M-%S")
         model_names_concatenated = "-".join(agent.model_name.replace(".", "-") for agent in agents)
-            
-        output_filename = f"../../../Results/{task_type}/chat_log/{task_type}_multi_debate-prompt-9_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_log_{current_date}{formatted_time}_{amount_of_data}.json"
-        final_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate-prompt-9_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_discussion_final_{current_date}{formatted_time}_{amount_of_data}.json"
-        init_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate-prompt-9_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_discussion_init_{current_date}{formatted_time}_{amount_of_data}.json"
+        output_name = "without_special_prompts"
+        output_filename = f"../../../Results/{task_type}/chat_log/{task_type}_multi_debate-prompt-9_{len(self.agents)}_{self.rounds}_{model_names_concatenated}-temp_log_{output_name}_{amount_of_data}.json"
+        final_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate-prompt-9_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_discussion_final_{output_name}_{amount_of_data}.json"
+        init_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate-prompt-9_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_discussion_init_{output_name}_{amount_of_data}.json"
         self.save_conversation(output_filename, all_responses)
         self.save_conversation(final_ans_filename, final_results)
         self.save_conversation(init_ans_filename, init_results)
@@ -274,7 +274,7 @@ class RolePlayDiscussion(Discussion):
         self.agent_roles_str = agent_role_str
         self.agents = self.initialize_agents(agents_config)
         self.task_type = task
-
+        
     def initialize_agents(self, agents_config):
         agents = []
         for config in agents_config:
@@ -350,7 +350,7 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
                         response = agent.generate_answer(chat_history[agent.agent_name])
                         print("OUTPUT FROM GENERATE: ", response, "\n")
                         if is_last_round:
-                            uses_list = self.extract_uses(response)
+                            uses_list = self.extract_response(response)
                             print(f"uses_list = {uses_list}")
                             final_result = {"item": object, "uses": uses_list, "Agent": agent.agent_name}
                             final_results.append(final_result)
@@ -386,15 +386,3 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
         print("Constructed Response", prefix_string)
         return prefix_string
     
-
-
-
-
-
-
-
-
-
-
-
-

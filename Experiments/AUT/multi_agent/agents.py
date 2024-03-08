@@ -64,6 +64,8 @@ class OpenAIAgent(Agent):
         self.agent_speciality = agent_speciality
         self.agent_role_prompt = agent_role_prompt
         self.speaking_rate = speaking_rate
+        
+        
     
     def generate_answer(self, answer_context, temperature=1):
         try:

@@ -64,13 +64,15 @@ class Agent:
         raise NotImplementedError("This method should be implemented by subclasses.")
 
 class OpenAIAgent(Agent):
-    def __init__(self, model_name, agent_name, agent_role, agent_speciality, agent_role_prompt):
+    def __init__(self, model_name, agent_name, agent_role, agent_speciality, agent_role_prompt, speaking_rate, skip_history = []):
         self.model_name = model_name
         self.client = OpenAI()
         self.agent_name = agent_name
         self.agent_role = agent_role
         self.agent_speciality = agent_speciality
         self.agent_role_prompt = agent_role_prompt
+        self.speaking_rate = speaking_rate
+        self.skip_history = skip_history
 
     def generate_answer(self, answer_context, temperature=1):
         try:
@@ -246,10 +248,19 @@ class Discussion:
                         final_results.append(final_result)
                     else:
                         prob = 0
-                        if (agent.speak_freq > prob):
+                        if (agent.speaking_rate > prob):
+                            agent.skip_history += most_recent_responses
+                            #romove the skipped agent's last response
+                            if most_recent_responses.get(agent.agent_name):
+                                del most_recent_responses[agent.agent_name]
                             continue
                         # print("most_recent_responses: ", most_recent_responses)
-                        combined_prompt = self.construct_response(question, most_recent_responses, agent, object, is_last_round)
+                        if agent.skip_history is not empty:
+                            agent.skip_history += most_recent_responses
+                            combined_prompt = self.construct_response(question,agent.skip_history , agent, object, is_last_round)
+                            agent.skip_history = []
+                        else:
+                            combined_prompt = self.construct_response(question, most_recent_responses, agent, object, is_last_round)
                         formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")

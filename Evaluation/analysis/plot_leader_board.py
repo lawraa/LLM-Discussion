@@ -33,7 +33,7 @@ def process_scores_folder(input_folder):
         input_file_name_list = str(json_file.stem).split('_')  # Use stem to get filename without suffix
         # print(input_file_name_list)
         dataset = input_file_name_list[2]
-        label = f"{input_file_name_list[3]}_{input_file_name_list[4]}_{input_file_name_list[5]}"
+        label = f"{input_file_name_list[3]}_{input_file_name_list[4]}"
         labels.append(label)
         scores = calculate_scores(json_file)
         for category in all_scores.keys():

@@ -5,9 +5,6 @@ import subprocess
 import time
 from openai import OpenAI
 import google.generativeai as genai
-import pickle
-
-
 
 def generate_response_llama2_torchrun(
     message,
@@ -66,8 +63,6 @@ class OpenAIAgent(Agent):
         self.speaking_rate = speaking_rate
         self.missing_history = missing_history
         
-        
-    
     def generate_answer(self, answer_context, temperature=1):
         try:
             completion = self.client.chat.completions.create(

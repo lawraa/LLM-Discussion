@@ -14,83 +14,101 @@ def calculate_mean_std(total_results):
 
     # Calculating mean and standard deviation for each criterion
     results = {
-        "mean_fluency": round(np.mean(fluency_scores), 2),
-        "std_fluency": round(np.std(fluency_scores), 2),
-        "mean_flexibility": round(np.mean(flexibility_scores), 2),
-        "std_flexibility": round(np.std(flexibility_scores), 2),
-        "mean_originality": round(np.mean(originality_scores), 2),
-        "std_originality": round(np.std(originality_scores), 2),
-        "mean_elaboration": round(np.mean(elaboration_scores), 2),
-        "std_elaboration": round(np.std(elaboration_scores), 2),
+        "mean_fluency": round(np.mean(fluency_scores), 3),
+        "std_fluency": round(np.std(fluency_scores), 3),
+        "mean_flexibility": round(np.mean(flexibility_scores), 3),
+        "std_flexibility": round(np.std(flexibility_scores), 3),
+        "mean_originality": round(np.mean(originality_scores), 3),
+        "std_originality": round(np.std(originality_scores), 3),
+        "mean_elaboration": round(np.mean(elaboration_scores), 3),
+        "std_elaboration": round(np.std(elaboration_scores), 3),
     }
     return results
-# round(np.mean(fluency_scores), 2)
 
-def write_results_to_csv(input_file_name, results, csv_file_path, version):
-    # Preparing data for CSV
+def write_results_to_csv(input_file_name, mean_std_results, csv_file_path, version):
+    
+    headers = ['Timestamp', 'Task', 'Type', 'Mode', 'Agent', 'Round','Model Name', 'Role Name', 'Data Num', 'Mean Fluency', 'STD Fluency', 'Mean Flexibility', 'STD Flexibility', 'Mean Originality', 'STD Originality', 'Mean Elaboration', 'STD Elaboration', 'File Name']
     csv_data = []
-    # csv_data = [
-    #     ["Task_Type", "Subtask_type", "Agent", "Agent Description", "Data", "Rounds", "mean_fluency", "mean_flexibility", "mean_originality", "mean_elaboration", "std_fluency", "std_flexibility", "std_originality", "std_elaboration"]
-    # ]
-    
-    print(input_file_name.split('_'))
-    Task_Type = input_file_name.split('_')[0]
-    Agent = input_file_name.split('_')[1]
-    Subtask_Type = input_file_name.split('_')[2]
-    
-    if Agent == "single":
-        Agent = 1
-        rounds = 1
-        # place the model name in the 4th place
-        # Agent_Description = input_file_name.split('_')[3]
+    parts = input_file_name.split('_')
 
-        # use gpt-3.5 for single agent now.
-        Agent_Description = "gpt-3.5"
-        # Agent_Description = f"gpt-{version}"
-    elif Agent == 'multi':
-        Agent = input_file_name.split('_')[3]
-        rounds = input_file_name.split('_')[4]
-        Agent_Description = input_file_name.split('_')[5]
-        # Agent_Description = f"gpt-{version}, gpt-{version}"
+
+    Task = parts[0] # AUT, Scientific, Similarities, Instances
+    Type = parts[2] # debate, conversational
+    Data_Num = parts[-1].split('-')[0]
+    Raw_Timestamp = parts[-2].split('-')
+    print("Raw_Timestamp: ", Raw_Timestamp)
+    date = '-'.join(Raw_Timestamp[:3])
+    print("date: ", date)
+    time = ':'.join(Raw_Timestamp[3:6])
+    print("time: ", time)
+    Timestamp = f'{date} {time}'
+
+    Mode, Agent, Rounds, Model_Name, Role_Name = None, None, None, None, None  # Initialize to None
+
+    if parts[1] == "single":
+        Agent = 1
+        Rounds = 1
+        Model_Name = "gpt-3.5"
+        Mode = "Default"
+    elif parts[1] == 'multi':
+        Mode = parts[3]
+        Agent = parts[4]
+        Rounds = parts[5]
+        Model_Name = parts[6]
+        Role_Name = parts[7]
     else:
         print('ERROR AGENT!!')
+    
 
-    
-    # Agent_Description = "gpt-3.5"
-    data_num = input_file_name.split('_')[-1].split('-')[0]
-    
-    # fill in the leader board with correct order
-    row = [Task_Type, Subtask_Type, Agent, Agent_Description, data_num, rounds]
-    expected_order = [
-        "mean_fluency", "mean_flexibility", "mean_originality", "mean_elaboration",
-        "std_fluency", "std_flexibility", "std_originality", "std_elaboration"]
-    
-    row.extend([results[key] for key in expected_order])
+    row = [Timestamp, Task, Type, Mode, Agent, Rounds, Model_Name, Role_Name, Data_Num]
+    row.extend([
+        mean_std_results['mean_fluency'], mean_std_results['std_fluency'],
+        mean_std_results['mean_flexibility'], mean_std_results['std_flexibility'],
+        mean_std_results['mean_originality'], mean_std_results['std_originality'],
+        mean_std_results['mean_elaboration'], mean_std_results['std_elaboration'],
+        input_file_name 
+    ])
     csv_data.append(row)
+    file_path = Path(csv_file_path)
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        with file_path.open(mode='a+', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            if file.tell() == 0:  # If file is empty, write headers
+                writer.writerow(headers)
+            writer.writerows(csv_data)
+        
+        # Now sort the data if needed, by reading, sorting, and rewriting the CSV file
+        with file_path.open(mode='r', newline='', encoding='utf-8') as file:
+            reader = csv.reader(file)
+            header = next(reader)  # Skip header
+            sorted_data = sorted(reader, key=lambda x: (x[0], x[8]))  # Sort by Timestamp and Data Num
 
-    print(csv_file_path)
+        with file_path.open(mode='w', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            writer.writerow(headers)  # Write headers
+            writer.writerows(sorted_data)
 
-    # Writing to CSV file
-    with open(csv_file_path, mode="a", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerows(csv_data)
+        print(f'Data sorted by Timestamp and Data and saved to {csv_file_path}')
+    except Exception as e:
+        print(f'ERROR: Failed to write data to CSV due to {e}')
+
+    # file_path = Path(csv_file_path)
+    # with file_path.open(mode='a', newline='', encoding='utf-8') as file:
+    #     writer = csv.writer(file)
+    #     if file.tell() == 0:  # If file is empty, write headers
+    #         writer.writerow(headers)
+    #     writer.writerows(csv_data)
     
-    # sort the leader board
-    data = []
-    with open(csv_file_path, mode='r', newline='') as file:
-        reader = csv.reader(file)
-        header = next(reader)  
-        for row in reader:
-            data.append(row)
+    # sorted_data = sorted(csv_data, key=lambda x: x[0])
 
-    sorted_data = sorted(data, key=lambda x: (int(x[2]), int(x[4]), x[1],  x[5]))
+    # # Write sorted data back to CSV
+    # with file_path.open(mode='w', newline='', encoding='utf-8') as file:
+    #     writer = csv.writer(file)
+    #     writer.writerow(headers)  # Write headers
+    #     writer.writerows(sorted_data)
 
-    with open(csv_file_path, mode='w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(header)
-        writer.writerows(sorted_data)
-
-    print(f'Data sorted by Task_Type and Data and saved to {csv_file_path}')
+    print(f'Data sorted by Timestamp and Data and saved to {csv_file_path}')
 
         # python3 auto_grade_final.py -v 3 -i Instances_single_few-shot_2-0 -t sampling -s 3 -d Instances -o y
         # python3 auto_grade_bai.py -v 3 -i Instances_multi_debate_2_3_discussion_final_3-0 -t sampling -s 3 -d Instances

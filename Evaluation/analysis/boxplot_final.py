@@ -146,11 +146,21 @@ def main(input_files, output_name, custom_labels, title):
     plot_combined_subplots(scores_dicts, custom_labels, output_name, title)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Process multiple JSON files for scoring analysis.")
-    parser.add_argument("-i", "--input_files", nargs='+', required=True, help="File paths of the JSON files")
-    parser.add_argument("-o", "--output_name", required=True, help="Give me the name of the output file without using json")
-    parser.add_argument("-l", "--custom_labels", nargs='+', required=False, help="Give me the custom labels for the boxplot")
-    parser.add_argument("-t", "--title", required=False, help="Give me the title of the plot")
-    args = parser.parse_args()
+    # parser = argparse.ArgumentParser(description="Process multiple JSON files for scoring analysis.")
+    # parser.add_argument("-i", "--input_files", nargs='+', required=True, help="File paths of the JSON files")
+    # parser.add_argument("-o", "--output_name", required=True, help="Give me the name of the output file without using json")
+    # parser.add_argument("-l", "--custom_labels", nargs='+', required=False, help="Give me the custom labels for the boxplot")
+    # parser.add_argument("-t", "--title", required=False, help="Give me the title of the plot")
+    # args = parser.parse_args()
+    # main(args.input_files, args.output_name, args.custom_labels, args.title)
+    
+    # Lazy to write all the arguments, so I just hardcode them
+    input_files = ['/Users/lawrancechen/Desktop/CreativeLM/NewRepo/LLM-Creativity/Results/AUT/Eval_Result/multi_agent/evaluation_AUT_multi_debate_default_2_3_gpt-3-5-turbo_None-None_final_2024-03-11-09-17-40_1_sampling_3.json', 
+                   '/Users/lawrancechen/Desktop/CreativeLM/NewRepo/LLM-Creativity/Results/AUT/Eval_Result/multi_agent/evaluation_AUT_multi_debate-prompt-9_2_6_gpt-3-5-turbo-gemini-pro_discussion_final_without_special_prompts_10_sampling_3.json']  # Example file paths
+    custom_labels = ['Label 1', 'Label 2']  # These must match the number of input files if they are used
+    output_name = 'analysis_result'
+    title = 'My Analysis'
 
-    main(args.input_files, args.output_name, args.custom_labels, args.title)
+    main(input_files, output_name, custom_labels, title)
+
+    

@@ -5,6 +5,11 @@ import datetime
 import random
 
 
+current_date = datetime.date.today().strftime("%m-%d-")
+current_time = datetime.datetime.now()
+formatted_time = current_time.strftime("%H:%M")
+
+
 class Discussion:
     def __init__(self, dataset_file, rounds):
         self.dataset_file = dataset_file
@@ -318,6 +323,8 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
                 # round_responses = {agent.agent_name: [] for agent in self.agents}
                 print(f"Round {round + 1}: Discussion on {object}")
                 for agent in self.agents:
+                    skip = False
+                    
                     if agent.agent_role != "None":
                         agent_role_prompt = f"You are a {agent.agent_role} whose specialty is {agent.agent_speciality}. {agent.agent_role_prompt} Remember to claim your role in the beginning of each conversation. "
                         print(f"agent_role = {agent.agent_role}")
@@ -341,26 +348,84 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
                         # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
                         response = agent.generate_answer(chat_history[agent.agent_name])
                         print("OUTPUT FROM GENERATE: ", response, "\n")
-                    else:
+                    elif is_last_round:
+
+                        if agent.missing_history: 
+                            #this agent was skipped 
+                            missing_prompt = agent.construct_missing_history(agent.missing_history, agent)
+                            agent.missing_history = [] #reset to empty
+                        else:
+                            missing_prompt = ""
                         # print("most_recent_responses: ", most_recent_responses)
                         combined_prompt = self.construct_response(question_prompt_9, most_recent_responses, agent, object, is_last_round)
-                        formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + combined_prompt)
+                        formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + missing_prompt + combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
                         response = agent.generate_answer(chat_history[agent.agent_name])
                         print("OUTPUT FROM GENERATE: ", response, "\n")
-                        if is_last_round:
-                            uses_list = self.extract_response(response)
-                            print(f"uses_list = {uses_list}")
-                            final_result = {"item": object, "uses": uses_list, "Agent": agent.agent_name}
-                            final_results.append(final_result)
-                    
-                    formatted_response = agent.construct_assistant_message(response)
-                    chat_history[agent.agent_name].append(formatted_response)    
-                    most_recent_responses[agent.agent_name] = [formatted_response]
+                        uses_list = self.extract_response(response)
+                        # print(f"uses_list = {uses_list}")
+                        final_result = {"item": object, "uses": uses_list, "Agent": agent.agent_name}
+                        final_results.append(final_result)
+                    else:
+                        prob = random.random()
+                        print (f"prob = {prob}")
+                        if prob > agent.speaking_rate:
+                            #agent skip this round
+                            skip = True
+                            print(f"######################## S K I P P E D ########################")
+                        if skip:
+                            #skip for this round
+                            agent.missing_history.append(most_recent_responses)
+
+                            if most_recent_responses.get(agent.agent_name):
+                                del most_recent_responses[agent.agent_name]
+                                continue
+                        else: #agent speaking
+                            
+                            if agent.missing_history: 
+                                #this agent was skipped 
+                                missing_prompt = agent.construct_missing_history(agent.missing_history, agent)
+                                agent.missing_history = [] #reset to empty
+                            else:
+                                missing_prompt = ""
+                            combined_prompt = self.construct_response(question_prompt_9, most_recent_responses, agent, object, is_last_round)
+                            formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + missing_prompt + combined_prompt)
+                            chat_history[agent.agent_name].append(formatted_combined_prompt)
+                            # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
+                            response = agent.generate_answer(chat_history[agent.agent_name])
+                            print("OUTPUT FROM GENERATE: ", response, "\n")
+                
+                    if not skip:
+                        formatted_response = agent.construct_assistant_message(response)
+                        chat_history[agent.agent_name].append(formatted_response)    
+                        most_recent_responses[agent.agent_name] = [formatted_response]
+                        print(f"most_recent_responses = {most_recent_responses}")
             all_responses[question] = chat_history
         self.save_debate_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
     
+
+    def construct_missing_history(self, missing_history, current_agent):
+        prefix_string = "These are the previous rounds of discussion to the problem from other agents:\n"
+        for round_history in missing_history:
+            prefix_string += "One round discussion:{"
+            for agent_name, responses in round_history.items():
+                if agent_name == current_agent.agent_name:
+                    continue
+                print("-----------------------------------------")
+                print(agent_name)
+                print(responses)
+                if responses and 'parts' in responses[-1]:
+                    print("IN GEMINI")
+                    response_content = responses[-1]['parts'][0]
+                else:
+                    print("IN GPT")
+                    response_content = responses[-1]['content']
+
+                other_agent_response = f"One agent solution: ```{response_content}```\n"
+                prefix_string += other_agent_response
+            prefix_string += "}. \n"
+        return prefix_string
 
     def construct_response(self, question, most_recent_responses, current_agent, object, is_last_round):
         prefix_string = "These are the solutions to the problem from other agents:\n"
@@ -386,4 +451,17 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
         
         print("Constructed Response", prefix_string)
         return prefix_string
+    
+    def save_debate_conversations(self, agents, all_responses, init_results, final_results, amount_of_data, task_type="AUT"):
+        current_time = datetime.datetime.now()
+        current_date = datetime.date.today().strftime("%Y-%m-%d_")
+        formatted_time = current_time.strftime("%H-%M-%S")
+        model_names_concatenated = "-".join(agent.model_name.replace(".", "-") for agent in agents)
+        output_name = "without_special_prompts"
+        output_filename = f"../../../Results/AUT/chat_log/multi_agent/AUT_multi_rolePlay-conv_{len(self.agents)}_{self.rounds}_history-{self.agent_roles_str}{current_date}{formatted_time}_10.json"
+        final_ans_filename = f"../../../Results/AUT/Output/multi_agent/AUT_multi_rolePlay-conv_{len(self.agents)}_{self.rounds}_final-{self.agent_roles_str}{current_date}{formatted_time}_10.json"
+        init_ans_filename = f"../../../Results/AUT/chat_log/multi_agent/AUT_multi_rolePlay-conv_{len(self.agents)}_{self.rounds}_init-{self.agent_roles_str}{current_date}{formatted_time}_10.json"
+        self.save_conversation(output_filename, all_responses)
+        self.save_conversation(final_ans_filename, final_results)
+        self.save_conversation(init_ans_filename, init_results)
     

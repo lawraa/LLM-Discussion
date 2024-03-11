@@ -2,10 +2,10 @@
   {
     "type": "openai",
     "model_name": "gpt-3.5-turbo",
-    "agent_name": "GPT Agent 1",
-    "agent_role": "None",
-    "agent_speciality": "None",
-    "agent_role_prompt": "None",
+    "agent_name": "GPT Agent 2 - Red Hat",
+    "agent_role": "Red Hat",
+    "agent_speciality": "Emotions and Feelings Interpretation",
+    "agent_role_prompt": "Listens to and validates the emotional responses of the group, understanding the values and intuition behind reactions, without judgment or justification.",
     "speaking_rate": 1
   },
   {
@@ -21,15 +21,6 @@
     "type": "openai",
     "model_name": "gpt-3.5-turbo",
     "agent_name": "GPT Agent 3",
-    "agent_role": "None",
-    "agent_speciality": "None",
-    "agent_role_prompt": "None",
-    "speaking_rate": 1
-  },
-  {
-    "type": "openai",
-    "model_name": "gpt-3.5-turbo",
-    "agent_name": "GPT Agent 4",
     "agent_role": "None",
     "agent_speciality": "None",
     "agent_role_prompt": "None",

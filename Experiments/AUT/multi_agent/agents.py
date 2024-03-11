@@ -56,7 +56,7 @@ class Agent:
         raise NotImplementedError("This method should be implemented by subclasses.")
 
 class OpenAIAgent(Agent):
-    def __init__(self, model_name, agent_name, agent_role, agent_speciality, agent_role_prompt, speaking_rate):
+    def __init__(self, model_name, agent_name, agent_role, agent_speciality, agent_role_prompt, speaking_rate, missing_history = []):
         self.model_name = model_name
         self.client = OpenAI()
         self.agent_name = agent_name
@@ -64,6 +64,7 @@ class OpenAIAgent(Agent):
         self.agent_speciality = agent_speciality
         self.agent_role_prompt = agent_role_prompt
         self.speaking_rate = speaking_rate
+        self.missing_history = missing_history
         
         
     

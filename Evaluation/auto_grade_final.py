@@ -160,7 +160,6 @@ def main():
             total_results.append(question_results)
             print(total_results)
             mean_std_results = calculate_mean_std(total_results)
-            print()
             print(mean_std_results)
             # print(0/0)
     
@@ -179,10 +178,7 @@ def main():
     
     if args.output == 'y':
         mean_std_results = calculate_mean_std(total_results)
-        output_csv_path = os.path.join(Path(__file__).parent, '..', 'Results', 'LeaderBoard', f'LeaderBoard-{args.task}.csv')
-        # output_csv_path is changed to /tmp2/LeaderBoard
-        # output_csv_path = f"/tmp2/LeaderBoard/LeaderBoard-{args.task}.csv"
-        print(output_csv_path)
+        output_csv_path = os.path.join(Path(__file__).parent, '..', 'Results', 'LeaderBoard', f'LeaderBoard-{args.task}-1.csv')
         write_results_to_csv(args.input_file, mean_std_results, output_csv_path, args.version)
         
     else:

@@ -87,7 +87,7 @@ class LLM_Debate(Discussion):
         else:
             model_names_concatenated = "-".join(agent.model_name.replace(".", "-") for agent in agents)
 
-        if all(agent.role_name == "None" for agent in agents):
+        if all(agent.agent_role == "None" for agent in agents):
             role_names_concatenated = "None"
             subtask = "default"
         else:
@@ -97,11 +97,12 @@ class LLM_Debate(Discussion):
         output_filename = f"../../../Results/{task_type}/chat_log/{task_type}_multi_debate_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_log_{current_date}-{formatted_time}_{amount_of_data}.json"
         final_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_final_{current_date}-{formatted_time}_{amount_of_data}.json"
         init_ans_filename = f"../../../Results/{task_type}/init/{task_type}_multi_debate_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_init_{current_date}-{formatted_time}_{amount_of_data}.json"
-        #{Task}_{single/multi}_{framework}_{sub-task}_{agents#}_{rounds#}_{state}-{roles_str}-{date}-{time}_{data#}.json
         
         self.save_conversation(output_filename, all_responses)
         self.save_conversation(final_ans_filename, final_results)
         self.save_conversation(init_ans_filename, init_results)
+
+        return f"{task_type}_multi_debate_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_final_{current_date}-{formatted_time}_{amount_of_data}.json"
 
 class LLM_Debate_AUT(LLM_Debate):
     def run(self):
@@ -137,9 +138,7 @@ class LLM_Debate_AUT(LLM_Debate):
                         # First Round If Statement
                         formatted_initial_prompt = agent.construct_user_message(initial_prompt)
                         chat_history[agent.agent_name].append(formatted_initial_prompt)
-                        print(f"Agent {agent.agent_name}, \nChat History: {chat_history[agent.agent_name]}","\n")
                         response = agent.generate_answer(chat_history[agent.agent_name])
-                        print(f"First Round Response For {agent.agent_name}: ", response, "\n")
 
                         # Save the initial response of the Agent
                         uses_list = self.extract_response(response)
@@ -164,7 +163,8 @@ class LLM_Debate_AUT(LLM_Debate):
                 most_recent_responses = round_responses
             all_responses[question] = chat_history
 
-        self.save_debate_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
+        output_file = self.save_debate_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
+        return output_file
 
 class LLM_Debate_Scientific(LLM_Debate):
     def run(self):
@@ -219,9 +219,8 @@ class LLM_Debate_Scientific(LLM_Debate):
                     most_recent_responses = round_responses
                 all_responses[question] = chat_history
 
-        self.save_debate_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
-
-    
+        output_file = self.save_debate_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
+        return output_file
 
 class LLM_Debate_Instance_Similarities(LLM_Debate):
     def run(self):
@@ -280,7 +279,8 @@ class LLM_Debate_Instance_Similarities(LLM_Debate):
                     round_responses[agent.agent_name].append(formatted_response)
                 most_recent_responses = round_responses
             all_responses[question] = chat_history
-        self.save_debate_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
+        output_file = self.save_debate_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
+        return output_file
 
 
 class RolePlayDiscussion(Discussion):
@@ -315,20 +315,24 @@ class RolePlayDiscussion(Discussion):
         else:
             model_names_concatenated = "-".join(agent.model_name.replace(".", "-") for agent in agents)
 
-        if all(agent.role_name == "None" for agent in agents):
+        if all(agent.agent_role == "None" for agent in agents):
             role_names_concatenated = "None"
             subtask = "default"
         else:
             role_names_concatenated = "-".join(agent.agent_role.replace(" ", "") for agent in agents)
             subtask = "roleplay"
-            
+        
         output_filename = f"../../../Results/{task_type}/chat_log/{task_type}_multi_debate_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_log_{current_date}-{formatted_time}_{amount_of_data}.json"
         final_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_final_{current_date}-{formatted_time}_{amount_of_data}.json"
-        init_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_init_{current_date}-{formatted_time}_{amount_of_data}.json"
-        #{Task}_{single/multi}_{framework}_{sub-task}_{agents#}_{rounds#}_{state}-{roles_str}-{date}-{time}_{data#}.json
+        init_ans_filename = f"../../../Results/{task_type}/init/{task_type}_multi_debate_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_init_{current_date}-{formatted_time}_{amount_of_data}.json"
+        
         self.save_conversation(output_filename, all_responses)
         self.save_conversation(final_ans_filename, final_results)
         self.save_conversation(init_ans_filename, init_results)
+
+        return f"{task_type}_multi_debate_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_final_{current_date}-{formatted_time}_{amount_of_data}.json"
+
+        
     
 class RolePlayDiscussion_AUT(RolePlayDiscussion):
     def run(self):
@@ -341,7 +345,6 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
         for example in dataset['Examples']:
             round_empty = True
             chat_history = {agent.agent_name: [] for agent in self.agents}
-            # print("initial chat_history: ", chat_history, "\n")
             # --------------->>>> set the system content
             object = example['object']
             problem_template = " ".join(dataset["Task"][0]["Problem"])
@@ -398,7 +401,8 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
                     chat_history[agent.agent_name].append(formatted_response)    
                     most_recent_responses[agent.agent_name] = [formatted_response]
             all_responses[question] = chat_history
-        self.save_debate_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
+        output_file = self.save_debate_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
+        return output_file
     
 
     def construct_response(self, question, most_recent_responses, current_agent, object, is_last_round):

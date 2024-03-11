@@ -3,23 +3,26 @@ import os
 import pickle
 import time
 import logging
+from pathlib import Path
 
 class OpenAIModel:
     def __init__(self, cache_file, version, api_key):
         self.cache_file = cache_file
+        self.cache_file_path = Path(__file__).parent
         self.cache_dict = self.load_cache()
         self.version = version
         self.client = OpenAI(api_key=api_key) 
+        
 
     def save_cache(self):
-        with open(self.cache_file, "wb") as f:
+        with open(self.cache_file_path/self.cache_file, "wb") as f:
             pickle.dump(self.cache_dict, f)
 
     def load_cache(self, allow_retry=True):
-        if os.path.exists(self.cache_file):
+        if os.path.exists(self.cache_file_path/self.cache_file):
             while True:
                 try:
-                    with open(self.cache_file, "rb") as f:
+                    with open(self.cache_file_path/self.cache_file, "rb") as f:
                         return pickle.load(f)
                 except Exception as e:
                     if not allow_retry:

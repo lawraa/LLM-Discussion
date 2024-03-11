@@ -11,19 +11,10 @@ import logging
 
 from automation_csv import calculate_mean_std, write_results_to_csv
 
-def main():
+def auto_grade(args):
+    print("AUTO GRADE STARTED, Input_file: ", args.input_file)
     # OPENAI KEY
     api_key = os.getenv("OPENAI_API_KEY")
-
-    # PARSERS
-    parser = argparse.ArgumentParser(description="Evaluate responses based on specified criteria using OpenAI's API.")
-    parser.add_argument("-v", "--version", default="3", choices=["3", "4"], help="Version of the OpenAI model to use.")
-    parser.add_argument("-i", "--input_file", required=True, help="Name of the input file located in the dataset/AUT/discussion_result directory.")
-    parser.add_argument("-t", "--type", default="default", choices=["default", "fewshot", "rubric", "pairwise", "sampling"], help="Variant of the evaluation.")
-    parser.add_argument("-s", "--sample", default=3, type=int, help="Number of times to sample the evaluation.")
-    parser.add_argument("-d", "--task", default="AUT", choices = ["AUT", "Scientific", "Instances", "Similarities"], help="Task for the evaluation. Default is AUT.")
-    parser.add_argument("-o", "--output", default="n", choices=["y", "n"], help="Output into LeaderBoard or not")
-    args = parser.parse_args()
 
     # GPT VERSION
     version = "gpt-4-1106-preview" if args.version == "4" else "gpt-3.5-turbo-0125"
@@ -187,6 +178,15 @@ def main():
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-    main()
+    # PARSERS
+    parser = argparse.ArgumentParser(description="Evaluate responses based on specified criteria using OpenAI's API.")
+    parser.add_argument("-v", "--version", default="3", choices=["3", "4"], help="Version of the OpenAI model to use.")
+    parser.add_argument("-i", "--input_file", required=True, help="Name of the input file located in the dataset/AUT/discussion_result directory.")
+    parser.add_argument("-t", "--type", default="default", choices=["default", "fewshot", "rubric", "pairwise", "sampling"], help="Variant of the evaluation.")
+    parser.add_argument("-s", "--sample", default=3, type=int, help="Number of times to sample the evaluation.")
+    parser.add_argument("-d", "--task", default="AUT", choices = ["AUT", "Scientific", "Instances", "Similarities"], help="Task for the evaluation. Default is AUT.")
+    parser.add_argument("-o", "--output", default="n", choices=["y", "n"], help="Output into LeaderBoard or not")
+    args = parser.parse_args()
+    auto_grade(args)
 
 # python3 auto_grade_final.py -v 3 -i Instances_single_few-shot_2-0 -t sampling -s 3 -d Instances -o y

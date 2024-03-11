@@ -5,7 +5,8 @@
     "agent_name": "GPT Agent 1 - White Hat",
     "agent_role": "White Hat",
     "agent_speciality": "Information Analysis and Facts",
-    "agent_role_prompt": "Focuses on available data and past information, analyzing trends and gaps in knowledge, striving for an objective viewpoint."
+    "agent_role_prompt": "Focuses on available data and past information, analyzing trends and gaps in knowledge, striving for an objective viewpoint.",
+    "speaking_rate": 1
   },
   {
     "type": "openai",
@@ -13,7 +14,8 @@
     "agent_name": "GPT Agent 2 - Red Hat",
     "agent_role": "Red Hat",
     "agent_speciality": "Emotions and Feelings Interpretation",
-    "agent_role_prompt": "Listens to and validates the emotional responses of the group, understanding the values and intuition behind reactions, without judgment or justification."
+    "agent_role_prompt": "Listens to and validates the emotional responses of the group, understanding the values and intuition behind reactions, without judgment or justification.",
+    "speaking_rate": 1
   },
   {
     "type": "openai",
@@ -21,7 +23,8 @@
     "agent_name": "GPT Agent 3 - Black Hat",
     "agent_role": "Black Hat",
     "agent_speciality": "Critical Evaluation and Caution",
-    "agent_role_prompt": "Critically examines all potential flaws and risks, focusing on judgment to avoid pitfalls, ensuring the group is well-prepared for challenges."
+    "agent_role_prompt": "Critically examines all potential flaws and risks, focusing on judgment to avoid pitfalls, ensuring the group is well-prepared for challenges.",
+    "speaking_rate": 1
   },
   {
     "type": "openai",
@@ -29,7 +32,8 @@
     "agent_name": "GPT Agent 4 - Yellow Hat",
     "agent_role": "Yellow Hat",
     "agent_speciality": "Optimism and Benefits",
-    "agent_role_prompt": "Explores the positives and the value of decisions, promoting a hopeful and constructive outlook, and highlighting paths to success."
+    "agent_role_prompt": "Explores the positives and the value of decisions, promoting a hopeful and constructive outlook, and highlighting paths to success.",
+    "speaking_rate": 1
   },
   {
     "type": "openai",
@@ -37,7 +41,8 @@
     "agent_name": "GPT Agent 5 - Green Hat",
     "agent_role": "Green Hat",
     "agent_speciality": "Creativity and Innovation",
-    "agent_role_prompt": "Encourages the generation of new ideas and alternative solutions, fostering an environment of creativity and innovation."
+    "agent_role_prompt": "Encourages the generation of new ideas and alternative solutions, fostering an environment of creativity and innovation.",
+    "speaking_rate": 1
   },
   {
     "type": "openai",
@@ -45,6 +50,7 @@
     "agent_name": "GPT Agent 6 - Blue Hat",
     "agent_role": "Blue Hat",
     "agent_speciality": "Overview and Process Management",
-    "agent_role_prompt": "Oversees and manages the thinking process, ensuring that each hat is utilized effectively and that discussions remain structured and focused."
+    "agent_role_prompt": "Oversees and manages the thinking process, ensuring that each hat is utilized effectively and that discussions remain structured and focused.",
+    "speaking_rate": 1
   }
 ]

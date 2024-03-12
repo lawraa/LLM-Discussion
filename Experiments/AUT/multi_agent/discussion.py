@@ -195,8 +195,14 @@ class LLM_Debate_Scientific(LLM_Debate):
                     round_responses = {agent.agent_name: [] for agent in self.agents}
                     print(f"Round {round + 1}: Discussion on {question}")
                     for agent in self.agents:
+                        if agent.agent_role != "None":
+                            agent_role_prompt = f"You are a {agent.agent_role} whose specialty is {agent.agent_speciality}. {agent.agent_role_prompt} Remember to claim your role in the beginning of each conversation. "
+                            print(f"agent_role = {agent.agent_role}")
+                        else:
+                            agent_role_prompt = ""
+
                         if is_first_round:
-                            formatted_initial_prompt = agent.construct_user_message(initial_prompt)
+                            formatted_initial_prompt = agent.construct_user_message(agent_role_prompt + initial_prompt)
                             chat_history[agent.agent_name].append(formatted_initial_prompt)
                             response = agent.generate_answer(chat_history[agent.agent_name])
                             response_list = self.extract_response(response)
@@ -205,7 +211,7 @@ class LLM_Debate_Scientific(LLM_Debate):
                         else:
                             print("most_recent_responses: ", most_recent_responses)
                             combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round)
-                            formatted_combined_prompt = agent.construct_user_message(combined_prompt)
+                            formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + combined_prompt)
                             chat_history[agent.agent_name].append(formatted_combined_prompt)
                             print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
                             response = agent.generate_answer(chat_history[agent.agent_name])
@@ -250,8 +256,15 @@ class LLM_Debate_Instance_Similarities(LLM_Debate):
                 round_responses = {agent.agent_name: [] for agent in self.agents}
                 print(f"Round {round + 1}: Discussion on {question}")
                 for agent in self.agents:
+
+                    if agent.agent_role != "None":
+                        agent_role_prompt = f"You are a {agent.agent_role} whose specialty is {agent.agent_speciality}. {agent.agent_role_prompt} Remember to claim your role in the beginning of each conversation. "
+                        print(f"agent_role = {agent.agent_role}")
+                    else:
+                        agent_role_prompt = ""
+
                     if is_first_round:
-                        formatted_initial_prompt = agent.construct_user_message(initial_prompt)
+                        formatted_initial_prompt = agent.construct_user_message(agent_role_prompt + initial_prompt)
                         chat_history[agent.agent_name].append(formatted_initial_prompt)
                         print("formatted_initial_prompt: ", formatted_initial_prompt, "\n")
                         print(f"Agent {agent.agent_name} chat history: {chat_history[agent.agent_name]}","\n")
@@ -265,7 +278,7 @@ class LLM_Debate_Instance_Similarities(LLM_Debate):
                     else:
                         print("most_recent_responses: ", most_recent_responses)
                         combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round)
-                        formatted_combined_prompt = agent.construct_user_message(combined_prompt)
+                        formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
                         response = agent.generate_answer(chat_history[agent.agent_name])

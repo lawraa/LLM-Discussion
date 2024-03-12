@@ -119,25 +119,28 @@ class LLM_Debate_AUT(LLM_Debate):
             
             # --------------->>>> set the system content
             chat_history = {agent.agent_name: [] for agent in self.agents}
-            most_recent_responses = {agent.agent_name: [] for agent in self.agents}
+
             object = example['object']
             problem_template = " ".join(dataset["Task"][0]["Problem"])
             question = problem_template.replace("{object}", object)
-            prompt = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can. "
-            question_prompt = question + "\n" + prompt
-            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt
+            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
             most_recent_responses = {}
             # ------------------------------------------
-
             for round in range(self.rounds):
                 is_last_round = (round == self.rounds - 1)
                 is_first_round = (round == 0)
                 round_responses = {agent.agent_name: [] for agent in self.agents}
                 print(f"Round {round + 1}, Object: {object}")
                 for agent in self.agents:
+                    if agent.agent_role != "None":
+                        agent_role_prompt = f"You are a {agent.agent_role} whose specialty is {agent.agent_speciality}. {agent.agent_role_prompt} Remember to claim your role in the beginning of each conversation. "
+                        print(f"agent_role = {agent.agent_role}")
+                    else:
+                        agent_role_prompt = ""
+
                     if is_first_round: 
                         # First Round If Statement
-                        formatted_initial_prompt = agent.construct_user_message(initial_prompt)
+                        formatted_initial_prompt = agent.construct_user_message(agent_role_prompt + initial_prompt)
                         chat_history[agent.agent_name].append(formatted_initial_prompt)
                         response = agent.generate_answer(chat_history[agent.agent_name])
 
@@ -147,8 +150,8 @@ class LLM_Debate_AUT(LLM_Debate):
                         init_results.append(init_result)
 
                     else:
-                        combined_prompt = self.construct_response(question_prompt, most_recent_responses, agent, is_last_round, object)
-                        formatted_combined_prompt = agent.construct_user_message(combined_prompt)
+                        combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round, object)
+                        formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         response = agent.generate_answer(chat_history[agent.agent_name])
 
@@ -181,9 +184,9 @@ class LLM_Debate_Scientific(LLM_Debate):
                 chat_history = {agent.agent_name: [] for agent in self.agents}
                 # --------------->>>> set the system content
                 question = example
-                prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can. "
-                question_prompt_9 = question + "\n" + prompt_9
-                initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
+                # prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can. "
+                # question_prompt_9 = question + "\n" + prompt_9
+                initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
                 # ------------------------------------------
                 most_recent_responses = {}
                 for round in range(self.rounds):
@@ -201,7 +204,7 @@ class LLM_Debate_Scientific(LLM_Debate):
                             init_results.append(init_result)
                         else:
                             print("most_recent_responses: ", most_recent_responses)
-                            combined_prompt = self.construct_response(question_prompt_9, most_recent_responses, agent, is_last_round)
+                            combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round)
                             formatted_combined_prompt = agent.construct_user_message(combined_prompt)
                             chat_history[agent.agent_name].append(formatted_combined_prompt)
                             print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
@@ -236,9 +239,9 @@ class LLM_Debate_Instance_Similarities(LLM_Debate):
             print("initial chat_history: ", chat_history, "\n")
             # --------------->>>> set the system content
             question = example
-            prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can. "
-            question_prompt_9 = question + "\n" + prompt_9
-            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
+            # prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can. "
+            # question_prompt_9 = question + "\n" + prompt_9
+            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
             # ------------------------------------------
             most_recent_responses = {}
             for round in range(self.rounds):
@@ -261,7 +264,7 @@ class LLM_Debate_Instance_Similarities(LLM_Debate):
                         init_results.append(init_result)
                     else:
                         print("most_recent_responses: ", most_recent_responses)
-                        combined_prompt = self.construct_response(question_prompt_9, most_recent_responses, agent, is_last_round)
+                        combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round)
                         formatted_combined_prompt = agent.construct_user_message(combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
@@ -284,7 +287,7 @@ class LLM_Debate_Instance_Similarities(LLM_Debate):
         return output_file
 
 
-class RolePlayDiscussion(Discussion):
+class Conversational(Discussion):
     def __init__(self, agents_config, dataset_file, rounds, task, agent_role_str=""):
         super().__init__(dataset_file, rounds)
         self.agent_roles_str = agent_role_str
@@ -307,7 +310,7 @@ class RolePlayDiscussion(Discussion):
         print("The agents are: ", agents)
         return agents
     
-    def save_debate_conversations(self, agents, all_responses, init_results, final_results, amount_of_data, task_type="AUT"):
+    def save_convo_conversations(self, agents, all_responses, init_results, final_results, amount_of_data, task_type="AUT"):
         current_time = datetime.datetime.now()
         current_date = datetime.date.today().strftime("%Y-%m-%d")
         formatted_time = current_time.strftime("%H-%M-%S")
@@ -323,19 +326,19 @@ class RolePlayDiscussion(Discussion):
             role_names_concatenated = "-".join(agent.agent_role.replace(" ", "") for agent in agents)
             subtask = "roleplay"
         
-        output_filename = f"../../../Results/{task_type}/chat_log/{task_type}_multi_debate_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_log_{current_date}-{formatted_time}_{amount_of_data}.json"
-        final_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_debate_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_final_{current_date}-{formatted_time}_{amount_of_data}.json"
-        init_ans_filename = f"../../../Results/{task_type}/init/{task_type}_multi_debate_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_init_{current_date}-{formatted_time}_{amount_of_data}.json"
+        output_filename = f"../../../Results/{task_type}/chat_log/{task_type}_multi_convo_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_log_{current_date}-{formatted_time}_{amount_of_data}.json"
+        final_ans_filename = f"../../../Results/{task_type}/Output/multi_agent/{task_type}_multi_convo_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_final_{current_date}-{formatted_time}_{amount_of_data}.json"
+        init_ans_filename = f"../../../Results/{task_type}/init/{task_type}_multi_convo_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_init_{current_date}-{formatted_time}_{amount_of_data}.json"
         
         self.save_conversation(output_filename, all_responses)
         self.save_conversation(final_ans_filename, final_results)
         self.save_conversation(init_ans_filename, init_results)
 
-        return f"{task_type}_multi_debate_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_final_{current_date}-{formatted_time}_{amount_of_data}.json"
+        return f"{task_type}_multi_convo_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_final_{current_date}-{formatted_time}_{amount_of_data}.json"
 
         
     
-class RolePlayDiscussion_AUT(RolePlayDiscussion):
+class Conversational_AUT(Conversational):
     def run(self):
         with open(self.dataset_file, 'r') as f:
             dataset = json.load(f)
@@ -350,19 +353,17 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
             object = example['object']
             problem_template = " ".join(dataset["Task"][0]["Problem"])
             question = problem_template.replace("{object}", object)
-            prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can. "
-            question_prompt_9 = question + "\n" + prompt_9
-            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question_prompt_9
+            #prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can. "
+            #question_prompt_9 = question + "\n" + prompt_9
+            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
             # ------------------------------------------
             most_recent_responses = {}
             for round in range(self.rounds):
                 is_last_round = (round == self.rounds - 1)
                 is_first_round = (round == 0)
-                # round_responses = {agent.agent_name: [] for agent in self.agents}
                 print(f"Round {round + 1}: Discussion on {object}")
                 for agent in self.agents:
                     skip = False
-                    
                     if agent.agent_role != "None":
                         agent_role_prompt = f"You are a {agent.agent_role} whose specialty is {agent.agent_speciality}. {agent.agent_role_prompt} Remember to claim your role in the beginning of each conversation. "
                         print(f"agent_role = {agent.agent_role}")
@@ -374,14 +375,15 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
                         formatted_initial_prompt = agent.construct_user_message(agent_role_prompt + initial_prompt)
                         chat_history[agent.agent_name].append(formatted_initial_prompt)
                         response = agent.generate_answer(chat_history[agent.agent_name])
-
+                        
+                        # Save to initial result
                         uses_list = self.extract_response(response)
                         init_result = {"item": object, "uses": uses_list, "Agent": agent.agent_name}
                         init_results.append(init_result)
                     elif is_first_round:
                         # print("most_recent_responses: ", most_recent_responses)
                         combined_prompt = self.construct_response("", most_recent_responses, agent, object, is_last_round)
-                        formatted_combined_prompt = agent.construct_user_message(agent_role_prompt +"Initiate a discussion with others to collectively complete the following task: " + question_prompt_9 + " "+ combined_prompt)
+                        formatted_combined_prompt = agent.construct_user_message(agent_role_prompt +"Initiate a discussion with others to collectively complete the following task: " + question + " "+ combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
                         response = agent.generate_answer(chat_history[agent.agent_name])
@@ -395,7 +397,7 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
                         else:
                             missing_prompt = ""
                         # print("most_recent_responses: ", most_recent_responses)
-                        combined_prompt = self.construct_response(question_prompt_9, most_recent_responses, agent, object, is_last_round)
+                        combined_prompt = self.construct_response(question, most_recent_responses, agent, object, is_last_round)
                         formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + missing_prompt + combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
@@ -427,7 +429,7 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
                                 agent.missing_history = [] #reset to empty
                             else:
                                 missing_prompt = ""
-                            combined_prompt = self.construct_response(question_prompt_9, most_recent_responses, agent, object, is_last_round)
+                            combined_prompt = self.construct_response(question, most_recent_responses, agent, object, is_last_round)
                             formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + missing_prompt + combined_prompt)
                             chat_history[agent.agent_name].append(formatted_combined_prompt)
                             # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
@@ -438,9 +440,9 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
                         formatted_response = agent.construct_assistant_message(response)
                         chat_history[agent.agent_name].append(formatted_response)    
                         most_recent_responses[agent.agent_name] = [formatted_response]
-                        print(f"most_recent_responses = {most_recent_responses}")
+                        # print(f"most_recent_responses = {most_recent_responses}")
             all_responses[question] = chat_history
-        output_file = self.save_debate_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
+        output_file = self.save_convo_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
         return output_file
     
 
@@ -491,16 +493,4 @@ class RolePlayDiscussion_AUT(RolePlayDiscussion):
         print("Constructed Response", prefix_string)
         return prefix_string
     
-    def save_debate_conversations(self, agents, all_responses, init_results, final_results, amount_of_data, task_type="AUT"):
-        current_time = datetime.datetime.now()
-        current_date = datetime.date.today().strftime("%Y-%m-%d_")
-        formatted_time = current_time.strftime("%H-%M-%S")
-        model_names_concatenated = "-".join(agent.model_name.replace(".", "-") for agent in agents)
-        output_name = "without_special_prompts"
-        output_filename = f"../../../Results/AUT/chat_log/multi_agent/AUT_multi_rolePlay-conv_{len(self.agents)}_{self.rounds}_history-{self.agent_roles_str}{current_date}{formatted_time}_10.json"
-        final_ans_filename = f"../../../Results/AUT/Output/multi_agent/AUT_multi_rolePlay-conv_{len(self.agents)}_{self.rounds}_final-{self.agent_roles_str}{current_date}{formatted_time}_10.json"
-        init_ans_filename = f"../../../Results/AUT/chat_log/multi_agent/AUT_multi_rolePlay-conv_{len(self.agents)}_{self.rounds}_init-{self.agent_roles_str}{current_date}{formatted_time}_10.json"
-        self.save_conversation(output_filename, all_responses)
-        self.save_conversation(final_ans_filename, final_results)
-        self.save_conversation(init_ans_filename, init_results)
     

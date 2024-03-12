@@ -1,5 +1,5 @@
 import argparse
-from discussion import RolePlayDiscussion_AUT
+from discussion import Conversational_AUT
 import argparse
 import sys
 from pathlib import Path
@@ -14,8 +14,8 @@ def main():
     parser.add_argument("-t", "--type", choices= ["AUT", "Scientific","Similarities", "Instances"], help="Type of task to run.")
     args = parser.parse_args()
 
-    agents_config = RolePlayDiscussion_AUT.load_config(args.config)
-    discussion_runner = RolePlayDiscussion_AUT(agents_config, args.dataset, args.rounds, args.type)
+    agents_config = Conversational_AUT.load_config(args.config)
+    discussion_runner = Conversational_AUT(agents_config, args.dataset, args.rounds, args.type)
     discussion_output = discussion_runner.run()
 
     if args.eval_mode:

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "Circular storytelling narrative",
+            "Circular unity in diversity movements",
+            "Halo symbolism in religious iconography",
+            "Vortex of change in societal revolutions"
+        ],
+        "Agent": "GPT Agent 1 - Analyst"
+    },
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "Whirlpool",
+            "Spiral staircase",
+            "Circle of life",
+            "Circle of trust"
+        ],
+        "Agent": "GPT Agent 2 - Classifier"
+    }
+]

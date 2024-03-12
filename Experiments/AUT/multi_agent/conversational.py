@@ -1,5 +1,5 @@
 import argparse
-from discussion import Conversational_AUT
+from discussion import Conversational_AUT, Conversational_Scientific
 import argparse
 import sys
 from pathlib import Path
@@ -12,10 +12,15 @@ def main():
     parser.add_argument("-d", "--dataset", required=True, help="Path to the dataset file.")
     parser.add_argument("-r", "--rounds", type=int, default=3, help="Number of rounds in the discussion.")
     parser.add_argument("-t", "--type", choices= ["AUT", "Scientific","Similarities", "Instances"], help="Type of task to run.")
+    parser.add_argument("-e", "--eval_mode", action="store_true", default=False, help="Run in evaluation mode.")
     args = parser.parse_args()
-
-    agents_config = Conversational_AUT.load_config(args.config)
-    discussion_runner = Conversational_AUT(agents_config, args.dataset, args.rounds, args.type)
+    if args.type == "AUT":
+        agents_config = Conversational_AUT.load_config(args.config)
+        discussion_runner = Conversational_AUT(agents_config, args.dataset, args.rounds, args.type)
+    elif args.type == "Scientific":
+        agents_config = Conversational_Scientific.load_config(args.config)
+        discussion_runner = Conversational_Scientific(agents_config, args.dataset, args.rounds, args.type)
+        
     discussion_output = discussion_runner.run()
 
     if args.eval_mode:

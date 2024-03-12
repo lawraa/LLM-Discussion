@@ -323,6 +323,27 @@ class Conversational(Discussion):
         print("The agents are: ", agents)
         return agents
     
+    def construct_response(self, question, most_recent_responses, current_agent, is_last_round, object = "None"):
+        prefix_string = "These are the solutions to the problem from other agents:\n"
+        for agent_name, responses in most_recent_responses.items():
+            if agent_name == current_agent.agent_name:
+                continue  
+            if responses and 'parts' in responses[-1]:
+                response_content = responses[-1]['parts'][0]
+            else:
+                response_content = responses[-1]['content']
+            
+            other_agent_response = f"One agent solution: ```{response_content}```\n"
+            prefix_string += other_agent_response
+        prefix_string += question
+        if is_last_round:
+            if self.task_type == "AUT":
+                prefix_string += f"This is the last round of the discussion, please only present a list of the most creative uses of {object} as your final answers. Please list the answer in 1. ... 2. ... 3. ... and so on.\n\n"
+            else:
+                prefix_string += f"This is the last round of the discussion, please only present a list of your final answers. Please list the final response in 1. ... 2. ... 3. ... and so on. \n\n"
+        
+        return prefix_string
+    
     def save_convo_conversations(self, agents, all_responses, init_results, final_results, amount_of_data, task_type="AUT"):
         current_time = datetime.datetime.now()
         current_date = datetime.date.today().strftime("%Y-%m-%d")
@@ -349,8 +370,6 @@ class Conversational(Discussion):
 
         return f"{task_type}_multi_convo_{subtask}_{len(self.agents)}_{self.rounds}_{model_names_concatenated}_{role_names_concatenated}_final_{current_date}-{formatted_time}_{amount_of_data}.json"
 
-        
-    
 class Conversational_AUT(Conversational):
     def run(self):
         with open(self.dataset_file, 'r') as f:
@@ -395,7 +414,8 @@ class Conversational_AUT(Conversational):
                         init_results.append(init_result)
                     elif is_first_round:
                         # print("most_recent_responses: ", most_recent_responses)
-                        combined_prompt = self.construct_response("", most_recent_responses, agent, object, is_last_round)
+                        # self, question, most_recent_responses, current_agent, is_last_round, object = "None"
+                        combined_prompt = self.construct_response("", most_recent_responses, agent, is_last_round, object = object)
                         formatted_combined_prompt = agent.construct_user_message(agent_role_prompt +"Initiate a discussion with others to collectively complete the following task: " + question + " "+ combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
@@ -410,7 +430,7 @@ class Conversational_AUT(Conversational):
                         else:
                             missing_prompt = ""
                         # print("most_recent_responses: ", most_recent_responses)
-                        combined_prompt = self.construct_response(question, most_recent_responses, agent, object, is_last_round)
+                        combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round, object=object)
                         formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + missing_prompt + combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
@@ -442,7 +462,7 @@ class Conversational_AUT(Conversational):
                                 agent.missing_history = [] #reset to empty
                             else:
                                 missing_prompt = ""
-                            combined_prompt = self.construct_response(question, most_recent_responses, agent, object, is_last_round)
+                            combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round, object= object)
                             formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + missing_prompt + combined_prompt)
                             chat_history[agent.agent_name].append(formatted_combined_prompt)
                             # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
@@ -480,30 +500,135 @@ class Conversational_AUT(Conversational):
                 prefix_string += other_agent_response
             prefix_string += "}. \n"
         return prefix_string
+    
 
-    def construct_response(self, question, most_recent_responses, current_agent, object, is_last_round):
-        prefix_string = "These are the solutions to the problem from other agents:\n"
-        for agent_name, responses in most_recent_responses.items():
-            if agent_name == current_agent.agent_name:
-                continue
-            print("-----------------------------------------")
-            print(agent_name)
-            print(responses)
-            if responses and 'parts' in responses[-1]:
-                print("IN GEMINI")
-                response_content = responses[-1]['parts'][0]
-            else:
-                print("IN GPT")
-                response_content = responses[-1]['content']
+class Conversational_Scientific(Conversational):
+    def run(self):
+        with open(self.dataset_file, 'r') as f:
+            dataset = json.load(f)
+        all_responses = {}
+        init_results = []
+        final_results = []
+        amount_of_data = 0
+        for task in dataset['Task']:
+            amount_of_data += len(task['Example'])
+            for example in task['Example']:
+                round_empty = True
+                chat_history = {agent.agent_name: [] for agent in self.agents}
+                # --------------->>>> set the system content
+                question = example
+                initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
+                # ------------------------------------------
+                most_recent_responses = {}
+                for round in range(self.rounds):
+                    is_last_round = (round == self.rounds - 1)
+                    is_first_round = (round == 0)
+                    print(f"Round {round + 1}: Discussion on {question}")
+                    for agent in self.agents:
+                        skip = False
+                        if agent.agent_role != "None":
+                            agent_role_prompt = f"You are a {agent.agent_role} whose specialty is {agent.agent_speciality}. {agent.agent_role_prompt} Remember to claim your role in the beginning of each conversation. "
+                            print(f"agent_role = {agent.agent_role}")
+                        else:
+                            agent_role_prompt = ""
+                        if is_first_round and round_empty:
+                            round_empty = False
+                            formatted_initial_prompt = agent.construct_user_message(agent_role_prompt + initial_prompt)
+                            chat_history[agent.agent_name].append(formatted_initial_prompt)
+                            response = agent.generate_answer(chat_history[agent.agent_name])
+                            
+                            # Save to initial result
+                            response_list = self.extract_response(response)
+                            init_result = {"question": question, "answer": response_list, "Agent": agent.agent_name}
+                            init_results.append(init_result)
+                        elif is_first_round:
+                            # print("most_recent_responses: ", most_recent_responses)
+                            combined_prompt = self.construct_response("", most_recent_responses, agent, is_last_round)
+                            formatted_combined_prompt = agent.construct_user_message(agent_role_prompt +"Initiate a discussion with others to collectively complete the following task: " + question + " "+ combined_prompt)
+                            chat_history[agent.agent_name].append(formatted_combined_prompt)
+                            # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
+                            response = agent.generate_answer(chat_history[agent.agent_name])
+                            print("OUTPUT FROM GENERATE: ", response, "\n")
+                        elif is_last_round:
 
-            other_agent_response = f"One agent solution: ```{response_content}```\n"
-            prefix_string += other_agent_response
+                            if agent.missing_history: 
+                                #this agent was skipped 
+                                missing_prompt = agent.construct_missing_history(agent.missing_history, agent)
+                                agent.missing_history = [] #reset to empty
+                            else:
+                                missing_prompt = ""
+                            # print("most_recent_responses: ", most_recent_responses)
+                            combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round)
+                            formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + missing_prompt + combined_prompt)
+                            chat_history[agent.agent_name].append(formatted_combined_prompt)
+                            # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
+                            response = agent.generate_answer(chat_history[agent.agent_name])
+                            print("OUTPUT FROM GENERATE: ", response, "\n")
+                            response_list = self.extract_response(response)
+                            # print(f"uses_list = {uses_list}")
+                            final_result = {"question": question, "answer": response_list, "Agent": agent.agent_name}
+                            final_results.append(final_result)
+                        else:
+                            prob = random.random()
+                            # print (f"prob = {prob}")
+                            if prob > agent.speaking_rate:
+                                #agent skip this round
+                                skip = True
+                                print(f"######################## S K I P P E D ########################")
+                            if skip:
+                                #skip for this round
+                                agent.missing_history.append(most_recent_responses)
 
-        prefix_string += question
-        if is_last_round:
-            prefix_string += f"This is the last round of the discussion, please only present a list of the most creative uses of {object} as your final answers. Please list the answer in 1. ... 2. ... 3. ... and so on.\n\n"
-        
-        print("Constructed Response", prefix_string)
+                                if most_recent_responses.get(agent.agent_name):
+                                    del most_recent_responses[agent.agent_name]
+                                    continue
+                            else: #agent speaking
+                                
+                                if agent.missing_history: 
+                                    #this agent was skipped 
+                                    missing_prompt = agent.construct_missing_history(agent.missing_history, agent)
+                                    agent.missing_history = [] #reset to empty
+                                else:
+                                    missing_prompt = ""
+                                combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round)
+                                formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + missing_prompt + combined_prompt)
+                                chat_history[agent.agent_name].append(formatted_combined_prompt)
+                                # print("INPUT TO GENERATE: ", chat_history[agent.agent_name], "\n")
+                                response = agent.generate_answer(chat_history[agent.agent_name])
+                                print("OUTPUT FROM GENERATE: ", response, "\n")
+                    
+                        if not skip:
+                            formatted_response = agent.construct_assistant_message(response)
+                            chat_history[agent.agent_name].append(formatted_response)    
+                            most_recent_responses[agent.agent_name] = [formatted_response]
+                            # print(f"most_recent_responses = {most_recent_responses}")
+                all_responses[question] = chat_history
+        output_file = self.save_convo_conversations(self.agents, all_responses, init_results, final_results, amount_of_data, task_type=self.task_type)
+        return output_file
+    
+
+    def construct_missing_history(self, missing_history, current_agent):
+        prefix_string = "These are the previous rounds of discussion to the problem from other agents:\n"
+        for round_history in missing_history:
+            prefix_string += "One round discussion:{"
+            for agent_name, responses in round_history.items():
+                if agent_name == current_agent.agent_name:
+                    continue
+                print("-----------------------------------------")
+                print(agent_name)
+                print(responses)
+                if responses and 'parts' in responses[-1]:
+                    print("IN GEMINI")
+                    response_content = responses[-1]['parts'][0]
+                else:
+                    print("IN GPT")
+                    response_content = responses[-1]['content']
+
+                other_agent_response = f"One agent solution: ```{response_content}```\n"
+                prefix_string += other_agent_response
+            prefix_string += "}. \n"
         return prefix_string
+
+
     
     

@@ -1,0 +1,20 @@
+[
+    {
+        "question": "If you could explore the deepest part of the ocean, what mysteries or unknown species would you expect to find?",
+        "answer": [
+            "Bioluminescent creatures that light up the darkness",
+            "Giant creatures that have never been seen before",
+            "Potentially prehistoric creatures that were thought to be extinct"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "If you could explore the deepest part of the ocean, what mysteries or unknown species would you expect to find?",
+        "answer": [
+            "Bioluminescent creatures that light up the darkness",
+            "Giant creatures that have never been seen before",
+            "Potentially prehistoric creatures that were thought to be extinct"
+        ],
+        "Agent": "GPT Agent 2 - Black Hat"
+    }
+]

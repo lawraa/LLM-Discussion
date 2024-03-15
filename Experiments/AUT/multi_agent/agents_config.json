@@ -11,10 +11,10 @@
   {
     "type": "openai",
     "model_name": "gpt-3.5-turbo",
-    "agent_name": "GPT Agent 2 - Black Hat",
-    "agent_role": "Black Hat",
-    "agent_speciality": "Critical Evaluation and Caution",
-    "agent_role_prompt": "Critically examines all potential flaws and risks, focusing on judgment to avoid pitfalls, ensuring the group is well-prepared for challenges.",
+    "agent_name": "GPT Agent 2",
+    "agent_role": "None",
+    "agent_speciality": "None",
+    "agent_role_prompt": "None",
     "speaking_rate": 1
   }
 ]

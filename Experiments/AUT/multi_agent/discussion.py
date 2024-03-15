@@ -9,6 +9,7 @@ class Discussion:
     def __init__(self, dataset_file, rounds):
         self.dataset_file = dataset_file
         self.rounds = rounds
+        self.discussion_prompt = " Engage in a collaborative discussion where each of you contributes a unique insight or query, aiming to delve into uncharted territories of thought. Throughout the discussion, focus on expanding the scope and depth of each contribution through constructive feedback, counterpoints, and further questioning. The objective is to achieve a broad spectrum of ideas and solutions, promoting a culture of continuous learning and innovation."
         print("Discussion initialized with dataset: {} and {} rounds.".format(dataset_file, rounds))
 
     def run(self):
@@ -73,10 +74,13 @@ class LLM_Debate(Discussion):
         prefix_string += question
         if is_last_round:
             if self.task_type == "AUT":
-                prefix_string += f"This is the last round of the discussion, please only present a list of the most creative uses of {object} as your final answers. Please list the answer in 1. ... 2. ... 3. ... and so on.\n\n"
+                prefix_string += f"This is the last round of the discussion. Please accumulate all the valuable answers for the creative use of {object} from the entire discussion. Note that diversity, originality, number of answers, and the amount of details of each answer are all important. Please list the answer in 1. ... 2. ... 3. ... and so on.\n\n"
+                # prefix_string += f"This is the last round of the discussion, please only present a list of the most creative uses of {object} as your final answers. Please list the answer in 1. ... 2. ... 3. ... and so on.\n\n"
             else:
-                prefix_string += f"This is the last round of the discussion, please only present a list of your final answers. Please list the final response in 1. ... 2. ... 3. ... and so on. \n\n"
-        
+                prefix_string += "This is the last round of the discussion. Please accumulate all the valuable answers from the entire discussion. Note that diversity, originality, number of answers, and the amount of details of each answer are all important. Please list the answer in 1. ... 2. ... 3. ... and so on.\n\n"
+                #prefix_string += f"This is the last round of the discussion, please only present a list of your final answers. Please list the final response in 1. ... 2. ... 3. ... and so on. \n\n"
+        else:
+            prefix_string += self.discussion_prompt
         return prefix_string
     
     def save_debate_conversations(self, agents, all_responses, init_results, final_results, amount_of_data, task_type="AUT"):
@@ -115,6 +119,7 @@ class LLM_Debate_AUT(LLM_Debate):
         final_results = []
         amount_of_data = len(dataset['Examples'])
 
+
         for example in dataset['Examples']:
             
             # --------------->>>> set the system content
@@ -123,7 +128,7 @@ class LLM_Debate_AUT(LLM_Debate):
             object = example['object']
             problem_template = " ".join(dataset["Task"][0]["Problem"])
             question = problem_template.replace("{object}", object)
-            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
+            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question + self.discussion_prompt
             most_recent_responses = {}
             # ------------------------------------------
             for round in range(self.rounds):
@@ -142,7 +147,9 @@ class LLM_Debate_AUT(LLM_Debate):
                         # First Round If Statement
                         formatted_initial_prompt = agent.construct_user_message(agent_role_prompt + initial_prompt)
                         chat_history[agent.agent_name].append(formatted_initial_prompt)
+                        print("Round: ",round, ", Agent: ", agent.agent_name,", INPUT: ", chat_history[agent.agent_name], "\n")
                         response = agent.generate_answer(chat_history[agent.agent_name])
+                        print("OUTPUT: ", response, "\n")
 
                         # Save the initial response of the Agent
                         uses_list = self.extract_response(response)
@@ -150,11 +157,12 @@ class LLM_Debate_AUT(LLM_Debate):
                         init_results.append(init_result)
 
                     else:
-                        combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round, object)
+                        combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round, object = object)
                         formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
+                        print("Round: ",round, ", Agent: ", agent.agent_name,", INPUT: ", chat_history[agent.agent_name], "\n")
                         response = agent.generate_answer(chat_history[agent.agent_name])
-
+                        print("OUTPUT: ", response, "\n")
                         # Save Final Result of the Agent
                         if is_last_round:
                             uses_list = self.extract_response(response)
@@ -186,7 +194,7 @@ class LLM_Debate_Scientific(LLM_Debate):
                 question = example
                 # prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can. "
                 # question_prompt_9 = question + "\n" + prompt_9
-                initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
+                initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question + self.discussion_prompt
                 # ------------------------------------------
                 most_recent_responses = {}
                 for round in range(self.rounds):
@@ -247,7 +255,7 @@ class LLM_Debate_Instance_Similarities(LLM_Debate):
             question = example
             # prompt_9 = "You are in a group discussion with other teammates; as a result, you should answer as diverge and creative as you can. "
             # question_prompt_9 = question + "\n" + prompt_9
-            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question
+            initial_prompt = "Initiate a discussion with others to collectively complete the following task: " + question + self.discussion_prompt
             # ------------------------------------------
             most_recent_responses = {}
             for round in range(self.rounds):

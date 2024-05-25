@@ -1,0 +1,163 @@
+[
+    {
+        "question": "Tell me all the ways in which a book and a magazine are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a book and a magazine are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a book and a magazine are alike.",
+        "answer": [
+            "Both books and magazines are published materials that contain written content and images.",
+            "They are both physical objects that can be held and read.",
+            "They are both sources of information and entertainment.",
+            "Both books and magazines are typically formatted in pages, chapters, and sections.",
+            "Both can be used for educational purposes or leisure reading.",
+            "They are both portable and can be taken with you on the go.",
+            "Both books and magazines can be purchased in bookstores or online.",
+            "They are both often categorized by genre, such as fiction, non-fiction, fashion, or cooking.",
+            "Both can be borrowed from libraries or shared with others.",
+            "Both books and magazines can feature advertisements and promotional content."
+        ],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Tell me all the ways in which a car and a bicycle are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a car and a bicycle are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a car and a bicycle are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Tell me all the ways in which a tree and a flower are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a tree and a flower are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a tree and a flower are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Tell me all the ways in which a cake and a pie are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a cake and a pie are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a cake and a pie are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Tell me all the ways in which a bird and an airplane are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a bird and an airplane are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a bird and an airplane are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Tell me all the ways in which a kite and a balloon are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a kite and a balloon are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a kite and a balloon are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Tell me all the ways in which a pencil and a pen are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a pencil and a pen are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a pencil and a pen are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Tell me all the ways in which a chair and a couch are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a chair and a couch are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a chair and a couch are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Tell me all the ways in which a jellyfish and an octopus are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a jellyfish and an octopus are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a jellyfish and an octopus are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Tell me all the ways in which a star and a planet are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a star and a planet are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a star and a planet are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    }
+]

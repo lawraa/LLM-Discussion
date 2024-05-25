@@ -1,0 +1,113 @@
+[
+    {
+        "question": "Tell me all the ways in which a book and a magazine are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a book and a magazine are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a car and a bicycle are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a car and a bicycle are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a tree and a flower are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a tree and a flower are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a cake and a pie are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a cake and a pie are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a bird and an airplane are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a bird and an airplane are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a kite and a balloon are alike.",
+        "answer": [
+            "Both a kite and a balloon are objects that can float in the air.",
+            "They both rely on wind to stay airborne and can be flown at various heights.",
+            "Both can be used for recreational purposes, such as flying at a park or on the beach.",
+            "Kites and balloons can come in different shapes, sizes, and colors.",
+            "They both require strings or ropes to control and steer their movement.",
+            "Kites and balloons can be used to carry messages or small objects attached to them.",
+            "Both can be used in scientific experiments or as tools for measuring wind speed and direction.",
+            "Kites and balloons are both traditionally used in celebrations and festivals around the world.",
+            "They can both bring joy and entertainment to people of all ages.",
+            "Both can be used as advertising tools, with messages or logos displayed on them."
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a kite and a balloon are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a pencil and a pen are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a pencil and a pen are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a chair and a couch are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a chair and a couch are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a jellyfish and an octopus are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a jellyfish and an octopus are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Tell me all the ways in which a star and a planet are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Tell me all the ways in which a star and a planet are alike.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    }
+]

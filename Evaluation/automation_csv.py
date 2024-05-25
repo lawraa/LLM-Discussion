@@ -45,12 +45,13 @@ def write_results_to_csv(input_file_name, mean_std_results, csv_file_path, versi
 
     Mode, Agent, Rounds, Model_Name, Role_Name = None, None, None, None, None  # Initialize to None
 
-    if parts[1] == "single":
-        Agent = 1
-        Rounds = 1
-        Model_Name = "gpt-3.5"
-        Mode = "Default"
-    elif parts[1] == 'multi':
+    #if parts[1] == "single":
+        #Agent = parts[4]
+        #Rounds = parts[5]
+        #Model_Name = parts[6]
+        #Mode = parts[3]
+        #Role_Name = parts[7]
+    if parts[1] == 'multi':
         Mode = parts[3]
         Agent = parts[4]
         Rounds = parts[5]

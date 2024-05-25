@@ -1,0 +1,1082 @@
+[
+    {
+        "question": "Name all the things you can think of that are used in culture.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used in culture.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used in culture.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used in culture.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are found in a bathroom.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are found in a bathroom.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are found in a bathroom.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are found in a bathroom.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are soft.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are soft.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are soft.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are soft.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used in celebrations.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used in celebrations.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used in celebrations.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used in celebrations.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that can be written on.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that can be written on.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that can be written on.",
+        "answer": [
+            "Paper",
+            "Notebooks",
+            "Post-its",
+            "Whiteboards",
+            "Chalkboards",
+            "Walls",
+            "Computers",
+            "Tablets",
+            "Smartphones",
+            "T-shirts",
+            "Coffee mugs",
+            "Wooden signs",
+            "Balloons",
+            "Glass windows",
+            "Fabric banners",
+            "Greeting cards",
+            "License plates",
+            "Envelopes",
+            "Photographs",
+            "Rocks",
+            "Canvas",
+            "Skateboards",
+            "Planners",
+            "Luggage tags",
+            "Name tags"
+        ],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that can be written on.",
+        "answer": [
+            "Paper",
+            "Whiteboard",
+            "Chalkboard",
+            "Notebook",
+            "Post-it notes",
+            "Canvas",
+            "Postcards",
+            "T-shirts",
+            "Walls",
+            "Signs",
+            "Name tags",
+            "Dry erase board",
+            "Water bottles",
+            "Coffee mugs",
+            "Sticky notes",
+            "Glass",
+            "Metal",
+            "Wood",
+            "Fabric",
+            "Skin (temporary tattoos)"
+        ],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used in pastimes.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used in pastimes.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used in pastimes.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used in pastimes.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used for cleaning.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used for cleaning.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used for cleaning.",
+        "answer": [
+            "Broom",
+            "Vacuum cleaner",
+            "Mop",
+            "Sponge",
+            "Duster",
+            "Dish soap",
+            "All-purpose cleaner",
+            "Bleach",
+            "Windex",
+            "Scrub brush",
+            "Lint roller",
+            "Trash bags",
+            "Rubber gloves",
+            "Microfiber cloths",
+            "Toilet brush",
+            "Laundry detergent",
+            "Carpet cleaner",
+            "Dustpan",
+            "Window squeegee",
+            "Swiffer wet jet"
+        ],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used for cleaning.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that use electricity.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that use electricity.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that use electricity.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that use electricity.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the languages you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the languages you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the languages you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the languages you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used in a pet store.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used in a pet store.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used in a pet store.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used in a pet store.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used in sports.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used in sports.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used in sports.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used in sports.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are spicy.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are spicy.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are spicy.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are spicy.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used in recreation.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used in recreation.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used in recreation.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used in recreation.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used by a dentist.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used by a dentist.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used by a dentist.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used by a dentist.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used in a library.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used in a library.",
+        "answer": [
+            "Books",
+            "Computers",
+            "Desks",
+            "Chairs",
+            "Shelves",
+            "Librarians",
+            "Laptops",
+            "Tables",
+            "Magazines",
+            "Newspapers",
+            "Study rooms",
+            "Microfilm readers",
+            "Scanners",
+            "Printers",
+            "Whiteboards",
+            "Projectors",
+            "Photocopiers",
+            "Headphones",
+            "Bookends",
+            "Catalog computers",
+            "Book drop box",
+            "Reference materials",
+            "DVDs/Blu-rays",
+            "Library cards",
+            "Book carts",
+            "Snacks/beverages in vending machines",
+            "Events space for book readings or workshops",
+            "Children's play area",
+            "Audio books",
+            "Interlibrary loan services."
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used in a library.",
+        "answer": [
+            "Books",
+            "Computers",
+            "Couches",
+            "Study tables",
+            "Magazines",
+            "Newspapers",
+            "DVDs",
+            "Audiobooks",
+            "Bookshelves",
+            "Librarians",
+            "Bookends",
+            "Library cards",
+            "Photocopiers",
+            "Scanners",
+            "Study carrels",
+            "Microfilm/microfiche readers",
+            "Whiteboards",
+            "Posters",
+            "Meeting rooms",
+            "Bookmarkers",
+            "Library carts",
+            "Databases",
+            "Reference materials",
+            "Book drop-off box",
+            "Events calendar"
+        ],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used in a library.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used by a sailor.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used by a sailor.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used by a sailor.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used by a sailor.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are found in a forest.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are found in a forest.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are found in a forest.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are found in a forest.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used in a kitchen.",
+        "answer": [
+            "Stove",
+            "Refrigerator",
+            "Microwave",
+            "Oven",
+            "Blender",
+            "Toaster",
+            "Coffee maker",
+            "Food processor",
+            "Dishwasher",
+            "Mixer",
+            "Cutting board",
+            "Knife set",
+            "Pots and pans",
+            "Utensils",
+            "Plates and bowls",
+            "Glasses and mugs",
+            "Storage containers",
+            "Spatula",
+            "Tongs",
+            "Colander",
+            "Grater",
+            "Can opener",
+            "Measuring cups and spoons",
+            "Mixing bowls",
+            "Baking sheets",
+            "Rolling pin",
+            "Thermometer",
+            "Apron",
+            "Kitchen towels",
+            "Trash can"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used in a kitchen.",
+        "answer": [
+            "Pots and pans",
+            "Knives",
+            "Cutting board",
+            "Mixing bowls",
+            "Spatula",
+            "Whisk",
+            "Measuring cups and spoons",
+            "Blender",
+            "Toaster",
+            "Microwave",
+            "Oven",
+            "Refrigerator",
+            "Dishwasher",
+            "Sink",
+            "Rice cooker",
+            "Colander",
+            "Can opener",
+            "Grater",
+            "Tongs",
+            "Rolling pin",
+            "Baking sheets",
+            "Oven mitts",
+            "Salt and pepper shakers",
+            "Wooden spoon",
+            "Crockpot",
+            "Food processor",
+            "Corkscrew",
+            "Ladle",
+            "Tea kettle",
+            "Cheese slicer"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used in a kitchen.",
+        "answer": [
+            "Knives",
+            "Cutting board",
+            "Pots and pans",
+            "Spatula",
+            "Oven",
+            "Refrigerator",
+            "Microwave",
+            "Blender",
+            "Toaster",
+            "Coffee maker",
+            "Tea kettle",
+            "Plates",
+            "Bowls",
+            "Utensils (forks, spoons, knives)",
+            "Mixing bowls",
+            "Measuring cups and spoons",
+            "Baking sheets",
+            "Colander",
+            "Grater",
+            "Rolling pin",
+            "Cutting board",
+            "Tongs",
+            "Food processor",
+            "Can opener",
+            "Corkscrew/opener",
+            "Timer",
+            "Cooking oil",
+            "Salt and pepper shakers",
+            "Spice rack",
+            "Trash can/trash bags"
+        ],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used in a kitchen.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used in sociology.",
+        "answer": [
+            "Surveys",
+            "Interviews",
+            "Observations",
+            "Case studies",
+            "Questionnaires",
+            "Statistical analysis",
+            "Ethnography",
+            "Field experiments",
+            "Content analysis",
+            "Focus groups",
+            "Participant observation",
+            "Social network analysis",
+            "Sampling techniques",
+            "Qualitative research methods",
+            "Quantitative research methods",
+            "Theory construction",
+            "Variable analysis",
+            "Historical analysis",
+            "Cross-cultural comparisons",
+            "Randomized control trials."
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used in sociology.",
+        "answer": [
+            "Surveys",
+            "Interviews",
+            "Observation",
+            "Questionnaires",
+            "Data analysis software",
+            "Fieldwork",
+            "Case studies",
+            "Sociological theories",
+            "Ethnography",
+            "Focus groups",
+            "Participant observation",
+            "Statistical analysis",
+            "Social experiments",
+            "Social networks analysis",
+            "Cultural analysis",
+            "Qualitative research methods",
+            "Literature reviews",
+            "Historical research",
+            "Demographic data",
+            "Public opinion polls"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used in sociology.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used in sociology.",
+        "answer": [
+            "Surveys/questionnaires",
+            "Interviews",
+            "Observations",
+            "Case studies",
+            "Statistical analysis",
+            "Participant observation",
+            "Field experiments",
+            "Content analysis",
+            "Ethnography",
+            "Social network analysis",
+            "Demographic data",
+            "Theory frameworks",
+            "Comparative analysis",
+            "Qualitative research methods",
+            "Quantitative research methods",
+            "Focus groups",
+            "Secondary data analysis",
+            "Sociological theories",
+            "Sociological paradigms",
+            "Cross-cultural studies",
+            "Symbolic interactionism",
+            "Conflict theory",
+            "Structural functionalism",
+            "Social stratification",
+            "Globalization and migration studies",
+            "Gender studies",
+            "Race and ethnicity studies",
+            "Social psychology",
+            "Social movements",
+            "Social change theories"
+        ],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are hot.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are hot.",
+        "answer": [
+            "The sun",
+            "A spicy curry",
+            "A blazing fire",
+            "A cup of freshly brewed coffee",
+            "A warm hug",
+            "A sauna",
+            "A hot summer day",
+            "A steamy shower",
+            "Red hot chili peppers",
+            "A sizzling pan of bacon",
+            "A heated debate",
+            "A batch of freshly baked cookies",
+            "A volcanic eruption",
+            "A hot air balloon",
+            "A cup of hot chocolate on a cold winter day",
+            "A runaway train",
+            "A hot piece of gossip",
+            "A fiery red sports car",
+            "A fever",
+            "A romantic candlelit dinner."
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are hot.",
+        "answer": [
+            "The sun",
+            "Spicy chili peppers",
+            "A burning candle",
+            "A cup of hot coffee",
+            "A sauna",
+            "Lava from a volcano",
+            "A fever",
+            "Freshly baked cookies",
+            "A hot stove",
+            "A heated debate",
+            "A warm hug",
+            "A steamy shower",
+            "A hot air balloon",
+            "A bonfire",
+            "A summer day",
+            "A hot iron",
+            "A hot air balloon",
+            "A warm fire on a cold winter day",
+            "A hot tub",
+            "A piping hot plate of food."
+        ],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are hot.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used in technology.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used in technology.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used in technology.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used in technology.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that can be worn on your feet.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that can be worn on your feet.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that can be worn on your feet.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that can be worn on your feet.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used by an electrician.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used by an electrician.",
+        "answer": [
+            "Wire cutters and strippers",
+            "Pliers (including needle-nose and lineman's)",
+            "Screwdrivers (flathead and Phillips)",
+            "Voltage tester",
+            "Multimeter",
+            "Circuit breaker finder",
+            "Fish tape",
+            "Tape measure",
+            "Electrical tape",
+            "Cable ties",
+            "Conduit bender",
+            "Circuit tracer",
+            "Junction boxes",
+            "Electrical connectors",
+            "Wire nuts"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used by an electrician.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used by an electrician.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that have keys.",
+        "answer": [
+            "Cars",
+            "Houses",
+            "Lockers",
+            "Safes",
+            "Piano",
+            "Keyboard",
+            "Typewriter",
+            "Cash registers",
+            "Suitcases",
+            "Bicycles",
+            "Padlocks",
+            "Guitar (tuning keys)",
+            "Remote control",
+            "Diary",
+            "Toolbox",
+            "Luggage",
+            "File cabinets",
+            "Hotel rooms",
+            "Alarm system",
+            "Machinery"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that have keys.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that have keys.",
+        "answer": [
+            "Keyboards - for typing on computers",
+            "Locks - to secure doors, cabinets, etc.",
+            "Cars - for starting and unlocking doors",
+            "Lockers - to store personal items",
+            "Safes - to protect valuable items",
+            "Bicycles - to lock and secure the bike",
+            "Pianos - to play different notes",
+            "Suitcases - to keep belongings secure during travel",
+            "Diaries - to keep personal thoughts private",
+            "Musical instruments - such as guitars or saxophones",
+            "Remote controls - for televisions or other electronic devices",
+            "Padlocks - for securing gates or fences",
+            "Cash registers - used by retailers to make sales transactions",
+            "Security systems - to arm/disarm alarms",
+            "File cabinets - to store important documents"
+        ],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that have keys.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used in sports.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used in sports.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used in sports.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used in sports.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the fruits you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the fruits you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the fruits you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the fruits you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used on a computer.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used on a computer.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used on a computer.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used on a computer.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used in music.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used in music.",
+        "answer": [
+            "Instruments (guitar, piano, drums, violin, trumpet, etc.)",
+            "Microphones",
+            "Amplifiers",
+            "Speakers",
+            "Sheet music",
+            "Music stands",
+            "Tuners",
+            "Metronomes",
+            "Cables",
+            "Picks",
+            "Drumsticks",
+            "Reeds (for woodwind instruments)",
+            "Straps (for guitars, saxophones, etc.)",
+            "Cases (for instruments)",
+            "Pedals (for guitarists, pianists, etc.)",
+            "Recording software",
+            "Mixing boards",
+            "Soundproofing materials",
+            "Studio headphones",
+            "Music books and reference materials",
+            "Stage lighting",
+            "Music videos and visual displays",
+            "Midi controllers and keyboards",
+            "Distortion pedals",
+            "Synthesizers",
+            "Vocoders",
+            "Turntables",
+            "Music software and apps",
+            "Fog machines and special effects",
+            "Projectors for visuals or lyrics."
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used in music.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used in music.",
+        "answer": [
+            "Instruments such as guitars, pianos, drums, violins, trumpets, and saxophones",
+            "Microphones for vocals and amplification",
+            "Music stands for holding sheet music",
+            "Cables and cords for connecting instruments and audio equipment",
+            "Speakers for sound projection",
+            "Tuners for tuning instruments",
+            "Sheet music or music notation software",
+            "Metronomes for keeping time",
+            "Recording equipment such as mixers and audio interfaces",
+            "Music software for composing and editing music",
+            "Stage lighting for performances",
+            "Music stands for holding sheet music",
+            "Conductors baton for directing orchestras",
+            "Guitar picks and drumsticks",
+            "Music cases and bags for transporting instruments."
+        ],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that are used in enjoyment.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are used in enjoyment.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are used in enjoyment.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are used in enjoyment.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    },
+    {
+        "question": "Name all the things you can think of that require electricity.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that require electricity.",
+        "answer": [
+            "Light bulbs",
+            "Refrigerators",
+            "Air conditioners",
+            "Televisions",
+            "Computers",
+            "Cell phones",
+            "Microwave ovens",
+            "Washing machines",
+            "Hair dryers",
+            "Video game consoles",
+            "Electric vehicles",
+            "Power tools",
+            "Electric toothbrushes",
+            "Fans",
+            "Chargers for various devices",
+            "Electric stoves",
+            "Alarm clocks",
+            "Electric blankets",
+            "Electric scooters",
+            "Home security systems."
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that require electricity.",
+        "answer": [
+            "Lights",
+            "Television",
+            "Refrigerator",
+            "Microwave",
+            "Oven",
+            "Heating and cooling systems",
+            "Washing machine",
+            "Dryer",
+            "Dishwasher",
+            "Electric toothbrush",
+            "Hairdryer",
+            "Charging devices for phones, laptops, tablets, etc.",
+            "Electric car",
+            "Elevators",
+            "Streetlights",
+            "Traffic lights",
+            "Alarm systems",
+            "Security cameras",
+            "Power tools",
+            "Electric-powered vehicles for transportation",
+            "Power banks",
+            "Fans",
+            "Air purifiers",
+            "Water heaters",
+            "Computers/internet routers."
+        ],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that require electricity.",
+        "answer": [],
+        "Agent": "GPT Agent 4"
+    }
+]

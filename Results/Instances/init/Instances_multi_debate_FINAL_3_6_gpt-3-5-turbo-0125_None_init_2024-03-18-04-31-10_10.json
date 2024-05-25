@@ -1,0 +1,252 @@
+[
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "Basketball",
+            "Soccer ball",
+            "Beach ball",
+            "Watermelon",
+            "Orange",
+            "Apple",
+            "Tomatoes",
+            "Wheel",
+            "Frisbee",
+            "Floppy disk",
+            "Clock",
+            "Plate",
+            "UFO",
+            "Ping pong ball",
+            "Globe",
+            "Bowling ball",
+            "Bubble",
+            "CD",
+            "Pancake",
+            "Donut"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.",
+        "answer": [
+            "Construction equipment like jackhammers and bulldozers",
+            "Musical instruments such as drums, guitars, and trumpets",
+            "Animals like dogs barking, birds chirping, and cows mooing",
+            "Vehicles like cars honking, trains passing by, and planes flying overhead",
+            "Household appliances like blenders, vacuum cleaners, and washing machines",
+            "Fireworks exploding in the sky",
+            "People clapping, cheering, or shouting",
+            "Thunderstorms with thunder rumbling and rain pouring down",
+            "Doors slamming shut",
+            "Sirens from emergency vehicles like police cars and ambulances",
+            "The crackling of a campfire or bonfire",
+            "Radios playing music or news broadcasts",
+            "Alarm clocks ringing in the morning",
+            "Wind blowing through trees or whistling against buildings",
+            "Church bells chiming in the distance"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that have a screen.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that have a screen.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that have a screen.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.",
+        "answer": [
+            "Cars",
+            "Bicycles",
+            "Trucks",
+            "Scooters",
+            "Skateboards",
+            "Rollerblades",
+            "Wheelchairs",
+            "Shopping carts",
+            "Luggage carts",
+            "Roller coasters",
+            "Trains",
+            "Roller skates",
+            "Segways",
+            "Golf carts",
+            "Ice cream trucks",
+            "Strollers",
+            "Motorcycles",
+            "Go-karts",
+            "Dump trucks",
+            "Ambulances."
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are red.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are red.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are red.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that are found in space.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are found in space.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are found in space.",
+        "answer": [
+            "Stars",
+            "Planets",
+            "Asteroids",
+            "Comets",
+            "Satellites",
+            "Black holes",
+            "Nebulas",
+            "Galaxies",
+            "Supernovas",
+            "Space debris",
+            "Space dust",
+            "Space stations",
+            "Solar flares",
+            "Cosmic rays",
+            "Interstellar gas",
+            "Dark matter",
+            "Exoplanets",
+            "Meteoroids",
+            "Space junk",
+            "Alien life forms"
+        ],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the instruments you can think of.",
+        "answer": [
+            "Piano",
+            "Guitar",
+            "Violin",
+            "Drums",
+            "Flute",
+            "Saxophone",
+            "Cello",
+            "Trumpet",
+            "Harp",
+            "Trombone",
+            "Clarinet",
+            "Banjo",
+            "Ukulele",
+            "Xylophone",
+            "Accordion",
+            "Bagpipes",
+            "Organ",
+            "Mandolin",
+            "Didgeridoo",
+            "Theremin"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the instruments you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the instruments you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the things you can think of that can fly.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that can fly.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that can fly.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the flowers you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the flowers you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the flowers you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 3"
+    }
+]

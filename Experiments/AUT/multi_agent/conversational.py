@@ -6,6 +6,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from pathlib import Path
 
+# This file runs LLM Conversational
 def main():
     parser = argparse.ArgumentParser(description="Orchestrate a discussion with multiple AI agents.")
     parser.add_argument("-c", "--config", required=True, help="Path to the configuration file for agents.")

@@ -1,0 +1,135 @@
+[
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the square things you can think of.",
+        "answer": [
+            "Dice",
+            "Rubik's cube",
+            "Post-it notes",
+            "Windows",
+            "TVs",
+            "Photo frames",
+            "Sandwiches",
+            "Paper",
+            "Book covers",
+            "Chess board squares",
+            "Ice cubes",
+            "Lego bricks",
+            "Stovetop burners",
+            "Chocolate bar pieces",
+            "Checkerboard squares"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the square things you can think of.",
+        "answer": [
+            "A Rubik's cube",
+            "Post-It notes",
+            "A chess board",
+            "A cube",
+            "A square rug",
+            "Instagram profile pictures",
+            "Gift boxes",
+            "A waffle",
+            "A window",
+            "A book",
+            "A game board like Monopoly",
+            "A picture frame",
+            "A television screen",
+            "A fridge magnet",
+            "A sticky note",
+            "A tile on a bathroom wall"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are red.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are red.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the fruits you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the fruits you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the instruments you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the instruments you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that can fly.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that can fly.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the flowers you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the flowers you can think of.",
+        "answer": [],
+        "Agent": "GPT Agent 2"
+    }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "Full moon",
+            "Soccer ball",
+            "Pizza",
+            "Orange",
+            "Donut",
+            "Hula hoop",
+            "Wheel",
+            "Coin",
+            "Bagel",
+            "Frisbee"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "Sun",
+            "Moon",
+            "Basketball",
+            "Orange",
+            "Soccer ball",
+            "Pizza",
+            "CD",
+            "Wheel",
+            "Clock",
+            "Frisbee"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "Full moon",
+            "Basketball",
+            "Orange",
+            "Pie",
+            "Sun",
+            "Soccer ball",
+            "Doughnut",
+            "Jellyfish",
+            "CD",
+            "Clock",
+            "Button",
+            "Wheel",
+            "Frisbee",
+            "Pancake",
+            "Lollipop"
+        ],
+        "Agent": "GPT Agent 3"
+    },
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "Sun",
+            "Moon",
+            "Pizza",
+            "Orange",
+            "Basketball",
+            "Earth",
+            "Clock",
+            "Frisbee",
+            "Doughnut",
+            "Button"
+        ],
+        "Agent": "GPT Agent 4"
+    }
+]

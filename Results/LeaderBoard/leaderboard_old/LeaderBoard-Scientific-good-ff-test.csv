@@ -1,0 +1,3 @@
+Timestamp,Task,Type,Mode,Agent,Round,Model Name,Role Name,Data Num,Mean Fluency,STD Fluency,Mean Flexibility,STD Flexibility,Mean Originality,STD Originality,Mean Elaboration,STD Elaboration,File Name
+2024-03-21 02:03:04,Scientific,debate,roleplay,4,5,gpt-3-5-turbo-0125,Environmentalist-CreativeProfessional-Futurist-Futurist,30,5.594,2.595,5.906,2.389,0,0,0,0,Scientific_multi_debate_roleplay_4_5_gpt-3-5-turbo-0125_Environmentalist-CreativeProfessional-Futurist-Futurist_final_2024-03-21-02-03-04-newversion-filtered_30
+2024-03-29 09:28:52,Scientific,debate,baseline,4,5,gpt-3-5-turbo-0125,None,30,6.883,3.348,6.731,2.27,0,0,0,0,Scientific_multi_debate_baseline_4_5_gpt-3-5-turbo-0125_None_final_2024-03-29-09-28-52-filtered_30

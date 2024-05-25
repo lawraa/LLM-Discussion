@@ -1,0 +1,64 @@
+{
+    "Task": [
+        {
+            "Original": "Please write down as many as possible scientific uses as you can for a piece of glass. For example, make a test tube.",
+            "Example": [
+                "Creative Scientific Applications of a Pencil: Explore different scientific ways to use a pencil. For example, using it to demonstrate principles of gravity and balance.",
+                "Exploring Science with a Button: Find scientific applications for a button. For example, using it to study materials science or color absorption.",
+                "Scientific Investigations with a Battery: Identify different scientific uses for a battery. For example, understanding electrochemistry or energy storage.",
+                "Exploring Science with a Feather: Find scientific experiments involving a feather. For example, studying aerodynamics or bird biology.",
+                "Utilizing a Brick in Science: Consider the scientific applications of a brick. For example, studying material strength or thermal properties.",
+                "Scientific Experiments with a Glass Jar: Explore different scientific uses for a glass jar. For example, creating a terrarium or studying gas laws."
+            ],
+            "Amount": "6"
+        },
+        {
+            "Original": "If you can take a spaceship to travel in outer space and go to a planet, what scientific questions do you want to research? For example, are there any living things on the planet?",
+            "Example": [
+                "How would you scientifically explore a scenario where the moon changes color every night?",
+                "What experiments would you design if you discovered a mirror that showed the future?",
+                "If you could breathe underwater without any equipment, what underwater mysteries or scientific studies would you explore?",
+                "If you discovered a way to become immortal, what long-term scientific experiments would you plan?",
+                "How would you investigate the causes and effects of a phenomenon where time moved twice as fast for everyone?",
+                "How would you study the effects on human health and society if everyone stopped needing sleep?"
+            ],
+            "Amount": "6"
+        },
+        {
+            "Original": "Please think up as many possible improvements as you can to a regular bicycle, making it more interesting, more useful and more beautiful. For example, make the tires reflective, so they can be seen in the dark.",
+            "Example": [
+                "How can you upgrade a conventional pen to make it more innovative and stylish? For example, including a digital display for notes.",
+                "How can you upgrade a conventional pillow to make it more comfortable and beneficial? For instance, infusing it with temperature-regulating materials.",
+                "How could you upgrade a common backpack to make it more versatile, comfortable, and attractive? Example: incorporating a built-in USB charging port.",
+                "How would you enhance a regular pair of shoes to make them more beneficial and fashionable? For example, adding self-tying laces.",
+                "How can you upgrade a traditional mirror to make it more useful and elegant? For instance, integrating a touchscreen interface with smart features.",
+                "How can you upgrade a typical desk lamp to make it more functional and aesthetically pleasing? For example, adding color-changing LED options."
+            ],
+            "Amount": "6"
+        },
+        {
+            "Original": "Suppose there was no gravity, describe what the world would be like? For example, human beings would be floating.",
+            "Example": [
+                "Suppose gravity could be turned on and off like a switch. How would this change architecture, transportation, and sports?",
+                "What if we could regenerate lost limbs like some animals? Discuss the implications for medicine and human ability.",
+                "What if humans had a lifespan of 200 years? Consider the societal and personal impacts.",
+                "Imagine if we could hear ultrasonic frequencies. How would this alter our perception of sound and communication?",
+                "Imagine if we could teleport to any location instantly. How would this revolutionize travel and society?",
+                "What if mountains could grow and shrink within a human lifetime? Consider the effects on geography and human settlements."
+            ],
+            "Amount": "6"
+        },
+        {
+            "Original": "There are two kinds of napkins. How can you test which is better? Please write down as many possible methods as you can and the instruments, principles and simple procedure.",
+            "Example": [
+                "How can you test which of two smartphones has a longer battery life? Explain your testing approach, the necessary tools, and the procedure.",
+                "You have two different kinds of soil for planting. How can you test which one is better for plant growth? Explain your testing methods, required tools, and the procedure.",
+                "Two brands of batteries claim long-lasting power. How can you test which one lasts longer? Describe your approach, the instruments you'll use, and the testing process.",
+                "How can you test which of two computer monitors has better color accuracy? Describe the approach, tools needed, and a brief procedure.",
+                "Determine which of two kinds of toothpaste is more effective at whitening teeth. Describe the testing methods, instruments, and a simple procedure.",
+                "Determine which of two types of blankets is more fire-resistant. Describe the testing methods, necessary tools, and a simple procedure."
+            ],
+            "Amount": "6"
+        }
+    ]
+}

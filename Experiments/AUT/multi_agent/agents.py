@@ -84,11 +84,15 @@ class OpenAIAgent(Agent):
         return {"role": "user", "content": content}
     
 class GeminiAgent(Agent):
-    def __init__(self, model_name, agent_name):
+    def __init__(self, model_name, agent_name, agent_role, agent_speciality, agent_role_prompt, speaking_rate):
         self.model_name = model_name
         genai.configure(api_key=os.environ["GEMINI_API_KEY"]) # ~/.bashrc save : export GEMINI_API_KEY="YOUR_API" 
         self.model = genai.GenerativeModel(self.model_name)
         self.agent_name = agent_name
+        self.agent_role = agent_role
+        self.agent_speciality = agent_speciality
+        self.agent_role_prompt = agent_role_prompt
+        self.speaking_rate = speaking_rate
 
     def generate_answer(self, answer_context,temperature= 1.0):
         try: 
@@ -109,6 +113,7 @@ class GeminiAgent(Agent):
             logging.exception("Exception occurred during response generation: " + str(e))
             time.sleep(1)
             return self.generate_answer(answer_context)
+        
     def construct_assistant_message(self, content):
         response = {"role": "model", "parts": [content]}
         return response

@@ -27,15 +27,12 @@ def parse_number_score_2(input_str):
     if matches:
         return int(matches[-1])  # Return the last matched number in this format
 
-    # If no [[X]] match, look for ": X" format
-    colon_pattern = r':\s*(\d+)'  # Matches a colon followed by one or more digits
-    matches = re.findall(colon_pattern, input_str)
+    # Next, try to match the "X." format
+    matches = re.findall(r'\b(\d+)\.\s', input_str)
     if matches:
-        return int(matches[-1])  # Return the last matched number in this format
-    
-    # If no match in the above formats, search for any standalone number
+        return int(matches[-1])
+
+    # Return the last standalone number found
     match = re.findall(r'\b\d+\b', input_str)
     if match:
-        return int(match[-1])  # Return the last standalone number found
-    
-    return None  # Return None if no numbers are found in any of the formats
+        return int(match[-1])  

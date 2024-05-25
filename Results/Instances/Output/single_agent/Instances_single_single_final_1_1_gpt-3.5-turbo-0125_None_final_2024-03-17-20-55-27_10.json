@@ -1,0 +1,192 @@
+[
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "Basketball",
+            "Soccer ball",
+            "Tennis ball",
+            "Baseball",
+            "Bowling ball",
+            "Globe",
+            "Coin",
+            "Frisbee",
+            "Doughnut",
+            "Bagel",
+            "Pizza",
+            "Wheel",
+            "Clock",
+            "CD",
+            "Plate"
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.",
+        "answer": [
+            "Cars honking",
+            "Dogs barking",
+            "Music playing",
+            "Thunder booming",
+            "Alarm clocks ringing",
+            "Faucets dripping",
+            "Children laughing",
+            "Birds chirping",
+            "Fireworks exploding",
+            "Champagne bottles popping",
+            "A tree branch scraping against a window in the wind",
+            "A balloon popping",
+            "A typewriter clacking",
+            "A skateboard rolling over gravel",
+            "A tennis ball hitting a racket",
+            "A flag flapping in the wind",
+            "A book falling off a shelf",
+            "Ice cubes clinking in a glass",
+            "A sprinkler spraying water",
+            "A hand drum being played"
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that have a screen.",
+        "answer": [
+            "Smartphones",
+            "Computers",
+            "Tablets",
+            "Televisions",
+            "ATM machines",
+            "GPS devices",
+            "E-readers",
+            "Game consoles",
+            "Smartwatches",
+            "Digital cameras",
+            "Smart mirrors: mirrors with built-in screens that display information like weather, news, and calendar appointments.",
+            "Smart fridges: refrigerators with screens that can display recipes, grocery lists, and even stream music or videos.",
+            "Virtual reality headsets: devices with screens that create immersive virtual worlds for gaming, entertainment, or training purposes."
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.",
+        "answer": [
+            "Cars",
+            "Bicycles",
+            "Trucks",
+            "Skateboards",
+            "Rollerblades",
+            "Wheelchairs",
+            "Scooters",
+            "Shopping carts",
+            "Strollers",
+            "Segways"
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that are red.",
+        "answer": [
+            "Roses",
+            "Apples",
+            "Fire trucks",
+            "Stop signs",
+            "Red peppers",
+            "Tomatoes",
+            "Cherries",
+            "Ladybugs",
+            "Lipstick",
+            "Strawberries",
+            "Red velvet cake",
+            "Red panda",
+            "Red wine",
+            "Red dye in fabric",
+            "Heart-shaped balloons in Valentine's Day displays",
+            "Fire hydrants",
+            "Blood oranges",
+            "Sunset over the ocean",
+            "Ruby gemstones",
+            "Red chili peppers hanging to dry in a farmer's market."
+        ]
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.",
+        "answer": [
+            "Fish - There are over 33,600 species of fish found in various aquatic environments around the world. They have gills for breathing underwater and scales covering their bodies.",
+            "Dolphins - These intelligent marine mammals are known for their playful behaviors and complex social structures. They use echolocation to navigate and communicate underwater.",
+            "Sharks - Sharks are apex predators in the ocean, with species ranging from the massive great white shark to the smaller catsharks. They have cartilaginous skeletons and sharp teeth for hunting prey.",
+            "Jellyfish - These soft-bodied, gelatinous creatures drift through the water using pulsations of their umbrella-shaped bell. They have stinging tentacles for capturing food.",
+            "Sea turtles - These ancient reptiles can be found in oceans around the world, with species like the loggerhead and green sea turtle. They are known for their migrations between feeding and nesting grounds.",
+            "Octopus - These intelligent and highly adaptable cephalopods have eight arms lined with suction cups and the ability to change color and texture to camouflage in their surroundings.",
+            "Seahorses - These unique fish have long, curled tails and are known for their distinctive upright posture and the males' role in pregnancy.",
+            "Manatees - Also known as sea cows, manatees are large, slow-moving marine mammals with paddle-like flippers. They are herbivores that graze on seagrass in shallow waters.",
+            "Sea otters - These charismatic marine mammals are known for their use of tools, such as rocks to crack open shellfish. They also have incredibly dense fur to keep them warm in cold water.",
+            "Narwhals - These medium-sized toothed whales are known for the long, spiral tusk that males grow from their upper lip. They are found in Arctic waters and use their tusks for various purposes including communication and hunting."
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that are found in space.",
+        "answer": [
+            "Stars",
+            "Planets",
+            "Moons",
+            "Asteroids",
+            "Nebulae",
+            "Comets",
+            "Black holes",
+            "Galaxies",
+            "Dark matter",
+            "Quasars",
+            "Exoplanets - Planets that exist outside of our solar system.",
+            "White dwarfs - The remnants of stars that have exhausted their nuclear fuel.",
+            "Wormholes - Hypothetical tunnels in spacetime that could potentially allow for faster-than-light travel.",
+            "Cosmic strings - Theoretical objects that are thought to be extremely thin and dense, possibly influencing the formation of galaxies.",
+            "Pulsars - Highly magnetized, rotating neutron stars that emit beams of electromagnetic radiation."
+        ]
+    },
+    {
+        "question": "Name all the instruments you can think of.",
+        "answer": [
+            "Piano: a keyboard instrument that produces sound by striking strings with hammers",
+            "Guitar: a string instrument with a wooden body and typically six strings that are plucked or strummed",
+            "Drums: percussion instruments that produce sound by being struck or shaken",
+            "Violin: a string instrument with four strings that are bowed to produce sound",
+            "Flute: a woodwind instrument that produces sound by blowing air across a hole",
+            "Trumpet: a brass instrument with three valves that produces sound by buzzing lips into a mouthpiece",
+            "Cello: a string instrument that is larger than a violin and produces lower tones",
+            "Harp: a string instrument with many strings that are plucked to produce sound",
+            "Saxophone: a woodwind instrument with a conical body and a single-reed mouthpiece",
+            "Theremin: an electronic instrument that is played without physical contact, by moving hands near antennas"
+        ]
+    },
+    {
+        "question": "Name all the things you can think of that can fly.",
+        "answer": [
+            "Birds (e.g. eagles, hummingbirds, penguins)",
+            "Insects (e.g. butterflies, bees, dragonflies)",
+            "Aircraft (e.g. airplanes, helicopters, hot air balloons)",
+            "Bats",
+            "Kites",
+            "Balloons",
+            "Frisbees",
+            "Drones",
+            "Pterosaurs",
+            "Flying fish"
+        ]
+    },
+    {
+        "question": "Name all the flowers you can think of.",
+        "answer": [
+            "Rose",
+            "Daisy",
+            "Tulip",
+            "Sunflower",
+            "Lily",
+            "Orchid",
+            "Peony",
+            "Marigold",
+            "Hydrangea",
+            "Lavender",
+            "Snapdragon",
+            "Carnation",
+            "Poppy",
+            "Daffodil",
+            "Bird of Paradise - known for its vibrant colors and unique shape resembling a bird in flight.",
+            "Protea - a tropical flower with large, striking petals that is native to South Africa.",
+            "Bleeding Heart - a whimsical flower with heart-shaped petals that appear to \"bleed\" from the tip."
+        ]
+    }
+]

@@ -1,0 +1,397 @@
+[
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "Compass rose",
+            "Lifebuoy",
+            "Compact mirror",
+            "Boule",
+            "Pill or tablet",
+            "Compass",
+            "Chandelier",
+            "Wagon wheel",
+            "Record or vinyl disc",
+            "Black hole"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the round things you can think of.",
+        "answer": [
+            "Bagel",
+            "Lifebuoy",
+            "Boule",
+            "Coin-operated carousel",
+            "Wreath",
+            "Pill or tablet",
+            "Compass rose",
+            "Record or vinyl disc",
+            "Compass",
+            "Compact mirror",
+            "Tambourine",
+            "Black hole",
+            "Helium balloon",
+            "Onion ring",
+            "Traffic light",
+            "Ferris wheel",
+            "Gumball",
+            "Jellyfish",
+            "Porthole window on a ship",
+            "Bubble"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.",
+        "answer": [
+            "Crackling bonfires",
+            "Whales singing underwater",
+            "Thunderous applause at a concert",
+            "Hooves galloping on a dirt path",
+            "Swords clashing in battle",
+            "Pages turning in a book",
+            "Ice cubes clinking in a glass",
+            "Silk fabric rustling",
+            "Coins dropping into a piggy bank",
+            "Raindrops tapping on a tin roof",
+            "Creaking old wooden floors",
+            "Laughter echoing through a canyon",
+            "Sand shifting in the desert wind",
+            "Popcorn kernels popping",
+            "Keys jingling in a pocket"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that will make a noise.",
+        "answer": [
+            "Raindrops falling on a tin roof",
+            "A crowd cheering at a sports event",
+            "A tea pot whistling on the stove",
+            "A typewriter carriage returning",
+            "Hooves of horses galloping",
+            "A whip cracking in the air",
+            "Ice cubes clinking in a glass",
+            "A drawer creaking open",
+            "A typewriter bell dinging at the end of a line",
+            "A cricket chirping in the night",
+            "A soda can opening with a fizz",
+            "A wind chime softly ringing in the breeze",
+            "A bowling ball rolling down the lane",
+            "A vending machine dispensing a drink",
+            "A sprinkler system turning on in the garden"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that have a screen.",
+        "answer": [
+            "Smartphones, tablets, laptops, TVs",
+            "Smart home devices: security cameras, doorbells, digital assistants",
+            "Medical equipment: X-ray machines, ultrasound devices, patient monitors",
+            "Outdoor advertising displays, interactive museum exhibits, stadium scoreboards",
+            "Digital art frames, smart vending machines, electronic ticket kiosks",
+            "Industrial control panels, flight navigation systems, weather forecasting displays",
+            "Gaming kiosks, self-service check-in screens at airports, mirrors with screens",
+            "Education technology: interactive whiteboards, e-readers, educational tablets",
+            "Video conferencing systems, in-car entertainment systems, appliances like washing machines and ovens with screens."
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that have a screen.",
+        "answer": [
+            "Interactive theme park attractions with screens, cameras, and sensors for an immersive experience.",
+            "Augmented reality glasses and heads-up displays in vehicles providing real-time information.",
+            "Self-service kiosks in airports and train stations offering ticket purchase and check-in services.",
+            "Touchscreen voting machines for secure and efficient election processes.",
+            "Virtual fitting room mirrors in retail stores for trying on clothes digitally.",
+            "In-flight entertainment systems on airplanes with individual screens for passengers.",
+            "Telescopes and observatories equipped with digital screens for viewing and analyzing celestial objects.",
+            "Dive computers for scuba divers displaying critical information like depth, time, and decompression limits.",
+            "Smart glasses for the visually impaired with built-in cameras and screens for navigation assistance.",
+            "Wearable health monitors with screens for tracking vital signs and providing health notifications."
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.",
+        "answer": [
+            "Cars",
+            "Bicycles",
+            "Skateboards",
+            "Rollerblades",
+            "Wheelchairs",
+            "Scooters",
+            "Roller skates",
+            "Shopping carts",
+            "Tractors",
+            "Segways",
+            "Golf carts",
+            "Strollers",
+            "Trolleys",
+            "Trucks",
+            "Motorcycles",
+            "Forklifts",
+            "Wheelbarrows",
+            "Roller coasters",
+            "Zambonis",
+            "Go-karts",
+            "Bumper cars",
+            "Teacup rides",
+            "Ferris wheels",
+            "Cherry pickers",
+            "Scissor lifts",
+            "Combines",
+            "Hay wagons",
+            "Vacuum cleaners",
+            "Rolling suitcases",
+            "Office chairs",
+            "Refrigerators",
+            "Washing machines",
+            "Fishing carts",
+            "Medical carts",
+            "Inline skates",
+            "Wheelchair basketball chairs",
+            "Dolly carts",
+            "Disc golf carts",
+            "Watercraft trailers",
+            "Conveyor belts",
+            "Rowing machines",
+            "Hot dog carts",
+            "Rickshaws",
+            "Ice cream trucks",
+            "Parade floats",
+            "Mechanical bulls",
+            "Mobile food trucks",
+            "Referee carts in sports games",
+            "Trash compactor trucks",
+            "Carnival rides"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that move on wheels.",
+        "answer": [
+            "Cars, bicycles, skateboards, rollerblades, wheelchairs, scooters, roller skates, shopping carts, tractors, Segways, golf carts, strollers, trolleys, trucks, motorcycles, forklifts, wheelbarrows, roller coasters, Zambonis, go-karts, skateboarding ramps, luggage carts, dolly carts, tandem bikes, hoverboards, hand trucks, unicycles, RV trailers, carousel rides, baggage carts, snowmobiles, dune buggies, sandboards, speed bumps, vintage cars, bumper cars, airport luggage trolleys, electric longboards, electric bicycles, mini bikes, hot dog carts, jet skis on trailers, rickshaws, train carriages, ice resurfacers, horse-drawn carriages, carnival rides, ice cream trucks, mail carts, mobile food trucks, tow trucks, dumper trucks, ice cream carts, wheel-based robots, conveyor belts, rowing machines, electric wheelchairs, dirt bikes, rickety old wagons, industrial carts, mountain bikes, UPS delivery vans, garbage trucks, laundry carts, mechanical bulls, referee carts in sports games, parade floats, trash compactor trucks, skate park obstacles, human cannonball carts."
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are red.",
+        "answer": [
+            "Red barns",
+            "Red velvet paintings",
+            "Red clay",
+            "Red phone booths",
+            "Red flannel shirts",
+            "Red velvet blazers",
+            "Red velvet cushions",
+            "Red brick walls",
+            "Red velvet cupcakes",
+            "Red velvet sofas",
+            "Red velvet ropes",
+            "Red velvet cake pops",
+            "Red velvet ballet costumes",
+            "Red velvet theater curtains",
+            "Red traffic cones",
+            "Red velvet ribbons",
+            "Red velvet ballet shoes",
+            "Red velvet theater seats",
+            "Red velvet ballet slippers",
+            "Red autumn leaves."
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are red.",
+        "answer": [
+            "Red velvet ballet shoes",
+            "Red flannel shirts",
+            "Red velvet theater curtains",
+            "Red velvet cake pops",
+            "Red phone booths",
+            "Red clay",
+            "Red brick walls",
+            "Red paprika powder",
+            "Red autumn leaves",
+            "Red velvet blazers"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.",
+        "answer": [
+            "Narwhals",
+            "Beluga whales",
+            "Sea lions",
+            "Orcas",
+            "Walruses",
+            "Sea anemones",
+            "Blue tang fish",
+            "Sea horses",
+            "Electric eels",
+            "Hammerhead sharks",
+            "Coral",
+            "Sea urchins",
+            "Manta rays",
+            "Lionfish",
+            "Green sea turtles",
+            "Manatees",
+            "Blobfish",
+            "Cuttlefish",
+            "Sea dragons",
+            "Sea slugs"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the animals you can think of that live in the water.",
+        "answer": [
+            "Manatees",
+            "Sea dragons",
+            "Cuttlefish",
+            "Blobfish",
+            "Leafy seadragons",
+            "Sea cucumbers",
+            "Goblin sharks",
+            "Dugongs",
+            "Sea angels",
+            "Comb jellies",
+            "Humpback whales",
+            "Leaf scorpionfish",
+            "Pygmy seahorses",
+            "Cookiecutter sharks",
+            "Feather stars"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that are found in space.",
+        "answer": [
+            "Aurora borealis, cosmic rays, interstellar medium",
+            "Space-time fabric, gravitational lensing, space weather",
+            "Binary star systems, red giants, white dwarfs",
+            "Interplanetary dust clouds, Lagrange points, solar storms",
+            "Space elevators, magnetic reconnection, multi-verses",
+            "Tidal forces, space-time dilation, heliosphere",
+            "Rogue planets, light echoes, planetary conjunctions",
+            "Kuiper Belt objects, scattered disc, exoplanetary systems",
+            "Hypernovae, magnetospheres, planetary trojans",
+            "Galileo spacecraft, Viking mission, Hubble Space Telescope",
+            "Gravitational waves, stellar nurseries, pulsating stars"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that are found in space.",
+        "answer": [
+            "Supernovae remnants, planetary rings, tidal forces",
+            "Phantom planets, galactic filaments, rogue asteroids",
+            "Celestial bodies, cosmic radiation, interplanetary space",
+            "Event horizons, stellar nurseries, gravitational lenses",
+            "The Big Bang, space-time distortion, parallel dimensions",
+            "Gamma-ray bursts, cosmic microwave background radiation, the cosmic web",
+            "Space elevators, magnetic reconnection, multi-verses",
+            "Aurora borealis, cosmic rays, interstellar medium",
+            "Space-time fabric, gravitational lensing, space weather",
+            "Binary star systems, red giants, white dwarfs"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the instruments you can think of.",
+        "answer": [
+            "Glass harmonica",
+            "Nyckelharpa",
+            "Chapman stick",
+            "Hurdy-gurdy",
+            "Serpent",
+            "Hammered dulcimer",
+            "Nose flute",
+            "Electric sitar",
+            "Berimbau",
+            "Marxophone",
+            "Theorbo",
+            "Vuvuzela",
+            "Cu\u00edca",
+            "Theremin cello",
+            "T\u00e1rogat\u00f3",
+            "Glass armonicon",
+            "Shamisen",
+            "Bamboo saxophone",
+            "Cymbalom",
+            "Dan moi (Vietnamese jaw harp)"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the instruments you can think of.",
+        "answer": [
+            "Ngoni",
+            "Contrabass flute",
+            "Ang\u00e9lique",
+            "Otamatone",
+            "Bandoneon",
+            "Duduk",
+            "Reactable",
+            "Stroh violin",
+            "Aerophone",
+            "Handpan"
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the things you can think of that can fly.",
+        "answer": [
+            "Birds, dragonflies, locusts",
+            "Pterosaurs (flying reptiles)",
+            "Flying foxes (fruit bats)",
+            "Paragliders, hang gliders",
+            "Space shuttles",
+            "Flying snakes",
+            "Aladdin's magic carpet",
+            "Jetpacks",
+            "Fairies in folklore",
+            "Seagulls and seabirds"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the things you can think of that can fly.",
+        "answer": [
+            "Birds, bats, butterflies, and bees showcase the diversity of winged creatures in nature.",
+            "Aircraft such as helicopters, airplanes, blimps, and airships demonstrate human engineering for flight.",
+            "Paragliders, hang gliders, skydivers, and flying fish explore unique forms of aerial movement beyond traditional flight.",
+            "Mythical creatures like dragons, Pegasus, and fairies ignite imaginations with their ability to soar through the skies.",
+            "Spacecraft like shuttles, satellites, and rockets push the boundaries of flight into the vast expanse of outer space.",
+            "Fictional flying objects including magic carpets, UFOs, and enchanted umbrellas add a touch of whimsy to our concept of flight.",
+            "Remote-controlled toys like drones, gliders, and flying toys showcase innovation and playfulness in airborne activities."
+        ],
+        "Agent": "GPT Agent 2"
+    },
+    {
+        "question": "Name all the flowers you can think of.",
+        "answer": [
+            "Queen Anne's Lace, bleeding heart, columbine",
+            "Black-eyed Susan, cosmos, foxglove",
+            "Bougainvillea, freesia, morning glory",
+            "Hellebore, passionflower, snowdrop",
+            "Begonia, fuchsia, sweet pea",
+            "Geranium, verbena, yarrow",
+            "Peony, ranunculus, anemone"
+        ],
+        "Agent": "GPT Agent 1"
+    },
+    {
+        "question": "Name all the flowers you can think of.",
+        "answer": [
+            "Alright team, let's finalize our list with a burst of creativity! How about we include some lesser-known flowers like celosia, sea holly, and strawflower for a unique touch?",
+            "Let's also add some delicate and whimsical options such as baby's breath, statice, and Queen Anne's lace to bring a sense of airiness to our list.",
+            "For a pop of vibrant color, let's not forget about bouvardia, celosia, and anemone to add a playful and lively element to our floral lineup.",
+            "To round out our diverse and creative list, let's include some garden treasures like foxglove, delphinium, and sweet pea for a touch of nostalgia and charm.",
+            "With these additions, our final list is a beautiful tapestry of flowers, showcasing the vast array of beauty and diversity found in the floral world. Well done, team!"
+        ],
+        "Agent": "GPT Agent 2"
+    }
+]

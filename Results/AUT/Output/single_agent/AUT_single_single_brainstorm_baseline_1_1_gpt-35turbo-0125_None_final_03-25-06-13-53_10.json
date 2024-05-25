@@ -1,0 +1,1202 @@
+[
+    {
+        "item": "Fork",
+        "uses": [
+            "Use a fork as a hair accessory by twisting it into a bun or ponytail holder."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.06922333,
+            "No": -2.7051754
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": [
+            "Create a unique piece of jewelry by bending and shaping a fork into a bracelet or necklace."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.021959733,
+            "No": -3.8304162
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": [
+            "Use a fork as a planting tool for delicate seeds in the garden."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.28640053,
+            "No": -1.3902442
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": [
+            "Turn a fork into a stylish pen holder for your desk by bending the tines into interesting shapes."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.014333671,
+            "No": -4.2539215
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": [
+            "Use a fork as a mini easel to display small pieces of art or photographs."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.0027447199,
+            "No": -5.9043884
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": [
+            "Turn a fork into a makeshift phone stand by bending the tines to hold up your device."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes.",
+        "probabilities": {
+            "Yes": -0.017851267,
+            "No": -4.0359197
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": [
+            "Use a fork as a cheese grater for small amounts of hard cheeses."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.2435597,
+            "No": -1.5317677
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": [
+            "Create a funky door handle by attaching a fork to the front of a door."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.007105463,
+            "No": -4.952538
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": [
+            "Use a fork as a unique bookmark by attaching a ribbon or string to the handle."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.029872667,
+            "No": -3.52618
+        }
+    },
+    {
+        "item": "Fork",
+        "uses": [
+            "Turn a fork into a quirky kitchen utensil holder by bending the tines to create hooks for hanging."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.26390707,
+            "No": -1.4613482
+        }
+    },
+    {
+        "item": "Jar",
+        "uses": [
+            "Use a jar as a terrarium by placing soil, small plants, and rocks inside."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.06437377,
+            "Yes": -2.775565
+        }
+    },
+    {
+        "item": "Jar",
+        "uses": [
+            "Create a DIY snow globe by filling a jar with water, glitter, and a miniature figurine."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.060740154,
+            "Yes": -2.8317516
+        }
+    },
+    {
+        "item": "Jar",
+        "uses": [
+            "Make a homemade candle by melting wax, adding fragrance, and pouring it into a jar with a wick."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.01114792,
+            "Yes": -4.5032363
+        }
+    },
+    {
+        "item": "Jar",
+        "uses": [
+            "Use a jar as a vase for fresh flowers or a display for dried flowers."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.006855558,
+            "Yes": -4.990132
+        }
+    },
+    {
+        "item": "Jar",
+        "uses": [
+            "Create a mini herb garden by planting different herbs in small jars on a windowsill."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.058272637,
+            "Yes": -2.8719056
+        }
+    },
+    {
+        "item": "Jar",
+        "uses": [
+            "Turn a jar into a piggy bank by cutting a slot in the lid for inserting coins."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.051613383,
+            "Yes": -2.9901662
+        }
+    },
+    {
+        "item": "Jar",
+        "uses": [
+            "Use a jar to assemble a portable first aid kit with bandages, antiseptic wipes, and other essentials."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes.",
+        "probabilities": {
+            "Yes": -0.57724017,
+            "No": -0.8243906
+        }
+    },
+    {
+        "item": "Jar",
+        "uses": [
+            "Create a personalized memory jar by writing down good memories on scraps of paper and storing them inside."
+        ],
+        "type": "No",
+        "full explanation": "No.",
+        "probabilities": {
+            "No": -0.25465545,
+            "Yes": -1.4927078
+        }
+    },
+    {
+        "item": "Jar",
+        "uses": [
+            "Make a DIY bird feeder by spreading peanut butter on the outside of a jar and rolling it in birdseed."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes.",
+        "probabilities": {
+            "No": -0.2229136,
+            "Yes": -1.6104754
+        }
+    },
+    {
+        "item": "Jar",
+        "uses": [
+            "Use a jar to organize and store small office supplies like paperclips, rubber bands, and push pins."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.002482435,
+            "Yes": -6.0038385
+        }
+    },
+    {
+        "item": "Mirror",
+        "uses": [
+            "Using a mirror as a serving tray for drinks or hors d'oeuvres at a party."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.08233966,
+            "No": -2.5380473
+        }
+    },
+    {
+        "item": "Mirror",
+        "uses": [
+            "Turning a mirror into a unique backdrop for a photo booth at a wedding or event."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes.",
+        "probabilities": {
+            "Yes": -0.0044747465,
+            "No": -5.4189816
+        }
+    },
+    {
+        "item": "Mirror",
+        "uses": [
+            "Creating a DIY light fixture by attaching small mirrors to a pendant lamp."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.4022711,
+            "No": -1.1051137
+        }
+    },
+    {
+        "item": "Mirror",
+        "uses": [
+            "Designing a mirrored garden pathway to add a touch of glamour to an outdoor space."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.18859996,
+            "No": -1.7611326
+        }
+    },
+    {
+        "item": "Mirror",
+        "uses": [
+            "Using a mirror as a decorative headboard for a bed in a small space."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.29522097,
+            "No": -1.3641297
+        }
+    },
+    {
+        "item": "Mirror",
+        "uses": [
+            "Making a statement wall by creating a mosaic of small mirrors in a geometric pattern."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.22355565,
+            "Yes": -1.607936
+        }
+    },
+    {
+        "item": "Mirror",
+        "uses": [
+            "Transforming a plain mirror into a functional piece of art by painting a colorful design on it."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.18737787,
+            "Yes": -1.7671738
+        }
+    },
+    {
+        "item": "Mirror",
+        "uses": [
+            "Using mirrors as coasters or trivets to protect surfaces and add a touch of elegance to a dining table."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "Yes": -0.108264185,
+            "No": -2.2769997
+        }
+    },
+    {
+        "item": "Mirror",
+        "uses": [
+            "Designing a unique clock by attaching a clock mechanism to a large mirror."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.045146253,
+            "No": -3.1208222
+        }
+    },
+    {
+        "item": "Mirror",
+        "uses": [
+            "Creating a DIY vanity tray by adding handles to a mirror and using it to organize and display beauty products."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.5710466,
+            "Yes": -0.8323114
+        }
+    },
+    {
+        "item": "Mug",
+        "uses": [
+            "A mini indoor herb garden: Use a mug to plant small herbs like mint or basil for a fun and functional kitchen decoration."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.2816246,
+            "No": -1.4047744
+        }
+    },
+    {
+        "item": "Mug",
+        "uses": [
+            "Desk organization: Use mugs to store pens, pencils, and other office supplies for a unique and stylish desk organization solution."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.036346875,
+            "Yes": -3.3333077
+        }
+    },
+    {
+        "item": "Mug",
+        "uses": [
+            "A DIY candle holder: Place a small candle inside a mug for a cozy and charming homemade candle holder."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.13281262,
+            "Yes": -2.084774
+        }
+    },
+    {
+        "item": "Mug",
+        "uses": [
+            "A bird feeder: Hang mugs filled with bird seed in your backyard to attract and feed birds in a quirky and eye-catching way."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.0046806303,
+            "No": -5.3690395
+        }
+    },
+    {
+        "item": "Mug",
+        "uses": [
+            "A succulent planter: Use mugs to plant small succulents for a trendy and low-maintenance indoor garden."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.10118161,
+            "Yes": -2.3412824
+        }
+    },
+    {
+        "item": "Mug",
+        "uses": [
+            "A mini terrarium: Create a miniature terrarium inside a mug using small rocks, soil, and tiny plants for a whimsical and enchanting decorative piece."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes, it would be a novel idea and it may surprise some people.",
+        "probabilities": {
+            "Yes": -0.0708485,
+            "No": -2.6827679
+        }
+    },
+    {
+        "item": "Mug",
+        "uses": [
+            "A homemade gift basket: Fill a mug with small items like tea bags, hot cocoa mix, and a mini candle for a thoughtful and personalized gift."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.24089731,
+            "Yes": -1.5415145
+        }
+    },
+    {
+        "item": "Mug",
+        "uses": [
+            "A DIY pin cushion: Fill a mug with sewing supplies like pins and needles to create a cute and practical pin cushion."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.6174221,
+            "Yes": -0.77511406
+        }
+    },
+    {
+        "item": "Mug",
+        "uses": [
+            "A place card holder: Use mugs as unique and creative place card holders for dinner parties or events."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.15660228,
+            "No": -1.9314436
+        }
+    },
+    {
+        "item": "Mug",
+        "uses": [
+            "A DIY pet food and water bowl: Use a mug as a cute and colorful food and water bowl for small pets like cats or small dogs."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "No": -0.22389287,
+            "Yes": -1.6065185
+        }
+    },
+    {
+        "item": "Blanket",
+        "uses": [
+            "A makeshift tablecloth for a picnic or outdoor gathering"
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "No": -0.03764204,
+            "Yes": -3.2989564
+        }
+    },
+    {
+        "item": "Blanket",
+        "uses": [
+            "A curtain divider in a small living space"
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.60110515,
+            "No": -0.79462475
+        }
+    },
+    {
+        "item": "Blanket",
+        "uses": [
+            "A cozy window seat cushion"
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.2700883,
+            "Yes": -1.4411546
+        }
+    },
+    {
+        "item": "Blanket",
+        "uses": [
+            "A DIY hammock for lounging in the backyard"
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.2053573,
+            "No": -1.6842163
+        }
+    },
+    {
+        "item": "Blanket",
+        "uses": [
+            "A protective cover for delicate furniture during a move"
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.0032523426,
+            "Yes": -5.7330995
+        }
+    },
+    {
+        "item": "Blanket",
+        "uses": [
+            "A play mat for children to sit and play on"
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.017011087,
+            "Yes": -4.083587
+        }
+    },
+    {
+        "item": "Blanket",
+        "uses": [
+            "A stylish wall tapestry for added warmth and texture"
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.27658126,
+            "No": -1.4205194
+        }
+    },
+    {
+        "item": "Blanket",
+        "uses": [
+            "A cushioned headboard for a bed"
+        ],
+        "type": "Yes",
+        "full explanation": "Yes.",
+        "probabilities": {
+            "Yes": -0.033294544,
+            "No": -3.4195611
+        }
+    },
+    {
+        "item": "Blanket",
+        "uses": [
+            "A homemade costume or prop for a themed party"
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.08541917,
+            "Yes": -2.5029721
+        }
+    },
+    {
+        "item": "Blanket",
+        "uses": [
+            "A makeshift pillow fort for a fun and cozy indoor activity"
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.095795885,
+            "Yes": -2.3934338
+        }
+    },
+    {
+        "item": "Scarf",
+        "uses": [
+            "Turn a scarf into a stylish belt to add a pop of color and texture to your outfit."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.3062702,
+            "Yes": -1.3328129
+        }
+    },
+    {
+        "item": "Scarf",
+        "uses": [
+            "Use a scarf as a makeshift headband to keep your hair out of your face while exercising."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.05040624,
+            "Yes": -3.0132701
+        }
+    },
+    {
+        "item": "Scarf",
+        "uses": [
+            "Transform a scarf into a decorative table runner for a unique and bohemian touch to your dining room."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.029628405,
+            "No": -3.5347097
+        }
+    },
+    {
+        "item": "Scarf",
+        "uses": [
+            "Wrap a scarf around a vase or candle holder to create a cozy and seasonal decoration for your home."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.045527432,
+            "No": -3.1126509
+        }
+    },
+    {
+        "item": "Scarf",
+        "uses": [
+            "Use a scarf as a camera strap to add a personalized and colorful touch to your photography gear."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.026292058,
+            "No": -3.6520474
+        }
+    },
+    {
+        "item": "Scarf",
+        "uses": [
+            "Tie a scarf around a bouquet of flowers to add an extra special touch to a gift or display."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "Yes": -0.48676467,
+            "No": -0.9535806
+        }
+    },
+    {
+        "item": "Scarf",
+        "uses": [
+            "Use a scarf as a makeshift bag strap to refresh an old purse or tote with a new look."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.5019476,
+            "Yes": -0.9298231
+        }
+    },
+    {
+        "item": "Scarf",
+        "uses": [
+            "Create a unique wall hanging by tying together multiple scarves in different patterns and colors."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.058541723,
+            "No": -2.8675075
+        }
+    },
+    {
+        "item": "Scarf",
+        "uses": [
+            "Use a scarf as a protective sleeve for delicate items like sunglasses or a tablet when traveling."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.46392003,
+            "Yes": -0.99118745
+        }
+    },
+    {
+        "item": "Scarf",
+        "uses": [
+            "Turn a scarf into a pet accessory by tying it around your pet's collar to give them a stylish and colorful look."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.08357774,
+            "Yes": -2.5241256
+        }
+    },
+    {
+        "item": "Ring",
+        "uses": [
+            "Ring can be used as a mini emergency flashlight when power goes out."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.23280255,
+            "Yes": -1.5718375
+        }
+    },
+    {
+        "item": "Ring",
+        "uses": [
+            "Ring can be used as a portable projector for watching movies or videos on the go."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "Yes": -0.097627625,
+            "No": -2.375471
+        }
+    },
+    {
+        "item": "Ring",
+        "uses": [
+            "Ring can be used as a makeshift stylus for touch screen devices."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.41539648,
+            "Yes": -1.079108
+        }
+    },
+    {
+        "item": "Ring",
+        "uses": [
+            "Ring can be used as a fashion accessory by stacking multiple rings on one finger for a unique look."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.0074297423,
+            "Yes": -4.9072843
+        }
+    },
+    {
+        "item": "Ring",
+        "uses": [
+            "Ring can be used as a mini microphone for impromptu karaoke sessions."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.14735033,
+            "No": -1.9878387
+        }
+    },
+    {
+        "item": "Ring",
+        "uses": [
+            "Ring can be used as a portable phone stand for hands-free viewing."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes.",
+        "probabilities": {
+            "No": -0.31673428,
+            "Yes": -1.3040352
+        }
+    },
+    {
+        "item": "Ring",
+        "uses": [
+            "Ring can be used as a mini compass for navigating in unfamiliar locations."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.4110075,
+            "Yes": -1.08767
+        }
+    },
+    {
+        "item": "Ring",
+        "uses": [
+            "Ring can be used as a makeshift bottle opener for opening bottles on the fly."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "No": -0.32570654,
+            "Yes": -1.2803192
+        }
+    },
+    {
+        "item": "Ring",
+        "uses": [
+            "Ring can be used as a mini storage container for carrying small items like medication or spare change."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.17340769,
+            "No": -1.8377181
+        }
+    },
+    {
+        "item": "Ring",
+        "uses": [
+            "Ring can be used as a fidget toy for anxiety or stress relief."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.014014352,
+            "Yes": -4.2763643
+        }
+    },
+    {
+        "item": "Racket",
+        "uses": [
+            "Creating a text-based adventure game in Racket, where players navigate through different scenarios and make choices that affect the outcome of the story."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.036356755,
+            "Yes": -3.3330276
+        }
+    },
+    {
+        "item": "Racket",
+        "uses": [
+            "Designing a virtual pet simulation in Racket, where users can interact with and care for a digital animal with unique behaviors and needs."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.22419052,
+            "Yes": -1.6054122
+        }
+    },
+    {
+        "item": "Racket",
+        "uses": [
+            "Building a music composition tool in Racket, allowing users to generate new melodies and harmonies using algorithms and randomization."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "No": -0.15035853,
+            "Yes": -1.9691566
+        }
+    },
+    {
+        "item": "Racket",
+        "uses": [
+            "Developing a recipe generator in Racket, which suggests meal ideas based on user preferences, dietary restrictions, and available ingredients."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes.",
+        "probabilities": {
+            "No": -0.047050472,
+            "Yes": -3.0804462
+        }
+    },
+    {
+        "item": "Racket",
+        "uses": [
+            "Designing a virtual art gallery in Racket, where users can browse and display digital artworks created by different artists."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "No": -0.5049454,
+            "Yes": -0.9252602
+        }
+    },
+    {
+        "item": "Racket",
+        "uses": [
+            "Creating a language learning app in Racket, which uses interactive exercises and quizzes to help users improve their vocabulary and grammar skills."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.044453125,
+            "Yes": -3.1358056
+        }
+    },
+    {
+        "item": "Racket",
+        "uses": [
+            "Building a weather forecasting tool in Racket, which provides real-time updates on current weather conditions and future forecasts."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "No": -0.11949135,
+            "Yes": -2.1838186
+        }
+    },
+    {
+        "item": "Racket",
+        "uses": [
+            "Designing a virtual reality experience in Racket, allowing users to explore imaginary worlds and interact with objects using motion controls."
+        ],
+        "type": "No",
+        "full explanation": "No.",
+        "probabilities": {
+            "Yes": -0.11896221,
+            "No": -2.188077
+        }
+    },
+    {
+        "item": "Racket",
+        "uses": [
+            "Developing a smart home automation system in Racket, which enables users to control household appliances and devices remotely through a mobile app."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.43532932,
+            "No": -1.041519
+        }
+    },
+    {
+        "item": "Racket",
+        "uses": [
+            "Creating a multiplayer trivia game in Racket, where users can compete against each other in real-time matches and earn points for correct answers."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.6624556,
+            "Yes": -0.7248793
+        }
+    },
+    {
+        "item": "Glove",
+        "uses": [
+            "Glove puppet theater for entertaining children"
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.1093909,
+            "Yes": -2.2672355
+        }
+    },
+    {
+        "item": "Glove",
+        "uses": [
+            "Glove-shaped hot pad for handling hot dishes in the kitchen"
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.044344466,
+            "Yes": -3.1383214
+        }
+    },
+    {
+        "item": "Glove",
+        "uses": [
+            "Glove filled with lavender or other scented herbs as a natural air freshener"
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "Yes": -0.41688517,
+            "No": -1.0762403
+        }
+    },
+    {
+        "item": "Glove",
+        "uses": [
+            "Glove-shaped ice pack for soothing sore muscles or injuries"
+        ],
+        "type": "No",
+        "full explanation": "No.",
+        "probabilities": {
+            "Yes": -0.57176304,
+            "No": -0.83139515
+        }
+    },
+    {
+        "item": "Glove",
+        "uses": [
+            "Glove made into a mini garden by attaching small plants to the fingers"
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.0010991342,
+            "No": -6.8256516
+        }
+    },
+    {
+        "item": "Glove",
+        "uses": [
+            "Glove as a funky alternative to a traditional flower vase when filled with water and fresh flowers"
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.001967293,
+            "No": -6.236985
+        }
+    },
+    {
+        "item": "Glove",
+        "uses": [
+            "Glove used as a quirky sleeve for a water bottle to keep drinks cold"
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "Yes": -0.010056493,
+            "No": -4.6074686
+        }
+    },
+    {
+        "item": "Glove",
+        "uses": [
+            "Glove decorated with beads or sequins to create a unique fashion accessory"
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.034675404,
+            "Yes": -3.3794954
+        }
+    },
+    {
+        "item": "Glove",
+        "uses": [
+            "Glove stuffed with rice and heated in the microwave for a homemade heating pad"
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "No": -0.4205794,
+            "Yes": -1.0692382
+        }
+    },
+    {
+        "item": "Glove",
+        "uses": [
+            "Glove transformed into a DIY bird feeder by filling with birdseed and hanging outside."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes.",
+        "probabilities": {
+            "Yes": -0.016843833,
+            "No": -4.092808
+        }
+    },
+    {
+        "item": "Sheet",
+        "uses": [
+            "Use sheets as a canvas for creating temporary art installations or murals in outdoor spaces."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.34831762,
+            "Yes": -1.2238784
+        }
+    },
+    {
+        "item": "Sheet",
+        "uses": [
+            "Cut up sheets to create unique and stylish clothing or accessories, such as a flowy summer dress or a funky patchwork scarf."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "No": -0.16889992,
+            "Yes": -1.8619465
+        }
+    },
+    {
+        "item": "Sheet",
+        "uses": [
+            "Use sheets as backdrop for a DIY photo booth at a party or event, creating a simple and budget-friendly way to capture memories."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.016748767,
+            "Yes": -4.098576
+        }
+    },
+    {
+        "item": "Sheet",
+        "uses": [
+            "Use sheets as a makeshift hammock for lounging in the backyard or at the beach."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "No": -0.08221296,
+            "Yes": -2.5399747
+        }
+    },
+    {
+        "item": "Sheet",
+        "uses": [
+            "Turn sheets into reusable gift wrap by tying them with colorful ribbons or adding personalized embellishments."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes.",
+        "probabilities": {
+            "Yes": -0.17141062,
+            "No": -1.8484011
+        }
+    },
+    {
+        "item": "Sheet",
+        "uses": [
+            "Use sheets as a makeshift kite for a fun and easy outdoor activity on a windy day."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.445561,
+            "Yes": -1.0230298
+        }
+    },
+    {
+        "item": "Sheet",
+        "uses": [
+            "Create a homemade tent or fort by hanging sheets from the ceiling or between trees for a cozy and imaginative space."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.019521123,
+            "Yes": -3.9475799
+        }
+    },
+    {
+        "item": "Sheet",
+        "uses": [
+            "Use sheets as a tablecloth for a rustic or bohemian themed outdoor picnic or dinner party."
+        ],
+        "type": "Yes",
+        "full explanation": "Yes",
+        "probabilities": {
+            "No": -0.45363033,
+            "Yes": -1.0088633
+        }
+    },
+    {
+        "item": "Sheet",
+        "uses": [
+            "Cut up sheets to make DIY curtains or drapes for a unique and personalized window treatment."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.07875582,
+            "Yes": -2.5808806
+        }
+    },
+    {
+        "item": "Sheet",
+        "uses": [
+            "Turn sheets into reusable shopping bags by sewing them into a tote bag shape and adding handles."
+        ],
+        "type": "No",
+        "full explanation": "No",
+        "probabilities": {
+            "No": -0.20607057,
+            "Yes": -1.6810118
+        }
+    }
+]

@@ -1,0 +1,9 @@
+Timestamp,Task,Type,Mode,Agent,Round,Model Name,Role Name,Data Num,Mean Fluency,STD Fluency,Mean Flexibility,STD Flexibility,Mean Originality,STD Originality,Mean Elaboration,STD Elaboration,File Name
+2024-04-20 01:24:51,Scientific,debate,FINAL,2,5,gpt-3-5-turbo-0125,None,10,6.183,2.25,6.15,2.172,3.664,0.346,3.062,0.661,Scientific_multi_debate_FINAL_2_5_gpt-3-5-turbo-0125_None_final_2024-04-20-01-24-51_10
+2024-04-20 05:15:11,Scientific,debate,FINAL,4,5,gpt-3-5-turbo-0125,None,10,6.492,2.336,6.45,2.039,3.626,0.429,3.007,0.759,Scientific_multi_debate_FINAL_4_5_gpt-3-5-turbo-0125_None_final_2024-04-20-05-15-11_10
+2024-04-20 06:14:45,Scientific,debate,FINAL,5,5,gpt-3-5-turbo-0125,None,10,6.12,2.038,6.28,1.923,3.765,0.304,3.27,0.533,Scientific_multi_debate_FINAL_5_5_gpt-3-5-turbo-0125_None_final_2024-04-20-06-14-45_10
+2024-04-21 20:41:55,Scientific,debate,FINAL,2,5,gpt-3-5-turbo-0125,None,10,6.167,1.705,5.8,1.907,3.783,0.343,3.239,0.547,Scientific_multi_debate_FINAL_2_5_gpt-3-5-turbo-0125_None_final_2024-04-21-20-41-55_10
+2024-04-21 21:08:59,Scientific,debate,FINAL,3,5,gpt-3-5-turbo-0125,None,10,5.967,2.012,5.744,1.403,3.637,0.317,3.183,0.579,Scientific_multi_debate_FINAL_3_5_gpt-3-5-turbo-0125_None_final_2024-04-21-21-08-59_10
+2024-04-21 21:54:39,Scientific,debate,FINAL,4,5,gpt-3-5-turbo-0125,None,10,5.458,2.03,5.708,2.063,3.726,0.36,3.17,0.675,Scientific_multi_debate_FINAL_4_5_gpt-3-5-turbo-0125_None_final_2024-04-21-21-54-39_10
+2024-04-21 22:55:46,Scientific,debate,FINAL,5,5,gpt-3-5-turbo-0125,None,10,6.193,2.214,5.953,2.071,3.675,0.371,3.267,0.557,Scientific_multi_debate_FINAL_5_5_gpt-3-5-turbo-0125_None_final_2024-04-21-22-55-46_10
+2024-04-22 06:08:43,Scientific,debate,FINAL,3,5,gpt-3-5-turbo-0125,None,10,5.9,1.97,5.733,1.661,3.733,0.38,3.294,0.562,Scientific_multi_debate_FINAL_3_5_gpt-3-5-turbo-0125_None_final_2024-04-22-06-08-43_10

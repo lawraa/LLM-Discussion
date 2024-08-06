@@ -42,14 +42,14 @@ For `mean_std.py`, set the file path to the dataset you want to analyze:
 
 ### 2. Running the Script
   Args Parser for `auto_grade_final.py`:
-
+   ```bash
    -v, --version: Version of the OpenAI model to use (3 for GPT-3, 4 for GPT-4). <br />
    -i, --input_file: Name of the input file located in the ```../Results/{Task_Type}``` directory. <br />
    -t, --type: Variant of the evaluation (options: default, few-shot, criteria, pairwise, sampling). <br />
    -s, --sample: Number of times to sample the evaluation.<br />
    -d, --dataset: which dataset we used. (AUT, Instances, Similarities and Scientific)  
    -o, --output: output in our leader board or not
-
+   ```
 For example: 
   ```bash
   python3 auto_grade_final.py -v 3 -i Instances_single_few-shot_2-0 -t sampling -s 3 -d Instances -o y

@@ -2,7 +2,7 @@
 
 Official Implementation of [LLM Discussion: Enhancing the Creativity of Large Language Models via Discussion Framework and Role-Play](https://arxiv.org/abs/2405.06373)
 
->Authors : [Lu, Li-Chun*](https://github.com/lichun-19) & [Chen, Shou-Jen*](https://github.com/lawraa) & [Pai, Tsung-Min](https://github.com/Bai1026) & Yu, Chan-Hung & Lee, Hung-yi & Sun, Shao-Hua*
+>Authors : [Li-Chun Lu*](https://github.com/lichun-19), [Shou-Jen Chen*](https://github.com/lawraa), [Tsung-Min Pai](https://github.com/Bai1026), Chan-Hung Yu & Hung-yi Lee, Shao-Hua Sun
 
 ## Introduction
 

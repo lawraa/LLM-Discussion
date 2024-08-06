@@ -45,12 +45,12 @@ def write_results_to_csv(input_file_name, mean_std_results, csv_file_path, versi
 
     Mode, Agent, Rounds, Model_Name, Role_Name = None, None, None, None, None  # Initialize to None
 
-    #if parts[1] == "single":
-        #Agent = parts[4]
-        #Rounds = parts[5]
-        #Model_Name = parts[6]
-        #Mode = parts[3]
-        #Role_Name = parts[7]
+    if parts[1] == "single":
+        Agent = parts[4]
+        Rounds = parts[5]
+        Model_Name = parts[6]
+        Mode = parts[3]
+        Role_Name = parts[7]
     if parts[1] == 'multi':
         Mode = parts[3]
         Agent = parts[4]
@@ -94,22 +94,4 @@ def write_results_to_csv(input_file_name, mean_std_results, csv_file_path, versi
     except Exception as e:
         print(f'ERROR: Failed to write data to CSV due to {e}')
 
-    # file_path = Path(csv_file_path)
-    # with file_path.open(mode='a', newline='', encoding='utf-8') as file:
-    #     writer = csv.writer(file)
-    #     if file.tell() == 0:  # If file is empty, write headers
-    #         writer.writerow(headers)
-    #     writer.writerows(csv_data)
-    
-    # sorted_data = sorted(csv_data, key=lambda x: x[0])
-
-    # # Write sorted data back to CSV
-    # with file_path.open(mode='w', newline='', encoding='utf-8') as file:
-    #     writer = csv.writer(file)
-    #     writer.writerow(headers)  # Write headers
-    #     writer.writerows(sorted_data)
-
     print(f'Data sorted by Timestamp and Data and saved to {csv_file_path}')
-
-        # python3 auto_grade_final.py -v 3 -i Instances_single_few-shot_2-0 -t sampling -s 3 -d Instances -o y
-        # python3 auto_grade_bai.py -v 3 -i Instances_multi_debate_2_3_discussion_final_3-0 -t sampling -s 3 -d Instances

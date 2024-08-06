@@ -166,7 +166,7 @@ def auto_grade(args):
     
     if args.output == 'y':
         mean_std_results = calculate_mean_std(total_results)
-        output_csv_path = os.path.join(Path(__file__).parent, '..', 'Results', 'LeaderBoard', f'LeaderBoard-{args.task}-rebuttal.csv')
+        output_csv_path = os.path.join(Path(__file__).parent, '..', 'Results', 'LeaderBoard', f'LeaderBoard-{args.task}.csv')
         write_results_to_csv(args.input_file, mean_std_results, output_csv_path, args.version)
         
     else:
@@ -186,4 +186,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
     auto_grade(args)
 
-# python3 auto_grade_final.py -v 3 -i Instances_single_few-shot_2-0 -t sampling -s 3 -d Instances -o y

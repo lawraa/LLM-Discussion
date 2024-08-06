@@ -1,6 +1,0 @@
-Timestamp,Task,Type,Mode,Agent,Round,Model Name,Role Name,Data Num,Mean Fluency,STD Fluency,Mean Flexibility,STD Flexibility,Mean Originality,STD Originality,Mean Elaboration,STD Elaboration,File Name
-CoT,AUT,CoT,,,,,,10,15.1,3.621,12.367,3.027,3.523,0.318,3.556,0.253,AUT_single_CoT_10-0
-deep-breath,AUT,deep-breath,,,,,,10,16.267,2.245,14.367,4.453,3.582,0.303,3.454,0.33,AUT_single_deep-breath_10-0
-shot,AUT,few,,,,,,10,5.1,2.055,12.0,3.037,3.708,0.136,2.948,0.15,AUT_single_few_shot_10-0
-single,AUT,basic-10-0,,,,,,basic,9.7,1.069,8.333,1.556,3.482,0.276,3.442,0.311,AUT_single_basic-10-0
-stimuli,AUT,stimuli,,,,,,10,11.2,3.166,11.467,3.29,3.405,0.265,3.335,0.278,AUT_single_stimuli_10-0

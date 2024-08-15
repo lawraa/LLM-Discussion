@@ -1,4 +1,4 @@
-# LLM Discussion: 
+# LLM Discussion 
 
 Official Implementation of [LLM Discussion: Enhancing the Creativity of Large Language Models via Discussion Framework and Role-Play](https://arxiv.org/abs/2405.06373)
 

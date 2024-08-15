@@ -1,9 +1,11 @@
 import argparse
 import sys
+import os
 from pathlib import Path
 from discussion import LLM_Discussion_AUT, LLM_Discussion_Scientific, LLM_Discussion_Instance_Similarities
 from types import SimpleNamespace
 from pathlib import Path
+
 
 # This file run LLM Discussion
 
@@ -26,25 +28,16 @@ def main():
     elif args.type == "Similarities" or args.type == "Instances":
         agents_config = LLM_Discussion_Instance_Similarities.load_config(args.config)
         discussion_runner = LLM_Discussion_Instance_Similarities(agents_config, args.dataset, args.rounds, args.type, args.prompt)
-    discussion_output =discussion_runner.run()
-
+    discussion_output = discussion_runner.run()
+    
     if args.eval_mode:
-        project_root = Path(__file__).resolve().parents[3]
-        evaluation_path = project_root / 'Evaluation'
-        sys.path.append(str(evaluation_path))
-        import json
-        import os
-        import csv
-        import numpy as np
-        from utils.openai_model import OpenAIModel
-        from eval_functions.eval_criterion import evaluate_aut, evaluate_scientific, evaluate_wkct
-        from eval_functions.pairwise_comparison import pairwise_judgement
-        from automation_csv import calculate_mean_std, write_results_to_csv
-        import logging
+        root_path = Path(__file__).resolve().parents[2]
+        evaluation_root = root_path / 'Evaluation'
+        sys.path.append(str(evaluation_root))
         from auto_grade_final import auto_grade
-
         #Call Evaluation
-        input_file_name = discussion_output.split('.')[0]
+        input_file_name = os.path.splitext(os.path.basename(discussion_output))[0]
+
         args = SimpleNamespace(
             version="3", 
             input_file=input_file_name, 

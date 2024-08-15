@@ -36,7 +36,7 @@ def auto_grade(args):
 
     task_folder = TASK_PATHS[args.task]
     input_file_path = os.path.join(Path(__file__).parent, '..', task_folder, f"{args.input_file.split('_')[1]}_agent", f"{args.input_file}.json")
-
+    
     ensure_folder_exists(os.path.dirname(input_file_path))
 
     with open(input_file_path, "r") as file:
@@ -49,7 +49,7 @@ def auto_grade(args):
 
     if args.task == "AUT":
         for response_obj in responses:
-            item = response_obj['item'] 
+            item = response_obj['item']
             uses = response_obj.get('uses', [])
             item_results = {"item": item}
             if not uses:  # Check if 'uses' is empty

@@ -100,7 +100,7 @@ class LLM_Debate(Discussion):
         subtask = self.determine_subtask(agents, baseline)
 
         output_filename = self.generate_filename(task_type, subtask, "chat_log", model_names_concatenated, role_names_concatenated, current_date, formatted_time, amount_of_data, len(agents), self.rounds)
-        final_ans_filename = self.generate_filename(task_type, subtask, "Output/multi_agent", model_names_concatenated, role_names_concatenated, current_date, formatted_time, amount_of_data, len(agents), self.rounds)
+        final_ans_filename = self.generate_final_filename(task_type, subtask, "multi_agent", model_names_concatenated, role_names_concatenated, current_date, formatted_time, amount_of_data, len(agents), self.rounds)
         init_ans_filename = self.generate_filename(task_type, subtask, "init", model_names_concatenated, role_names_concatenated, current_date, formatted_time, amount_of_data, len(agents), self.rounds)
         
         # Ensure all required directories exist
@@ -142,9 +142,12 @@ class LLM_Debate(Discussion):
     
     @staticmethod
     def generate_filename(task_type, subtask, data_type, model_names_concatenated, role_names_concatenated, current_date, formatted_time, amount_of_data, num_agents, num_rounds):
-        return f"../../../Results/{task_type}/{data_type}/{task_type}_multi_debate_{subtask}_{num_agents}_{num_rounds}_{model_names_concatenated}_{role_names_concatenated}_{data_type}_{current_date}-{formatted_time}_{amount_of_data}.json"
+        return f"../../Results/{task_type}/{data_type}/{task_type}_multi_debate_{subtask}_{num_agents}_{num_rounds}_{model_names_concatenated}_{role_names_concatenated}_{data_type}_{current_date}-{formatted_time}_{amount_of_data}.json"
 
-
+    @staticmethod
+    def generate_final_filename(task_type, subtask, data_type, model_names_concatenated, role_names_concatenated, current_date, formatted_time, amount_of_data, num_agents, num_rounds):
+        return f"../../Results/{task_type}/Output/{data_type}/{task_type}_multi_debate_{subtask}_{num_agents}_{num_rounds}_{model_names_concatenated}_{role_names_concatenated}_{data_type}_{current_date}-{formatted_time}_{amount_of_data}.json"
+    
 class LLM_Debate_AUT_Baseline(LLM_Debate):    
     def run(self):
         print(f"Starting LLM_Debate.run with dataset: {self.dataset_file}")
@@ -355,7 +358,7 @@ class LLM_Discussion_AUT(LLM_Debate):
                         init_results.append(init_result)
 
                     else:
-                        combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round, object = object)
+                        combined_prompt = self.construct_response(question, most_recent_responses, agent, is_last_round)
                         formatted_combined_prompt = agent.construct_user_message(agent_role_prompt + combined_prompt)
                         chat_history[agent.agent_name].append(formatted_combined_prompt)
                         response = agent.generate_answer(chat_history[agent.agent_name])

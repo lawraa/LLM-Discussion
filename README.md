@@ -43,7 +43,7 @@ pip install -r requirements.txt
 @inproceedings{lu2024llm,
   title={LLM Discussion: Enhancing the Creativity of Large Language Models via Discussion Framework and Role-Play},
   author={Lu, Li-Chun and Chen, Shou-Jen and Pai, Tsung-Min and Yu, Chan-Hung and Lee, Hung-yi and Sun, Shao-Hua},
-  booktitle={First Conference on Language Modeling},
+  booktitle={Conference on Language Modeling},
   year={2024}
 }
 ```

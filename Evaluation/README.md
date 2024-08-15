@@ -24,13 +24,13 @@ Before you execute, export you API key (set it in your environment)
   -o, --output: Choose whether to output the results into the LeaderBoard or not. Options are "y" (yes) and "n" (no). Default is "n".
   ```
 
-For example: 
+#### For example: 
   ```bash
   python3 auto_grade_final.py -v 3 -i Instances_single_few-shot_2-0 -s 3 -d Instances -o y
   ```
 
 ## Output 
-The results of the evaluation will be saved in a JSON file located in the corresponding task's `Result/{task}/Eval_Result/multi-agent` folder. 
-- If the -o option is set to "y", the results will also be saved in a CSV file in the LeaderBoard folder.
-`os.path.join(Path(__file__).parent, '..', 'Results', 'LeaderBoard', f'LeaderBoard-{args.task}.csv'`
+The results of the evaluation will be saved in a JSON file located in the corresponding task's `Results/{task}/Eval_Result/multi-agent` folder. 
+- If the -o option is set to "y", the results will also be saved in a CSV file in the LeaderBoard folder: <br>
+`Results/LeaderBoard/LeaderBoard-{args.task}.csv`
 -----

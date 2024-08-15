@@ -39,3 +39,10 @@ Subfolders for storing different types of data:
 
 #### Evaluation Results: 
 If running in evaluation mode (--eval_mode or -e), results will be saved in an Evaluation folder at the root of the project. For more information on the output folder of the evaluation, refer to: [Evaluation Output Section](../Evaluation/README.md#output)
+
+## View Qualitative Results
+Use `read_conversation.py` to read the entire chatlog
+```bash
+python3 read_conversation.py -i <path_to_chatlog_json_file>
+```
+**<path_to_chatlog_json_file>** are saved in `LLM-Discussion/Results/<task_type>/chat_log`

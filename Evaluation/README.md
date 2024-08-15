@@ -25,12 +25,12 @@ Before you execute, export you API key (set it in your environment)
   ```
 
 #### For example: 
-  ```bash
-  python3 auto_grade_final.py -v 3 -i Instances_single_few-shot_2-0 -s 3 -d Instances -o y
-  ```
+```bash
+python3 auto_grade_final.py -v 3 -i Instances_single_few-shot_2-0 -s 3 -d Instances -o y
+```
 
 ## Output 
-The results of the evaluation will be saved in a JSON file located in the corresponding task's `Results/{task}/Eval_Result/multi-agent` folder. 
-- If the -o option is set to "y", the results will also be saved in a CSV file in the LeaderBoard folder: <br>
+The results of the evaluation will be saved in a JSON file located in the corresponding task's `Results/{task}/Eval_Result/multi_agent` folder. 
+- If the -o option is set to "y", the results will also be saved in a CSV file in the LeaderBoard folder: 
 `Results/LeaderBoard/LeaderBoard-{args.task}.csv`
 -----

@@ -14,6 +14,11 @@ TASK_PATHS = {
     "Similarities": "Results/Similarities/Output",
 }
 
+def ensure_folder_exists(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+        print(f"Created directory: {path}")
+
 def auto_grade(args):
     print("AUTO GRADE STARTED, Input_file: ", args.input_file)
 
@@ -31,6 +36,8 @@ def auto_grade(args):
 
     task_folder = TASK_PATHS[args.task]
     input_file_path = os.path.join(Path(__file__).parent, '..', task_folder, f"{args.input_file.split('_')[1]}_agent", f"{args.input_file}.json")
+
+    ensure_folder_exists(os.path.dirname(input_file_path))
 
     with open(input_file_path, "r") as file:
         responses = json.load(file)
@@ -148,6 +155,8 @@ def auto_grade(args):
     output_folder = task_folder.replace('Output', 'Eval_Result')
     output_file_path = os.path.join(Path(__file__).parent, '..', output_folder, f"{args.input_file.split('_')[1]}_agent", f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
 
+    ensure_folder_exists(os.path.dirname(output_file_path))
+
     with open(output_file_path, "w") as outfile:
         json.dump(total_results, outfile, indent=4)
     print(f"Results saved to {output_file_path}")
@@ -155,6 +164,7 @@ def auto_grade(args):
     if args.output == 'y':
         mean_std_results = calculate_mean_std(total_results)
         output_csv_path = os.path.join(Path(__file__).parent, '..', 'Results', 'LeaderBoard', f'LeaderBoard-{args.task}.csv')
+        ensure_folder_exists(os.path.dirname(output_csv_path))
         write_results_to_csv(args.input_file, mean_std_results, output_csv_path, args.version)
     else:
         print('Output will not be saved in Leader Board!')
@@ -165,8 +175,8 @@ if __name__ == "__main__":
     # PARSERS
     parser = argparse.ArgumentParser(description="Evaluate responses based on specified criteria using OpenAI's API.")
     parser.add_argument("-v", "--version", default="3", choices=["3", "4"], help="Version of the OpenAI model to use.")
-    parser.add_argument("-i", "--input_file", required=True, help="Name of the input file located in the dataset/AUT/discussion_result directory.")
-    parser.add_argument("-t", "--type", default="default", choices=["default", "fewshot", "rubric", "pairwise", "sampling"], help="Variant of the evaluation.")
+    parser.add_argument("-i", "--input_file", required=True, help="Name of the input file located in the Results directory.")
+    parser.add_argument("-t", "--type", default="sampling", choices=["default", "sampling"], help="Variant of the evaluation.")
     parser.add_argument("-s", "--sample", default=3, type=int, help="Number of times to sample the evaluation.")
     parser.add_argument("-d", "--task", default="AUT", choices = ["AUT", "Scientific", "Instances", "Similarities"], help="Task for the evaluation. Default is AUT.")
     parser.add_argument("-o", "--output", default="n", choices=["y", "n"], help="Output into LeaderBoard or not")

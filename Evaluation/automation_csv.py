@@ -6,9 +6,7 @@ import csv
 def calculate_mean_std(total_results):
     # Extracting scores for each criterion from the total results
     fluency_scores = [item["fluency"][-1]["average_fluency"] for item in total_results]
-    print(fluency_scores)
     flexibility_scores = [item["flexibility"][-1]["average_flexibility"] for item in total_results]
-    print(flexibility_scores)
     originality_scores = [item["originality"][-1]["average_originality"] for item in total_results]
     elaboration_scores = [item["elaboration"][-1]["average_elaboration"] for item in total_results]
 

@@ -1,12 +1,9 @@
 import argparse
 import json
 import os
-import csv
-import numpy as np
 from pathlib import Path
 from utils.openai_model import OpenAIModel
 from eval_functions.eval_criterion import evaluate_aut, evaluate_scientific, evaluate_wkct
-from eval_functions.pairwise_comparison import pairwise_judgement
 import logging
 
 from automation_csv import calculate_mean_std, write_results_to_csv
@@ -168,7 +165,6 @@ def auto_grade(args):
         mean_std_results = calculate_mean_std(total_results)
         output_csv_path = os.path.join(Path(__file__).parent, '..', 'Results', 'LeaderBoard', f'LeaderBoard-{args.task}.csv')
         write_results_to_csv(args.input_file, mean_std_results, output_csv_path, args.version)
-        
     else:
         print('Output will not be saved in Leader Board!')
 

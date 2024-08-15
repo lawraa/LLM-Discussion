@@ -1,5 +1,5 @@
 from eval_functions.eval_prompts import aut_prompts, scientific_prompts, wkct_prompts
-from utils.util import parse_number_score, parse_number_score_2
+from utils.util import parse_number_score
 from utils.openai_model import OpenAIModel
 import traceback
 import logging
@@ -42,7 +42,7 @@ def evaluate_aut(model: OpenAIModel, response_obj, criterion, eval_type, sample_
             response = model.generate_response(messages=messages, seed=seed)
             print("Given Seed ::: ", seed)
             print("Model Response ::: ", response)
-            individual_score = parse_number_score_2(response)
+            individual_score = parse_number_score(response)
             sample_responses.append({"response": response, "score": individual_score})
             sample_score += individual_score
             print("Score ::: ", sample_score)
@@ -93,7 +93,7 @@ def evaluate_scientific(model: OpenAIModel, response_obj, criterion, eval_type, 
             response = model.generate_response(messages=messages, seed=seed)
             print("Given Seed ::: ", seed)
             print("Model Response ::: ", response)
-            individual_score = parse_number_score_2(response)
+            individual_score = parse_number_score(response)
             sample_responses.append({"response": response, "score": individual_score})
             sample_score += individual_score
             print("Score ::: ", sample_score)
@@ -143,7 +143,7 @@ def evaluate_wkct(model: OpenAIModel, response_obj, criterion, eval_type, sample
             response = model.generate_response(messages=messages, seed=seed)
             print("Given Seed ::: ", seed)
             print("Model Response ::: ", response)
-            individual_score = parse_number_score_2(response)
+            individual_score = parse_number_score(response)
             sample_responses.append({"response": response, "score": individual_score})
             sample_score += individual_score
             print("Score ::: ", sample_score)

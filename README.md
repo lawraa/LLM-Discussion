@@ -38,16 +38,12 @@ To install the required dependencies, run:
 pip install -r requirements.txt
 ```
 
-## Author
-- **Note**: Li-Chun Lu and Shou-Jen Chen are both the first authors.
-
-
 ## Citation
 ```
-@article{lu2024llm,
+@inproceedings{lu2024llm,
   title={LLM Discussion: Enhancing the Creativity of Large Language Models via Discussion Framework and Role-Play},
   author={Lu, Li-Chun and Chen, Shou-Jen and Pai, Tsung-Min and Yu, Chan-Hung and Lee, Hung-yi and Sun, Shao-Hua},
-  journal={arXiv preprint arXiv:2405.06373},
+  booktitle={First Conference on Language Modeling},
   year={2024}
 }
 ```

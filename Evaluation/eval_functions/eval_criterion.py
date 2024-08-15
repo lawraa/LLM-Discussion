@@ -22,7 +22,6 @@ def evaluate_aut(model: OpenAIModel, response_obj, criterion, eval_type, sample_
                 "average_score": 0
             }
 
-    # if there is eval type, get aut_prompts[criterion][eval_type], else get aut_prompts[criterion]['default']
     get_prompt = aut_prompts[criterion].get(eval_type, aut_prompts[criterion]['default'])
     
     if eval_type == 'sampling':

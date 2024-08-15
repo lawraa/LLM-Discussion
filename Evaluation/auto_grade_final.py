@@ -5,15 +5,20 @@ from pathlib import Path
 from utils.openai_model import OpenAIModel
 from eval_functions.eval_criterion import evaluate_aut, evaluate_scientific, evaluate_wkct
 import logging
-
 from automation_csv import calculate_mean_std, write_results_to_csv
+
+TASK_PATHS = {
+    "AUT": "Results/AUT/Output",
+    "Scientific": "Results/Scientific/Output",
+    "Instances": "Results/Instances/Output",
+    "Similarities": "Results/Similarities/Output",
+}
 
 def auto_grade(args):
     print("AUTO GRADE STARTED, Input_file: ", args.input_file)
+
     # OPENAI KEY
     api_key = os.getenv("OPENAI_API_KEY")
-
-    # GPT VERSION
     version = "gpt-4-0125-preview" if args.version == "4" else "gpt-3.5-turbo-0125"
     print(f"Using GPT Version {version}, Input: {args.version}")
 
@@ -24,15 +29,8 @@ def auto_grade(args):
     # This is for assign the input folder
     print(f"{args.input_file.split('_')[1]}_agent")
 
-    #INPUT FILE
-    if args.task == "AUT":
-        input_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'AUT', 'Output', f"{args.input_file.split('_')[1]}_agent", f"{args.input_file}.json")
-    elif args.task == "Scientific":
-        input_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Scientific','Output', f"{args.input_file.split('_')[1]}_agent", f"{args.input_file}.json")
-    elif args.task == "Instances":
-        input_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Instances','Output', f"{args.input_file.split('_')[1]}_agent", f"{args.input_file}.json")
-    elif args.task == "Similarities":
-        input_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Similarities','Output', f"{args.input_file.split('_')[1]}_agent", f"{args.input_file}.json")
+    task_folder = TASK_PATHS[args.task]
+    input_file_path = os.path.join(Path(__file__).parent, '..', task_folder, f"{args.input_file.split('_')[1]}_agent", f"{args.input_file}.json")
 
     with open(input_file_path, "r") as file:
         responses = json.load(file)
@@ -147,15 +145,8 @@ def auto_grade(args):
 
             total_results.append(question_results)
 
-    
-    if args.task == "AUT":
-        output_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'AUT', 'Eval_Result', f"{args.input_file.split('_')[1]}_agent", f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
-    elif args.task == "Scientific":
-        output_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Scientific','Eval_Result', f"{args.input_file.split('_')[1]}_agent", f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
-    elif args.task == "Instances":
-        output_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Instances','Eval_Result', f"{args.input_file.split('_')[1]}_agent", f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
-    elif args.task == "Similarities":
-        output_file_path = os.path.join(Path(__file__).parent, '..', 'Results', 'Similarities','Eval_Result', f"{args.input_file.split('_')[1]}_agent", f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
+    output_folder = task_folder.replace('Output', 'Eval_Result')
+    output_file_path = os.path.join(Path(__file__).parent, '..', output_folder, f"{args.input_file.split('_')[1]}_agent", f"evaluation_{args.input_file}_{args.type}_{args.version}.json")
 
     with open(output_file_path, "w") as outfile:
         json.dump(total_results, outfile, indent=4)

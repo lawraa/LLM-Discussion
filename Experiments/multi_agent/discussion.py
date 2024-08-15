@@ -2,7 +2,7 @@ import json
 import re
 from agents import OpenAIAgent, GeminiAgent, Llama2Agent
 import datetime
-import random
+import os
 
 class Discussion:
     PROMPTS = {
@@ -23,6 +23,7 @@ class Discussion:
         pass
 
     def save_conversation(self, filename, conversation_data):
+        os.makedirs(os.path.dirname(filename), exist_ok=True)
         with open(filename, 'w') as file:
             json.dump(conversation_data, file, indent=4)
         print(f"Saved Conversation Data to {filename}")
@@ -101,6 +102,11 @@ class LLM_Debate(Discussion):
         output_filename = self.generate_filename(task_type, subtask, "chat_log", model_names_concatenated, role_names_concatenated, current_date, formatted_time, amount_of_data, len(agents), self.rounds)
         final_ans_filename = self.generate_filename(task_type, subtask, "Output/multi_agent", model_names_concatenated, role_names_concatenated, current_date, formatted_time, amount_of_data, len(agents), self.rounds)
         init_ans_filename = self.generate_filename(task_type, subtask, "init", model_names_concatenated, role_names_concatenated, current_date, formatted_time, amount_of_data, len(agents), self.rounds)
+        
+        # Ensure all required directories exist
+        os.makedirs(os.path.dirname(output_filename), exist_ok=True)
+        os.makedirs(os.path.dirname(final_ans_filename), exist_ok=True)
+        os.makedirs(os.path.dirname(init_ans_filename), exist_ok=True)
 
         self.save_conversation(output_filename, all_responses)
         self.save_conversation(final_ans_filename, final_results)

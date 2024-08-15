@@ -11,7 +11,7 @@ def main():
     parser = argparse.ArgumentParser(description="Orchestrate a discussion with multiple AI agents.")
     parser.add_argument("-c", "--config", required=True, help="Path to the configuration file for agents.")
     parser.add_argument("-d", "--dataset", required=True, help="Path to the dataset file.")
-    parser.add_argument("-r", "--rounds", type=int, default=3, help="Number of rounds in the discussion.")
+    parser.add_argument("-r", "--rounds", type=int, default=5, help="Number of rounds in the discussion.")
     parser.add_argument("-t", "--type", choices= ["AUT", "Scientific","Similarities", "Instances"], help="Type of task to run.")
     parser.add_argument("-e", "--eval_mode", action="store_true", default=False, help="Run in evaluation mode.")
     parser.add_argument("-p", "--prompt", type = int, default = 1, help = "Prompt Test")
@@ -32,7 +32,6 @@ def main():
         project_root = Path(__file__).resolve().parents[3]
         evaluation_path = project_root / 'Evaluation'
         sys.path.append(str(evaluation_path))
-        # Now you can import auto_grade directly
         import json
         import os
         import csv

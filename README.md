@@ -38,7 +38,9 @@ To install the required dependencies, run:
 pip install -r requirements.txt
 ```
 
+## Run
 
+To run LLM Discussion, refer to [Experiments/README.md](Experiments/README.md)
 
 ## Citation
 ```

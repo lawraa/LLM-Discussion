@@ -1,4 +1,10 @@
 # LLM Discussion 
+<div align="center">
+
+[![Website](https://img.shields.io/badge/Website-Intro_Page-blue?style=for-the-badge&logo=github-pages)](https://bai1026.github.io/LLM-Discussion/)
+[![Paper](https://img.shields.io/badge/Paper-Arxiv-red?style=for-the-badge&logo=arxiv)](https://arxiv.org/abs/2405.06373)
+
+</div>
 
 Official Implementation of [LLM Discussion: Enhancing the Creativity of Large Language Models via Discussion Framework and Role-Play](https://arxiv.org/abs/2405.06373)
 
